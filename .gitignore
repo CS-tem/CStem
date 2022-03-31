@@ -1,6 +1,6 @@
 .vscode
 
-dblp.xml
+backend/data/*.xml
 package-lock.json
 
 # Byte-compiled / optimized / DLL files
