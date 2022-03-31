@@ -27,6 +27,31 @@ publtypes = [
     'disambiguation',
     'group'
 ]
+split = {
+    None: 0,
+    'informal': 0,
+    'withdrawn': 0,
+    'data': 0,
+    'software': 0,
+    'survey': 0,
+    'edited': 0,
+    'informal withdrawn': 0,
+    'encyclopedia': 0,
+    'habil': 0,
+    'noshow': 0,
+    'disambiguation': 0,
+    'group': 0
+}
+publ_stats = {
+    'article': split.copy(),
+    'inproceedings': split.copy(),
+    'proceedings': split.copy(),
+    'book': split.copy(),
+    'incollection': split.copy(),
+    'phdthesis': split.copy(),
+    'mastersthesis': split.copy(),
+    'www': split.copy()
+}
 
 
 def print_xml_tree(tree):
@@ -56,3 +81,11 @@ if __name__ == '__main__':
         if count == 100:
             break
     print(count)
+
+    # for event, elem in context:
+    #     if event == 'start':
+    #         if elem.tag in publ_records:
+    #             publ_stats[elem.tag][elem.attrib.get('publtype')] += 1
+    #     if event == 'end':
+    #         elem.clear()
+    # print(publ_stats)
