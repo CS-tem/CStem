@@ -2,6 +2,7 @@
 
 backend/data/*.xml
 package-lock.json
+papers
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
