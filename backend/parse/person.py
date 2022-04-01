@@ -1,15 +1,10 @@
+import utils
+from config import *
 from lxml import etree
 
-
-def print_xml_tree(tree):
-    """
-    Prints the XML tree to the console.
-    """
-    print(etree.tostring(tree, pretty_print=True).decode('utf-8'))
-
-
 if __name__ == '__main__':
-    context = etree.iterparse('data/dblp.xml', events=('start', 'end'), load_dtd=True)
+
+    context = etree.iterparse(f'{PATH_DATA}/dblp.xml', events=('start', 'end'), load_dtd=True)
 
     count = 0
     for event, elem in context:
@@ -22,7 +17,7 @@ if __name__ == '__main__':
                     print(elem.attrib)
                     # print(elem.xpath('string()'))
                     print(len(elem.getchildren()))
-                    print_xml_tree(elem)
+                    utils.printET(elem)
         if event == 'end':
             elem.clear()
         if count == 100:
