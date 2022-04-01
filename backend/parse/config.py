@@ -1,6 +1,6 @@
 PATH_DATA = "../data"
 
-publ_records = [
+PUBL_RECORDS = [
     # 'article',
     'inproceedings',
     # 'proceedings',
@@ -11,7 +11,7 @@ publ_records = [
     # 'www'
 ]
 
-publtypes = [
+PUBL_TYPES = [
     None,
     # 'informal',
     # 'withdrawn',
@@ -27,7 +27,7 @@ publtypes = [
     # 'group'
 ]
 
-split = {
+SPLIT = {
     None: 0,
     'informal': 0,
     'withdrawn': 0,
@@ -43,13 +43,13 @@ split = {
     'group': 0
 }
 
-publ_stats = {
-    'article': split.copy(),
-    'inproceedings': split.copy(),
-    'proceedings': split.copy(),
-    'book': split.copy(),
-    'incollection': split.copy(),
-    'phdthesis': split.copy(),
-    'mastersthesis': split.copy(),
-    'www': split.copy()
+PUBL_STATS = {
+    'article': SPLIT.copy(),
+    'inproceedings': SPLIT.copy(),
+    'proceedings': SPLIT.copy(),
+    'book': SPLIT.copy(),
+    'incollection': SPLIT.copy(),
+    'phdthesis': SPLIT.copy(),
+    'mastersthesis': SPLIT.copy(),
+    'www': SPLIT.copy()
 }

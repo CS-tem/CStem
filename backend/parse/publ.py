@@ -2,7 +2,7 @@ import utils
 from config import *
 from lxml import etree
 
-def sample_inproceedings(context, output_file, max=-1):
+def sampleInproceedings(context, output_file, max=-1):
     with open(output_file, 'w') as f:
         f.write('<?xml version="1.0" encoding="ISO-8859-1"?>')
         f.write('<!DOCTYPE dblp SYSTEM "dblp.dtd">')
@@ -22,14 +22,14 @@ def sample_inproceedings(context, output_file, max=-1):
 if __name__ == '__main__':
     context = etree.iterparse(f'{PATH_DATA}/dblp.xml', events=('start', 'end'), load_dtd=True)
 
-    sample_inproceedings(context, f'{PATH_DATA}/inproceedings.xml')
+    sampleInproceedings(context, f'{PATH_DATA}/inproceedings.xml')
     exit(0)
 
     count = 0
     for event, elem in context:
         if event == 'start':
-            if elem.tag in publ_records:
-                if elem.attrib.get('publtype') in publtypes:
+            if elem.tag in PUBL_RECORDS:
+                if elem.attrib.get('publtype') in PUBL_TYPES:
                     count += 1
                     if count % 1000 == 0:
                         print(count)
@@ -45,8 +45,8 @@ if __name__ == '__main__':
 
     # for event, elem in context:
     #     if event == 'start':
-    #         if elem.tag in publ_records:
-    #             publ_stats[elem.tag][elem.attrib.get('publtype')] += 1
+    #         if elem.tag in PUBL_RECORDS:
+    #             PUBL_STATS[elem.tag][elem.attrib.get('publtype')] += 1
     #     if event == 'end':
     #         elem.clear()
-    # print(publ_stats)
+    # print(PUBL_STATS)
