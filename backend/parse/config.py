@@ -1,4 +1,6 @@
-PATH_DATA = "../data"
+import os
+
+PATH_DATA = os.path.dirname(__file__) + '/../data'
 
 PUBL_RECORDS = [
     # 'article',
