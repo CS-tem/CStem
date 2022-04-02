@@ -1,5 +1,5 @@
 PATH_DATA = 'data'
-PATH_INSERT_CYPHER = 'insert.cypher'
+PATH_CYPHER = 'insert.cypher'
 
 TABLES = [
 

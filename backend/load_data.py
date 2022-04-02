@@ -94,7 +94,7 @@ def createRelations(f, path_base):
 
 if __name__ == '__main__':
 
-    with open(PATH_LOAD_CYPHER, 'w+') as f:
+    with open(PATH_CYPHER, 'w+') as f:
 
         # Delete all nodes/relationships present
         f.write('MATCH (n) DETACH DELETE n;\n\n')
