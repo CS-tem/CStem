@@ -1,27 +1,6 @@
 import os
 import csv
-
-TABLES = ['contains', 'follows', 'hashtags', 'mentions', 'sent', 'tweets', 'users']
-
-NODES = {
-    'User': {'csv': 'users', 'attr': 'name'},
-    'Tweet': {'csv': 'tweets', 'attr': 'text'},
-    'Hashtag':  {'csv': 'hashtags', 'attr': 'tag'},
-}
-
-RELS = {
-    'MENTIONS': {'csv': 'mentions', 'between': ('Tweet', 'User')},
-    'SENT': {'csv': 'sent', 'between': ('User', 'Tweet')},
-    'CONTAINS': {'csv': 'contains', 'between': ('Tweet', 'Hashtag')},
-    'FOLLOWS': {'csv': 'follows', 'between': ('User', 'User')}
-}
-
-ID2VAL = {
-    'User': {},
-    'Tweet': {},
-    'Hashtag': {}
-}
-
+from config import *
 
 def createNodes(f, path_base):
 
@@ -83,13 +62,10 @@ def createRelations(f, path_base):
 
 if __name__ == '__main__':
 
-    path_data = '.'
-    path_output = 'insert.cypher'
-
-    with open(path_output, 'w+') as f:
+    with open(PATH_LOAD_CYPHER, 'w+') as f:
 
         # Delete all nodes/relationships present
         f.write('MATCH (n) DETACH DELETE n;\n\n')
 
-        createNodes(f, path_data)
-        createRelations(f, path_data)
+        createNodes(f, PATH_DATA)
+        createRelations(f, PATH_DATA)
