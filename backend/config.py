@@ -48,11 +48,46 @@ NODES = {
 }
 
 RELS = {
-    'InstituteMember': {'csv': 'institute_member', 'between': ('Institute', 'Author'), 'attrs' : []},
-    'AuthorArticle': {'csv': 'author_article', 'between': ('Author', 'Article'), 'attrs' : []},
-    'AuthorTopic': {'csv': 'author_topic', 'between': ('Author', 'Topic'), 'attrs' : []},
-    'ArticleTopic': {'csv': 'article_topic', 'between': ('Article', 'Topic'), 'attrs' : []},
-    'VenueTopic': {'csv': 'venue_topic', 'between': ('Venue', 'Topic'), 'attrs' : []},
-    'CitedBy': {'csv': 'cited_by', 'between': ('Article', 'Article'), 'attrs' : []},
-    'Coauthor': {'csv': 'coauthor', 'between': ('Author', 'Author'), 'attrs' : ['n_colab']},
+    'InstituteMember': {
+        'csv': 'institute_member', 
+        'between': ('Institute', 'Author'), 
+        'direction' : '--',
+        'attrs' : []
+    },
+    'AuthorArticle': {
+        'csv': 'author_article', 
+        'between': ('Author', 'Article'),
+        'direction' : '--',
+        'attrs' : []
+    },
+    'AuthorTopic': {
+        'csv': 'author_topic', 
+        'between': ('Author', 'Topic'), 
+        'direction' : '--',
+        'attrs' : []
+    },
+    'ArticleTopic': {
+        'csv': 'article_topic', 
+        'between': ('Article', 'Topic'),
+        'direction' : '--', 
+        'attrs' : []
+    },
+    'VenueTopic': {
+        'csv': 'venue_topic', 
+        'between': ('Venue', 'Topic'),
+        'direction' : '--', 
+        'attrs' : []
+    },
+    'CitedBy': {
+        'csv': 'cited_by', 
+        'between': ('Article', 'Article'), 
+        'direction' : '<-',
+        'attrs' : []
+    },
+    'Coauthor': {
+        'csv': 'coauthor', 
+        'between': ('Author', 'Author'), 
+        'direction' : '--',
+        'attrs' : ['n_colab']
+    },
 }

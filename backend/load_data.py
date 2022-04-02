@@ -1,64 +1,96 @@
 import os
-import csv
+import pandas as pd
 from config import *
+
+def pyType(v):
+    try:
+        o = int(float(v))
+    except:
+        o = str(v)
+    return o
+
+def dir2Cypher(direction):
+    if direction == '--':
+        return '-', '-'
+    elif direction == '->':
+        return '-', '->'
+    elif direction == '<-':
+        return '<-', '-'
+    else:
+        raise ValueError("Invalid direction")
+
+def propCypher(attrs, vals):
+    typed_vals = [pyType(v) for v in vals]
+    cypher = ", ".join([f"{a} : {repr(t)}" for a, t in zip(attrs, typed_vals)])
+    return cypher
 
 def createNodes(f, path_base):
 
     for node in sorted(NODES.keys()):
 
         table = NODES[node]['csv']
-        attr = NODES[node]['attr']
+        attrs = NODES[node]['attrs']
         fpath = os.path.join(path_base, table + '.csv')
 
-        with open(fpath, 'r') as c:
+        df = pd.read_csv(fpath)
+        n_rows = len(df)
 
-            reader = csv.reader(c)
-            next(reader)
-
-            for row in reader:
-                idx = int(row[0])
-                val = row[1]
-                ID2VAL[node][idx] = val
-                stmt = f'CREATE ({node.lower()}_{idx}:{node} {{ {attr} : \"{val}\" }});'
-                f.write(stmt)
-                f.write('\n')
+        for idx in range(n_rows):
+            row = df.iloc[idx]
+            vals = [row[a] for a in attrs]
+            props = propCypher(attrs, vals)
+            stmt = f'CREATE ({node.lower()}_{idx}:{node} {{ {props} }});'
+            f.write(stmt)
             f.write('\n')
-        f.write('\n')
 
+        f.write('\n')
+    f.write('\n')
 
 def createRelations(f, path_base):
 
     for rel in sorted(RELS.keys()):
 
         between = RELS[rel]['between']
+        
+        node1 = between[0]
+        node2 = between[1]
+        
         table = RELS[rel]['csv']
+        
+        attrs = RELS[rel]['attrs']
+        n_attrs = len(attrs)
+
+        direction = RELS[rel]['direction']
+        d_start, d_end = dir2Cypher(direction)
+        
         fpath = os.path.join(path_base, table + '.csv')
+        df = pd.read_csv(fpath)
+        cols = df.columns
+        n_rows = len(df)
 
-        with open(fpath, 'r') as c:
+        for idx in range(n_rows):
 
-            reader = csv.reader(c)
-            next(reader)
+            row = df.iloc[idx]
 
-            for i, row in enumerate(reader):
+            if n_attrs > 0:
+                vals = [row[a] for a in attrs]
+                props = propCypher(attrs, vals)
 
-                node1 = between[0]
-                node2 = between[1]
+            node1_id = row[cols[0]]
+            node2_id = row[cols[1]]
 
-                node1_id = int(row[0])
-                node2_id = int(row[1])
+            match = f'MATCH (a:{node1}), (b:{node2}) WHERE a.id = {node1_id} AND b.id = {node2_id}'
+            
+            if n_attrs > 0:
+                create = f'CREATE (a){d_start}[{rel.lower()}_{i}:{rel} {{ {props} }}]{d_end}(b);\n'
+            else:
+                create = f'CREATE (a){d_start}[{rel.lower()}_{i}:{rel}]{d_end}(b);\n'
 
-                node1_val = ID2VAL[node1][node1_id]
-                node2_val = ID2VAL[node2][node2_id]
+            stmt = f'{match} {create}'
+            f.write(stmt)
 
-                node1_attr = NODES[node1]['attr']
-                node2_attr = NODES[node2]['attr']
-
-                stmt = f'MATCH (a:{node1}), (b:{node2}) WHERE a.{node1_attr} = \"{node1_val}\" AND b.{node2_attr} = \"{node2_val}\" CREATE (a)-[{rel.lower()}_{i}:{rel}]->(b);\n'
-                f.write(stmt)
-
-            f.write('\n')
         f.write('\n')
-
+    f.write('\n')
 
 if __name__ == '__main__':
 
