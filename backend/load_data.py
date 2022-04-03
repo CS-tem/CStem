@@ -11,7 +11,7 @@ def pyType(v):
 
 def dir2Cypher(direction):
     if direction == '--':
-        return '-', '-'
+        return '-', '->' # Neo4j doesn't allow undirected edges while creation
     elif direction == '->':
         return '-', '->'
     elif direction == '<-':
