@@ -14,13 +14,14 @@ def samplePerson(context, output_file, n_samples=-1):
 
         count = 0
         for event, elem in context:
-            if event == 'end':
+            if event == 'start':
                 if elem.tag == 'www' and 'homepages' in elem.attrib.get('key'):
                     f.write(etree.tostring(elem, pretty_print=True).decode('utf-8'))
                     f.write('\n')
                     count += 1
                     if count == n_samples:
                         break
+            if event == 'end':
                 elem.clear()
 
         f.write('\n</dblp>\n')
@@ -30,7 +31,8 @@ def samplePerson(context, output_file, n_samples=-1):
 
 if __name__ == '__main__':
 
-    context = etree.iterparse(f'{config.PATH_DATA}/dblp.xml', events=('end',), load_dtd=True)
+    context = etree.iterparse(f'{config.PATH_DATA}/dblp.xml',
+                              events=('start', 'end'), load_dtd=True)
 
     count = samplePerson(context, f'{config.PATH_DATA}/person.xml', -1)
     print(count)
