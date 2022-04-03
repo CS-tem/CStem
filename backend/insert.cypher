@@ -9,18 +9,18 @@ CREATE (article_5:Article { id : 5, title : 'GLASS: Geometric Latent Augmentatio
 CREATE (article_6:Article { id : 6, title : 'DECOR-GAN: 3D Shape Detailization by Conditional Refinement', year : 2021, venue_id : 0, n_citations : 0 });
 CREATE (article_7:Article { id : 7, title : 'Generalizing Across Domains via Cross-Gradient Training', year : 2018, venue_id : 2, n_citations : 0 });
 
-CREATE (author_0:Author { id : 0, name : 'Abhinav Gupta', country_id : 2, n_pubs : 0, n_citations : 0, h_index : 0 });
-CREATE (author_1:Author { id : 1, name : 'Deva Ramanan', country_id : 2, n_pubs : 0, n_citations : 0, h_index : 0 });
-CREATE (author_2:Author { id : 2, name : 'Xilin Chen', country_id : 1, n_pubs : 0, n_citations : 0, h_index : 0 });
-CREATE (author_3:Author { id : 3, name : 'Siddhartha Chaudhuri', country_id : 0, n_pubs : 0, n_citations : 0, h_index : 0 });
+CREATE (author_0:Author { id : 0, name : 'Abhinav Gupta', n_pubs : 0, n_citations : 0, h_index : 0 });
+CREATE (author_1:Author { id : 1, name : 'Deva Ramanan', n_pubs : 0, n_citations : 0, h_index : 0 });
+CREATE (author_2:Author { id : 2, name : 'Xilin Chen', n_pubs : 0, n_citations : 0, h_index : 0 });
+CREATE (author_3:Author { id : 3, name : 'Siddhartha Chaudhuri', n_pubs : 0, n_citations : 0, h_index : 0 });
 
 CREATE (country_0:Country { id : 0, name : 'India' });
 CREATE (country_1:Country { id : 1, name : 'China' });
 CREATE (country_2:Country { id : 2, name : 'USA' });
 
-CREATE (institute_0:Institute { id : 0, name : 'Indian Institute of Technology Bombay', country : 'India', n_members : 0, n_pubs : 0, n_citations : 0 });
-CREATE (institute_1:Institute { id : 1, name : 'Chinese Academy of Sciences', country : 'China', n_members : 0, n_pubs : 0, n_citations : 0 });
-CREATE (institute_2:Institute { id : 2, name : 'Carnegie Mellon University', country : 'USA', n_members : 0, n_pubs : 0, n_citations : 0 });
+CREATE (institute_0:Institute { id : 0, name : 'Indian Institute of Technology Bombay', n_members : 0, n_pubs : 0, n_citations : 'nan' });
+CREATE (institute_1:Institute { id : 1, name : 'Chinese Academy of Sciences', n_members : 0, n_pubs : 0, n_citations : 'nan' });
+CREATE (institute_2:Institute { id : 2, name : 'Carnegie Mellon University', n_members : 0, n_pubs : 0, n_citations : 'nan' });
 
 CREATE (topic_0:Topic { id : 0, name : 'computer vision', n_articles : 0, n_authors : 0, n_citations : 0 });
 CREATE (topic_1:Topic { id : 1, name : 'natural language processing', n_articles : 0, n_authors : 0, n_citations : 0 });
@@ -55,6 +55,11 @@ MATCH (a:Author), (b:Article) WHERE a.id = 3 AND b.id = 6 CREATE (a)-[author_art
 MATCH (a:Author), (b:Article) WHERE a.id = 3 AND b.id = 2 CREATE (a)-[author_article_10:AuthorArticle]->(b);
 MATCH (a:Author), (b:Article) WHERE a.id = 3 AND b.id = 7 CREATE (a)-[author_article_11:AuthorArticle]->(b);
 
+MATCH (a:Author), (b:Country) WHERE a.id = 0 AND b.id = 2 CREATE (a)<-[author_country_0:AuthorCountry]-(b);
+MATCH (a:Author), (b:Country) WHERE a.id = 1 AND b.id = 2 CREATE (a)<-[author_country_1:AuthorCountry]-(b);
+MATCH (a:Author), (b:Country) WHERE a.id = 2 AND b.id = 1 CREATE (a)<-[author_country_2:AuthorCountry]-(b);
+MATCH (a:Author), (b:Country) WHERE a.id = 3 AND b.id = 0 CREATE (a)<-[author_country_3:AuthorCountry]-(b);
+
 MATCH (a:Author), (b:Topic) WHERE a.id = 0 AND b.id = 0 CREATE (a)-[author_topic_0:AuthorTopic]->(b);
 MATCH (a:Author), (b:Topic) WHERE a.id = 0 AND b.id = 2 CREATE (a)-[author_topic_1:AuthorTopic]->(b);
 MATCH (a:Author), (b:Topic) WHERE a.id = 1 AND b.id = 0 CREATE (a)-[author_topic_2:AuthorTopic]->(b);
@@ -76,6 +81,10 @@ MATCH (a:Author), (b:Author) WHERE a.id = 0 AND b.id = 1 CREATE (a)-[coauthor_0:
 MATCH (a:Author), (b:Author) WHERE a.id = 0 AND b.id = 3 CREATE (a)-[coauthor_1:Coauthor { n_colab : 1 }]->(b);
 MATCH (a:Author), (b:Author) WHERE a.id = 1 AND b.id = 2 CREATE (a)-[coauthor_2:Coauthor { n_colab : 1 }]->(b);
 MATCH (a:Author), (b:Author) WHERE a.id = 1 AND b.id = 3 CREATE (a)-[coauthor_3:Coauthor { n_colab : 1 }]->(b);
+
+MATCH (a:Institute), (b:Country) WHERE a.id = 0 AND b.id = 0 CREATE (a)<-[institute_country_0:InstituteCountry]-(b);
+MATCH (a:Institute), (b:Country) WHERE a.id = 1 AND b.id = 1 CREATE (a)<-[institute_country_1:InstituteCountry]-(b);
+MATCH (a:Institute), (b:Country) WHERE a.id = 2 AND b.id = 2 CREATE (a)<-[institute_country_2:InstituteCountry]-(b);
 
 MATCH (a:Institute), (b:Author) WHERE a.id = 0 AND b.id = 3 CREATE (a)-[institute_member_0:InstituteMember]->(b);
 MATCH (a:Institute), (b:Author) WHERE a.id = 1 AND b.id = 0 CREATE (a)-[institute_member_1:InstituteMember]->(b);

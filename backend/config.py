@@ -12,7 +12,9 @@ TABLES = [
     'country',
 
     'institute_member',
+    'institute_country',
     'author_article',
+    'author_country',
     'author_topic'
     'article_topic',
     'venue_topic',
@@ -28,11 +30,11 @@ NODES = {
     },
     'Author': {
         'csv': 'author', 
-        'attrs': ['id', 'name', 'country_id', 'n_pubs', 'n_citations', 'h_index']
+        'attrs': ['id', 'name', 'n_pubs', 'n_citations', 'h_index']
     },
     'Institute': {
         'csv': 'institute', 
-        'attrs': ['id', 'name', 'country_id', 'n_members', 'n_pubs', 'n_citations']
+        'attrs': ['id', 'name', 'n_members', 'n_pubs', 'n_citations']
     },
     'Venue' : {
         'csv' : 'venue', 
@@ -55,10 +57,22 @@ RELS = {
         'direction' : '--',
         'attrs' : []
     },
+    'InstituteCountry': {
+        'csv': 'institute_country', 
+        'between': ('Institute', 'Country'), 
+        'direction' : '<-',
+        'attrs' : []
+    },
     'AuthorArticle': {
         'csv': 'author_article', 
         'between': ('Author', 'Article'),
         'direction' : '--',
+        'attrs' : []
+    },
+    'AuthorCountry': {
+        'csv': 'author_country', 
+        'between': ('Author', 'Country'), 
+        'direction' : '<-',
         'attrs' : []
     },
     'AuthorTopic': {
