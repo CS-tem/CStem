@@ -82,9 +82,9 @@ def createRelations(f, path_base):
             match = f'MATCH (a:{node1}), (b:{node2}) WHERE a.id = {node1_id} AND b.id = {node2_id}'
             
             if n_attrs > 0:
-                create = f'CREATE (a){d_start}[{rel.lower()}_{i}:{rel} {{ {props} }}]{d_end}(b);\n'
+                create = f'CREATE (a){d_start}[{table}_{idx}:{rel} {{ {props} }}]{d_end}(b);\n'
             else:
-                create = f'CREATE (a){d_start}[{rel.lower()}_{i}:{rel}]{d_end}(b);\n'
+                create = f'CREATE (a){d_start}[{table}_{idx}:{rel}]{d_end}(b);\n'
 
             stmt = f'{match} {create}'
             f.write(stmt)

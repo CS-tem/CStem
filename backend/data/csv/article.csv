@@ -6,4 +6,4 @@ id,title,year,venue_id,n_citations
 4,Learning to Segment Rigid Motions from Two Frames,2021,0,0
 5,GLASS: Geometric Latent Augmentation for Shape Spaces,2022,0,0
 6,DECOR-GAN: 3D Shape Detailization by Conditional Refinement,2021,0,0
-7,Generalizing Across Domains via Cross-Gradient Training,2018,2,0,0
+7,Generalizing Across Domains via Cross-Gradient Training,2018,2,0
