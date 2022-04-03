@@ -32,7 +32,7 @@ NODES = {
     },
     'Institute': {
         'csv': 'institute', 
-        'attrs': ['id', 'name', 'country', 'n_members', 'n_pubs', 'n_citations']
+        'attrs': ['id', 'name', 'country_id', 'n_members', 'n_pubs', 'n_citations']
     },
     'Venue' : {
         'csv' : 'venue', 
