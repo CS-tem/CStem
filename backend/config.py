@@ -28,7 +28,7 @@ NODES = {
     },
     'Author': {
         'csv': 'author', 
-        'attrs': ['id', 'name', 'country', 'n_pubs', 'n_citations', 'h_index']
+        'attrs': ['id', 'name', 'country_id', 'n_pubs', 'n_citations', 'h_index']
     },
     'Institute': {
         'csv': 'institute', 
@@ -36,7 +36,7 @@ NODES = {
     },
     'Venue' : {
         'csv' : 'venue', 
-        'attrs' : ['id', 'name', 'acronym', 'avg_citations', 'flexibility']
+        'attrs' : ['id', 'name', 'acronym', 'type', 'avg_citations', 'flexibility']
     },
     'Topic': {
         'csv': 'topic', 

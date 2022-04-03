@@ -1,1 +1,5 @@
-id,name,country,n_pubs,n_citations,h_index
+id,name,country_id,n_pubs,n_citations,h_index
+0,Abhinav Gupta,2,0,0,0
+1,Deva Ramanan,2,0,0,0
+2,Xilin Chen,1,0,0,0
+3,Siddhartha Chaudhuri,0,0,0,0
