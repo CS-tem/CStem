@@ -99,5 +99,5 @@ if __name__ == '__main__':
         # Delete all nodes/relationships present
         f.write('MATCH (n) DETACH DELETE n;\n\n')
 
-        createNodes(f, PATH_DATA)
-        createRelations(f, PATH_DATA)
+        createNodes(f, PATH_CSV)
+        createRelations(f, PATH_CSV)

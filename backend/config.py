@@ -1,4 +1,5 @@
 PATH_DATA = 'data'
+PATH_CSV = f'{PATH_DATA}/csv'
 PATH_CYPHER = 'insert.cypher'
 
 TABLES = [
