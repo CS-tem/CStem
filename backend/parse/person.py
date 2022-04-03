@@ -1,7 +1,7 @@
 from lxml import etree
 
-import config
-import utils
+from config import PATH_DATA
+from utils import printET
 
 
 def samplePerson(context, output_file, n_samples=-1):
@@ -31,10 +31,10 @@ def samplePerson(context, output_file, n_samples=-1):
 
 if __name__ == '__main__':
 
-    context = etree.iterparse(f'{config.PATH_DATA}/dblp.xml',
+    context = etree.iterparse(f'{PATH_DATA}/dblp.xml',
                               events=('start', 'end'), load_dtd=True)
 
-    count = samplePerson(context, f'{config.PATH_DATA}/person.xml', -1)
+    count = samplePerson(context, f'{PATH_DATA}/person.xml', -1)
     print(count)
     exit(0)
 
@@ -47,9 +47,8 @@ if __name__ == '__main__':
                     if count % 1000 == 0:
                         print(count)
                     print(elem.attrib)
-                    # print(elem.xpath('string()'))
                     print(len(elem.getchildren()))
-                    utils.printET(elem)
+                    printET(elem)
         if event == 'end':
             elem.clear()
         if count == 100:

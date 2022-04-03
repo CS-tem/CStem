@@ -1,7 +1,7 @@
-from config import *
+from config import NODES, RELS, PATH_CSV
+
 
 # Creates CSV files with column headers when testing with manual data
-
 if __name__ == '__main__':
 
     for n in NODES.keys():
@@ -23,4 +23,3 @@ if __name__ == '__main__':
             else:
                 f.write(f'{n1}_id,{n2}_id,')
                 f.write(','.join(attrs))
-    

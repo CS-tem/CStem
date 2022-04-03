@@ -1,17 +1,21 @@
 import os
+
 import pandas as pd
-from config import *
+
+from config import NODES, RELS, PATH_CSV, PATH_CYPHER
+
 
 def pyType(v):
     try:
         o = int(float(v))
-    except:
+    except Exception:
         o = str(v)
     return o
 
+
 def dir2Cypher(direction):
     if direction == '--':
-        return '-', '->' # Neo4j doesn't allow undirected edges while creation
+        return '-', '->'  # Neo4j doesn't allow undirected edges while creation
     elif direction == '->':
         return '-', '->'
     elif direction == '<-':
@@ -19,10 +23,12 @@ def dir2Cypher(direction):
     else:
         raise ValueError("Invalid direction")
 
+
 def propCypher(attrs, vals):
     typed_vals = [pyType(v) for v in vals]
     cypher = ", ".join([f"{a} : {repr(t)}" for a, t in zip(attrs, typed_vals)])
     return cypher
+
 
 def createNodes(f, path_base):
 
@@ -46,23 +52,24 @@ def createNodes(f, path_base):
         f.write('\n')
     f.write('\n')
 
+
 def createRelations(f, path_base):
 
     for rel in sorted(RELS.keys()):
 
         between = RELS[rel]['between']
-        
+
         node1 = between[0]
         node2 = between[1]
-        
+
         table = RELS[rel]['csv']
-        
+
         attrs = RELS[rel]['attrs']
         n_attrs = len(attrs)
 
         direction = RELS[rel]['direction']
         d_start, d_end = dir2Cypher(direction)
-        
+
         fpath = os.path.join(path_base, table + '.csv')
         df = pd.read_csv(fpath)
         cols = df.columns
@@ -80,7 +87,7 @@ def createRelations(f, path_base):
             node2_id = row[cols[1]]
 
             match = f'MATCH (a:{node1}), (b:{node2}) WHERE a.id = {node1_id} AND b.id = {node2_id}'
-            
+
             if n_attrs > 0:
                 create = f'CREATE (a){d_start}[{table}_{idx}:{rel} {{ {props} }}]{d_end}(b);\n'
             else:
@@ -91,6 +98,7 @@ def createRelations(f, path_base):
 
         f.write('\n')
     f.write('\n')
+
 
 if __name__ == '__main__':
 
