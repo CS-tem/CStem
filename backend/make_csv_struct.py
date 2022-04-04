@@ -19,8 +19,14 @@ if __name__ == '__main__':
         csv = rel['csv']
         with open(f'{PATH_CSV}/{csv}.csv', 'w+') as f:
             if len(attrs) == 0:
-                f.write(f'{n1}_id,{n2}_id')
+                if n1 == n2:
+                    f.write(f'{n1}_id_1,{n2}_id_2')
+                else:
+                    f.write(f'{n1}_id,{n2}_id')
             else:
-                f.write(f'{n1}_id,{n2}_id,')
+                if n1 == n2:
+                    f.write(f'{n1}_id_1,{n2}_id_2,')
+                else:
+                    f.write(f'{n1}_id,{n2}_id,')
                 f.write(','.join(attrs))
     
