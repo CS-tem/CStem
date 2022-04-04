@@ -26,6 +26,9 @@ if __name__ == "__main__":
         df_article = csv2df(f'{PATH_CSV}/article.csv')
         df_author = csv2df(f'{PATH_CSV}/author.csv')
         df_aa = csv2df(f'{PATH_CSV}/author_article.csv')
+    elif ent == 'institute':
+        df_inst = csv2df(f'{PATH_CSV}/institute.csv')
+        df_im = csv2df(f'{PATH_CSV}/institute_member.csv')
     
     # Article metrics
     if ent == 'article':
@@ -47,6 +50,15 @@ if __name__ == "__main__":
                     withColumnRenamed('sum(n_citations)', 'n_citations').\
                     fillna({'n_pubs' : '0'})
         df_author.toPandas().to_csv(f'{PATH_CSV}/author.csv', index = False)
+
+    # Institute metrics
+    elif ent == 'institute':
+        n_mem = df_im.groupBy('institute_id').count()
+        df_inst = df_inst.join(n_mem, [df_inst.id == n_mem.institute_id], 'leftouter')
+        df_inst = df_inst.select('id', 'name', 'country_id', 'count', 'n_pubs', 'n_citations').\
+                  withColumnRenamed('count', 'n_members').\
+                  fillna({'n_members' : '0'})
+        df_inst.toPandas().to_csv(f'{PATH_CSV}/institute.csv', index = False)
 
     # Stop
     spark.stop()
