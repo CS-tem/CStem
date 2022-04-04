@@ -35,6 +35,9 @@ if __name__ == "__main__":
         df_art = csv2df(f'{PATH_CSV}/article_topic.csv')
         df_aut = csv2df(f'{PATH_CSV}/author_topic.csv')
         df_article = csv2df(f'{PATH_CSV}/article.csv')
+    elif ent == 'venue':
+        df_venue = csv2df(f'{PATH_CSV}/venue.csv')
+        df_article = csv2df(f'{PATH_CSV}/article.csv')
 
     # Article metrics
     if ent == 'article':
@@ -63,7 +66,7 @@ if __name__ == "__main__":
                  select('institute_id', 'author_id', 'n_pubs', 'n_citations')
         temp = df_ima.groupBy('institute_id').agg({'author_id': 'count', 'n_pubs' : 'sum', 'n_citations' : 'sum'})
         df_inst = df_inst.join(temp, [df_inst.id == temp.institute_id], 'leftouter')
-        df_inst = df_inst.select('id', 'name', 'country_id', 'count(author_id)', 'sum(n_pubs)', 'sum(n_citations)').\
+        df_inst = df_inst.select('id', 'name', 'count(author_id)', 'sum(n_pubs)', 'sum(n_citations)').\
                   withColumnRenamed('count(author_id)', 'n_members').\
                   withColumnRenamed('sum(n_pubs)', 'n_pubs').\
                   withColumnRenamed('sum(n_citations)', 'n_citations').\
@@ -88,6 +91,17 @@ if __name__ == "__main__":
                    select('id', 'name', 'n_articles', 'n_authors', 'n_citations').\
                    fillna(0) 
         df_topic.toPandas().to_csv(f'{PATH_CSV}/topic.csv', index = False)
+
+    # Venue metrics
+    elif ent == 'venue':
+        df_av = df_article.groupBy('venue_id').\
+                agg({'id': 'count', 'n_citations' : 'sum'})
+        df_venue = df_venue.join(df_av, [df_venue.id == df_av.venue_id], 'leftouter').\
+                   select('id', 'name', 'acronym', 'type', 'count(id)', 'sum(n_citations)', 'flexibility').\
+                   withColumnRenamed('count(id)', 'n_articles').\
+                   withColumnRenamed('sum(n_citations)', 'n_citations').\
+                   fillna(0)
+        df_venue.toPandas().to_csv(f'{PATH_CSV}/venue.csv', index = False)
 
     # Stop
     spark.stop()
