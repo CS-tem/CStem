@@ -23,6 +23,7 @@ if __name__ == "__main__":
         df_article = csv2df(f'{PATH_CSV}/article.csv')
         df_cite = csv2df(f'{PATH_CSV}/cited_by.csv')
     elif ent == 'author':
+        df_article = csv2df(f'{PATH_CSV}/article.csv')
         df_author = csv2df(f'{PATH_CSV}/author.csv')
         df_aa = csv2df(f'{PATH_CSV}/author_article.csv')
     
@@ -37,11 +38,14 @@ if __name__ == "__main__":
 
     # Author metrics
     elif ent == 'author':
-        n_pubs = df_aa.groupBy('author_id').count()
-        df_author = df_author.join(n_pubs, [df_author.id == n_pubs.author_id], 'leftouter')
-        df_author = df_author.select('id', 'name', 'count', 'n_citations', 'h_index').\
-                     withColumnRenamed('count', 'n_pubs').\
-                     fillna({'n_pubs' : '0'})
+        df_aac = df_aa.join(df_article, [df_aa.article_id == df_article.id], 'leftouter').\
+                 select('author_id', 'article_id', 'n_citations')
+        temp = df_aac.groupBy('author_id').agg({'article_id': 'count', 'n_citations' : 'sum'})
+        df_author = df_author.join(temp, [df_author.id == temp.author_id], 'leftouter')
+        df_author = df_author.select('id', 'name', 'count(article_id)', 'sum(n_citations)', 'h_index').\
+                    withColumnRenamed('count(article_id)', 'n_pubs').\
+                    withColumnRenamed('sum(n_citations)', 'n_citations').\
+                    fillna({'n_pubs' : '0'})
         df_author.toPandas().to_csv(f'{PATH_CSV}/author.csv', index = False)
 
     # Stop
