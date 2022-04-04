@@ -1,6 +1,7 @@
 import os
 
-PATH_DATA = f'{os.path.dirname(os.path.dirname(__file__))}/data'
+PATH_BASE = os.path.dirname(os.path.dirname(__file__))
+PATH_DATA = f'{PATH_BASE}/data/dblp'
 
 PUBL_RECORDS = [
     # 'article',

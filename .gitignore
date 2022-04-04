@@ -1,6 +1,6 @@
 .vscode
 
-backend/data/*.xml
+backend/data/dblp/*.xml
 package-lock.json
 papers
 
