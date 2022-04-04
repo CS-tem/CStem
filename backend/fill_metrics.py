@@ -30,14 +30,19 @@ if __name__ == "__main__":
         df_inst = csv2df(f'{PATH_CSV}/institute.csv')
         df_im = csv2df(f'{PATH_CSV}/institute_member.csv')
         df_author = csv2df(f'{PATH_CSV}/author.csv')
-    
+    elif ent == 'topic':
+        df_topic = csv2df(f'{PATH_CSV}/topic.csv')
+        df_art = csv2df(f'{PATH_CSV}/article_topic.csv')
+        df_aut = csv2df(f'{PATH_CSV}/author_topic.csv')
+        df_article = csv2df(f'{PATH_CSV}/article.csv')
+
     # Article metrics
     if ent == 'article':
         n_cit = df_cite.groupBy('article_id_1').count()
         df_article = df_article.join(n_cit, [df_article.id == n_cit.article_id_1], 'leftouter')
         df_article = df_article.select('id', 'title', 'venue_id', 'count').\
                      withColumnRenamed('count', 'n_citations').\
-                     fillna({'n_citations' : '0'})
+                     fillna(0)
         df_article.toPandas().to_csv(f'{PATH_CSV}/article.csv', index = False)
 
     # Author metrics
@@ -49,7 +54,7 @@ if __name__ == "__main__":
         df_author = df_author.select('id', 'name', 'count(article_id)', 'sum(n_citations)', 'h_index').\
                     withColumnRenamed('count(article_id)', 'n_pubs').\
                     withColumnRenamed('sum(n_citations)', 'n_citations').\
-                    fillna({'n_pubs' : '0'})
+                    fillna(0)
         df_author.toPandas().to_csv(f'{PATH_CSV}/author.csv', index = False)
 
     # Institute metrics
@@ -62,8 +67,27 @@ if __name__ == "__main__":
                   withColumnRenamed('count(author_id)', 'n_members').\
                   withColumnRenamed('sum(n_pubs)', 'n_pubs').\
                   withColumnRenamed('sum(n_citations)', 'n_citations').\
-                  fillna({'n_members' : '0'})
+                  fillna(0)
         df_inst.toPandas().to_csv(f'{PATH_CSV}/institute.csv', index = False)
+
+    # Topic metrics
+    elif ent == 'topic':
+        df_arta = df_art.join(df_article, [df_article.id == df_art.article_id], 'leftouter').\
+                  select('article_id', 'topic_id', 'n_citations').\
+                  groupBy('topic_id').\
+                  agg({'article_id': 'count', 'n_citations' : 'sum'}).\
+                  withColumnRenamed('count(article_id)', 'n_articles').\
+                  withColumnRenamed('sum(n_citations)', 'n_citations').\
+                  fillna(0)
+        df_autg = df_aut.groupBy('topic_id').count()
+        df_topic = df_topic.join(df_autg, [df_autg.topic_id == df_topic.id], 'leftouter').\
+                   select('id', 'name', 'count').\
+                   withColumnRenamed('count', 'n_authors').\
+                   fillna(0)
+        df_topic = df_topic.join(df_arta, [df_arta.topic_id == df_topic.id], 'leftouter').\
+                   select('id', 'name', 'n_articles', 'n_authors', 'n_citations').\
+                   fillna(0) 
+        df_topic.toPandas().to_csv(f'{PATH_CSV}/topic.csv', index = False)
 
     # Stop
     spark.stop()
