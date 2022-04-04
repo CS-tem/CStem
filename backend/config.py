@@ -81,7 +81,7 @@ RELS = {
         'csv': 'author_topic',
         'between': ('Author', 'Topic'),
         'direction': '--',
-        'attrs': []
+        'attrs': ['n_pubs']
     },
     'ArticleTopic': {
         'csv': 'article_topic',

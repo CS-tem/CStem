@@ -63,6 +63,7 @@ if __name__ == "__main__":
                     withColumnRenamed('count(article_id)', 'n_pubs').\
                     withColumnRenamed('sum(n_citations)', 'n_citations').\
                     fillna(0)
+        # h-index: TODO
         df_author.toPandas().to_csv(f'{PATH_CSV}/author.csv', index = False)
 
     # Institute metrics
@@ -111,8 +112,12 @@ if __name__ == "__main__":
         df_venue.toPandas().to_csv(f'{PATH_CSV}/venue.csv', index = False)
 
     elif opt == 'author_topic':
-        # Find top-5 topics for each author
-        pass
+        # Fill author topic
+        df_aut = df_aa.join(df_art, 'article_id', 'leftouter').\
+                 select('author_id', 'article_id', 'topic_id').\
+                 groupBy('author_id', 'topic_id').count().\
+                 withColumnRenamed('count', 'n_pubs')
+        df_aut.toPandas().to_csv(f'{PATH_CSV}/author_topic.csv', index = False)
 
     # Stop
     spark.stop()
