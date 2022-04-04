@@ -3,7 +3,7 @@ from config import *
 from pyspark.sql import SparkSession
 
 parser = argparse.ArgumentParser()
-parser.add_argument("-e","--entity", required = True)
+parser.add_argument("-o","--option", required = True)
 args = parser.parse_args()
 
 def csv2df(path):
@@ -13,34 +13,39 @@ def csv2df(path):
 if __name__ == "__main__":
 
     # Args
-    ent = args.entity
+    opt = args.option
 
     # Start
     spark = SparkSession.builder.appName('CStem').getOrCreate()
 
     # Load DFs
-    if ent == 'article':
+    if opt == 'article':
         df_article = csv2df(f'{PATH_CSV}/article.csv')
         df_cite = csv2df(f'{PATH_CSV}/cited_by.csv')
-    elif ent == 'author':
+    elif opt == 'author':
         df_article = csv2df(f'{PATH_CSV}/article.csv')
         df_author = csv2df(f'{PATH_CSV}/author.csv')
         df_aa = csv2df(f'{PATH_CSV}/author_article.csv')
-    elif ent == 'institute':
+    elif opt == 'institute':
         df_inst = csv2df(f'{PATH_CSV}/institute.csv')
         df_im = csv2df(f'{PATH_CSV}/institute_member.csv')
         df_author = csv2df(f'{PATH_CSV}/author.csv')
-    elif ent == 'topic':
+    elif opt == 'topic':
         df_topic = csv2df(f'{PATH_CSV}/topic.csv')
         df_art = csv2df(f'{PATH_CSV}/article_topic.csv')
         df_aut = csv2df(f'{PATH_CSV}/author_topic.csv')
         df_article = csv2df(f'{PATH_CSV}/article.csv')
-    elif ent == 'venue':
+    elif opt == 'venue':
         df_venue = csv2df(f'{PATH_CSV}/venue.csv')
         df_article = csv2df(f'{PATH_CSV}/article.csv')
+    elif opt == 'author_topic':
+        df_art = csv2df(f'{PATH_CSV}/article_topic.csv')
+        df_aa = csv2df(f'{PATH_CSV}/author_article.csv')
+    else:
+        raise ValueError('Invalid option')
 
     # Article metrics
-    if ent == 'article':
+    if opt == 'article':
         n_cit = df_cite.groupBy('article_id_1').count()
         df_article = df_article.join(n_cit, [df_article.id == n_cit.article_id_1], 'leftouter')
         df_article = df_article.select('id', 'title', 'venue_id', 'count').\
@@ -49,7 +54,7 @@ if __name__ == "__main__":
         df_article.toPandas().to_csv(f'{PATH_CSV}/article.csv', index = False)
 
     # Author metrics
-    elif ent == 'author':
+    elif opt == 'author':
         df_aac = df_aa.join(df_article, [df_aa.article_id == df_article.id], 'leftouter').\
                  select('author_id', 'article_id', 'n_citations')
         temp = df_aac.groupBy('author_id').agg({'article_id': 'count', 'n_citations' : 'sum'})
@@ -61,7 +66,7 @@ if __name__ == "__main__":
         df_author.toPandas().to_csv(f'{PATH_CSV}/author.csv', index = False)
 
     # Institute metrics
-    elif ent == 'institute':
+    elif opt == 'institute':
         df_ima = df_im.join(df_author, [df_im.author_id == df_author.id], 'leftouter').\
                  select('institute_id', 'author_id', 'n_pubs', 'n_citations')
         temp = df_ima.groupBy('institute_id').agg({'author_id': 'count', 'n_pubs' : 'sum', 'n_citations' : 'sum'})
@@ -74,7 +79,7 @@ if __name__ == "__main__":
         df_inst.toPandas().to_csv(f'{PATH_CSV}/institute.csv', index = False)
 
     # Topic metrics
-    elif ent == 'topic':
+    elif opt == 'topic':
         df_arta = df_art.join(df_article, [df_article.id == df_art.article_id], 'leftouter').\
                   select('article_id', 'topic_id', 'n_citations').\
                   groupBy('topic_id').\
@@ -93,7 +98,7 @@ if __name__ == "__main__":
         df_topic.toPandas().to_csv(f'{PATH_CSV}/topic.csv', index = False)
 
     # Venue metrics
-    elif ent == 'venue':
+    elif opt == 'venue':
         df_av = df_article.groupBy('venue_id').\
                 agg({'id': 'count', 'n_citations' : 'sum'})
         df_venue = df_venue.join(df_av, [df_venue.id == df_av.venue_id], 'leftouter').\
@@ -101,7 +106,13 @@ if __name__ == "__main__":
                    withColumnRenamed('count(id)', 'n_pubs').\
                    withColumnRenamed('sum(n_citations)', 'n_citations').\
                    fillna(0)
+        # Flexibility: #articles published at venue with 
+        # at least 1 topic not present in the venue's list of topics 
         df_venue.toPandas().to_csv(f'{PATH_CSV}/venue.csv', index = False)
+
+    elif opt == 'author_topic':
+        # Find top-5 topics for each author
+        pass
 
     # Stop
     spark.stop()
