@@ -1,7 +1,7 @@
 from lxml import etree
 
-import config
-import utils
+from config import PATH_DATA, PUBL_RECORDS, PUBL_TYPES, PUBL_STATS
+from utils import printET
 
 
 def sampleInproceedings(context, output_file, n_samples=-1):
@@ -31,25 +31,24 @@ def sampleInproceedings(context, output_file, n_samples=-1):
 
 if __name__ == '__main__':
 
-    context = etree.iterparse(f'{config.PATH_DATA}/dblp.xml',
+    context = etree.iterparse(f'{PATH_DATA}/dblp.xml',
                               events=('start', 'end'), load_dtd=True)
 
-    count = sampleInproceedings(context, f'{config.PATH_DATA}/inproceedings.xml', -1)
+    count = sampleInproceedings(context, f'{PATH_DATA}/inproceedings.xml', -1)
     print(count)
     exit(0)
 
     count = 0
     for event, elem in context:
         if event == 'start':
-            if elem.tag in config.PUBL_RECORDS:
-                if elem.attrib.get('publtype') in config.PUBL_TYPES:
+            if elem.tag in PUBL_RECORDS:
+                if elem.attrib.get('publtype') in PUBL_TYPES:
                     count += 1
                     if count % 1000 == 0:
                         print(count)
                     print(elem.attrib)
-                    # print(elem.xpath('string()'))
                     print(len(elem.getchildren()))
-                    utils.printET(elem)
+                    printET(elem)
         if event == 'end':
             elem.clear()
         if count == 100:
@@ -59,8 +58,8 @@ if __name__ == '__main__':
 
     for event, elem in context:
         if event == 'start':
-            if elem.tag in config.PUBL_RECORDS:
-                config.PUBL_STATS[elem.tag][elem.attrib.get('publtype')] += 1
+            if elem.tag in PUBL_RECORDS:
+                PUBL_STATS[elem.tag][elem.attrib.get('publtype')] += 1
         if event == 'end':
             elem.clear()
-    print(config.PUBL_STATS)
+    print(PUBL_STATS)
