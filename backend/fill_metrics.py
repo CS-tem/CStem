@@ -29,6 +29,7 @@ if __name__ == "__main__":
     elif ent == 'institute':
         df_inst = csv2df(f'{PATH_CSV}/institute.csv')
         df_im = csv2df(f'{PATH_CSV}/institute_member.csv')
+        df_author = csv2df(f'{PATH_CSV}/author.csv')
     
     # Article metrics
     if ent == 'article':
@@ -53,10 +54,14 @@ if __name__ == "__main__":
 
     # Institute metrics
     elif ent == 'institute':
-        n_mem = df_im.groupBy('institute_id').count()
-        df_inst = df_inst.join(n_mem, [df_inst.id == n_mem.institute_id], 'leftouter')
-        df_inst = df_inst.select('id', 'name', 'country_id', 'count', 'n_pubs', 'n_citations').\
-                  withColumnRenamed('count', 'n_members').\
+        df_ima = df_im.join(df_author, [df_im.author_id == df_author.id], 'leftouter').\
+                 select('institute_id', 'author_id', 'n_pubs', 'n_citations')
+        temp = df_ima.groupBy('institute_id').agg({'author_id': 'count', 'n_pubs' : 'sum', 'n_citations' : 'sum'})
+        df_inst = df_inst.join(temp, [df_inst.id == temp.institute_id], 'leftouter')
+        df_inst = df_inst.select('id', 'name', 'country_id', 'count(author_id)', 'sum(n_pubs)', 'sum(n_citations)').\
+                  withColumnRenamed('count(author_id)', 'n_members').\
+                  withColumnRenamed('sum(n_pubs)', 'n_pubs').\
+                  withColumnRenamed('sum(n_citations)', 'n_citations').\
                   fillna({'n_members' : '0'})
         df_inst.toPandas().to_csv(f'{PATH_CSV}/institute.csv', index = False)
 
