@@ -98,7 +98,7 @@ if __name__ == "__main__":
                 agg({'id': 'count', 'n_citations' : 'sum'})
         df_venue = df_venue.join(df_av, [df_venue.id == df_av.venue_id], 'leftouter').\
                    select('id', 'name', 'acronym', 'type', 'count(id)', 'sum(n_citations)', 'flexibility').\
-                   withColumnRenamed('count(id)', 'n_articles').\
+                   withColumnRenamed('count(id)', 'n_pubs').\
                    withColumnRenamed('sum(n_citations)', 'n_citations').\
                    fillna(0)
         df_venue.toPandas().to_csv(f'{PATH_CSV}/venue.csv', index = False)

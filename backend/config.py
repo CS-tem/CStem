@@ -40,7 +40,7 @@ NODES = {
     },
     'Venue': {
         'csv': 'venue',
-        'attrs': ['id', 'name', 'acronym', 'type', 'avg_citations', 'flexibility']
+        'attrs': ['id', 'name', 'acronym', 'type', 'n_pubs', 'n_citations', 'flexibility']
     },
     'Topic': {
         'csv': 'topic',
