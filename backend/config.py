@@ -56,7 +56,7 @@ RELS = {
     'InstituteMember': {
         'csv': 'institute_member',
         'between': ('Institute', 'Author'),
-        'direction': '--',
+        'direction': '->',
         'attrs': []
     },
     'InstituteCountry': {
@@ -68,7 +68,7 @@ RELS = {
     'AuthorArticle': {
         'csv': 'author_article',
         'between': ('Author', 'Article'),
-        'direction': '--',
+        'direction': '->',
         'attrs': []
     },
     'AuthorCountry': {
@@ -80,19 +80,19 @@ RELS = {
     'AuthorTopic': {
         'csv': 'author_topic',
         'between': ('Author', 'Topic'),
-        'direction': '--',
+        'direction': '<-',
         'attrs': ['n_pubs']
     },
     'ArticleTopic': {
         'csv': 'article_topic',
         'between': ('Article', 'Topic'),
-        'direction': '--',
+        'direction': '<-',
         'attrs': []
     },
     'VenueTopic': {
         'csv': 'venue_topic',
         'between': ('Venue', 'Topic'),
-        'direction': '--',
+        'direction': '<-',
         'attrs': []
     },
     'CitedBy': {

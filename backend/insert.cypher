@@ -31,16 +31,16 @@ CREATE (venue_1:Venue { id : 1, name : 'Conference and Workshop on Neural Inform
 CREATE (venue_2:Venue { id : 2, name : 'International Conference on Learning Representations', acronym : 'ICLR', type : 'Conference', n_pubs : 1, n_citations : 0, flexibility : 0 });
 
 
-MATCH (a:Article), (b:Topic) WHERE a.id = 0 AND b.id = 0 CREATE (a)-[article_topic_0:ArticleTopic]->(b);
-MATCH (a:Article), (b:Topic) WHERE a.id = 0 AND b.id = 2 CREATE (a)-[article_topic_1:ArticleTopic]->(b);
-MATCH (a:Article), (b:Topic) WHERE a.id = 1 AND b.id = 0 CREATE (a)-[article_topic_2:ArticleTopic]->(b);
-MATCH (a:Article), (b:Topic) WHERE a.id = 2 AND b.id = 2 CREATE (a)-[article_topic_3:ArticleTopic]->(b);
-MATCH (a:Article), (b:Topic) WHERE a.id = 3 AND b.id = 0 CREATE (a)-[article_topic_4:ArticleTopic]->(b);
-MATCH (a:Article), (b:Topic) WHERE a.id = 4 AND b.id = 0 CREATE (a)-[article_topic_5:ArticleTopic]->(b);
-MATCH (a:Article), (b:Topic) WHERE a.id = 5 AND b.id = 0 CREATE (a)-[article_topic_6:ArticleTopic]->(b);
-MATCH (a:Article), (b:Topic) WHERE a.id = 5 AND b.id = 2 CREATE (a)-[article_topic_7:ArticleTopic]->(b);
-MATCH (a:Article), (b:Topic) WHERE a.id = 6 AND b.id = 0 CREATE (a)-[article_topic_8:ArticleTopic]->(b);
-MATCH (a:Article), (b:Topic) WHERE a.id = 7 AND b.id = 0 CREATE (a)-[article_topic_9:ArticleTopic]->(b);
+MATCH (a:Article), (b:Topic) WHERE a.id = 0 AND b.id = 0 CREATE (a)<-[article_topic_0:ArticleTopic]-(b);
+MATCH (a:Article), (b:Topic) WHERE a.id = 0 AND b.id = 2 CREATE (a)<-[article_topic_1:ArticleTopic]-(b);
+MATCH (a:Article), (b:Topic) WHERE a.id = 1 AND b.id = 0 CREATE (a)<-[article_topic_2:ArticleTopic]-(b);
+MATCH (a:Article), (b:Topic) WHERE a.id = 2 AND b.id = 2 CREATE (a)<-[article_topic_3:ArticleTopic]-(b);
+MATCH (a:Article), (b:Topic) WHERE a.id = 3 AND b.id = 0 CREATE (a)<-[article_topic_4:ArticleTopic]-(b);
+MATCH (a:Article), (b:Topic) WHERE a.id = 4 AND b.id = 0 CREATE (a)<-[article_topic_5:ArticleTopic]-(b);
+MATCH (a:Article), (b:Topic) WHERE a.id = 5 AND b.id = 0 CREATE (a)<-[article_topic_6:ArticleTopic]-(b);
+MATCH (a:Article), (b:Topic) WHERE a.id = 5 AND b.id = 2 CREATE (a)<-[article_topic_7:ArticleTopic]-(b);
+MATCH (a:Article), (b:Topic) WHERE a.id = 6 AND b.id = 0 CREATE (a)<-[article_topic_8:ArticleTopic]-(b);
+MATCH (a:Article), (b:Topic) WHERE a.id = 7 AND b.id = 0 CREATE (a)<-[article_topic_9:ArticleTopic]-(b);
 
 MATCH (a:Author), (b:Article) WHERE a.id = 0 AND b.id = 0 CREATE (a)-[author_article_0:AuthorArticle]->(b);
 MATCH (a:Author), (b:Article) WHERE a.id = 0 AND b.id = 3 CREATE (a)-[author_article_1:AuthorArticle]->(b);
@@ -60,13 +60,13 @@ MATCH (a:Author), (b:Country) WHERE a.id = 1 AND b.id = 2 CREATE (a)<-[author_co
 MATCH (a:Author), (b:Country) WHERE a.id = 2 AND b.id = 1 CREATE (a)<-[author_country_2:AuthorCountry]-(b);
 MATCH (a:Author), (b:Country) WHERE a.id = 3 AND b.id = 0 CREATE (a)<-[author_country_3:AuthorCountry]-(b);
 
-MATCH (a:Author), (b:Topic) WHERE a.id = 1 AND b.id = 0 CREATE (a)-[author_topic_0:AuthorTopic { n_pubs : 3 }]->(b);
-MATCH (a:Author), (b:Topic) WHERE a.id = 1 AND b.id = 2 CREATE (a)-[author_topic_1:AuthorTopic { n_pubs : 1 }]->(b);
-MATCH (a:Author), (b:Topic) WHERE a.id = 0 AND b.id = 0 CREATE (a)-[author_topic_2:AuthorTopic { n_pubs : 2 }]->(b);
-MATCH (a:Author), (b:Topic) WHERE a.id = 2 AND b.id = 0 CREATE (a)-[author_topic_3:AuthorTopic { n_pubs : 1 }]->(b);
-MATCH (a:Author), (b:Topic) WHERE a.id = 3 AND b.id = 2 CREATE (a)-[author_topic_4:AuthorTopic { n_pubs : 2 }]->(b);
-MATCH (a:Author), (b:Topic) WHERE a.id = 0 AND b.id = 2 CREATE (a)-[author_topic_5:AuthorTopic { n_pubs : 2 }]->(b);
-MATCH (a:Author), (b:Topic) WHERE a.id = 3 AND b.id = 0 CREATE (a)-[author_topic_6:AuthorTopic { n_pubs : 3 }]->(b);
+MATCH (a:Author), (b:Topic) WHERE a.id = 1 AND b.id = 0 CREATE (a)<-[author_topic_0:AuthorTopic { n_pubs : 3 }]-(b);
+MATCH (a:Author), (b:Topic) WHERE a.id = 1 AND b.id = 2 CREATE (a)<-[author_topic_1:AuthorTopic { n_pubs : 1 }]-(b);
+MATCH (a:Author), (b:Topic) WHERE a.id = 0 AND b.id = 0 CREATE (a)<-[author_topic_2:AuthorTopic { n_pubs : 2 }]-(b);
+MATCH (a:Author), (b:Topic) WHERE a.id = 2 AND b.id = 0 CREATE (a)<-[author_topic_3:AuthorTopic { n_pubs : 1 }]-(b);
+MATCH (a:Author), (b:Topic) WHERE a.id = 3 AND b.id = 2 CREATE (a)<-[author_topic_4:AuthorTopic { n_pubs : 2 }]-(b);
+MATCH (a:Author), (b:Topic) WHERE a.id = 0 AND b.id = 2 CREATE (a)<-[author_topic_5:AuthorTopic { n_pubs : 2 }]-(b);
+MATCH (a:Author), (b:Topic) WHERE a.id = 3 AND b.id = 0 CREATE (a)<-[author_topic_6:AuthorTopic { n_pubs : 3 }]-(b);
 
 MATCH (a:Article), (b:Article) WHERE a.id = 0 AND b.id = 2 CREATE (a)<-[cited_by_0:CitedBy]-(b);
 MATCH (a:Article), (b:Article) WHERE a.id = 0 AND b.id = 3 CREATE (a)<-[cited_by_1:CitedBy]-(b);
@@ -92,10 +92,10 @@ MATCH (a:Institute), (b:Author) WHERE a.id = 2 AND b.id = 1 CREATE (a)-[institut
 MATCH (a:Institute), (b:Author) WHERE a.id = 1 AND b.id = 2 CREATE (a)-[institute_member_2:InstituteMember]->(b);
 MATCH (a:Institute), (b:Author) WHERE a.id = 0 AND b.id = 3 CREATE (a)-[institute_member_3:InstituteMember]->(b);
 
-MATCH (a:Venue), (b:Topic) WHERE a.id = 0 AND b.id = 0 CREATE (a)-[venue_topic_0:VenueTopic]->(b);
-MATCH (a:Venue), (b:Topic) WHERE a.id = 1 AND b.id = 1 CREATE (a)-[venue_topic_1:VenueTopic]->(b);
-MATCH (a:Venue), (b:Topic) WHERE a.id = 1 AND b.id = 2 CREATE (a)-[venue_topic_2:VenueTopic]->(b);
-MATCH (a:Venue), (b:Topic) WHERE a.id = 2 AND b.id = 1 CREATE (a)-[venue_topic_3:VenueTopic]->(b);
-MATCH (a:Venue), (b:Topic) WHERE a.id = 2 AND b.id = 2 CREATE (a)-[venue_topic_4:VenueTopic]->(b);
+MATCH (a:Venue), (b:Topic) WHERE a.id = 0 AND b.id = 0 CREATE (a)<-[venue_topic_0:VenueTopic]-(b);
+MATCH (a:Venue), (b:Topic) WHERE a.id = 1 AND b.id = 1 CREATE (a)<-[venue_topic_1:VenueTopic]-(b);
+MATCH (a:Venue), (b:Topic) WHERE a.id = 1 AND b.id = 2 CREATE (a)<-[venue_topic_2:VenueTopic]-(b);
+MATCH (a:Venue), (b:Topic) WHERE a.id = 2 AND b.id = 1 CREATE (a)<-[venue_topic_3:VenueTopic]-(b);
+MATCH (a:Venue), (b:Topic) WHERE a.id = 2 AND b.id = 2 CREATE (a)<-[venue_topic_4:VenueTopic]-(b);
 
 
