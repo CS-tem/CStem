@@ -48,7 +48,7 @@ if __name__ == "__main__":
     if opt == 'article':
         n_cit = df_cite.groupBy('article_id_1').count()
         df_article = df_article.join(n_cit, [df_article.id == n_cit.article_id_1], 'leftouter')
-        df_article = df_article.select('id', 'title', 'venue_id', 'count').\
+        df_article = df_article.select('id', 'title', 'year', 'venue_id', 'count').\
                      withColumnRenamed('count', 'n_citations').\
                      fillna(0)
         df_article.toPandas().to_csv(f'{PATH_CSV}/article.csv', index = False)
