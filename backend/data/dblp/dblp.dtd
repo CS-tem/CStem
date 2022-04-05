@@ -258,8 +258,8 @@
        "ISO 8879-1986//ENTITIES Added Latin 1//EN//XML">
 -->
 <!-- This version of the entity set can be used with any SGML document
-     which uses ISO 8859-1 or ISO 10646 as its document character 
-     set. This includes XML documents and ISO HTML documents. 
+     which uses ISO 8859-1 or ISO 10646 as its document character
+     set. This includes XML documents and ISO HTML documents.
 -->
 
 <!ENTITY Agrave  "&#192;" ><!-- capital A, grave accent -->
@@ -293,7 +293,7 @@
 <!ENTITY Yacute  "&#221;" ><!-- capital Y, acute accent -->
 <!ENTITY THORN   "&#222;" ><!-- capital THORN, Icelandic -->
 <!ENTITY szlig   "&#223;" ><!-- small sharp s, German (sz ligature) -->
-<!ENTITY agrave  "&#224;" ><!-- small a, grave accent -->   
+<!ENTITY agrave  "&#224;" ><!-- small a, grave accent -->
 <!ENTITY aacute  "&#225;" ><!-- small a, acute accent -->
 <!ENTITY acirc   "&#226;" ><!-- small a, circumflex accent -->
 <!ENTITY atilde  "&#227;" ><!-- small a, tilde -->
