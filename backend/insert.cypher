@@ -22,9 +22,9 @@ CREATE (institute_0:Institute { id : 0, name : 'Indian Institute of Technology B
 CREATE (institute_1:Institute { id : 1, name : 'Chinese Academy of Sciences', n_members : 1, n_pubs : 1, n_citations : 0 });
 CREATE (institute_2:Institute { id : 2, name : 'Carnegie Mellon University', n_members : 2, n_pubs : 7, n_citations : 10 });
 
-CREATE (topic_0:Topic { id : 0, name : 'computer vision', n_articles : 7, n_authors : 3, n_citations : 8 });
-CREATE (topic_1:Topic { id : 1, name : 'natural language processing', n_articles : 0, n_authors : 1, n_citations : 0 });
-CREATE (topic_2:Topic { id : 2, name : 'machine learning', n_articles : 3, n_authors : 2, n_citations : 5 });
+CREATE (topic_0:Topic { id : 0, name : 'computer vision', n_articles : 7, n_authors : 4, n_citations : 8 });
+CREATE (topic_1:Topic { id : 1, name : 'natural language processing', n_articles : 0, n_authors : 0, n_citations : 0 });
+CREATE (topic_2:Topic { id : 2, name : 'machine learning', n_articles : 3, n_authors : 3, n_citations : 5 });
 
 CREATE (venue_0:Venue { id : 0, name : 'Conference on Computer Vision and Pattern Recognition', acronym : 'CVPR', type : 'Conference', n_pubs : 5, n_citations : 6, flexibility : 0 });
 CREATE (venue_1:Venue { id : 1, name : 'Conference and Workshop on Neural Information Processing Systems', acronym : 'NeurIPS', type : 'Conference', n_pubs : 2, n_citations : 3, flexibility : 0 });
