@@ -2,6 +2,7 @@
 
 backend/data/dblp/*.xml
 backend/data/citation/*.json
+backend/data/aminer/*.txt
 package-lock.json
 papers
 
