@@ -1,7 +1,7 @@
 import os
 
 PATH_BASE = os.path.dirname(os.path.dirname(__file__))
-PATH_DATA = f'{PATH_BASE}/data/aminer'
+PATH_DATA = f'{PATH_BASE}/data/citation'
 
 ESSENTIAL_KEYS = (
     # 'abstract',

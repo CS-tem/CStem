@@ -1,7 +1,7 @@
 .vscode
 
 backend/data/dblp/*.xml
-backend/data/aminer/*.json
+backend/data/citation/*.json
 package-lock.json
 papers
 
