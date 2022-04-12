@@ -2,6 +2,8 @@ import argparse
 from config import *
 from pyspark.sql import SparkSession
 
+# Usage: python3 fill_metrics.py -o article
+
 parser = argparse.ArgumentParser()
 parser.add_argument("-o","--option", required = True)
 args = parser.parse_args()
@@ -20,27 +22,27 @@ if __name__ == "__main__":
 
     # Load DFs
     if opt == 'article':
-        df_article = csv2df(f'{PATH_CSV}/article.csv')
-        df_cite = csv2df(f'{PATH_CSV}/cited_by.csv')
+        df_article = csv2df(f'{PATH_CSV_BASE}/article.csv')
+        df_cite = csv2df(f'{PATH_CSV_BASE}/cited_by.csv')
     elif opt == 'author':
-        df_article = csv2df(f'{PATH_CSV}/article.csv')
-        df_author = csv2df(f'{PATH_CSV}/author.csv')
-        df_aa = csv2df(f'{PATH_CSV}/author_article.csv')
+        df_article = csv2df(f'{PATH_CSV_BASE}/article.csv')
+        df_author = csv2df(f'{PATH_CSV_BASE}/author.csv')
+        df_aa = csv2df(f'{PATH_CSV_BASE}/author_article.csv')
     elif opt == 'institute':
-        df_inst = csv2df(f'{PATH_CSV}/institute.csv')
-        df_im = csv2df(f'{PATH_CSV}/institute_member.csv')
-        df_author = csv2df(f'{PATH_CSV}/author.csv')
+        df_inst = csv2df(f'{PATH_CSV_BASE}/institute.csv')
+        df_im = csv2df(f'{PATH_CSV_BASE}/institute_member.csv')
+        df_author = csv2df(f'{PATH_CSV_BASE}/author.csv')
     elif opt == 'topic':
-        df_topic = csv2df(f'{PATH_CSV}/topic.csv')
-        df_art = csv2df(f'{PATH_CSV}/article_topic.csv')
-        df_aut = csv2df(f'{PATH_CSV}/author_topic.csv')
-        df_article = csv2df(f'{PATH_CSV}/article.csv')
+        df_topic = csv2df(f'{PATH_CSV_BASE}/topic.csv')
+        df_art = csv2df(f'{PATH_CSV_BASE}/article_topic.csv')
+        df_aut = csv2df(f'{PATH_CSV_BASE}/author_topic.csv')
+        df_article = csv2df(f'{PATH_CSV_BASE}/article.csv')
     elif opt == 'venue':
-        df_venue = csv2df(f'{PATH_CSV}/venue.csv')
-        df_article = csv2df(f'{PATH_CSV}/article.csv')
+        df_venue = csv2df(f'{PATH_CSV_BASE}/venue.csv')
+        df_article = csv2df(f'{PATH_CSV_BASE}/article.csv')
     elif opt == 'author_topic':
-        df_art = csv2df(f'{PATH_CSV}/article_topic.csv')
-        df_aa = csv2df(f'{PATH_CSV}/author_article.csv')
+        df_art = csv2df(f'{PATH_CSV_BASE}/article_topic.csv')
+        df_aa = csv2df(f'{PATH_CSV_BASE}/author_article.csv')
     else:
         raise ValueError('Invalid option')
 
@@ -51,7 +53,7 @@ if __name__ == "__main__":
         df_article = df_article.select('id', 'title', 'year', 'venue_id', 'count').\
                      withColumnRenamed('count', 'n_citations').\
                      fillna(0)
-        df_article.toPandas().to_csv(f'{PATH_CSV}/article.csv', index = False)
+        df_article.toPandas().to_csv(f'{PATH_CSV_FINAL}/article.csv', index = False)
 
     # Author metrics
     elif opt == 'author':
@@ -64,7 +66,7 @@ if __name__ == "__main__":
                     withColumnRenamed('sum(n_citations)', 'n_citations').\
                     fillna(0)
         # h-index: TODO
-        df_author.toPandas().to_csv(f'{PATH_CSV}/author.csv', index = False)
+        df_author.toPandas().to_csv(f'{PATH_CSV_FINAL}/author.csv', index = False)
 
     # Institute metrics
     elif opt == 'institute':
@@ -77,7 +79,7 @@ if __name__ == "__main__":
                   withColumnRenamed('sum(n_pubs)', 'n_pubs').\
                   withColumnRenamed('sum(n_citations)', 'n_citations').\
                   fillna(0)
-        df_inst.toPandas().to_csv(f'{PATH_CSV}/institute.csv', index = False)
+        df_inst.toPandas().to_csv(f'{PATH_CSV_FINAL}/institute.csv', index = False)
 
     # Topic metrics
     elif opt == 'topic':
@@ -96,7 +98,7 @@ if __name__ == "__main__":
         df_topic = df_topic.join(df_arta, [df_arta.topic_id == df_topic.id], 'leftouter').\
                    select('id', 'name', 'n_articles', 'n_authors', 'n_citations').\
                    fillna(0) 
-        df_topic.toPandas().to_csv(f'{PATH_CSV}/topic.csv', index = False)
+        df_topic.toPandas().to_csv(f'{PATH_CSV_FINAL}/topic.csv', index = False)
 
     # Venue metrics
     elif opt == 'venue':
@@ -109,7 +111,7 @@ if __name__ == "__main__":
                    fillna(0)
         # Flexibility: #articles published at venue with 
         # at least 1 topic not present in the venue's list of topics 
-        df_venue.toPandas().to_csv(f'{PATH_CSV}/venue.csv', index = False)
+        df_venue.toPandas().to_csv(f'{PATH_CSV_FINAL}/venue.csv', index = False)
 
     elif opt == 'author_topic':
         # Fill author topic
@@ -117,7 +119,7 @@ if __name__ == "__main__":
                  select('author_id', 'article_id', 'topic_id').\
                  groupBy('author_id', 'topic_id').count().\
                  withColumnRenamed('count', 'n_pubs')
-        df_aut.toPandas().to_csv(f'{PATH_CSV}/author_topic.csv', index = False)
+        df_aut.toPandas().to_csv(f'{PATH_CSV_FINAL}/author_topic.csv', index = False)
 
     # Stop
     spark.stop()

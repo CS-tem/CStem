@@ -1,7 +1,8 @@
 import os
 
 PATH_BASE = os.path.dirname(__file__)
-PATH_CSV = f'{PATH_BASE}/data/csv'
+PATH_CSV_BASE = f'{PATH_BASE}/data/base_csv'
+PATH_CSV_FINAL = f'{PATH_BASE}/data/final_csv'
 PATH_CYPHER = f'{PATH_BASE}/insert.cypher'
 
 TABLES = [
