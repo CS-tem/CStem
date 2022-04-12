@@ -44,6 +44,8 @@ if __name__ == "__main__":
     elif opt == 'venue':
         df_venue = csv2df(f'{PATH_CSV_BASE}/venue.csv')
         df_article = csv2df(f'{PATH_CSV_FINAL}/article.csv')
+    elif opt == 'coauthor':
+        df_aa = csv2df(f'{PATH_CSV_BASE}/author_article.csv')
     else:
         raise ValueError('Invalid option')
 
@@ -121,6 +123,16 @@ if __name__ == "__main__":
                  groupBy('author_id', 'topic_id').count().\
                  withColumnRenamed('count', 'n_pubs')
         df_aut.toPandas().to_csv(f'{PATH_CSV_FINAL}/author_topic.csv', index = False)
+
+    elif opt == 'coauthor':
+        df_coauthor = df_aa.withColumnRenamed('author_id', 'author_id_1').\
+                      join(df_aa.withColumnRenamed('author_id', 'author_id_2'), 'article_id', 'inner').\
+                      select('author_id_1', 'author_id_2').\
+                      where('author_id_1 < author_id_2').\
+                      groupBy('author_id_1', 'author_id_2').count().\
+                      withColumnRenamed('count', 'n_colab').\
+                      orderBy('author_id_1', 'author_id_2')
+        df_coauthor.toPandas().to_csv(f'{PATH_CSV_FINAL}/coauthor.csv', index = False)
 
     # Stop
     spark.stop()
