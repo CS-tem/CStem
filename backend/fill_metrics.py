@@ -3,6 +3,7 @@ from config import *
 from pyspark.sql import SparkSession
 
 # Usage: python3 fill_metrics.py -o article
+# Order of computation: article_topic, article, author, institute, topic, venue
 
 parser = argparse.ArgumentParser()
 parser.add_argument("-o","--option", required = True)
@@ -25,21 +26,21 @@ if __name__ == "__main__":
         df_article = csv2df(f'{PATH_CSV_BASE}/article.csv')
         df_cite = csv2df(f'{PATH_CSV_BASE}/cited_by.csv')
     elif opt == 'author':
-        df_article = csv2df(f'{PATH_CSV_BASE}/article.csv')
+        df_article = csv2df(f'{PATH_CSV_FINAL}/article.csv')
         df_author = csv2df(f'{PATH_CSV_BASE}/author.csv')
         df_aa = csv2df(f'{PATH_CSV_BASE}/author_article.csv')
     elif opt == 'institute':
         df_inst = csv2df(f'{PATH_CSV_BASE}/institute.csv')
         df_im = csv2df(f'{PATH_CSV_BASE}/institute_member.csv')
-        df_author = csv2df(f'{PATH_CSV_BASE}/author.csv')
+        df_author = csv2df(f'{PATH_CSV_FINAL}/author.csv')
     elif opt == 'topic':
         df_topic = csv2df(f'{PATH_CSV_BASE}/topic.csv')
         df_art = csv2df(f'{PATH_CSV_BASE}/article_topic.csv')
-        df_aut = csv2df(f'{PATH_CSV_BASE}/author_topic.csv')
-        df_article = csv2df(f'{PATH_CSV_BASE}/article.csv')
+        df_aut = csv2df(f'{PATH_CSV_FINAL}/author_topic.csv')
+        df_article = csv2df(f'{PATH_CSV_FINAL}/article.csv')
     elif opt == 'venue':
         df_venue = csv2df(f'{PATH_CSV_BASE}/venue.csv')
-        df_article = csv2df(f'{PATH_CSV_BASE}/article.csv')
+        df_article = csv2df(f'{PATH_CSV_FINAL}/article.csv')
     elif opt == 'author_topic':
         df_art = csv2df(f'{PATH_CSV_BASE}/article_topic.csv')
         df_aa = csv2df(f'{PATH_CSV_BASE}/author_article.csv')
@@ -90,7 +91,7 @@ if __name__ == "__main__":
                   withColumnRenamed('count(article_id)', 'n_articles').\
                   withColumnRenamed('sum(n_citations)', 'n_citations').\
                   fillna(0)
-        df_autg = df_aut.groupBy('topic_id').count()
+        df_autg = df_aut.select('author_id' ,'topic_id').groupBy('topic_id').count()
         df_topic = df_topic.join(df_autg, [df_autg.topic_id == df_topic.id], 'leftouter').\
                    select('id', 'name', 'count').\
                    withColumnRenamed('count', 'n_authors').\
