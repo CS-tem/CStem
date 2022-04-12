@@ -2,7 +2,7 @@ import os
 
 import pandas as pd
 
-from config import NODES, RELS, PATH_CSV, PATH_CYPHER
+from config import NODES, RELS, PATH_CSV_FINAL, PATH_CYPHER
 
 
 def pyType(v):
@@ -107,5 +107,5 @@ if __name__ == '__main__':
         # Delete all nodes/relationships present
         f.write('MATCH (n) DETACH DELETE n;\n\n')
 
-        createNodes(f, PATH_CSV)
-        createRelations(f, PATH_CSV)
+        createNodes(f, PATH_CSV_FINAL)
+        createRelations(f, PATH_CSV_FINAL)

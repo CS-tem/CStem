@@ -33,6 +33,9 @@ if __name__ == "__main__":
         df_inst = csv2df(f'{PATH_CSV_BASE}/institute.csv')
         df_im = csv2df(f'{PATH_CSV_BASE}/institute_member.csv')
         df_author = csv2df(f'{PATH_CSV_FINAL}/author.csv')
+    elif opt == 'author_topic':
+        df_art = csv2df(f'{PATH_CSV_BASE}/article_topic.csv')
+        df_aa = csv2df(f'{PATH_CSV_BASE}/author_article.csv')
     elif opt == 'topic':
         df_topic = csv2df(f'{PATH_CSV_BASE}/topic.csv')
         df_art = csv2df(f'{PATH_CSV_BASE}/article_topic.csv')
@@ -41,9 +44,6 @@ if __name__ == "__main__":
     elif opt == 'venue':
         df_venue = csv2df(f'{PATH_CSV_BASE}/venue.csv')
         df_article = csv2df(f'{PATH_CSV_FINAL}/article.csv')
-    elif opt == 'author_topic':
-        df_art = csv2df(f'{PATH_CSV_BASE}/article_topic.csv')
-        df_aa = csv2df(f'{PATH_CSV_BASE}/author_article.csv')
     else:
         raise ValueError('Invalid option')
 
