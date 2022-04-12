@@ -1,17 +1,21 @@
 import argparse
-from config import *
+
 from pyspark.sql import SparkSession
+
+
+from config import PATH_CSV_BASE, PATH_CSV_FINAL
 
 # Usage: python3 fill_metrics.py -o article
 # Order of computation: article_topic, article, author, institute, topic, venue
-
 parser = argparse.ArgumentParser()
-parser.add_argument("-o","--option", required = True)
+parser.add_argument("-o", "--option", required=True)
 args = parser.parse_args()
 
+
 def csv2df(path):
-    df = spark.read.options(inferSchema = True, header = True).csv(path)
+    df = spark.read.options(inferSchema=True, header=True).csv(path)
     return df
+
 
 if __name__ == "__main__":
 
@@ -23,7 +27,7 @@ if __name__ == "__main__":
 
     # Load DFs
     if opt == 'article':
-        df_article = csv2df(f'{PATH_CSV_BASE}/article.csv')
+        df_art = csv2df(f'{PATH_CSV_BASE}/article.csv')
         df_cite = csv2df(f'{PATH_CSV_BASE}/cited_by.csv')
     elif opt == 'author':
         df_article = csv2df(f'{PATH_CSV_FINAL}/article.csv')
@@ -52,87 +56,89 @@ if __name__ == "__main__":
     # Article metrics
     if opt == 'article':
         n_cit = df_cite.groupBy('article_id_1').count()
-        df_article = df_article.join(n_cit, [df_article.id == n_cit.article_id_1], 'leftouter')
-        df_article = df_article.select('id', 'title', 'year', 'venue_id', 'count').\
-                     withColumnRenamed('count', 'n_citations').\
-                     fillna(0)
-        df_article.toPandas().to_csv(f'{PATH_CSV_FINAL}/article.csv', index = False)
+        df_art = df_art.join(n_cit, [df_art.id == n_cit.article_id_1], 'leftouter')
+        df_art = df_art.select('id', 'title', 'year', 'venue_id', 'count').\
+            withColumnRenamed('count', 'n_citations').\
+            fillna(0)
+        df_art.toPandas().to_csv(f'{PATH_CSV_FINAL}/article.csv', index=False)
 
     # Author metrics
     elif opt == 'author':
         df_aac = df_aa.join(df_article, [df_aa.article_id == df_article.id], 'leftouter').\
-                 select('author_id', 'article_id', 'n_citations')
-        temp = df_aac.groupBy('author_id').agg({'article_id': 'count', 'n_citations' : 'sum'})
+            select('author_id', 'article_id', 'n_citations')
+        temp = df_aac.groupBy('author_id').agg({'article_id': 'count', 'n_citations': 'sum'})
         df_author = df_author.join(temp, [df_author.id == temp.author_id], 'leftouter')
         df_author = df_author.select('id', 'name', 'count(article_id)', 'sum(n_citations)', 'h_index').\
-                    withColumnRenamed('count(article_id)', 'n_pubs').\
-                    withColumnRenamed('sum(n_citations)', 'n_citations').\
-                    fillna(0)
+            withColumnRenamed('count(article_id)', 'n_pubs').\
+            withColumnRenamed('sum(n_citations)', 'n_citations').\
+            fillna(0)
         # h-index: TODO
-        df_author.toPandas().to_csv(f'{PATH_CSV_FINAL}/author.csv', index = False)
+        df_author.toPandas().to_csv(f'{PATH_CSV_FINAL}/author.csv', index=False)
 
     # Institute metrics
     elif opt == 'institute':
         df_ima = df_im.join(df_author, [df_im.author_id == df_author.id], 'leftouter').\
-                 select('institute_id', 'author_id', 'n_pubs', 'n_citations')
-        temp = df_ima.groupBy('institute_id').agg({'author_id': 'count', 'n_pubs' : 'sum', 'n_citations' : 'sum'})
+            select('institute_id', 'author_id', 'n_pubs', 'n_citations')
+        temp = df_ima.groupBy('institute_id').agg(
+            {'author_id': 'count', 'n_pubs': 'sum', 'n_citations': 'sum'})
         df_inst = df_inst.join(temp, [df_inst.id == temp.institute_id], 'leftouter')
         df_inst = df_inst.select('id', 'name', 'count(author_id)', 'sum(n_pubs)', 'sum(n_citations)').\
-                  withColumnRenamed('count(author_id)', 'n_members').\
-                  withColumnRenamed('sum(n_pubs)', 'n_pubs').\
-                  withColumnRenamed('sum(n_citations)', 'n_citations').\
-                  fillna(0)
-        df_inst.toPandas().to_csv(f'{PATH_CSV_FINAL}/institute.csv', index = False)
+            withColumnRenamed('count(author_id)', 'n_members').\
+            withColumnRenamed('sum(n_pubs)', 'n_pubs').\
+            withColumnRenamed('sum(n_citations)', 'n_citations').\
+            fillna(0)
+        df_inst.toPandas().to_csv(f'{PATH_CSV_FINAL}/institute.csv', index=False)
 
     # Topic metrics
     elif opt == 'topic':
         df_arta = df_art.join(df_article, [df_article.id == df_art.article_id], 'leftouter').\
-                  select('article_id', 'topic_id', 'n_citations').\
-                  groupBy('topic_id').\
-                  agg({'article_id': 'count', 'n_citations' : 'sum'}).\
-                  withColumnRenamed('count(article_id)', 'n_articles').\
-                  withColumnRenamed('sum(n_citations)', 'n_citations').\
-                  fillna(0)
-        df_autg = df_aut.select('author_id' ,'topic_id').groupBy('topic_id').count()
+            select('article_id', 'topic_id', 'n_citations').\
+            groupBy('topic_id').\
+            agg({'article_id': 'count', 'n_citations': 'sum'}).\
+            withColumnRenamed('count(article_id)', 'n_articles').\
+            withColumnRenamed('sum(n_citations)', 'n_citations').\
+            fillna(0)
+        df_autg = df_aut.select('author_id', 'topic_id').groupBy('topic_id').count()
         df_topic = df_topic.join(df_autg, [df_autg.topic_id == df_topic.id], 'leftouter').\
-                   select('id', 'name', 'count').\
-                   withColumnRenamed('count', 'n_authors').\
-                   fillna(0)
+            select('id', 'name', 'count').\
+            withColumnRenamed('count', 'n_authors').\
+            fillna(0)
         df_topic = df_topic.join(df_arta, [df_arta.topic_id == df_topic.id], 'leftouter').\
-                   select('id', 'name', 'n_articles', 'n_authors', 'n_citations').\
-                   fillna(0) 
-        df_topic.toPandas().to_csv(f'{PATH_CSV_FINAL}/topic.csv', index = False)
+            select('id', 'name', 'n_articles', 'n_authors', 'n_citations').\
+            fillna(0)
+        df_topic.toPandas().to_csv(f'{PATH_CSV_FINAL}/topic.csv', index=False)
 
     # Venue metrics
     elif opt == 'venue':
         df_av = df_article.groupBy('venue_id').\
-                agg({'id': 'count', 'n_citations' : 'sum'})
+            agg({'id': 'count', 'n_citations': 'sum'})
         df_venue = df_venue.join(df_av, [df_venue.id == df_av.venue_id], 'leftouter').\
-                   select('id', 'name', 'acronym', 'type', 'count(id)', 'sum(n_citations)', 'flexibility').\
-                   withColumnRenamed('count(id)', 'n_pubs').\
-                   withColumnRenamed('sum(n_citations)', 'n_citations').\
-                   fillna(0)
-        # Flexibility: #articles published at venue with 
-        # at least 1 topic not present in the venue's list of topics 
-        df_venue.toPandas().to_csv(f'{PATH_CSV_FINAL}/venue.csv', index = False)
+            select('id', 'name', 'acronym', 'type', 'count(id)', 'sum(n_citations)', 'flexibility').\
+            withColumnRenamed('count(id)', 'n_pubs').\
+            withColumnRenamed('sum(n_citations)', 'n_citations').\
+            fillna(0)
+        # Flexibility: #articles published at venue with
+        # at least 1 topic not present in the venue's list of topics
+        df_venue.toPandas().to_csv(f'{PATH_CSV_FINAL}/venue.csv', index=False)
 
+    # Author-topic metrics
     elif opt == 'author_topic':
-        # Fill author topic
         df_aut = df_aa.join(df_art, 'article_id', 'leftouter').\
-                 select('author_id', 'article_id', 'topic_id').\
-                 groupBy('author_id', 'topic_id').count().\
-                 withColumnRenamed('count', 'n_pubs')
-        df_aut.toPandas().to_csv(f'{PATH_CSV_FINAL}/author_topic.csv', index = False)
+            select('author_id', 'article_id', 'topic_id').\
+            groupBy('author_id', 'topic_id').count().\
+            withColumnRenamed('count', 'n_pubs')
+        df_aut.toPandas().to_csv(f'{PATH_CSV_FINAL}/author_topic.csv', index=False)
 
+    # Coauthor metrics
     elif opt == 'coauthor':
         df_coauthor = df_aa.withColumnRenamed('author_id', 'author_id_1').\
-                      join(df_aa.withColumnRenamed('author_id', 'author_id_2'), 'article_id', 'inner').\
-                      select('author_id_1', 'author_id_2').\
-                      where('author_id_1 < author_id_2').\
-                      groupBy('author_id_1', 'author_id_2').count().\
-                      withColumnRenamed('count', 'n_colab').\
-                      orderBy('author_id_1', 'author_id_2')
-        df_coauthor.toPandas().to_csv(f'{PATH_CSV_FINAL}/coauthor.csv', index = False)
+            join(df_aa.withColumnRenamed('author_id', 'author_id_2'), 'article_id', 'inner').\
+            select('author_id_1', 'author_id_2').\
+            where('author_id_1 < author_id_2').\
+            groupBy('author_id_1', 'author_id_2').count().\
+            withColumnRenamed('count', 'n_colab').\
+            orderBy('author_id_1', 'author_id_2')
+        df_coauthor.toPandas().to_csv(f'{PATH_CSV_FINAL}/coauthor.csv', index=False)
 
     # Stop
     spark.stop()

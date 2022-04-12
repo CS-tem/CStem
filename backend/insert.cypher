@@ -78,7 +78,7 @@ MATCH (a:Article), (b:Article) WHERE a.id = 2 AND b.id = 5 CREATE (a)<-[cited_by
 MATCH (a:Article), (b:Article) WHERE a.id = 3 AND b.id = 6 CREATE (a)<-[cited_by_7:CitedBy]-(b);
 MATCH (a:Article), (b:Article) WHERE a.id = 6 AND b.id = 7 CREATE (a)<-[cited_by_8:CitedBy]-(b);
 
-MATCH (a:Author), (b:Author) WHERE a.id = 0 AND b.id = 1 CREATE (a)-[coauthor_0:Coauthor { n_colab : 3 }]->(b);
+MATCH (a:Author), (b:Author) WHERE a.id = 0 AND b.id = 1 CREATE (a)-[coauthor_0:Coauthor { n_colab : 2 }]->(b);
 MATCH (a:Author), (b:Author) WHERE a.id = 0 AND b.id = 3 CREATE (a)-[coauthor_1:Coauthor { n_colab : 1 }]->(b);
 MATCH (a:Author), (b:Author) WHERE a.id = 1 AND b.id = 2 CREATE (a)-[coauthor_2:Coauthor { n_colab : 1 }]->(b);
 MATCH (a:Author), (b:Author) WHERE a.id = 1 AND b.id = 3 CREATE (a)-[coauthor_3:Coauthor { n_colab : 1 }]->(b);
