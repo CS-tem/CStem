@@ -4,7 +4,7 @@ from pyspark.sql import SparkSession, functions as F
 from pyspark.sql.window import Window
 
 # Usage: python3 fill_metrics.py -o article
-# Order of computation: article_topic, article, author, institute, topic, venue
+# Order of computation: article_topic, article, author, institute, topic, venue, author_topic
 parser = argparse.ArgumentParser()
 parser.add_argument("-o", "--option", required=True)
 args = parser.parse_args()
@@ -46,6 +46,8 @@ if __name__ == "__main__":
     elif opt == 'venue':
         df_venue = csv2df(f'{PATH_CSV_BASE}/venue.csv')
         df_article = csv2df(f'{PATH_CSV_FINAL}/article.csv')
+        df_art = csv2df(f'{PATH_CSV_BASE}/article_topic.csv')
+        df_vt = csv2df(f'{PATH_CSV_BASE}/venue_topic.csv')
     elif opt == 'coauthor':
         df_aa = csv2df(f'{PATH_CSV_BASE}/author_article.csv')
     else:
@@ -114,12 +116,24 @@ if __name__ == "__main__":
         df_av = df_article.groupBy('venue_id').\
             agg({'id': 'count', 'n_citations': 'sum'})
         df_venue = df_venue.join(df_av, [df_venue.id == df_av.venue_id], 'leftouter').\
-            select('id', 'name', 'acronym', 'type', 'count(id)', 'sum(n_citations)', 'flexibility').\
+            select('id', 'name', 'acronym', 'type', 'count(id)', 'sum(n_citations)').\
             withColumnRenamed('count(id)', 'n_pubs').\
             withColumnRenamed('sum(n_citations)', 'n_citations').\
             fillna(0)
         # Flexibility: #articles published at venue with
-        # at least 1 topic not present in the venue's list of topics
+        # at least 1 topic not present in the venue's list of topics / total articles published at venue
+        df_avt = df_article.join(df_art, [df_art.article_id == df_article.id], 'inner').\
+            withColumnRenamed('topic_id', 'article_topic_id').\
+            withColumnRenamed('venue_id', 'article_venue_id').\
+            select('id', 'article_venue_id', 'article_topic_id')
+        df_avtt = df_avt.join(df_vt, [df_vt.venue_id == df_avt.article_venue_id, df_vt.topic_id == df_avt.article_topic_id], 'leftouter').\
+            where('venue_id IS NULL AND topic_id IS NULL').\
+            select('id', 'article_venue_id').\
+            groupBy('article_venue_id').agg(F.countDistinct('id')).\
+            withColumnRenamed('count(id)', 'n_oot') # out of topic
+        df_venue = df_venue.join(df_avtt, [df_venue.id == df_avt.article_venue_id], 'leftouter').fillna(0).\
+            withColumn('flexibility', F.col('n_oot') / F.col('n_pubs')).\
+            select('id', 'name', 'acronym', 'type', 'n_pubs', 'n_citations', 'flexibility')
         df_venue.toPandas().to_csv(f'{PATH_CSV_FINAL}/venue.csv', index=False)
 
     # Author-topic metrics

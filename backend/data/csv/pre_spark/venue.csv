@@ -1,4 +1,4 @@
-id,name,acronym,type,flexibility
-0,Conference on Computer Vision and Pattern Recognition,CVPR,Conference,0
-1,Conference and Workshop on Neural Information Processing Systems,NeurIPS,Conference,0
-2,International Conference on Learning Representations,ICLR,Conference,0
+id,name,acronym,type
+0,Conference on Computer Vision and Pattern Recognition,CVPR,Conference
+1,Conference and Workshop on Neural Information Processing Systems,NeurIPS,Conference
+2,International Conference on Learning Representations,ICLR,Conference
