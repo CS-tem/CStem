@@ -1,9 +1,7 @@
 import argparse
-
-from pyspark.sql import SparkSession
-
-
 from config import PATH_CSV_BASE, PATH_CSV_FINAL
+from pyspark.sql import SparkSession, functions as F
+from pyspark.sql.window import Window
 
 # Usage: python3 fill_metrics.py -o article
 # Order of computation: article_topic, article, author, institute, topic, venue
@@ -66,13 +64,16 @@ if __name__ == "__main__":
     elif opt == 'author':
         df_aac = df_aa.join(df_article, [df_aa.article_id == df_article.id], 'leftouter').\
             select('author_id', 'article_id', 'n_citations')
-        temp = df_aac.groupBy('author_id').agg({'article_id': 'count', 'n_citations': 'sum'})
+        w = Window.partitionBy(df_aac.author_id).orderBy(df_aac.n_citations.desc())  
+        df_aac = df_aac.withColumn('rank', F.row_number().over(w))
+        temp = df_aac.groupBy('author_id').\
+            agg(
+                F.count(df_aac.article_id).alias('n_pubs'),
+                F.sum(df_aac.n_citations).alias('n_citations'),
+                F.max(F.when(df_aac.n_citations >= df_aac.rank, df_aac.rank).otherwise(0)).alias('h_index')
+            )
         df_author = df_author.join(temp, [df_author.id == temp.author_id], 'leftouter')
-        df_author = df_author.select('id', 'name', 'count(article_id)', 'sum(n_citations)', 'h_index').\
-            withColumnRenamed('count(article_id)', 'n_pubs').\
-            withColumnRenamed('sum(n_citations)', 'n_citations').\
-            fillna(0)
-        # h-index: TODO
+        df_author = df_author.select('id', 'name', 'n_pubs', 'n_citations', 'h_index').fillna(0)
         df_author.toPandas().to_csv(f'{PATH_CSV_FINAL}/author.csv', index=False)
 
     # Institute metrics
