@@ -4,7 +4,7 @@ from pyspark.sql import SparkSession, functions as F
 from pyspark.sql.window import Window
 
 # Usage: python3 fill_metrics.py -o article
-# Order of computation: article_topic, article, author, institute, topic, venue, author_topic
+# Order of computation: article, author, institute, author_topic, topic, venue, coauthor
 parser = argparse.ArgumentParser()
 parser.add_argument("-o", "--option", required=True)
 args = parser.parse_args()
@@ -66,14 +66,15 @@ if __name__ == "__main__":
     elif opt == 'author':
         df_aac = df_aa.join(df_article, [df_aa.article_id == df_article.id], 'leftouter').\
             select('author_id', 'article_id', 'n_citations')
-        w = Window.partitionBy(df_aac.author_id).orderBy(df_aac.n_citations.desc())  
+        w = Window.partitionBy(df_aac.author_id).orderBy(df_aac.n_citations.desc())
         df_aac = df_aac.withColumn('rank', F.row_number().over(w))
         temp = df_aac.groupBy('author_id').\
             agg(
                 F.count(df_aac.article_id).alias('n_pubs'),
                 F.sum(df_aac.n_citations).alias('n_citations'),
-                F.max(F.when(df_aac.n_citations >= df_aac.rank, df_aac.rank).otherwise(0)).alias('h_index')
-            )
+                F.max(F.when(df_aac.n_citations >= df_aac.rank,
+                      df_aac.rank).otherwise(0)).alias('h_index')
+        )
         df_author = df_author.join(temp, [df_author.id == temp.author_id], 'leftouter')
         df_author = df_author.select('id', 'name', 'n_pubs', 'n_citations', 'h_index').fillna(0)
         df_author.toPandas().to_csv(f'{PATH_CSV_FINAL}/author.csv', index=False)
@@ -130,7 +131,7 @@ if __name__ == "__main__":
             where('venue_id IS NULL AND topic_id IS NULL').\
             select('id', 'article_venue_id').\
             groupBy('article_venue_id').agg(F.countDistinct('id')).\
-            withColumnRenamed('count(id)', 'n_oot') # out of topic
+            withColumnRenamed('count(id)', 'n_oot')  # out of topic
         df_venue = df_venue.join(df_avtt, [df_venue.id == df_avt.article_venue_id], 'leftouter').fillna(0).\
             withColumn('flexibility', F.col('n_oot') / F.col('n_pubs')).\
             select('id', 'name', 'acronym', 'type', 'n_pubs', 'n_citations', 'flexibility')

@@ -9,10 +9,10 @@ CREATE (article_5:Article { id : 5, title : 'GLASS: Geometric Latent Augmentatio
 CREATE (article_6:Article { id : 6, title : 'DECOR-GAN: 3D Shape Detailization by Conditional Refinement', year : 2021, venue_id : 0, n_citations : 1 });
 CREATE (article_7:Article { id : 7, title : 'Generalizing Across Domains via Cross-Gradient Training', year : 2019, venue_id : 2, n_citations : 0 });
 
-CREATE (author_0:Author { id : 0, name : 'Abhinav Gupta', n_pubs : 3, n_citations : 6, h_index : 0 });
-CREATE (author_1:Author { id : 1, name : 'Deva Ramanan', n_pubs : 4, n_citations : 4, h_index : 0 });
+CREATE (author_0:Author { id : 0, name : 'Abhinav Gupta', n_pubs : 3, n_citations : 6, h_index : 1 });
+CREATE (author_1:Author { id : 1, name : 'Deva Ramanan', n_pubs : 4, n_citations : 4, h_index : 1 });
 CREATE (author_2:Author { id : 2, name : 'Xilin Chen', n_pubs : 1, n_citations : 0, h_index : 0 });
-CREATE (author_3:Author { id : 3, name : 'Siddhartha Chaudhuri', n_pubs : 4, n_citations : 2, h_index : 0 });
+CREATE (author_3:Author { id : 3, name : 'Siddhartha Chaudhuri', n_pubs : 4, n_citations : 2, h_index : 1 });
 
 CREATE (country_0:Country { id : 0, name : 'India' });
 CREATE (country_1:Country { id : 1, name : 'China' });
@@ -27,9 +27,8 @@ CREATE (topic_1:Topic { id : 1, name : 'natural language processing', n_articles
 CREATE (topic_2:Topic { id : 2, name : 'machine learning', n_articles : 3, n_authors : 3, n_citations : 5 });
 
 CREATE (venue_0:Venue { id : 0, name : 'Conference on Computer Vision and Pattern Recognition', acronym : 'CVPR', type : 'Conference', n_pubs : 5, n_citations : 6, flexibility : 0 });
-CREATE (venue_1:Venue { id : 1, name : 'Conference and Workshop on Neural Information Processing Systems', acronym : 'NeurIPS', type : 'Conference', n_pubs : 2, n_citations : 3, flexibility : 0 });
-CREATE (venue_2:Venue { id : 2, name : 'International Conference on Learning Representations', acronym : 'ICLR', type : 'Conference', n_pubs : 1, n_citations : 0, flexibility : 0 });
-
+CREATE (venue_1:Venue { id : 1, name : 'Conference and Workshop on Neural Information Processing Systems', acronym : 'NeurIPS', type : 'Conference', n_pubs : 2, n_citations : 3, flexibility : 1 });
+CREATE (venue_2:Venue { id : 2, name : 'International Conference on Learning Representations', acronym : 'ICLR', type : 'Conference', n_pubs : 1, n_citations : 0, flexibility : 1 });
 
 MATCH (a:Article), (b:Topic) WHERE a.id = 0 AND b.id = 0 CREATE (a)<-[article_topic_0:ArticleTopic]-(b);
 MATCH (a:Article), (b:Topic) WHERE a.id = 0 AND b.id = 2 CREATE (a)<-[article_topic_1:ArticleTopic]-(b);
@@ -97,5 +96,4 @@ MATCH (a:Venue), (b:Topic) WHERE a.id = 1 AND b.id = 1 CREATE (a)<-[venue_topic_
 MATCH (a:Venue), (b:Topic) WHERE a.id = 1 AND b.id = 2 CREATE (a)<-[venue_topic_2:VenueTopic]-(b);
 MATCH (a:Venue), (b:Topic) WHERE a.id = 2 AND b.id = 1 CREATE (a)<-[venue_topic_3:VenueTopic]-(b);
 MATCH (a:Venue), (b:Topic) WHERE a.id = 2 AND b.id = 2 CREATE (a)<-[venue_topic_4:VenueTopic]-(b);
-
 

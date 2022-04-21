@@ -31,9 +31,7 @@ def propCypher(attrs, vals):
 
 
 def createNodes(f, path_base):
-
     for node in sorted(NODES.keys()):
-
         table = NODES[node]['csv']
         attrs = NODES[node]['attrs']
         fpath = os.path.join(path_base, table + '.csv')
@@ -50,13 +48,10 @@ def createNodes(f, path_base):
             f.write('\n')
 
         f.write('\n')
-    f.write('\n')
 
 
 def createRelations(f, path_base):
-
     for rel in sorted(RELS.keys()):
-
         between = RELS[rel]['between']
 
         node1 = between[0]
@@ -97,13 +92,10 @@ def createRelations(f, path_base):
             f.write(stmt)
 
         f.write('\n')
-    f.write('\n')
 
 
 if __name__ == '__main__':
-
     with open(PATH_CYPHER, 'w+') as f:
-
         # Delete all nodes/relationships present
         f.write('MATCH (n) DETACH DELETE n;\n\n')
 
