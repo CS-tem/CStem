@@ -1,4 +1,4 @@
-id,name,n_members,n_pubs,n_citations
-0,Indian Institute of Technology Bombay,1,4,2
-1,Chinese Academy of Sciences,1,1,0
-2,Carnegie Mellon University,2,7,10
+id,name
+0,Indian Institute of Technology Bombay
+1,Chinese Academy of Sciences
+2,Carnegie Mellon University
