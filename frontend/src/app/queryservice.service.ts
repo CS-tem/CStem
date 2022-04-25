@@ -9,7 +9,11 @@ export class QueryserviceService {
   
   constructor(private http: HttpClient) { }
 
-  public getInstitute(id) : Observable<any> {
+  public getInstitutes() : Observable<any> {
+    return this.http.get(`http://127.0.0.1:8000/institutes/`)
+  }
+
+  public getInstitute(id: number) : Observable<any> {
     return this.http.get(`http://127.0.0.1:8000/institutes/${id}`)
   }
 }
