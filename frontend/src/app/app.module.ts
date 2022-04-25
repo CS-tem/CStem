@@ -7,12 +7,18 @@ import { AuthorsComponent } from './authors/authors.component';
 import { FormsModule } from '@angular/forms';
 import { InstituteComponent } from './institute/institute.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { VenueComponent } from './venue/venue.component';
+import { ArticleComponent } from './article/article.component';
+import { TopicComponent } from './topic/topic.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AuthorsComponent,
-    InstituteComponent
+    InstituteComponent,
+    VenueComponent,
+    ArticleComponent,
+    TopicComponent
   ],
   imports: [
     BrowserModule,
