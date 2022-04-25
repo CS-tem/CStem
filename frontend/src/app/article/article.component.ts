@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { QueryserviceService } from '../queryservice.service';
 import { Subscription } from 'rxjs';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-article',
@@ -8,19 +9,23 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./article.component.scss']
 })
 export class ArticleComponent implements OnInit {
-
+  article_id = 0;
   subscription = new Subscription();
-  articles: any = [{}];
+  article = {}
 
-  constructor(private qs : QueryserviceService) { }
+  constructor(private activatedRoute: ActivatedRoute, private qs : QueryserviceService) { }
 
   ngOnInit(): void {
+    this.activatedRoute.params.subscribe(params => {
+      this.article_id = params['article_id'];
+      this.updateArticleInfo();
+    });
   }
 
-  updateArticlesInfo() : void {
+  updateArticleInfo() : void {
     this.subscription.add(
-      this.qs.getVenues().subscribe(res => {
-        this.articles = res;
+      this.qs.getArticle(this.article_id).subscribe(res => {
+        this.article = res;
         console.log(res);
       })
     );

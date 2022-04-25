@@ -10,7 +10,6 @@ import { Subscription } from 'rxjs';
 export class InstituteComponent implements OnInit {
   subscription = new Subscription();
   institutes: any = [{}];
-  institute : any = {};
 
   constructor(private qs : QueryserviceService) { }
 
@@ -21,16 +20,8 @@ export class InstituteComponent implements OnInit {
   updateInstitutesInfo() : void {
     this.subscription.add(
       this.qs.getInstitutes().subscribe(res => {
-        this.institutes = res;
         console.log(res);
-      })
-    );
-  }
-
-  updateInstituteInfo(id : number) : void {
-    this.subscription.add(
-      this.qs.getInstitute(id).subscribe(res => {
-        this.institute = res;
+        this.institutes = res;
         console.log(res);
       })
     );

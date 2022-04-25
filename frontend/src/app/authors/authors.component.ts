@@ -16,11 +16,12 @@ export class AuthorsComponent implements OnInit {
   constructor(private qs : QueryserviceService) { }
 
   ngOnInit(): void {
+    this.updateAuthorsInfo();
   }
 
   updateAuthorsInfo() : void {
     this.subscription.add(
-      this.qs.getInstitutes().subscribe(res => {
+      this.qs.getAuthors().subscribe(res => {
         this.authors = res;
         console.log(res);
       })

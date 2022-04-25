@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { QueryserviceService } from '../queryservice.service';
 import { Subscription } from 'rxjs';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-venue',
@@ -9,16 +10,21 @@ import { Subscription } from 'rxjs';
 })
 export class VenueComponent implements OnInit {
   subscription = new Subscription();
-  venues: any = [{}];
-  constructor(private qs: QueryserviceService) { }
+  venue_id = 0;
+  venue = {};
+  constructor(private activatedRoute: ActivatedRoute, private qs: QueryserviceService) {  }
 
   ngOnInit(): void {
+    this.activatedRoute.params.subscribe(params => {
+      this.venue_id = params['venue_id'];
+      this.updateVenueInfo();
+    });
   }
 
-  updateVenuesInfo() : void {
+  updateVenueInfo() : void {
     this.subscription.add(
-      this.qs.getVenues().subscribe(res => {
-        this.venues = res;
+      this.qs.getVenue(this.venue_id).subscribe(res => {
+        this.venue = res;
         console.log(res);
       })
     );

@@ -100,7 +100,7 @@ def get_articles():
     result = neo_db.neo4j_query(query)
     return result
 
-@app.get('/articles/{articles_id}')
+@app.get('/articles/{article_id}')
 def get_articles(article_id : int):
     query = 'MATCH (i : Article{{id : {}}}) RETURN i;'.format(article_id)
     result = neo_db.neo4j_query(query)
