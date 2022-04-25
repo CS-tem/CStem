@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { QueryserviceService } from '../queryservice.service';
 import { Subscription } from 'rxjs';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-institute',
@@ -9,19 +10,22 @@ import { Subscription } from 'rxjs';
 })
 export class InstituteComponent implements OnInit {
   subscription = new Subscription();
-  institutes: any = [{}];
+  institute = {};
+  institute_id = 0;
 
-  constructor(private qs : QueryserviceService) { }
+  constructor(private activatedRoute : ActivatedRoute, private qs : QueryserviceService) { }
 
   ngOnInit(): void {
-    this.updateInstitutesInfo();
+    this.activatedRoute.params.subscribe(params => {
+      this.institute_id = params['institute_id'];
+      this.updateInstituteInfo();
+    });
   }
 
-  updateInstitutesInfo() : void {
+  updateInstituteInfo(): void {
     this.subscription.add(
-      this.qs.getInstitutes().subscribe(res => {
-        console.log(res);
-        this.institutes = res;
+      this.qs.getInstitute(this.institute_id).subscribe(res => {
+        this.institute = res;
         console.log(res);
       })
     );

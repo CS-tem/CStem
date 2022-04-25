@@ -11,7 +11,7 @@ import { ActivatedRoute } from '@angular/router';
 export class ArticleComponent implements OnInit {
   article_id = 0;
   subscription = new Subscription();
-  article = {}
+  article = {};
 
   constructor(private activatedRoute: ActivatedRoute, private qs : QueryserviceService) { }
 
