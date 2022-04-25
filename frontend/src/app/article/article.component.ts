@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { QueryserviceService } from '../queryservice.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-article',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ArticleComponent implements OnInit {
 
-  constructor() { }
+  subscription = new Subscription();
+  articles: any = [{}];
+
+  constructor(private qs : QueryserviceService) { }
 
   ngOnInit(): void {
+  }
+
+  updateArticlesInfo() : void {
+    this.subscription.add(
+      this.qs.getVenues().subscribe(res => {
+        this.articles = res;
+        console.log(res);
+      })
+    );
   }
 
 }
