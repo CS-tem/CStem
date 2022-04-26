@@ -62,7 +62,7 @@ export class InstituteComponent implements OnInit {
     this.chartOptions = {
       series: [
         {
-          name: "My-series",
+          name: "Publications",
           data: ['1','2','3','4']
         }
       ],
@@ -71,7 +71,7 @@ export class InstituteComponent implements OnInit {
         type: "bar"
       },
       title: {
-        text: "My First Angular Chart"
+        text: "Yearwise publications"
       },
       xaxis: {
         categories: ['2016','2017','2018','2019']
@@ -86,8 +86,6 @@ export class InstituteComponent implements OnInit {
       this.updateInstituteInfo();
       this.updateMembersInfo();
       this.updatePubsInfo();
-      // this.updateSeries();
-      
     });
   }
 
@@ -116,15 +114,12 @@ export class InstituteComponent implements OnInit {
   updatePubsInfo(): void {
     this.subscription.add(
       this.qs.getInstitutePubs(this.institute_id).subscribe(res => {
-        this.pubs = res;
-        
+        this.pubs = res; 
         for(var ele of res){
           this.pubs_x.push(""+ele.year);
           this.pubs_y.push(""+ele.n_pubs);
-        }
-        this.pubs = res;
-        console.log(this.pubs);
-         
+        }  
+        this.updateSeries(); 
       })
     );
   }
@@ -133,8 +128,7 @@ export class InstituteComponent implements OnInit {
     this.chartOptions.series = [{
       data: this.pubs_y
     }];
-    console.log(this.pubs_y)
-    // this.chartOptions.xaxis = {categories : this.pubs_x};
+    this.chartOptions.xaxis = {categories : this.pubs_x};
   }
 
   members_sortData(sort: Sort) {
