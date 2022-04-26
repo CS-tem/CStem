@@ -17,6 +17,10 @@ export class QueryserviceService {
     return this.http.get(`http://127.0.0.1:8000/institutes/${id}`);
   }
 
+  public getInstituteMembers(id: number) : Observable<any> {
+    return this.http.get(`http://127.0.0.1:8000/institute-members/${id}`);
+  }
+
   public getInstitutePubs(id: number) : Observable<any> {
     return this.http.get(`http://127.0.0.1:8000/institute-pubs/${id}`);
   }

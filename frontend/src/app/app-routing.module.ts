@@ -13,15 +13,15 @@ import { AuthorComponent } from './author/author.component';
 
 const routes: Routes = [
   { path: 'institutes', component: InstitutesComponent },
-  { path: 'institutes/:institute_id', component: InstituteComponent},
+  { path: 'institute/:institute_id', component: InstituteComponent},
   { path: 'authors/:author_id', component: AuthorComponent },
   { path: 'authors', component: AuthorsComponent },
   { path: 'venues', component: VenuesComponent},
-  { path: 'venues/:venue_id', component: VenueComponent},
+  { path: 'venue/:venue_id', component: VenueComponent},
   { path: 'topics', component: TopicsComponent},
-  { path: 'topics/:topic_id', component: TopicComponent},
+  { path: 'topic/:topic_id', component: TopicComponent},
   { path: 'articles', component : ArticlesComponent},
-  { path: 'articles/:article_id', component: ArticleComponent}
+  { path: 'article/:article_id', component: ArticleComponent}
   
 
 ];

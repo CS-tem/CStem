@@ -26,6 +26,15 @@ def get_institutes(institute_id : int):
     result = neo_db.neo4j_query(query)
     return [entry['i'] for entry in result]
 
+@app.get('/institute-members/{institute_id}')
+def get_institute_members(institute_id : int):
+    query = '''
+        MATCH (i:Institute{{id : {}}})-[:InstituteMember]->(j)
+        RETURN j;
+        '''.format(institute_id)
+    result = neo_db.neo4j_query(query)
+    return [entry['j'] for entry in result]
+
 @app.get('/institute-pubs/{institute_id}')
 def get_institute_pubs(institute_id : int):
     query = """MATCH (i : Institute{{id: {}}})-[:InstituteMember]->

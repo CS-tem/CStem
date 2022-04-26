@@ -5,15 +5,6 @@ import { Sort } from '@angular/material/sort';
 import { FormControl } from '@angular/forms';
 import { MatSelectChange } from '@angular/material/select';
 
-export interface Institute {
-  id: number,
-  name: string,
-  // country: string,
-  n_members: number,
-  n_pubs: number,
-  n_citations: number
-}
-
 @Component({
   selector: 'app-institutes',
   templateUrl: './institutes.component.html',
@@ -47,7 +38,7 @@ export class InstitutesComponent implements OnInit {
       this.qs.getTopics().subscribe(res => {
         this.topicList = ['All'];
         res.forEach((element: any) => {
-          this.topicList.push(element.i.name);
+          this.topicList.push(element.name);
         });
       })
     );
