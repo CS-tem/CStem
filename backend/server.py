@@ -125,10 +125,19 @@ def get_article_citations(article_id : int):
     
     return result
 
-@app.get('/article-cited/{article_id}')
-def get_article_cited(article_id : int):
+@app.get('/article-cited-by/{article_id}')
+def get_article_cited_by(article_id : int):
     query = """
     MATCH (i : Article{{id : {}}})-[:CitedBy]->(j)
+    RETURN j;""".format(article_id)
+    result = neo_db.neo4j_query(query)
+    
+    return result
+
+@app.get('/article-cited-from/{article_id}')
+def get_article_cited_from(article_id : int):
+    query = """
+    MATCH (i : Article{{id : {}}})<-[:CitedBy]-(j)
     RETURN j;""".format(article_id)
     result = neo_db.neo4j_query(query)
     
