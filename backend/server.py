@@ -61,9 +61,15 @@ def get_institutes():
 
 @app.get('/authors/{author_id}')
 def get_authors(author_id : int):
-    query = 'MATCH (i:Author{{id : {}}})-[:AuthorArticle]->(j)RETURN i,j;'.format(author_id)
+    query = 'MATCH (i:Author{{id : {}}}) RETURN i;'.format(author_id)
     result = neo_db.neo4j_query(query)
     return result
+
+@app.get('/authors-top5pubs/{author_id}')
+def get_authors_top5(author_id : int):
+    query = 'MATCH (i:Author{{id : {}}})-[:AuthorArticle]->(j)RETURN j ORDER BY j.n_citations DESC, j.year LIMIT 5;'.format(author_id)
+    result = neo_db.neo4j_query(query)
+    return [entry['j'] for entry in result]
 
 @app.get('/authors/')
 def get_authors():

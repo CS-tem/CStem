@@ -3,6 +3,37 @@ import { QueryserviceService } from '../queryservice.service';
 import { Subscription } from 'rxjs';
 import { ActivatedRoute } from '@angular/router';
 
+import {
+  ApexAxisChartSeries,
+  ApexChart,
+  ChartComponent,
+  ApexDataLabels,
+  ApexPlotOptions,
+  ApexYAxis,
+  ApexLegend,
+  ApexStroke,
+  ApexXAxis,
+  ApexFill,
+  ApexTooltip,
+  ApexTitleSubtitle
+} from "ng-apexcharts";
+import { Author } from '../author';
+import { Sort } from '@angular/material/sort';
+
+export type ChartOptions = {
+  series: ApexAxisChartSeries;
+  chart: ApexChart;
+  dataLabels: ApexDataLabels;
+  plotOptions: ApexPlotOptions;
+  yaxis: ApexYAxis;
+  xaxis: ApexXAxis;
+  fill: ApexFill;
+  tooltip: ApexTooltip;
+  stroke: ApexStroke;
+  legend: ApexLegend;
+  title: ApexTitleSubtitle;
+};
+
 @Component({
   selector: 'app-author',
   templateUrl: './author.component.html',
@@ -10,25 +41,167 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class AuthorComponent implements OnInit {
   author_id = 0;
-  author = {};
+  author : Author = {
+    id: 0,
+    name: 'null',
+    h_index: 0,
+    n_pubs: 0,
+    n_citations: 0
+  };
+  articles = [{}];
+  pubs_x : string[]= [];
+  pubs_y : string[]= [];
+  citations_x : string[]= [];
+  citations_y : string[]= [];
+
+  displayedColumns = ["id", "title", "year", "n_citations"];
+
+  public pubs_chartOptions: Partial<ChartOptions> | any;
+  public citations_chartOptions: Partial<ChartOptions> | any;
+
   subscription = new Subscription();
 
-  constructor(private activatedRoute: ActivatedRoute, private qs: QueryserviceService) { }
+  public chartOptions: Partial<ChartOptions> | any;
 
+  constructor(private activatedRoute : ActivatedRoute, private qs : QueryserviceService) { 
+    this.pubs_chartOptions = {
+      series: [
+        {
+          name: "Publications",
+          data: ['0']
+        }
+      ],
+      chart: {
+        height: 350,
+        type: "bar"
+      },
+      title: {
+        text: "Yearwise publications"
+      },
+      xaxis: {
+        categories: ['0']
+      }
+    };
+    this.citations_chartOptions = {
+      series: [
+        {
+          name: "Citations",
+          data: ['1','2','3','4']
+        }
+      ],
+      chart: {
+        height: 350,
+        type: "bar"
+      },
+      title: {
+        text: "Yearwise citations"
+      },
+      xaxis: {
+        categories: ['2016','2017','2018','2019']
+      }
+    }; 
+  }
+    
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(params => {
       this.author_id = params['author_id'];
       this.updateAuthorInfo();
+      this.updateAuthorArticlesInfo();
+      this.updatePubsInfo();
+      this.updateCitationsInfo();
     });
   }
 
   updateAuthorInfo(): void {
     this.subscription.add(
       this.qs.getAuthor(this.author_id).subscribe(res => {
-        this.author = res;
-        console.log(res);
+        this.author = {
+          id: res[0].i['id'],
+          name: res[0].i['name'],
+          h_index: res[0].i['h_index'],
+          n_pubs: res[0].i['n_pubs'],
+          n_citations: res[0].i['n_citations']
+        };
+        // console.log(this.author, res);
       })
     );
   }
 
+  updateAuthorArticlesInfo(): void {
+    this.subscription.add(
+      this.qs.getAuthorTop5Pubs(this.author_id).subscribe(res => {
+        this.articles = res;
+        // console.log(res);
+      })
+    );
+  }
+
+  articles_sortData(sort: Sort) {
+    const data = this.articles.slice();
+    if (!sort.active || sort.direction === '') {
+      this.articles = data;
+      return;
+    }
+
+    this.articles = data.sort((a: any, b: any) => {
+      const isAsc = sort.direction === 'asc';
+      switch (sort.active) {
+        case 'id':
+          return compare(a.id, b.id, isAsc);
+        case 'title':
+          return compare(a.title, b.title, isAsc);
+        case 'year':
+          return compare(a.year, b.year, isAsc);
+        case 'n_citations':
+          return compare(a.n_citations, b.n_citations, isAsc);
+        default:
+          return 0;
+      }
+    });
+  }
+
+  updatePubsInfo(): void {
+    this.subscription.add(
+      this.qs.getAuthorPubs(this.author_id).subscribe(res => {
+        for(var ele of res){
+          this.pubs_x.push(""+ele.year);
+          this.pubs_y.push(""+ele.n_pubs);
+        }  
+        this.pubs_updateSeries(); 
+      })
+    );
+  }
+
+  updateCitationsInfo(): void {
+    this.subscription.add(
+      this.qs.getAuthorCitations(this.author_id).subscribe(res => {
+        for(var ele of res){
+          this.citations_x.push(""+ele.year);
+          this.citations_y.push(""+ele.n_citations);
+        }  
+        this.citations_updateSeries(); 
+      })
+    );
+  }
+
+  public pubs_updateSeries() {
+    this.pubs_chartOptions.series = [{
+      data: this.pubs_y
+    }];
+    this.pubs_chartOptions.xaxis = {categories : this.pubs_x};
+  }
+
+  public citations_updateSeries() {
+    this.citations_chartOptions.series = [{
+      data: this.citations_y,
+    }];
+    this.citations_chartOptions.xaxis = {categories : this.citations_x};
+  }
+  
+  
+
+}
+
+function compare(a: number | string, b: number | string, isAsc: boolean) {
+  return (a < b ? -1 : 1) * (isAsc ? 1 : -1);
 }

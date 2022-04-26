@@ -33,6 +33,10 @@ export class QueryserviceService {
     return this.http.get(`http://127.0.0.1:8000/authors/${id}`);
   }
 
+  public getAuthorTop5Pubs(id: number) : Observable<any> {
+    return this.http.get(`http://127.0.0.1:8000/authors-top5pubs/${id}`);
+  }
+
   public getAuthors() : Observable<any> {
     return this.http.get(`http://127.0.0.1:8000/authors/`);
   }
