@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { QueryserviceService } from '../queryservice.service';
 import { Subscription } from 'rxjs';
-import { MatTableModule } from '@angular/material/table';
+import { Sort } from '@angular/material/sort';
 
 export interface Institute {
   id: number,
@@ -36,4 +36,33 @@ export class InstitutesComponent implements OnInit {
     );
   }
 
+  sortData(sort: Sort) {
+    const data = this.institutes.slice();
+    if (!sort.active || sort.direction === '') {
+      this.institutes = data;
+      return;
+    }
+
+    this.institutes = data.sort((a: any, b: any) => {
+      const isAsc = sort.direction === 'asc';
+      switch (sort.active) {
+        case 'id':
+          return compare(a.id, b.id, isAsc);
+        case 'name':
+          return compare(a.name, b.name, isAsc);
+        case 'n_members':
+          return compare(a.n_members, b.n_members, isAsc);
+        case 'n_pubs':
+          return compare(a.n_pubs, b.n_pubs, isAsc);
+        case 'n_citations':
+          return compare(a.n_citations, b.n_citations, isAsc);
+        default:
+          return 0;
+      }
+    });
+  }
+}
+
+function compare(a: number | string, b: number | string, isAsc: boolean) {
+  return (a < b ? -1 : 1) * (isAsc ? 1 : -1);
 }
