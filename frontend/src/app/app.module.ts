@@ -15,6 +15,8 @@ import { ArticlesComponent } from './articles/articles.component';
 import { TopicsComponent } from './topics/topics.component';
 import { VenuesComponent } from './venues/venues.component';
 import { AuthorComponent } from './author/author.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { AuthorComponent } from './author/author.component';
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

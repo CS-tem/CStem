@@ -1,13 +1,24 @@
 import { Component, OnInit } from '@angular/core';
 import { QueryserviceService } from '../queryservice.service';
 import { Subscription } from 'rxjs';
+import { MatTableModule } from '@angular/material/table';
+
+export interface Institute {
+  id: number,
+  name: string,
+  // country: string,
+  n_members: number,
+  n_pubs: number,
+  n_citations: number
+}
 
 @Component({
   selector: 'app-institutes',
   templateUrl: './institutes.component.html',
-  styleUrls: ['./institutes.component.scss']
+  styleUrls: ['./institutes.component.scss'],
 })
 export class InstitutesComponent implements OnInit {
+  displayedColumns = ["id", "name", "n_members", "n_pubs", "n_citations"];
   subscription = new Subscription();
   institutes: any = [{}];
 
@@ -21,7 +32,6 @@ export class InstitutesComponent implements OnInit {
     this.subscription.add(
       this.qs.getInstitutes().subscribe(res => {
         this.institutes = res;
-        console.log(res);
       })
     );
   }

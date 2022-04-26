@@ -13,7 +13,7 @@ app.add_middleware(
     allow_headers=['*']
 )
 
-neo_db = Graph(uri='bolt://localhost:7687/', user='neo4j', password='adarsh.1')
+neo_db = Graph(uri='bolt://localhost:7687/', user='neo4j', password='adshaila')
 
 @app.get('/')
 def test():
