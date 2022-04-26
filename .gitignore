@@ -3,6 +3,7 @@
 backend/data/dblp/*.xml
 backend/data/citation/*.json
 backend/data/aminer/*.txt
+backend/password.py
 package-lock.json
 papers
 
