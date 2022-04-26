@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { QueryserviceService } from '../queryservice.service';
 import { Subscription } from 'rxjs';
 import { Sort } from '@angular/material/sort';
+import { FormControl } from '@angular/forms';
+import { MatSelectChange } from '@angular/material/select';
 
 export interface Institute {
   id: number,
@@ -21,17 +23,32 @@ export class InstitutesComponent implements OnInit {
   displayedColumns = ["id", "name", "n_members", "n_pubs", "n_citations"];
   subscription = new Subscription();
   institutes: any = [{}];
+  topicFilter = new FormControl();
+  topicList: string[] = ['all'];
+  chosenTopics = [];
 
   constructor(private qs : QueryserviceService) { }
 
   ngOnInit(): void {
     this.updateInstitutesInfo();
+    this.updateTopicsInfo();
   }
 
   updateInstitutesInfo() : void {
     this.subscription.add(
       this.qs.getInstitutes().subscribe(res => {
         this.institutes = res;
+      })
+    );
+  }
+
+  updateTopicsInfo() : void {
+    this.subscription.add(
+      this.qs.getTopics().subscribe(res => {
+        this.topicList = ['All'];
+        res.forEach((element: any) => {
+          this.topicList.push(element.i.name);
+        });
       })
     );
   }
@@ -61,6 +78,23 @@ export class InstitutesComponent implements OnInit {
       }
     });
   }
+
+  chooseTopics(event: MatSelectChange) {
+    var value = event.value;
+    var all = false;
+    if (value[0] == 'all') {
+      all = true;
+    }
+  }
+
+  capitalize(input: string) {  
+    var words = input.split(' ');  
+    var CapitalizedWords: Array<string> = [];  
+    words.forEach((element: string) => {  
+        CapitalizedWords.push(element[0].toUpperCase() + element.slice(1, element.length));  
+    });  
+    return CapitalizedWords.join(' ');  
+  } 
 }
 
 function compare(a: number | string, b: number | string, isAsc: boolean) {

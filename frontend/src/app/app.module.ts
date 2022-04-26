@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuthorsComponent } from './authors/authors.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { InstitutesComponent } from './institutes/institutes.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { VenueComponent } from './venue/venue.component';
@@ -17,7 +17,8 @@ import { VenuesComponent } from './venues/venues.component';
 import { AuthorComponent } from './author/author.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTableModule } from '@angular/material/table';
-import {MatSortModule} from '@angular/material/sort';
+import { MatSortModule } from '@angular/material/sort';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -36,11 +37,13 @@ import {MatSortModule} from '@angular/material/sort';
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
     MatTableModule,
-    MatSortModule
+    MatSortModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

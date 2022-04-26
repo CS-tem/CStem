@@ -1,3 +1,6 @@
+<div align="center">
+    <h1>Institutes List</h1>
+</div>
 <table mat-table [dataSource]="institutes" class="mat-elevation-z8"
     matSort (matSortChange)="sortData($event)">
 
@@ -31,5 +34,18 @@
   
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-  </table>
+</table>
+<mat-form-field appearance="fill">
+    <mat-label>Topics Considered</mat-label>
+    <mat-select (selectionChange)="chooseTopics($event)" [formControl]="topicFilter" multiple>
+        <mat-select-trigger>
+        {{topicFilter.value ? topicFilter.value[0] : "All"}}
+        <span *ngIf="topicFilter.value?.length > 1" class="example-additional-selection">
+            (+{{topicFilter.value.length - 1}} {{topicFilter.value?.length === 2 ? 'other' : 'others'}})
+        </span>
+        </mat-select-trigger>
+        <mat-option *ngFor="let topic of topicList" [value]="topic">{{capitalize(topic)}}</mat-option>
+    </mat-select>
+</mat-form-field>
+  
   
