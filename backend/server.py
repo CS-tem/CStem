@@ -48,7 +48,7 @@ def get_institute_pubs(institute_id : int):
 def get_institute_citations(institute_id : int):
     query = """
     MATCH (i : Institute{{id: {}}})-[:InstituteMember]->(j : Author)-[:AuthorArticle]->(k: Article) RETURN 
-    i AS institute, SUM(k.n_citations) AS n_citations, k.year as year ORDER BY year; """.format(institute_id)
+    SUM(k.n_citations) AS n_citations, k.year as year ORDER BY year; """.format(institute_id)
     result = neo_db.neo4j_query(query)
     
     return result
@@ -74,7 +74,7 @@ def get_authors():
 @app.get('/author-pubs/{author_id}')
 def get_author_pubs(author_id : int):
     query = """MATCH (i : Author{{id: {}}})-[:AuthorArticle]->(j : Article)
-        RETURN i AS author, count(j.id) AS n_pubs, j.year as year ORDER BY year;""".format(author_id)
+        RETURN count(j.id) AS n_pubs, j.year as year ORDER BY year;""".format(author_id)
     result = neo_db.neo4j_query(query)
     return result
 
@@ -82,7 +82,7 @@ def get_author_pubs(author_id : int):
 def get_author_citations(author_id : int):
     query = """
     MATCH(j : Author{{id: {}}})-[:AuthorArticle]->(k: Article)
-    RETURN j AS author, SUM(k.n_citations) AS n_citations, k.year as year
+    RETURN SUM(k.n_citations) AS n_citations, k.year as year
     ORDER BY year;""".format(author_id)
     result = neo_db.neo4j_query(query)
     
@@ -92,7 +92,7 @@ def get_author_citations(author_id : int):
 def get_author_pubs_per_topic(author_id : int):
     query = """MATCH(j : Author{{id: {}}})-[:AuthorArticle]->
             (k: Article)<-[:ArticleTopic]-(i:Topic)
-            RETURN j AS author, COUNT(k.id) AS n_pubs, i AS topic
+            RETURN COUNT(k.id) AS n_pubs, i AS topic
             ORDER BY topic""".format(author_id)
     result = neo_db.neo4j_query(query)
     return result
@@ -120,7 +120,7 @@ def get_articles(article_id : int):
 def get_article_citations(article_id : int):
     query = """
     MATCH (i : Article{{id : {}}})-[:CitedBy]->(j)
-    RETURN i, COUNT(j) as n_citations, j.year AS Year;""".format(article_id)
+    RETURN COUNT(j) as n_citations, j.year AS Year;""".format(article_id)
     result = neo_db.neo4j_query(query)
     
     return result
@@ -163,14 +163,14 @@ def get_venues():
 @app.get('/topic-citations/{topic_id}')
 def get_topic_citations(topic_id : int):
     query = """MATCH (i : Topic{id: 2})<-[:ArticleTopic]-(j : Article)
-    RETURN i AS topic, sum(j.n_citations) AS n_citations, j.year as year;""".format(topic_id)
+    RETURN sum(j.n_citations) AS n_citations, j.year as year;""".format(topic_id)
     result = neo_db.neo4j_query(query)
     return result
 
 @app.get('/topic-pubs/{topic_id}')
 def get_topic_pubs(topic_id : int):
     query = """MATCH (i : Topic{{id: {}}})<-[:ArticleTopic]-(j : Article)
-    RETURN i AS topic, count(j.id) AS n_pubs,  j.year as year;""".format(topic_id)
+    RETURN count(j.id) AS n_pubs,  j.year as year;""".format(topic_id)
     result = neo_db.neo4j_query(query)
     return result
 
