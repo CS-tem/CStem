@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from neoquery import Graph
 from typing import Optional
+from password import PASSWORD
 
 app = FastAPI()
 origins = ['*']
@@ -13,7 +14,7 @@ app.add_middleware(
     allow_headers=['*']
 )
 
-neo_db = Graph(uri='bolt://localhost:7687/', user='neo4j', password='adarsh.1')
+neo_db = Graph(uri='bolt://localhost:7687/', user='neo4j', password=PASSWORD)
 
 @app.get('/')
 def test():

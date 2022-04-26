@@ -38,7 +38,6 @@ export class InstitutesComponent implements OnInit {
     this.subscription.add(
       this.qs.getInstitutes().subscribe(res => {
         this.institutes = res;
-        console.log(res);
       })
     );
   }
