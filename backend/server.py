@@ -13,7 +13,7 @@ app.add_middleware(
     allow_headers=['*']
 )
 
-neo_db = Graph(uri='bolt://localhost:7687/', user='neo4j', password='adshaila')
+neo_db = Graph(uri='bolt://localhost:7687/', user='neo4j', password='adarsh.1')
 
 @app.get('/')
 def test():
@@ -59,7 +59,7 @@ def get_authors(author_id : int):
 def get_authors():
     query = 'MATCH (i: Author) RETURN i;'
     result = neo_db.neo4j_query(query)
-    return result
+    return [entry['i'] for entry in result]
 
 @app.get('/author-pubs/{author_id}')
 def get_author_pubs(author_id : int):
@@ -98,7 +98,7 @@ def get_author_colabs(author_id : int):
 def get_articles():
     query = 'MATCH (i: Article) RETURN i;'
     result = neo_db.neo4j_query(query)
-    return result
+    return [entry['i'] for entry in result]
 
 @app.get('/articles/{article_id}')
 def get_articles(article_id : int):
@@ -148,7 +148,7 @@ def get_venues(venue_id : int):
 def get_venues():
     query = 'MATCH (i : Venue) RETURN i;'
     result = neo_db.neo4j_query(query)
-    return result
+    return [entry['i'] for entry in result]
     
 @app.get('/topic-citations/{topic_id}')
 def get_topic_citations(topic_id : int):
@@ -174,4 +174,4 @@ def get_topics(topic_id : int):
 def get_topics():
     query = 'MATCH (i : Topic) RETURN i;'
     result = neo_db.neo4j_query(query)
-    return result
+    return [entry['i'] for entry in result]

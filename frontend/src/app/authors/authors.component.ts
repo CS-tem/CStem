@@ -1,7 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { QueryserviceService } from '../queryservice.service';
 import { Subscription } from 'rxjs';
+import { Sort } from '@angular/material/sort';
 
+export interface Author {
+  id: number,
+  name: string,
+  // country: string,
+  h_index: number,
+  n_pubs: number,
+  n_citations: number
+}
 
 @Component({
   selector: 'app-authors',
@@ -10,6 +19,7 @@ import { Subscription } from 'rxjs';
 })
 export class AuthorsComponent implements OnInit {
 
+  displayedColumns = ["id", "name", "h_index", "n_pubs", "n_citations"];
   subscription = new Subscription();
   authors: any = [{}];
 
@@ -28,4 +38,33 @@ export class AuthorsComponent implements OnInit {
     );
   }
 
+  sortData(sort: Sort) {
+    const data = this.authors.slice();
+    if (!sort.active || sort.direction === '') {
+      this.authors = data;
+      return;
+    }
+
+    this.authors = data.sort((a: any, b: any) => {
+      const isAsc = sort.direction === 'asc';
+      switch (sort.active) {
+        case 'id':
+          return compare(a.id, b.id, isAsc);
+        case 'name':
+          return compare(a.name, b.name, isAsc);
+        case 'h_index':
+          return compare(a.h_index, b.h_index, isAsc);
+        case 'n_pubs':
+          return compare(a.n_pubs, b.n_pubs, isAsc);
+        case 'n_citations':
+          return compare(a.n_citations, b.n_citations, isAsc);
+        default:
+          return 0;
+      }
+    });
+  }
+}
+
+function compare(a: number | string, b: number | string, isAsc: boolean) {
+  return (a < b ? -1 : 1) * (isAsc ? 1 : -1);
 }
