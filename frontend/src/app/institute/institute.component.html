@@ -45,3 +45,11 @@
     <tr mat-row *matRowDef="let row; columns: members_displayedColumns;"></tr>
 </table>
   
+<div style="text-align:center">
+  <apx-chart
+    [series]="chartOptions.series"
+    [chart]="chartOptions.chart"
+    [xaxis]="chartOptions.xaxis"
+    [title]="chartOptions.title"
+  ></apx-chart>
+</div>

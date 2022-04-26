@@ -16,7 +16,8 @@ import {
   ApexStroke,
   ApexXAxis,
   ApexFill,
-  ApexTooltip
+  ApexTooltip,
+  ApexTitleSubtitle
 } from "ng-apexcharts";
 
 export type ChartOptions = {
@@ -30,6 +31,7 @@ export type ChartOptions = {
   tooltip: ApexTooltip;
   stroke: ApexStroke;
   legend: ApexLegend;
+  title: ApexTitleSubtitle;
 };
 
 @Component({
@@ -49,9 +51,34 @@ export class InstituteComponent implements OnInit {
   institute_id = 0;
   members = [{}];
   pubs = [{}];
+  pubs_x : string[]= [];
+  pubs_y : string[]= [];
+
   members_displayedColumns = ["id", "name", "h_index", "n_pubs", "n_citations"];
 
-  constructor(private activatedRoute : ActivatedRoute, private qs : QueryserviceService) { }
+  public chartOptions: Partial<ChartOptions> | any;
+
+  constructor(private activatedRoute : ActivatedRoute, private qs : QueryserviceService) { 
+    this.chartOptions = {
+      series: [
+        {
+          name: "My-series",
+          data: ['1','2','3','4']
+        }
+      ],
+      chart: {
+        height: 350,
+        type: "bar"
+      },
+      title: {
+        text: "My First Angular Chart"
+      },
+      xaxis: {
+        categories: ['2016','2017','2018','2019']
+      }
+    };
+    
+  }
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(params => {
@@ -59,6 +86,8 @@ export class InstituteComponent implements OnInit {
       this.updateInstituteInfo();
       this.updateMembersInfo();
       this.updatePubsInfo();
+      // this.updateSeries();
+      
     });
   }
 
@@ -88,8 +117,24 @@ export class InstituteComponent implements OnInit {
     this.subscription.add(
       this.qs.getInstitutePubs(this.institute_id).subscribe(res => {
         this.pubs = res;
+        
+        for(var ele of res){
+          this.pubs_x.push(""+ele.year);
+          this.pubs_y.push(""+ele.n_pubs);
+        }
+        this.pubs = res;
+        console.log(this.pubs);
+         
       })
     );
+  }
+
+  public updateSeries() {
+    this.chartOptions.series = [{
+      data: this.pubs_y
+    }];
+    console.log(this.pubs_y)
+    // this.chartOptions.xaxis = {categories : this.pubs_x};
   }
 
   members_sortData(sort: Sort) {

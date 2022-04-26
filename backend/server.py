@@ -39,7 +39,7 @@ def get_institute_members(institute_id : int):
 def get_institute_pubs(institute_id : int):
     query = """MATCH (i : Institute{{id: {}}})-[:InstituteMember]->
                 (j : Author)-[:AuthorArticle]->(k: Article)
-                RETURN  i AS institute, COUNT(k.id) AS n_pubs, 
+                RETURN  COUNT(k.id) AS n_pubs, 
                 k.year as year ORDER BY year""".format(institute_id)
     result = neo_db.neo4j_query(query)
     return result

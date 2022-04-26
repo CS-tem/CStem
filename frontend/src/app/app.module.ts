@@ -20,6 +20,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatSortModule } from '@angular/material/sort';
 import { MatSelectModule } from '@angular/material/select';
 import { MatCardModule } from '@angular/material/card';
+import { NgApexchartsModule } from 'ng-apexcharts';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { MatCardModule } from '@angular/material/card';
     MatSortModule,
     MatSelectModule,
     MatCardModule,
+    NgApexchartsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

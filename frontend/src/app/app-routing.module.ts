@@ -14,7 +14,7 @@ import { AuthorComponent } from './author/author.component';
 const routes: Routes = [
   { path: 'institutes', component: InstitutesComponent },
   { path: 'institute/:institute_id', component: InstituteComponent},
-  { path: 'authors/:author_id', component: AuthorComponent },
+  { path: 'author/:author_id', component: AuthorComponent },
   { path: 'authors', component: AuthorsComponent },
   { path: 'venues', component: VenuesComponent},
   { path: 'venue/:venue_id', component: VenueComponent},
