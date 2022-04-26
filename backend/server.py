@@ -98,8 +98,8 @@ def get_author_citations(author_id : int):
 def get_author_pubs_per_topic(author_id : int):
     query = """MATCH(j : Author{{id: {}}})-[:AuthorArticle]->
             (k: Article)<-[:ArticleTopic]-(i:Topic)
-            RETURN COUNT(k.id) AS n_pubs, i AS topic
-            ORDER BY topic""".format(author_id)
+            RETURN COUNT(k.id) AS n_pubs, i.name AS topic
+            ORDER BY topic LIMIT 5""".format(author_id)
     result = neo_db.neo4j_query(query)
     return result
 

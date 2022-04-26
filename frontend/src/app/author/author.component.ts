@@ -53,6 +53,8 @@ export class AuthorComponent implements OnInit {
   pubs_y : string[]= [];
   citations_x : string[]= [];
   citations_y : string[]= [];
+  pie_x : string[]= [];
+  pie_y : string[]= [];
 
   displayedColumns = ["id", "title", "year", "n_citations"];
 
@@ -61,7 +63,7 @@ export class AuthorComponent implements OnInit {
 
   subscription = new Subscription();
 
-  public chartOptions: Partial<ChartOptions> | any;
+  public pie_chartOptions: Partial<ChartOptions> | any;
 
   constructor(private activatedRoute : ActivatedRoute, private qs : QueryserviceService) { 
     this.pubs_chartOptions = {
@@ -100,7 +102,34 @@ export class AuthorComponent implements OnInit {
         categories: ['2016','2017','2018','2019']
       }
     }; 
+    this.pie_chartOptions = {
+      series: [
+        {
+          name: "n_pubs",
+          data: [1,2,3]
+        }
+      ],
+      chart: {
+        width: 600,
+        type: "pie"
+      },
+      labels: ["Topic1", "Topic 2", "Topic 3"],
+      responsive: [
+        {
+          breakpoint: 480,
+          options: {
+            chart: {
+              width: 600
+            },
+            legend: {
+              position: "bottom"
+            }
+          }
+        }
+      ]
+    };
   }
+  
     
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(params => {
@@ -109,6 +138,7 @@ export class AuthorComponent implements OnInit {
       this.updateAuthorArticlesInfo();
       this.updatePubsInfo();
       this.updateCitationsInfo();
+      this.updatePubsperTopicInfo();
     });
   }
 
@@ -165,7 +195,7 @@ export class AuthorComponent implements OnInit {
       this.qs.getAuthorPubs(this.author_id).subscribe(res => {
         for(var ele of res){
           this.pubs_x.push(""+ele.year);
-          this.pubs_y.push(""+ele.n_pubs);
+          this.pubs_y.push(ele.n_pubs);
         }  
         this.pubs_updateSeries(); 
       })
@@ -177,9 +207,23 @@ export class AuthorComponent implements OnInit {
       this.qs.getAuthorCitations(this.author_id).subscribe(res => {
         for(var ele of res){
           this.citations_x.push(""+ele.year);
-          this.citations_y.push(""+ele.n_citations);
+          this.citations_y.push(ele.n_citations);
         }  
         this.citations_updateSeries(); 
+      })
+    );
+  }
+
+  updatePubsperTopicInfo(): void {
+    this.subscription.add(
+      this.qs.getAuthorPubsPerTopic(this.author_id).subscribe(res => {
+        for(var ele of res){
+          this.pie_x.push(ele.topic);
+          this.pie_y.push(ele.n_pubs);
+        }  
+        this.pie_updateSeries();
+
+        console.log(res);
       })
     );
   }
@@ -196,6 +240,11 @@ export class AuthorComponent implements OnInit {
       data: this.citations_y,
     }];
     this.citations_chartOptions.xaxis = {categories : this.citations_x};
+  }
+
+  public pie_updateSeries() {
+    this.pie_chartOptions.series = this.pie_y;
+    this.pie_chartOptions.labels = this.pie_x;
   }
   
   
