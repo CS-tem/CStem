@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { QueryserviceService } from '../queryservice.service';
 import { Subscription } from 'rxjs';
 import { ActivatedRoute } from '@angular/router';
+import { ChartOptions } from '../app.component';
 
 @Component({
   selector: 'app-article',

@@ -47,9 +47,16 @@
   
 <div style="text-align:center" style="margin-left:30%;margin-right:35%;margin-top:4%">
   <apx-chart
-    [series]="chartOptions.series"
-    [chart]="chartOptions.chart"
-    [xaxis]="chartOptions.xaxis"
-    [title]="chartOptions.title"
+    [series]="pubs_chartOptions.series"
+    [chart]="pubs_chartOptions.chart"
+    [xaxis]="pubs_chartOptions.xaxis"
+    [title]="pubs_chartOptions.title"
+  ></apx-chart>
+  <br/>
+  <apx-chart
+    [series]="citations_chartOptions.series"
+    [chart]="citations_chartOptions.chart"
+    [xaxis]="citations_chartOptions.xaxis"
+    [title]="citations_chartOptions.title"
   ></apx-chart>
 </div>
