@@ -13,7 +13,6 @@ import { AuthorComponent } from './author/author.component';
 import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
   { path: 'institutes', component: InstitutesComponent },
   { path: 'institute/:institute_id', component: InstituteComponent},
   { path: 'author/:author_id', component: AuthorComponent },
@@ -23,7 +22,9 @@ const routes: Routes = [
   { path: 'topics', component: TopicsComponent},
   { path: 'topic/:topic_id', component: TopicComponent},
   { path: 'articles', component : ArticlesComponent},
-  { path: 'article/:article_id', component: ArticleComponent}
+  { path: 'article/:article_id', component: ArticleComponent},
+  { path: 'home', component: HomeComponent },
+  { path: '**', redirectTo: 'home' },
 ];
 
 @NgModule({

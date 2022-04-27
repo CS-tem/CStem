@@ -1,11 +1,17 @@
-<div style="text-align:center" style="margin-left:30%;margin-right:35%;margin-top:4%">
-    <apx-chart
-      [series]="citations_chartOptions.series"
-      [chart]="citations_chartOptions.chart"
-      [xaxis]="citations_chartOptions.xaxis"
-      [title]="citations_chartOptions.title"
-    ></apx-chart>
-    <br>
-    <div echarts [options]="graphOption"></div>
+<div class="container">
+  
+  <h2>Article: (name)</h2>
+
+  <div class="chart">
+      <apx-chart
+        [series]="citations_chartOptions.series"
+        [chart]="citations_chartOptions.chart"
+        [xaxis]="citations_chartOptions.xaxis"
+        [title]="citations_chartOptions.title"
+      ></apx-chart>
+      <br>
+      <div echarts [options]="graphOption"></div>
+  </div>
+
 </div>
 

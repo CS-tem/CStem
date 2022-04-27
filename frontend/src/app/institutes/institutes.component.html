@@ -1,54 +1,57 @@
-<div style="margin-left:40%;margin-top:2%">
-    <h1>Institutes List</h1>
-</div>
-<table mat-table [dataSource]="institutes" class="mat-elevation-z8"
-    matSort (matSortChange)="sortData($event)">
+<div class="container">
+    
+    <h2>Institutes</h2>
 
-    <!--- Note that these columns can be defined in any order.
-          The actual rendered columns are set as a property on the row definition" -->
-  
-    <ng-container matColumnDef="id">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header="id"> Institute ID </th>
-      <td mat-cell *matCellDef="let institute"> {{institute.id}} </td>
-    </ng-container>
-  
-    <ng-container matColumnDef="name">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header="name"> Institute Name </th>
-      <td mat-cell *matCellDef="let institute"> {{institute.name}} </td>
-    </ng-container>
-  
-    <ng-container matColumnDef="n_members">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header="n_members"> Num. of Members </th>
-      <td mat-cell *matCellDef="let institute"> {{institute.n_members}} </td>
-    </ng-container>
-  
-    <ng-container matColumnDef="n_pubs">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header="n_pubs"> Num. of Publications </th>
-      <td mat-cell *matCellDef="let institute"> {{institute.n_pubs}} </td>
-    </ng-container>
+    <table mat-table [dataSource]="institutes" class="mat-elevation-z8"
+        matSort (matSortChange)="sortData($event)">
 
-    <ng-container matColumnDef="n_citations">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header="n_citations"> Num. of Citations </th>
-        <td mat-cell *matCellDef="let institute"> {{institute.n_citations}} </td>
-      </ng-container>
-  
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-</table>
+        <!--- Note that these columns can be defined in any order.
+              The actual rendered columns are set as a property on the row definition" -->
+      
+        <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header="id"> Institute ID </th>
+          <td mat-cell *matCellDef="let institute"> {{institute.id}} </td>
+        </ng-container>
+      
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header="name"> Institute Name </th>
+          <td mat-cell *matCellDef="let institute"> {{institute.name}} </td>
+        </ng-container>
+      
+        <ng-container matColumnDef="n_members">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header="n_members"> Num. of Members </th>
+          <td mat-cell *matCellDef="let institute"> {{institute.n_members}} </td>
+        </ng-container>
+      
+        <ng-container matColumnDef="n_pubs">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header="n_pubs"> Num. of Publications </th>
+          <td mat-cell *matCellDef="let institute"> {{institute.n_pubs}} </td>
+        </ng-container>
 
-<div class="flex-center">
-    <mat-form-field appearance="fill">
-    <mat-label>Topics Considered</mat-label>
-    <mat-select (selectionChange)="chooseTopics($event)" [formControl]="topicFilter" multiple>
-        <mat-select-trigger>
-        {{topicFilter.value ? topicFilter.value[0] : "All"}}
-        <span *ngIf="topicFilter.value?.length > 1" class="example-additional-selection">
-            (+{{topicFilter.value.length - 1}} {{topicFilter.value?.length === 2 ? 'other' : 'others'}})
-        </span>
-        </mat-select-trigger>
-        <mat-option *ngFor="let topic of topicList" [value]="topic">{{capitalize(topic)}}</mat-option>
-    </mat-select>
-</mat-form-field>
+        <ng-container matColumnDef="n_citations">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header="n_citations"> Num. of Citations </th>
+            <td mat-cell *matCellDef="let institute"> {{institute.n_citations}} </td>
+          </ng-container>
+      
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+    <div class="flex-center">
+        <mat-form-field appearance="fill">
+        <mat-label>Topics Considered</mat-label>
+        <mat-select (selectionChange)="chooseTopics($event)" [formControl]="topicFilter" multiple>
+            <mat-select-trigger>
+            {{topicFilter.value ? topicFilter.value[0] : "All"}}
+            <span *ngIf="topicFilter.value?.length > 1" class="example-additional-selection">
+                (+{{topicFilter.value.length - 1}} {{topicFilter.value?.length === 2 ? 'other' : 'others'}})
+            </span>
+            </mat-select-trigger>
+            <mat-option *ngFor="let topic of topicList" [value]="topic">{{capitalize(topic)}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+    </div>
+
 </div>
   
   

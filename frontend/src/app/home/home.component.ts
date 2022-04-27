@@ -20,7 +20,7 @@ export class HomeComponent implements OnInit {
     this.dataSource.data = [
       {
         'route': '/',
-        'desc': 'Brings to the Home page',
+        'desc': 'Homepage',
       },
       {
         'route': '/institutes',

@@ -1,35 +1,41 @@
-<table mat-table [dataSource]="authors" class="mat-elevation-z8"
-    matSort (matSortChange)="sortData($event)">
+<div class="container">
+    
+    <h2>Authors</h2>
 
-    <!--- Note that these columns can be defined in any order.
-          The actual rendered columns are set as a property on the row definition" -->
-  
-    <ng-container matColumnDef="id">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header="id"> Author ID </th>
-      <td mat-cell *matCellDef="let author"> {{author.id}} </td>
-    </ng-container>
-  
-    <ng-container matColumnDef="name">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header="name"> Author Name </th>
-      <td mat-cell *matCellDef="let author"> {{author.name}} </td>
-    </ng-container>
-  
-    <ng-container matColumnDef="h_index">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header="h_index"> H Index </th>
-      <td mat-cell *matCellDef="let author"> {{author.h_index}} </td>
-    </ng-container>
-  
-    <ng-container matColumnDef="n_pubs">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header="n_pubs"> Num. of Publications </th>
-      <td mat-cell *matCellDef="let author"> {{author.n_pubs}} </td>
-    </ng-container>
+    <table mat-table [dataSource]="authors" class="mat-elevation-z8"
+        matSort (matSortChange)="sortData($event)">
 
-    <ng-container matColumnDef="n_citations">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header="n_citations"> Num. of Citations </th>
-        <td mat-cell *matCellDef="let author"> {{author.n_citations}} </td>
-      </ng-container>
-  
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-  </table>
+        <!--- Note that these columns can be defined in any order.
+              The actual rendered columns are set as a property on the row definition" -->
+
+        <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header="id"> Author ID </th>
+          <td mat-cell *matCellDef="let author"> {{author.id}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header="name"> Author Name </th>
+          <td mat-cell *matCellDef="let author"> {{author.name}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="h_index">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header="h_index"> H Index </th>
+          <td mat-cell *matCellDef="let author"> {{author.h_index}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="n_pubs">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header="n_pubs"> Num. of Publications </th>
+          <td mat-cell *matCellDef="let author"> {{author.n_pubs}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="n_citations">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header="n_citations"> Num. of Citations </th>
+            <td mat-cell *matCellDef="let author"> {{author.n_citations}} </td>
+          </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+</div>
   
