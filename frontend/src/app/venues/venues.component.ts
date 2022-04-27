@@ -35,7 +35,10 @@ export class VenuesComponent implements OnInit {
     this.subscription.add(
       this.qs.getVenues().subscribe(res => {
         this.venues = res;
-        console.log(res);
+        this.sortData({
+          active: 'n_citations',
+          direction: 'desc'
+        });
       })
     );
   }
