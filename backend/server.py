@@ -200,3 +200,46 @@ def get_topics():
     query = 'MATCH (i : Topic) RETURN i;'
     result = neo_db.neo4j_query(query)
     return [entry['i'] for entry in result]
+
+
+### queries for recomputation ### 
+
+#topic selected articles
+@app.get('/articles/selected-topics/{topic_id}') #assumed a '-' separated list will be given here 
+def get_topics(topic_id : str,q: Optional[str] = None):
+    if q:
+        topics = q
+    topics = topic_id.split('-')
+    topics = list(map(int, topics))
+    query = """MATCH (j : Topic)-[:ArticleTopic]->(i: Article)
+                WHERE j.id IN {}
+                RETURN i,j""".format(topics)
+    result = neo_db.neo4j_query(query)
+    return result
+
+#country selected Institutes
+@app.get('/institutes/selected-countries/{cnt_str}') #assumed a '-' separated list will be given here 
+def get_topics(cnt_str : str,q: Optional[str] = None):
+    if q:
+        countries = q
+    countries = cnt_str.split('-')
+    query = """MATCH (i: Institute)<-[:InstituteCountry]-(j: Country) 
+            WHERE j.name in {}
+            RETURN i;""".format(countries)
+
+    result = neo_db.neo4j_query(query)
+    return result
+
+#Type selected venues
+@app.get('/venues/selected-types/{type_string}') #assumed a '-' separated list will be given here 
+def get_topics(type_string : str,q: Optional[str] = None):
+    if q:
+        venues = q
+    venues = type_string.split('-')
+    query = """MATCH (i: Venue)
+            WHERE i.type in {}
+            RETURN i;""".format(venues)
+    result = neo_db.neo4j_query(query)
+    return result
+    
+

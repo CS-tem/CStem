@@ -109,4 +109,16 @@ export class QueryserviceService {
   public getTopicCitations(id: number) : Observable<any> {
     return this.http.get(`http://127.0.0.1:8000/topic-citations/${id}`);
   }
+
+  public getVenueByType(id: number) : Observable<any> {
+    return this.http.get(`http://127.0.0.1:8000/venues/selected-types/${id}`);
+  }
+
+  public getInstituteByCountry(id: number) : Observable<any> {
+    return this.http.get(`http://127.0.0.1:8000/institutes/selected-countries/${id}`);
+  }
+
+  public getArticleByTopic(id: number) : Observable<any> {
+    return this.http.get(`http://127.0.0.1:8000/articles/selected-topics/${id}`);
+  }
 }
