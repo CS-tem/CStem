@@ -177,14 +177,14 @@ def get_venues():
     
 @app.get('/topic-citations/{topic_id}')
 def get_topic_citations(topic_id : int):
-    query = """MATCH (i : Topic{id: 2})<-[:ArticleTopic]-(j : Article)
+    query = """MATCH (i : Topic{{id: {}}})-[:ArticleTopic]->(j : Article)
     RETURN sum(j.n_citations) AS n_citations, j.year as year;""".format(topic_id)
     result = neo_db.neo4j_query(query)
     return result
 
 @app.get('/topic-pubs/{topic_id}')
 def get_topic_pubs(topic_id : int):
-    query = """MATCH (i : Topic{{id: {}}})<-[:ArticleTopic]-(j : Article)
+    query = """MATCH (i : Topic{{id: {}}})-[:ArticleTopic]->(j : Article)
     RETURN count(j.id) AS n_pubs,  j.year as year;""".format(topic_id)
     result = neo_db.neo4j_query(query)
     return result

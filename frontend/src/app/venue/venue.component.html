@@ -1,1 +1,20 @@
-<p>venue works!</p>
+<ng-container *ngIf="venue">
+    <mat-card class="example-card">
+        <mat-card-header>
+            <mat-card-title>{{venue.name}} ({{venue.acronym}})</mat-card-title>
+            <mat-card-subtitle>ID: {{venue.id}}</mat-card-subtitle>
+            <mat-card-subtitle>{{venue.type}}</mat-card-subtitle>
+            <mat-card-subtitle>{{venue.n_pubs}} publications</mat-card-subtitle>
+        </mat-card-header>
+    </mat-card>
+</ng-container>
+<div style="text-align:center" style="margin-left:30%;margin-right:35%;margin-top:4%">
+<apx-chart
+    [series]="pubs_chartOptions.series"
+    [chart]="pubs_chartOptions.chart"
+    [xaxis]="pubs_chartOptions.xaxis"
+    [title]="pubs_chartOptions.title"
+></apx-chart>
+</div>
+  
+  

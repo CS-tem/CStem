@@ -3,15 +3,6 @@ import { QueryserviceService } from '../queryservice.service';
 import { Subscription } from 'rxjs';
 import { Sort } from '@angular/material/sort';
 
-export interface Topic {
-  id: number,
-  name: string,
-  // country: string,
-  n_articles: number,
-  n_authors: number,
-  n_citations: number
-}
-
 @Component({
   selector: 'app-topics',
   templateUrl: './topics.component.html',
@@ -31,8 +22,14 @@ export class TopicsComponent implements OnInit {
   updateTopicsInfo() : void {
     this.subscription.add(
       this.qs.getTopics().subscribe(res => {
+        for (var i = 0; i < res.length; i++) {
+          res[i].name = this.capitalize(res[i].name);
+        }
         this.topics = res;
-        console.log(res);
+        this.sortData({
+          active: 'n_citations',
+          direction: 'desc',
+        });
       })
     );
   }
@@ -63,6 +60,14 @@ export class TopicsComponent implements OnInit {
     });
   }
 
+  capitalize(input: string) {  
+    var words = input.split(' ');  
+    var CapitalizedWords: Array<string> = [];  
+    words.forEach((element: string) => {  
+        CapitalizedWords.push(element[0].toUpperCase() + element.slice(1, element.length));  
+    });  
+    return CapitalizedWords.join(' ');  
+  } 
 
 }
 
