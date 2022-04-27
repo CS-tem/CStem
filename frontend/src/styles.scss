@@ -1,5 +1,171 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~@angular/material/prebuilt-themes/indigo-pink.css';
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+// SCSS Mixin that adds shadow to elements
+@mixin shadow {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+// SCSS Mixin that adds margins to elements
+@mixin margin($top: 0, $bottom: 0, $left: 0, $right: 0) {
+  margin-top: $top;
+  margin-bottom: $bottom;
+  margin-left: $left;
+  margin-right: $right;
+}
+
+html, body { 
+    height: 100%; 
+}
+
+body { 
+    margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; 
+}
+
+table {
+  width: 90%;
+  padding: 1em;
+  margin: auto;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+table:hover {
+  @include shadow();
+}
+
+.tcell {
+  white-space: initial;
+}
+
+.container {
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-bottom: 1em;
+}
+
+mat-paginator {
+  margin: auto;
+  margin-top: -1em !important;
+  width: 90%;
+}
+
+mat-paginator:hover {
+  @include shadow();
+}
+
+.container {
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-bottom: 1em;
+}
+
+mat-list {
+  margin-top: 1em !important;
+  margin-bottom: 1em !important;
+  padding-top: 0 !important;
+}
+
+mat-list:hover {
+  @include shadow();
+}
+
+mat-list-item {
+  padding-top: 1em !important;
+  padding-bottom: 1em !important;
+  height: auto !important;
+  background-color: #fff;
+}
+
+mat-spinner {
+  margin: auto;
+  margin-top: 20%;
+}
+
+mat-card {
+  width: 50%;
+  @include margin(0, 0, auto, auto);
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-bottom: 0;
+  margin-top: 2em;
+  text-align: center;
+  @include shadow();
+}
+
+mat-form-field {
+  width: 90%;
+}
+
+.mat-menu-item {
+  text-align: center !important;
+}
+
+th {
+  font-size: 1em !important;
+}
+
+h2,
+h3,
+h4 {
+  text-align: center;
+  margin: auto;
+  margin-top: 1em;
+}
+
+h2 {
+  font-size: 2em !important;
+}
+
+h3 {
+  font-size: 1.25em !important;
+}
+
+h4 {
+  font-size: 1.15em;
+}
+
+.spacing {
+  flex: 1 1 auto;
+}
+
+.title {
+  text-decoration: none;
+  color: azure;
+  font-size: x-large;
+}
+
+.subtitle {
+  text-decoration: none;
+  color: azure;
+  font-size: large;
+}
+
+.btn {
+  margin: 1em;
+}
+
+.btn:hover {
+  @include shadow();
+}
+
+mat-toolbar {
+  @include shadow();
+}
+
+.navbar_icons:hover {
+  color: blue;
+}
+
+.mat-row:hover {
+  background-color: #EEE;
+}
+
+.example-additional-selection {
+    opacity: 0.75;
+    font-size: 0.75em;
+}
+
+.demo-chart {
+    height: 400px;
+}
