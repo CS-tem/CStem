@@ -35,7 +35,9 @@
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 </table>
-<mat-form-field appearance="fill">
+
+<div class="flex-center">
+    <mat-form-field appearance="fill">
     <mat-label>Topics Considered</mat-label>
     <mat-select (selectionChange)="chooseTopics($event)" [formControl]="topicFilter" multiple>
         <mat-select-trigger>
@@ -47,5 +49,6 @@
         <mat-option *ngFor="let topic of topicList" [value]="topic">{{capitalize(topic)}}</mat-option>
     </mat-select>
 </mat-form-field>
+</div>
   
   
