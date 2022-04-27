@@ -37,6 +37,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon'
 import { MatSortModule } from '@angular/material/sort';
 import { MatSelectModule } from '@angular/material/select';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { MatSelectModule } from '@angular/material/select';
     ArticlesComponent,
     TopicsComponent,
     VenuesComponent,
-    AuthorComponent
+    AuthorComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

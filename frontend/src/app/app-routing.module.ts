@@ -10,8 +10,10 @@ import { ArticlesComponent } from './articles/articles.component';
 import { VenuesComponent } from './venues/venues.component';
 import { TopicsComponent } from './topics/topics.component';
 import { AuthorComponent } from './author/author.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
+  { path: '', component: HomeComponent },
   { path: 'institutes', component: InstitutesComponent },
   { path: 'institute/:institute_id', component: InstituteComponent},
   { path: 'author/:author_id', component: AuthorComponent },
@@ -22,8 +24,6 @@ const routes: Routes = [
   { path: 'topic/:topic_id', component: TopicComponent},
   { path: 'articles', component : ArticlesComponent},
   { path: 'article/:article_id', component: ArticleComponent}
-  
-
 ];
 
 @NgModule({
