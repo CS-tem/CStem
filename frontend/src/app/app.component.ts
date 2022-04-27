@@ -34,5 +34,5 @@ export type ChartOptions = {
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'frontend';
+  title = 'CStem';
 }
