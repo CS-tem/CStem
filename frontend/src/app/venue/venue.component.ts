@@ -65,7 +65,7 @@ export class VenueComponent implements OnInit {
 
   updatePubsInfo(): void {
     this.subscription.add(
-      this.qs.getTopicPubs(this.venue_id).subscribe(res => {
+      this.qs.getVenuePubs(this.venue_id).subscribe(res => {
         for(var ele of res){
           this.pubs_x.push(""+ele.year);
           this.pubs_y.push(""+ele.n_pubs);
