@@ -22,8 +22,10 @@ def test():
 
 @app.get('/institutes/{institute_id}')
 def get_institutes(institute_id : int):
-    query = 'MATCH (i: Institute {{id : {}}}) RETURN i;'.format(institute_id)
+    query = 'MATCH (i: Institute {{id : {}}})<-[:InstituteCountry]-(j) RETURN i,j.name AS c_name;'.format(institute_id)
     result = neo_db.neo4j_query(query)
+    for entry in result:
+        entry['i']['country'] = entry['c_name']
     return [entry['i'] for entry in result]
 
 @app.get('/institute-members/{institute_id}')
@@ -55,8 +57,10 @@ def get_institute_citations(institute_id : int):
 
 @app.get('/institutes/')
 def get_institutes():
-    query = 'MATCH (i: Institute) RETURN i;'
+    query = 'MATCH (i: Institute)<-[:InstituteCountry]-(j) RETURN i,j.name AS c_name;'
     result = neo_db.neo4j_query(query)
+    for entry in result:
+        entry['i']['country'] = entry['c_name']
     return [entry['i'] for entry in result]
 
 @app.get('/authors/{author_id}')

@@ -11,7 +11,7 @@ import { MatSelectChange } from '@angular/material/select';
   styleUrls: ['./institutes.component.scss'],
 })
 export class InstitutesComponent implements OnInit {
-  displayedColumns = ["id", "name", "n_members", "n_pubs", "n_citations"];
+  displayedColumns = ["id", "name","country", "n_members", "n_pubs", "n_citations"];
   subscription = new Subscription();
   institutes: any = [{}];
   topicFilter = new FormControl();
@@ -29,6 +29,7 @@ export class InstitutesComponent implements OnInit {
     this.subscription.add(
       this.qs.getInstitutes().subscribe(res => {
         this.institutes = res;
+        console.log(res);
       })
     );
   }
@@ -64,6 +65,8 @@ export class InstitutesComponent implements OnInit {
           return compare(a.n_pubs, b.n_pubs, isAsc);
         case 'n_citations':
           return compare(a.n_citations, b.n_citations, isAsc);
+        case 'country':
+          return compare(a.country, b.country, isAsc);
         default:
           return 0;
       }

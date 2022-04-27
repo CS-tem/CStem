@@ -18,7 +18,8 @@ export class InstituteComponent implements OnInit {
     name: 'null',
     n_members: 0,
     n_pubs: 0,
-    n_citations: 0
+    n_citations: 0,
+    country: 'null'
   };
   institute_id = 0;
   members = [{}];
@@ -27,7 +28,7 @@ export class InstituteComponent implements OnInit {
   citations_x : string[]= [];
   citations_y : string[]= [];
 
-  members_displayedColumns = ["id", "name", "h_index", "n_pubs", "n_citations"];
+  members_displayedColumns = ["id", "name","h_index", "n_pubs", "n_citations"];
 
   public pubs_chartOptions: Partial<ChartOptions> | any;
   public citations_chartOptions: Partial<ChartOptions> | any;
@@ -90,8 +91,10 @@ export class InstituteComponent implements OnInit {
           name: res[0]['name'],
           n_members: res[0]['n_members'],
           n_pubs: res[0]['n_pubs'],
-          n_citations: res[0]['n_citations']
+          n_citations: res[0]['n_citations'],
+          country: res[0]['country']
         };
+        console.log(res);
       })
     );
   }
@@ -162,6 +165,8 @@ export class InstituteComponent implements OnInit {
           return compare(a.n_pubs, b.n_pubs, isAsc);
         case 'n_citations':
           return compare(a.n_citations, b.n_citations, isAsc);
+      // ] case 'country':
+      //     return compare(a.n_country, b.country, isAsc);
         default:
           return 0;
       }

@@ -17,6 +17,11 @@
           <th mat-header-cell *matHeaderCellDef mat-sort-header="name"> Institute Name </th>
           <td mat-cell *matCellDef="let institute"> {{institute.name}} </td>
         </ng-container>
+
+        <ng-container matColumnDef="country">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header="country"> Country </th>
+          <td mat-cell *matCellDef="let institute"> {{institute.country}} </td>
+        </ng-container>
       
         <ng-container matColumnDef="n_members">
           <th mat-header-cell *matHeaderCellDef mat-sort-header="n_members"> Num. of Members </th>
