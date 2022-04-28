@@ -58,6 +58,7 @@ export class ArticleComponent implements OnInit {
     this.subscription.add(
       this.qs.getArticle(this.article_id).subscribe(res => {
         this.article = res;
+        console.log(this.article);
       })
     );
   }

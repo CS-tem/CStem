@@ -6,6 +6,7 @@ backend/data/aminer/*.txt
 backend/password.py
 package-lock.json
 papers
+todo.txt
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
