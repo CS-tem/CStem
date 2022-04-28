@@ -90,6 +90,10 @@ mat-card {
   @include shadow();
 }
 
+mat-list {
+  @include margin(0, 0, auto, auto);
+}
+
 .flex-center{
   display: flex;
   justify-content: center;

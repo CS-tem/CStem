@@ -4,9 +4,6 @@
 
   <table mat-table [dataSource]="topics" class=""
       matSort (matSortChange)="sortData($event)">
-
-      <!--- Note that these columns can be defined in any order.
-            The actual rendered columns are set as a property on the row definition" -->
     
       <ng-container matColumnDef="id">
         <th mat-header-cell *matHeaderCellDef mat-sort-header="id"> Topic ID </th>

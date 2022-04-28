@@ -1,16 +1,24 @@
 <div class="container">
 
-  <h2>Author: {{author['name']}}</h2>
+  <h2>{{author['name']}}</h2>
 
-  <mat-card>
-      <mat-card-header>
-        <mat-card-title>{{author['name']}}</mat-card-title>
-        <mat-card-subtitle>ID: {{author['id']}}</mat-card-subtitle>
-        <mat-card-subtitle>H-Index: {{author['h_index']}}</mat-card-subtitle>
-        <mat-card-subtitle>{{author['n_pubs']}} publications</mat-card-subtitle>
-        <mat-card-subtitle>{{author['n_citations']}} citations</mat-card-subtitle>
-      </mat-card-header>
-  </mat-card>
+  <mat-list>
+    
+      <mat-list-item> Name: {{author.name}} </mat-list-item>
+      <mat-divider></mat-divider>
+
+      <mat-list-item> Total publications: {{author.n_pubs}} </mat-list-item>
+      <mat-divider></mat-divider>
+
+      <mat-list-item> Total citations: {{author.n_citations}} </mat-list-item>
+      <mat-divider></mat-divider>
+
+      <mat-list-item> Average citations: {{author.n_citations / author.n_pubs}} </mat-list-item>
+      <mat-divider></mat-divider>
+
+      <mat-list-item> H-index: {{author.h_index}} </mat-list-item>
+
+  </mat-list>
 
   <table mat-table [dataSource]="articles" class=""
       matSort (matSortChange)="articles_sortData($event)">

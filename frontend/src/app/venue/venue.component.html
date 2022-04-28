@@ -1,15 +1,21 @@
 <div class="container">
   
-    <h2>Venue: {{venue.name}}</h2>
+    <h2>{{venue.name}} ({{venue.acronym}})</h2>
 
-    <mat-card>
-        <mat-card-header>
-            <mat-card-title>{{venue.name}} ({{venue.acronym}})</mat-card-title>
-            <mat-card-subtitle>ID: {{venue.id}}</mat-card-subtitle>
-            <mat-card-subtitle>{{venue.type}}</mat-card-subtitle>
-            <mat-card-subtitle>{{venue.n_pubs}} publications</mat-card-subtitle>
-        </mat-card-header>
-    </mat-card>
+    <mat-list>
+    
+      <mat-list-item> Name: {{venue.name}} ({{venue.acronym}}) </mat-list-item>
+      <mat-divider></mat-divider>
+
+      <mat-list-item> Total publications: {{venue.n_pubs}} </mat-list-item>
+      <mat-divider></mat-divider>
+
+      <mat-list-item> Total citations: {{venue.n_citations}} </mat-list-item>
+      <mat-divider></mat-divider>
+
+      <mat-list-item> Average citations: {{venue.n_citations / venue.n_pubs}} </mat-list-item>
+
+  </mat-list>
 
     <div class="chart">
         <apx-chart
