@@ -121,4 +121,8 @@ export class QueryserviceService {
   public getArticleByTopic(id: number) : Observable<any> {
     return this.http.get(`http://127.0.0.1:8000/articles/selected-topics/${id}`);
   }
+
+  public getArticleCitationGraph(id: number) : Observable<any> {
+    return this.http.get(`http://127.0.0.1:8000/article/citation-graph/${id}`);
+  }
 }

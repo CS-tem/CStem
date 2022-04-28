@@ -209,7 +209,7 @@ def get_topics():
 ### queries for recomputation ### 
 
 #topic selected articles
-@app.get('/articles/selected-topics/{topic_id}') #assumed a '-' separated list will be given here 
+@app.get('/articles/selected-topics/{topic_id}') #assumed a '-' separated string will be given here 
 def get_topics(topic_id : str,q: Optional[str] = None):
     if q:
         topics = q
@@ -222,7 +222,7 @@ def get_topics(topic_id : str,q: Optional[str] = None):
     return result
 
 #country selected Institutes
-@app.get('/institutes/selected-countries/{cnt_str}') #assumed a '-' separated list will be given here 
+@app.get('/institutes/selected-countries/{cnt_str}') #assumed a '-' separated string will be given here 
 def get_topics(cnt_str : str,q: Optional[str] = None):
     if q:
         countries = q
@@ -235,7 +235,7 @@ def get_topics(cnt_str : str,q: Optional[str] = None):
     return result
 
 #Type selected venues
-@app.get('/venues/selected-types/{type_string}') #assumed a '-' separated list will be given here 
+@app.get('/venues/selected-types/{type_string}') #assumed a '-' separated string will be given here 
 def get_topics(type_string : str,q: Optional[str] = None):
     if q:
         venues = q
@@ -245,5 +245,21 @@ def get_topics(type_string : str,q: Optional[str] = None):
             RETURN i;""".format(venues)
     result = neo_db.neo4j_query(query)
     return result
+
+#citation graph based on depths
+@app.get('/article/citation-graph/{query_str}') #article_id-depth_upperbound
+def get_topics(query_str : str,q: Optional[str] = None):
+    if q:
+        query = q
+    query = query_str.split('-')
+    article_id = query[0]
+    depth = query[1]
+    query = """MATCH r= (i : Article{{id:{}}})-[:CitedBy*..]->(j)
+        WITH j, length(r) AS depth
+        WHERE depth <= {}
+        RETURN j, depth;""".format(article_id, depth)
+    result = neo_db.neo4j_query(query)
+    return result
+
     
 
