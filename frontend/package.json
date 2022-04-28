@@ -20,13 +20,18 @@
     "@angular/platform-browser": "~13.2.0",
     "@angular/platform-browser-dynamic": "~13.2.0",
     "@angular/router": "~13.2.0",
+    "@egjs/hammerjs": "^2.0.17",
     "apexcharts": "^3.35.0",
     "echarts": "^5.3.2",
+    "keycharm": "^0.4.0",
     "ng-apexcharts": "^1.7.1",
     "ngx-echarts": "^8.0.1",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "vis": "^4.21.0-EOL",
+    "vis-data": "^7.1.4",
+    "vis-network": "^9.1.2",
+    "vis-util": "^5.0.3",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {

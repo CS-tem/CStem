@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
 import { QueryserviceService } from '../queryservice.service';
 import { Subscription } from 'rxjs';
 import { ActivatedRoute } from '@angular/router';
+import { DataSet } from 'vis-data';
+import { Network } from 'vis-network';
 
 import {
   ApexAxisChartSeries,
@@ -57,6 +59,9 @@ export class AuthorComponent implements OnInit {
   pie_y : string[]= [];
 
   displayedColumns = ["id", "title", "year", "n_citations"];
+
+  @ViewChild('coauthors', { static: false }) coauthors!: ElementRef;
+  private networkInstance: any;
 
   public pubs_chartOptions: Partial<ChartOptions> | any;
   public citations_chartOptions: Partial<ChartOptions> | any;
@@ -247,7 +252,29 @@ export class AuthorComponent implements OnInit {
     this.pie_chartOptions.labels = this.pie_x;
   }
   
-  
+  ngAfterViewInit(): void {
+    // create an array with nodes
+    const nodes = new DataSet<any>([
+      { id: 1, label: 'Node 1' },
+      { id: 2, label: 'Node 2' },
+      { id: 3, label: 'Node 3' },
+      { id: 4, label: 'Node 4' },
+      { id: 5, label: 'Node 5' },
+    ]);
+ 
+    // create an array with edges
+    const edges = new DataSet<any>([
+      { from: '1', to: '3' },
+      { from: '1', to: '2' },
+      { from: '2', to: '4' },
+      { from: '2', to: '5' },
+    ]);
+ 
+    const data = { nodes, edges };
+ 
+    const container = this.coauthors;
+    this.networkInstance = new Network(container.nativeElement, data, {});
+  }
 
 }
 
