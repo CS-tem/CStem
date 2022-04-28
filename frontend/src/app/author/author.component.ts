@@ -253,6 +253,7 @@ export class AuthorComponent implements OnInit {
   }
   
   ngAfterViewInit(): void {
+    
     // create an array with nodes
     const nodes = new DataSet<any>([
       { id: 1, label: 'Node 1' },
@@ -273,7 +274,25 @@ export class AuthorComponent implements OnInit {
     const data = { nodes, edges };
  
     const container = this.coauthors;
-    this.networkInstance = new Network(container.nativeElement, data, {});
+    this.networkInstance = new Network(container.nativeElement, data, {
+      height: '100%',
+      width: '100%',
+      nodes: {
+        shape: 'hexagon',
+        font: {
+          color: 'white',
+        },
+      },
+      edges: {
+        smooth: true,
+        arrows: {
+          to: {
+            enabled: true,
+            type: 'vee',
+          },
+        },
+      },
+    });
   }
 
 }
