@@ -4,6 +4,8 @@ import { Subscription } from 'rxjs';
 import { ActivatedRoute } from '@angular/router';
 import { DataSet } from 'vis-data';
 import { Network } from 'vis-network';
+import { Router } from '@angular/router';
+
 
 import {
   ApexAxisChartSeries,
@@ -70,7 +72,7 @@ export class AuthorComponent implements OnInit {
 
   public pie_chartOptions: Partial<ChartOptions> | any;
 
-  constructor(private activatedRoute : ActivatedRoute, private qs : QueryserviceService) { 
+  constructor(private router: Router, private activatedRoute : ActivatedRoute, private qs : QueryserviceService) { 
     this.pubs_chartOptions = {
       series: [
         {
@@ -293,6 +295,11 @@ export class AuthorComponent implements OnInit {
         },
       },
     });
+  }
+
+  openRow(row: any) {
+    let route = 'article/' + row.id;
+    this.router.navigate([route]);
   }
 
 }

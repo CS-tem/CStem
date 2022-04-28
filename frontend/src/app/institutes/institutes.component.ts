@@ -4,6 +4,7 @@ import { Subscription } from 'rxjs';
 import { Sort } from '@angular/material/sort';
 import { FormControl } from '@angular/forms';
 import { MatSelectChange } from '@angular/material/select';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-institutes',
@@ -18,7 +19,7 @@ export class InstitutesComponent implements OnInit {
   topicList: string[] = ['all'];
   chosenTopics = [];
 
-  constructor(private qs : QueryserviceService) { }
+  constructor(private router: Router, private qs : QueryserviceService) { }
 
   ngOnInit(): void {
     this.updateInstitutesInfo();
@@ -89,6 +90,12 @@ export class InstitutesComponent implements OnInit {
     });  
     return CapitalizedWords.join(' ');  
   } 
+
+  openRow(row: any) {
+    let route = '/institute/' + row.id;
+    this.router.navigate([route]);
+  }
+
 }
 
 function compare(a: number | string, b: number | string, isAsc: boolean) {

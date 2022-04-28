@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { QueryserviceService } from '../queryservice.service';
 import { Subscription } from 'rxjs';
 import { Sort } from '@angular/material/sort';
+import { Router } from '@angular/router';
 
 export interface Author {
   id: number,
@@ -23,7 +24,7 @@ export class AuthorsComponent implements OnInit {
   subscription = new Subscription();
   authors: any = [{}];
 
-  constructor(private qs : QueryserviceService) { }
+  constructor(private router: Router, private qs : QueryserviceService) { }
 
   ngOnInit(): void {
     this.updateAuthorsInfo();
@@ -63,6 +64,12 @@ export class AuthorsComponent implements OnInit {
       }
     });
   }
+
+  openRow(row: any) {
+    let route = '/author/' + row.id;
+    this.router.navigate([route]);
+  }
+
 }
 
 function compare(a: number | string, b: number | string, isAsc: boolean) {

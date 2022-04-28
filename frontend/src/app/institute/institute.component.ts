@@ -5,6 +5,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Institute } from '../institute';
 import { Sort } from '@angular/material/sort';
 import { ChartOptions } from '../app.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-institute',
@@ -33,7 +34,7 @@ export class InstituteComponent implements OnInit {
   public pubs_chartOptions: Partial<ChartOptions> | any;
   public citations_chartOptions: Partial<ChartOptions> | any;
 
-  constructor(private activatedRoute : ActivatedRoute, private qs : QueryserviceService) { 
+  constructor(private router: Router, private activatedRoute : ActivatedRoute, private qs : QueryserviceService) { 
     this.pubs_chartOptions = {
       series: [
         {
@@ -171,6 +172,11 @@ export class InstituteComponent implements OnInit {
           return 0;
       }
     });
+  }
+
+  openRow(row: any) {
+    let route = '/author/' + row.id;
+    this.router.navigate([route]);
   }
 
 }

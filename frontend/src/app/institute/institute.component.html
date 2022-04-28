@@ -41,7 +41,7 @@
         </ng-container>
     
       <tr mat-header-row *matHeaderRowDef="members_displayedColumns"></tr>
-      <tr mat-row *matRowDef="let row; columns: members_displayedColumns;"></tr>
+      <tr mat-row *matRowDef="let row; columns: members_displayedColumns;" (click)="openRow(row)" class="clickable"></tr>
   </table>
     
   <div class="chart">

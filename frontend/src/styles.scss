@@ -170,11 +170,7 @@ mat-toolbar {
   margin: auto;
 }
 
-.example-additional-selection {
-    opacity: 0.75;
-    font-size: 0.75em;
-}
-
-.demo-chart {
-    height: 400px;
+.clickable:hover{
+  background-color: #EEE;
+  cursor: pointer;
 }

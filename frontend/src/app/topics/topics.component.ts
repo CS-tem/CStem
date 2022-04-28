@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { QueryserviceService } from '../queryservice.service';
 import { Subscription } from 'rxjs';
 import { Sort } from '@angular/material/sort';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-topics',
@@ -13,7 +14,7 @@ export class TopicsComponent implements OnInit {
   subscription = new Subscription();
   topics: any = [{}];
 
-  constructor(private qs : QueryserviceService) { }
+  constructor(private router: Router, private qs : QueryserviceService) { }
 
   ngOnInit(): void {
     this.updateTopicsInfo();
@@ -68,6 +69,11 @@ export class TopicsComponent implements OnInit {
     });  
     return CapitalizedWords.join(' ');  
   } 
+
+  openRow(row: any) {
+    let route = '/topic/' + row.id;
+    this.router.navigate([route]);
+  }
 
 }
 
