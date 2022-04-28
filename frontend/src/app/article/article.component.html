@@ -1,7 +1,19 @@
 <div class="container">
   
-  <h2>Article: {{article}}</h2>
+  <h2>{{article['title']}}</h2>
 
+  <mat-list>
+    
+      <!-- <mat-list-item> Name: {{article.title}} </mat-list-item>
+      <mat-divider></mat-divider> -->
+
+      <mat-list-item> Year of Publication: {{article.year}} </mat-list-item>
+      <mat-divider></mat-divider>
+
+      <mat-list-item> Total citations: {{article.n_citations}} </mat-list-item>
+      <mat-divider></mat-divider>
+
+  </mat-list>
   <div class="chart">
       <apx-chart
         [series]="citations_chartOptions.series"

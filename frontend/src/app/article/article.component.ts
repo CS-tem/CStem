@@ -6,6 +6,7 @@ import { ChartOptions } from '../app.component';
 import { dataTool, EChartsOption } from 'echarts';
 import { ViewChild, ElementRef } from '@angular/core';
 import * as echarts from 'echarts';
+import { Article } from '../article';
 
 @Component({
   selector: 'app-article',
@@ -15,7 +16,13 @@ import * as echarts from 'echarts';
 export class ArticleComponent implements OnInit {
   article_id = 0;
   subscription = new Subscription();
-  article = {};
+  article :Article = {
+    id: 0,
+    n_citations: 0,
+    title: 'null',
+    venue_id: 0,
+    year: 0
+  };
   citations_x : string[]= [];
   citations_y : string[]= [];
   cited_from = [];
@@ -57,8 +64,14 @@ export class ArticleComponent implements OnInit {
   updateArticleInfo() : void {
     this.subscription.add(
       this.qs.getArticle(this.article_id).subscribe(res => {
-        this.article = res;
-        console.log(this.article);
+        this.article = {
+          id: res[0].i['id'],
+          n_citations: res[0].i['n_citations'],
+          title: res[0].i['title'],
+          venue_id: res[0].i['venue_id'],
+          year: res[0].i['year']
+        };
+        console.log(res);
       })
     );
   }
