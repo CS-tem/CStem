@@ -1,10 +1,27 @@
 <div class="container">
     
     <h2>Institutes</h2>
-    <mat-form-field appearance="standard" class="filter">
-        <mat-label>Filter</mat-label>
-        <input matInput (keyup)="applyFilter($event)" placeholder="Search columns" #input>
-    </mat-form-field>
+
+    <div class="flex-center">
+        <mat-form-field appearance="standard" class="filter">
+            <mat-label>Search</mat-label>
+            <input matInput (keyup)="applyFilter($event)" placeholder="Enter" #input>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="dropdown">
+        <mat-label>Filter by topics</mat-label>
+        <mat-select (selectionChange)="chooseTopics($event)" [formControl]="topicFilter" multiple>
+            <mat-select-trigger>
+            {{topicFilter.value ? topicFilter.value[0] : "All"}}
+            <span *ngIf="topicFilter.value?.length > 1" class="example-additional-selection">
+                (+{{topicFilter.value.length - 1}} {{topicFilter.value?.length === 2 ? 'other' : 'others'}})
+            </span>
+            </mat-select-trigger>
+            <mat-option *ngFor="let topic of topicList" [value]="topic">{{capitalize(topic)}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
     <table mat-table [dataSource]="dataSource" class=""
         matSort (matSortChange)="sortData($event)">
       
@@ -42,22 +59,6 @@
                     [pageSizeOptions]="[5, 10, 25, 100]"
                     aria-label="Select page">
     </mat-paginator>
-
-
-    <div class="flex-center">
-      <mat-form-field appearance="fill" class="dropdown">
-        <mat-label>Topics Considered</mat-label>
-        <mat-select (selectionChange)="chooseTopics($event)" [formControl]="topicFilter" multiple>
-            <mat-select-trigger>
-            {{topicFilter.value ? topicFilter.value[0] : "All"}}
-            <span *ngIf="topicFilter.value?.length > 1" class="example-additional-selection">
-                (+{{topicFilter.value.length - 1}} {{topicFilter.value?.length === 2 ? 'other' : 'others'}})
-            </span>
-            </mat-select-trigger>
-            <mat-option *ngFor="let topic of topicList" [value]="topic">{{capitalize(topic)}}</mat-option>
-        </mat-select>
-      </mat-form-field>
-    </div>
 
 </div>
   
