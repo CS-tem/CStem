@@ -16,6 +16,7 @@
       <mat-list-item> Total citations: {{article.n_citations}} </mat-list-item>
 
   </mat-list>
+
   <div class="chart">
       <apx-chart
         [series]="citations_chartOptions.series"
@@ -25,6 +26,10 @@
       ></apx-chart>
       <br>
       <div echarts [options]="graphOption"></div>
+  </div>
+
+  <div class="graph">
+    <div id="citations" #citations></div>
   </div>
 
 </div>
