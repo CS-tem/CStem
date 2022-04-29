@@ -157,7 +157,19 @@ export class InstitutesComponent implements OnInit {
   handleUserChange() {
     this.qs.getInstitutesNewInfo(this.start_year, this.end_year, this.topics, this.countries).subscribe(
       (res: any) => {
-        // console.log(res);
+        this.institutes = [];
+        res.forEach((row: any) => {
+          this.institutes.push({
+            id: row['i']['id'],
+            name: row['i']['name'],
+            country: row['country'],
+            n_members: row['i']['n_members'],
+            n_pubs: row['n_pubs'],
+            n_citations: row['n_citations'] 
+          });
+        });
+        this.dataSource.data = this.institutes;
+        this.dataSource.paginator = this.paginator;
       }
     );
   }

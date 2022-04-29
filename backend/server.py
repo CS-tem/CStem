@@ -392,7 +392,6 @@ class NewInstitutesCondition(BaseModel):
 
 @app.post('/new-institutes-info/')
 def post_new_institutes_info(request: NewInstitutesCondition):
-    print(request)
     query = """
     CALL {{
     MATCH (c:Country)-[:InstituteCountry]->(i: Institute)-[:InstituteMember]->(j)-[:AuthorArticle]->(k)-[:CitedBy]->(l)
@@ -407,10 +406,10 @@ def post_new_institutes_info(request: NewInstitutesCondition):
         AND q1.name in {}
         RETURN j1, k1, COALESCE(COUNT(DISTINCT l1),0) AS n_cits
     }}
-    CALL{
+    CALL{{
         WITH *
         RETURN cntry AS country, i0 AS i, j0 AS j, n_pub as n_pub1, SUM(CASE WHEN j1.id = j0.id THEN n_cits ELSE 0 END) AS n_citation
-    }
+    }}
     WITH *
     RETURN country, i, SUM(n_pub1) AS n_pubs, SUM(n_citation) AS n_citations;""".format(
         request.countries, request.frm, request.to, request.frm, request.to, request.frm, request.to, request.topics
