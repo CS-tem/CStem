@@ -348,23 +348,40 @@ export class AuthorComponent implements OnInit {
         // res is a array of edges
         res.forEach((edge: any) => {
 
-          // console.log(edge.v1);
-          // console.log(edge.v2);
-
           if (!nodes_set.has(edge.v1.id)) {
             nodes_set.add(edge.v1.id);
-            this.nodes_list.push({
-              id: edge.v1.id,
-              title: edge.v1.name
-            });
+            if (edge.v1.id == this.author_id){
+              this.nodes_list.push({
+                id: edge.v1.id,
+                title: edge.v1.name,
+                color: '#C2FABC',
+                shape: 'diamond'
+              });
+            }
+            else{
+              this.nodes_list.push({
+                id: edge.v1.id,
+                title: edge.v1.name
+              });
+            }
           }
 
           if (!nodes_set.has(edge.v2.id)) {
             nodes_set.add(edge.v2.id);
-            this.nodes_list.push({
-              id: edge.v2.id,
-              title: edge.v2.name
-            });
+            if (edge.v2.id == this.author_id){
+              this.nodes_list.push({
+                id: edge.v2.id,
+                title: edge.v2.name,
+                color: '#C2FABC',
+                shape: 'diamond'
+              });
+            }
+            else{
+              this.nodes_list.push({
+                id: edge.v2.id,
+                title: edge.v2.name
+              });
+            }
           }
 
           // Use the concatenated string as the 'key' to check if already done
@@ -375,7 +392,8 @@ export class AuthorComponent implements OnInit {
             edges_set.add(key1);
             this.edges_list.push({
               from: ''+edge.v1.id,
-              to: ''+edge.v2.id
+              to: ''+edge.v2.id,
+              label: ''+edge.n_colab
             });
           }
 
@@ -384,27 +402,27 @@ export class AuthorComponent implements OnInit {
         // console.log(this.nodes_list);
         // console.log(this.edges_list);
 
-        this.nodes_list.forEach((node: any) => {
+        // this.nodes_list.forEach((node: any) => {
 
-          var key1 = this.author_id + "#" + node.id;
-          var key2 = node.id + "#" + this.author_id;
+        //   var key1 = this.author_id + "#" + node.id;
+        //   var key2 = node.id + "#" + this.author_id;
 
-          if (!edges_set.has(key1) && !edges_set.has(key2)) {
-            edges_set.add(key1);
-            this.edges_list.push({
-              from: ''+this.author_id,
-              to: ''+node.id
-            });
-          }
+        //   if (!edges_set.has(key1) && !edges_set.has(key2)) {
+        //     edges_set.add(key1);
+        //     this.edges_list.push({
+        //       from: ''+this.author_id,
+        //       to: ''+node.id
+        //     });
+        //   }
 
-        });
+        // });
 
-        this.nodes_list.push({
-          id: this.author_id,
-          title: this.author.name,
-          color: '#C2FABC',
-          shape: 'diamond'
-        });
+        // this.nodes_list.push({
+        //   id: this.author_id,
+        //   title: this.author.name,
+        //   color: '#C2FABC',
+        //   shape: 'diamond'
+        // });
 
         var nodes = new DataSet<any>(this.nodes_list);
         var edges = new DataSet<any>(this.edges_list);

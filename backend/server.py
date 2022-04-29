@@ -150,13 +150,23 @@ def get_author_pubs_per_topic(author_id : int):
     result = neo_db.neo4j_query(query)
     return result
 
-@app.get('/author-colab/{author_id}')
-def get_author_colabs(author_id : int):
-    query = f"""MATCH (i : Author{{id:{author_id}}})
-    OPTIONAL MATCH r=(i)-[:Coauthor*..]->(j)
-    WITH r, length(r) AS depth
-    WHERE depth <= 1
-    RETURN nodes(r) as nodes;""".format(author_id)
+@app.get('/author-colab/{query_str}')
+def get_author_colabs(query_str : str):
+    qlist = query_str.split('-')
+    author_id = qlist[0]
+    k = qlist[1]
+    query = f"""
+    CALL{{
+        MATCH (a1 {{id: {author_id}}})-[r:Coauthor]-(a2)  
+        RETURN a1, a2
+        ORDER BY r.n_colab
+        LIMIT {k}
+    }}
+    UNWIND a2 as ua2
+    WITH collect(DISTINCT ua2) + a1 as V
+    MATCH (v1)-[r:Coauthor]-(v2)
+    WHERE v1 in V and v2 in V
+    RETURN v1, v2, r.n_colab as n_colab"""
     result = neo_db.neo4j_query(query)
     return result
 
@@ -177,7 +187,10 @@ def get_articles(article_id : int):
     query = """
     MATCH  (i : Article{{id: {}}}), (v: Venue{{id : i.venue_id}})
     OPTIONAL MATCH (i)-[:CitedBy]->(l) 
-    RETURN i,COALESCE(COUNT(DISTINCT l),0) as citations,v.name as vname, v.acronym as vacr;""".format(article_id)
+    MATCH (i)<-[:AuthorArticle]-(a)
+    MATCH (i)<-[:ArticleTopic]-(t)
+    RETURN i,COALESCE(COUNT(DISTINCT l),0) as citations,v.name as vname, v.acronym as vacr,
+    a.name as a_name, t.name as topic;""".format(article_id)
     # query = 'MATCH (i : Article{{id : {}}}) RETURN i;'.format(article_id)
     result = neo_db.neo4j_query(query)
     return result
@@ -320,29 +333,7 @@ def get_citation_graph(query_str : str,q: Optional[str] = None):
         WHERE depth <= {}
         RETURN nodes(r) as nodes;""".format(article_id, depth)
     result = neo_db.neo4j_query(query)
-    return result
-
-    
-#author-slider-selected topics
-
-# #npubs
-# @app.get('/author/modified_n_pubs/') #author[id]-start-end-<selected topics>
-# def get_modified_npubs():
-#     start = 2016
-#     end = 2018
-#     selected_topics = ['Machine Learning']
-    
-# #n_citations
-# @app.get('/author/modified_n_citations/{query_str}') #author[id]-start-end-<selected topics>
-# def get_modified_npubs(query_str : str, q : Optional[str] = None):
-#     if q:
-#         query = q
-#     author_id = 1
-#     query = query_str.split('-')
-#     start = 2016
-#     end = 2018
-#     selected_topics = ['Machine Learning']
-    
+    return result    
 
 class NewAuthorsCondition(BaseModel):
     frm: int
