@@ -1,5 +1,5 @@
 from config import PATH_DATA
-from config import S0_ARTICLE_FILE, S1_AUTHOR_ARTICLE_FILE
+from config import S0_ARTICLE_FILE, S1_AUTHOR_ARTICLE_FILE, S1_AUTHOR_ID_FILE
 
 if __name__ == '__main__':
     author_list = []
@@ -44,7 +44,7 @@ if __name__ == '__main__':
 
     author_list = sorted(list(set(author_list)))
 
-    out = open(PATH_DATA + '/s1/author_id.csv', 'w')
+    out = open(S1_AUTHOR_ID_FILE, 'w')
     out.write('author_id\n')
     for author_id in author_list:
         out.write(f'{author_id}\n')
