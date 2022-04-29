@@ -2,7 +2,7 @@
     
     <h2>Articles</h2>
 
-      <table mat-table [dataSource]="articles" class=""
+      <table mat-table [dataSource]="dataSource" class=""
       matSort (matSortChange)="sortData($event)">
            
       <ng-container matColumnDef="title">
@@ -11,7 +11,7 @@
       </ng-container>
     
       <ng-container matColumnDef="vacr">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header="venue_id"> Venue </th>
+        <th mat-header-cell *matHeaderCellDef mat-sort-header="vacr"> Venue </th>
         <td mat-cell *matCellDef="let article"> {{article.vacr}} </td>
       </ng-container>
 
@@ -29,6 +29,11 @@
       <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="openRow(row)" class="clickable"></tr>
   
   </table>
-
+  <mat-paginator  #paginator
+                  [length]="100"
+                  [pageSize]="10"
+                  [pageSizeOptions]="[5, 10, 25, 100]"
+                  aria-label="Select page">
+  </mat-paginator>
 </div>
   

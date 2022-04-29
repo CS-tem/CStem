@@ -3,13 +3,17 @@ import { QueryserviceService } from '../queryservice.service';
 import { Subscription } from 'rxjs';
 import { Sort } from '@angular/material/sort';
 import { Router } from '@angular/router';
+import { ViewChild } from '@angular/core';
+import { MatTableDataSource } from '@angular/material/table';
+import { MatPaginator } from '@angular/material/paginator';
 
-export interface Article {
+interface Article {
   id: number,
-  n_citations: string,
+  n_citations: number,
   title: string,
+  vacr: string
   venue_id: number,
-  year: number
+  year: number,
 }
 
 @Component({
@@ -19,11 +23,15 @@ export interface Article {
 })
 export class ArticlesComponent implements OnInit {
   displayedColumns = ["title", "vacr", "n_citations", "year"];
-  
   subscription = new Subscription();
-  articles: any = [{}];
+  articles: Array<Article> = [];
+  @ViewChild('paginator') paginator: MatPaginator | any;
+  dataSource: MatTableDataSource<Article>;
 
-  constructor(private router: Router, private qs : QueryserviceService) { }
+  constructor(private router: Router, private qs : QueryserviceService) {
+    this.dataSource = new MatTableDataSource(this.articles);
+    this.dataSource.paginator = this.paginator;
+  }
 
   ngOnInit(): void {
     this.updateArticlesInfo();
@@ -32,8 +40,20 @@ export class ArticlesComponent implements OnInit {
   updateArticlesInfo() : void {
     this.subscription.add(
       this.qs.getArticles().subscribe(res => {
+        this.articles = [];
+        res.forEach((row: any) => {
+          this.articles.push({
+            id: row['id'],
+            n_citations: row['n_citations'],
+            title: row['title'],
+            vacr: row['vacr'],
+            venue_id: row['venue_id'],
+            year: row['year'],
+          });
+        });
         console.log(res);
-        this.articles = res;
+        this.dataSource.data = this.articles;
+        this.dataSource.paginator = this.paginator;
       })
     );
   }
@@ -42,6 +62,8 @@ export class ArticlesComponent implements OnInit {
     const data = this.articles.slice();
     if (!sort.active || sort.direction === '') {
       this.articles = data;
+      this.dataSource.data = this.articles;
+      this.dataSource.paginator = this.paginator;
       return;
     }
 
@@ -62,6 +84,8 @@ export class ArticlesComponent implements OnInit {
           return 0;
       }
     });
+    this.dataSource.data = this.articles;
+    this.dataSource.paginator = this.paginator;
   }
 
   openRow(row: any) {

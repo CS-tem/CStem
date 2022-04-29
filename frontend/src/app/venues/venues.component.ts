@@ -3,18 +3,10 @@ import { QueryserviceService } from '../queryservice.service';
 import { Subscription } from 'rxjs';
 import { Sort } from '@angular/material/sort';
 import { Router } from '@angular/router';
-
-export interface Venue {
-  id: number,
-  name : string,
-  flexibility: string,
-  acronym : string,
-  n_pubs: number,
-  n_citations: number
-  type : string
-
-}
-
+import { Venue } from '../venue';
+import { ViewChild } from '@angular/core';
+import { MatTableDataSource } from '@angular/material/table';
+import { MatPaginator } from '@angular/material/paginator';
 
 @Component({
   selector: 'app-venues',
@@ -24,9 +16,14 @@ export interface Venue {
 export class VenuesComponent implements OnInit {
   displayedColumns = ["name", "acronym", "type", "n_pubs", "n_citations", "flexibility"];
   subscription = new Subscription();
-  venues: any = [{}];
+  venues: Array<Venue> = [];
+  @ViewChild('paginator') paginator: MatPaginator | any;
+  dataSource: MatTableDataSource<Venue>;
 
-  constructor(private router: Router, private qs: QueryserviceService) { }
+  constructor(private router: Router, private qs: QueryserviceService) { 
+    this.dataSource = new MatTableDataSource(this.venues);
+    this.dataSource.paginator = this.paginator;
+  }
 
   ngOnInit(): void {
     this.updateVenuesInfo();
@@ -35,7 +32,19 @@ export class VenuesComponent implements OnInit {
   updateVenuesInfo() : void {
     this.subscription.add(
       this.qs.getVenues().subscribe(res => {
-        this.venues = res;
+        this.venues = [];
+        res.forEach((row: any) => {
+          this.venues.push({
+            id: row['id'],
+            name : row['name'],
+            flexibility: row['flexibility'],
+            acronym : row['acronym'],
+            n_pubs: row['n_pubs'],
+            n_citations: row['n_citations'],
+            type : row['type']
+          });
+        });
+        // No need to update datasource here; done in sortData below
         this.sortData({
           active: 'n_citations',
           direction: 'desc'
@@ -48,6 +57,8 @@ export class VenuesComponent implements OnInit {
     const data = this.venues.slice();
     if (!sort.active || sort.direction === '') {
       this.venues = data;
+      this.dataSource.data = this.venues;
+      this.dataSource.paginator = this.paginator;
       return;
     }
 
@@ -72,6 +83,8 @@ export class VenuesComponent implements OnInit {
           return 0;
       }
     });
+    this.dataSource.data = this.venues;
+    this.dataSource.paginator = this.paginator;
   }
 
   openRow(row: any) {

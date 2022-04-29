@@ -3,15 +3,10 @@ import { QueryserviceService } from '../queryservice.service';
 import { Subscription } from 'rxjs';
 import { Sort } from '@angular/material/sort';
 import { Router } from '@angular/router';
-
-export interface Author {
-  id: number,
-  name: string,
-  // country: string,
-  h_index: number,
-  n_pubs: number,
-  n_citations: number
-}
+import { Author } from '../author';
+import { ViewChild } from '@angular/core';
+import { MatTableDataSource } from '@angular/material/table';
+import { MatPaginator } from '@angular/material/paginator';
 
 @Component({
   selector: 'app-authors',
@@ -22,9 +17,14 @@ export class AuthorsComponent implements OnInit {
 
   displayedColumns = ["name", "h_index", "n_pubs", "n_citations"];
   subscription = new Subscription();
-  authors: any = [{}];
+  authors: Array<Author> = [];
+  @ViewChild('paginator') paginator: MatPaginator | any;
+  dataSource: MatTableDataSource<Author>;
 
-  constructor(private router: Router, private qs : QueryserviceService) { }
+  constructor(private router: Router, private qs : QueryserviceService) { 
+    this.dataSource = new MatTableDataSource(this.authors);
+    this.dataSource.paginator = this.paginator;
+  }
 
   ngOnInit(): void {
     this.updateAuthorsInfo();
@@ -33,8 +33,19 @@ export class AuthorsComponent implements OnInit {
   updateAuthorsInfo() : void {
     this.subscription.add(
       this.qs.getAuthors().subscribe(res => {
-        this.authors = res;
+        this.authors = [];
+        res.forEach((row: any) => {
+          this.authors.push({
+            id: row['id'],
+            name: row['name'],
+            h_index: row['h_index'],
+            n_pubs: row['n_pubs'],
+            n_citations: row['n_citations']
+          });
+        });
         console.log(res);
+        this.dataSource.data = this.authors;
+        this.dataSource.paginator = this.paginator;
       })
     );
   }
@@ -43,6 +54,8 @@ export class AuthorsComponent implements OnInit {
     const data = this.authors.slice();
     if (!sort.active || sort.direction === '') {
       this.authors = data;
+      this.dataSource.data = this.authors;
+      this.dataSource.paginator = this.paginator;
       return;
     }
 
@@ -63,6 +76,8 @@ export class AuthorsComponent implements OnInit {
           return 0;
       }
     });
+    this.dataSource.data = this.authors;
+    this.dataSource.paginator = this.paginator;
   }
 
   openRow(row: any) {

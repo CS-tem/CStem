@@ -2,7 +2,7 @@
     
   <h2>Venues</h2>
 
-    <table mat-table [dataSource]="venues" class=""
+    <table mat-table [dataSource]="dataSource" class=""
         matSort (matSortChange)="sortData($event)">
       
         <ng-container matColumnDef="name">
@@ -38,6 +38,11 @@
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
         <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="openRow(row)" class="clickable"></tr>
     </table>
-
+    <mat-paginator  #paginator
+                  [length]="100"
+                  [pageSize]="10"
+                  [pageSizeOptions]="[5, 10, 25, 100]"
+                  aria-label="Select page">
+    </mat-paginator>
 </div>
   
