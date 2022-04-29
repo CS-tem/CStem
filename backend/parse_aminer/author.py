@@ -1,37 +1,26 @@
 import csv
 
+import random
+
 from config import PATH_DATA
+from config import S0_INSTITUTE_COUNTRY_FILE, S1_AUTHOR_ID_FILE
+from config import S2_AUTHOR_COUNTRY_FILE, S2_AUTHOR_FILE, S2_INSTITUTE_MEMBER_FILE
 
 if __name__ == '__main__':
-    with open('/home/devansh/PROJECTS/CSrankings/csrankings.csv', 'r') as csr:
-        csv_reader = csv.reader(csr, delimiter=',')
-        next(csv_reader)
-        author_dict = {}
-        for row in csv_reader:
-            author_dict[row[0]] = row[1]
-
-    with open(PATH_DATA + '/constant/country.csv', 'r') as f:
+    random.seed(0)
+    with open(S0_INSTITUTE_COUNTRY_FILE, 'r') as f:
         csv_reader = csv.reader(f, delimiter=',')
         next(csv_reader)
-        country_dict = {}
-        id = 0
+        institute_dict = []
         for row in csv_reader:
-            country_dict[row[0].lower()] = id
-            id += 1
+            institute_dict.append((int(row[0]), int(row[1])))
 
-    with open(PATH_DATA + '/s0/institute.csv', 'r') as f:
-        csv_reader = csv.reader(f, delimiter=',')
-        next(csv_reader)
-        institute_dict = {}
-        for row in csv_reader:
-            institute_dict[row[1]] = row[0]
-
-    with open(PATH_DATA + '/s1/author_id.csv', 'r') as in_author:
+    with open(S1_AUTHOR_ID_FILE, 'r') as in_author:
         next(in_author)
         with open(PATH_DATA + '/AMiner-Author.txt', 'r') as f:
-            out_author = open(PATH_DATA + '/s2/author.csv', 'w')
-            out_author_country = open(PATH_DATA + '/s2/author_country.csv', 'w')
-            out_author_institute = open(PATH_DATA + '/s2/institute_member.csv', 'w')
+            out_author = open(S2_AUTHOR_FILE, 'w')
+            out_author_country = open(S2_AUTHOR_COUNTRY_FILE, 'w')
+            out_author_institute = open(S2_INSTITUTE_MEMBER_FILE, 'w')
 
             out_author.write('id,name\n')
             out_author_country.write('author_id,country_id\n')
@@ -66,22 +55,15 @@ if __name__ == '__main__':
 
                     line = next(f)
                     if not line.startswith('#n'):
-                        print('Error: no name')
                         break
                     names = line[3:-1].split(';')
 
-                    for name in names:
-                        institute = author_dict.get(name, None)
-                        if institute is not None:
-                            break
-                    if institute is None:
-                        institute = 'IIT Bombay'
-                        name = names[0]
+                    name = names[0]
+                    institute_id, country_id = random.choice(institute_dict)
 
                     out_author.write(f'{id},"{name}"\n')
-                    out_author_country.write(f'{id},{country_dict["in"]}\n')
-                    out_author_institute.write(f'{institute_dict["IIT Bombay"]},{id}\n')
-                    print(id, name, institute)
+                    out_author_country.write(f'{id},{country_id}\n')
+                    out_author_institute.write(f'{institute_id},{id}\n')
                     count += 1
             out_author.close()
             out_author_country.close()

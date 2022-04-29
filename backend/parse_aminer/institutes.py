@@ -1,10 +1,11 @@
 import csv
 
-from config import PATH_DATA
+from config import CON_COUNTRIES_FILE, CON_INSTITUTIONS_FILE
+from config import S0_COUNTRY_FILE, S0_INSTITUTE_FILE, S0_INSTITUTE_COUNTRY_FILE
 
 if __name__ == '__main__':
-    with open(PATH_DATA + '/constant/country.csv', 'r') as f:
-        out = open(PATH_DATA + '/s0/country.csv', 'w')
+    with open(CON_COUNTRIES_FILE, 'r') as f:
+        out = open(S0_COUNTRY_FILE, 'w')
         out.write('id,name\n')
 
         id = 0
@@ -18,9 +19,9 @@ if __name__ == '__main__':
 
         out.close()
 
-    with open(PATH_DATA + '/constant/institute.csv', 'r') as f:
-        out_institute = open(PATH_DATA + '/s0/institute.csv', 'w')
-        out_institute_country = open(PATH_DATA + '/s0/institute_country.csv', 'w')
+    with open(CON_INSTITUTIONS_FILE, 'r') as f:
+        out_institute = open(S0_INSTITUTE_FILE, 'w')
+        out_institute_country = open(S0_INSTITUTE_COUNTRY_FILE, 'w')
         out_institute.write('id,name\n')
         out_institute_country.write('institute_id,country_id\n')
 

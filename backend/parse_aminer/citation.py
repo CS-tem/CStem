@@ -1,7 +1,8 @@
 from config import PATH_DATA
+from config import S0_ARTICLE_FILE, S1_CITED_BY_FILE
 
 if __name__ == '__main__':
-    with open(PATH_DATA + '/s0/article.csv', 'r') as in_article:
+    with open(S0_ARTICLE_FILE, 'r') as in_article:
         next(in_article)
         article_list = []
         for line in in_article:
@@ -10,14 +11,14 @@ if __name__ == '__main__':
 
     index = 0
     with open(PATH_DATA + '/AMiner-Paper.txt', 'r') as f:
-        out = open(PATH_DATA + '/s1/cited_by.csv', 'w')
+        out = open(S1_CITED_BY_FILE, 'w')
         out.write('article_id_1,article_id_2\n')
 
         article_id = article_list[index]
         count = 0
         while (True):
-            if count == 100:
-                break
+            # if count == 100:
+            #     break
 
             try:
                 line = next(f)
@@ -53,5 +54,4 @@ if __name__ == '__main__':
                         out.write(f'{ref_id},{article_id}\n')
                         count += 1
 
-            # count += 1
         out.close()
