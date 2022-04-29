@@ -23,5 +23,5 @@ cp s1/author_article.csv s1/cited_by.csv final/
 cp s2/* final/
 
 cd -
-mkdir -p ../data/real/pre_spark
-cp -r ../data/aminer/final/* ../data/real/pre_spark/
+mkdir -p ../data/real2/pre_spark
+cp -r ../data/aminer/final/* ../data/real2/pre_spark/

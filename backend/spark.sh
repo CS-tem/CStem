@@ -1,14 +1,14 @@
 cd "$(dirname "$0")"
 
-DNAME="real"
+DNAME="real2"
 
 mkdir -p data/$DNAME/post_spark
 cp data/$DNAME/pre_spark/* data/$DNAME/post_spark
 
-python3 fill_metrics.py -o article
-python3 fill_metrics.py -o author
-python3 fill_metrics.py -o institute
-python3 fill_metrics.py -o author_topic
-python3 fill_metrics.py -o topic
-python3 fill_metrics.py -o venue
-python3 fill_metrics.py -o coauthor
+python fill_metrics.py -o article
+python fill_metrics.py -o author
+python fill_metrics.py -o institute
+python fill_metrics.py -o author_topic
+python fill_metrics.py -o topic
+python fill_metrics.py -o venue
+python fill_metrics.py -o coauthor

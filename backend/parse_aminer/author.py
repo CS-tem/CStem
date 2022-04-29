@@ -65,6 +65,7 @@ if __name__ == '__main__':
                     out_author_country.write(f'{id},{country_id}\n')
                     out_author_institute.write(f'{institute_id},{id}\n')
                     count += 1
+
             out_author.close()
             out_author_country.close()
             out_author_institute.close()

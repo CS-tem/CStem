@@ -3,8 +3,4 @@ id,name,acronym,type
 1,European Conference on Computer Vision,ECCV,Conference
 2,International Conference on Computer Vision,ICCV,Conference
 3,Knowledge Discovery and Data Mining,KDD,Conference
-4,International Conference on Machine Learning,ICML,Conference
-5,Conference on Neural Information Processing Systems,NeurIPS,Conference
 6,Association for Computational Linguistics,ACL,Conference
-7,Empirical Methods in Natural Language Processing,EMNLP,Conference
-8,North American Chapter of the Association for Computational Linguistics - Human Language Technologies,NAACL-HLT,Conference

@@ -56,6 +56,9 @@ if __name__ == '__main__':
                 if '"' in title:
                     continue
 
+                if year not in [1999, 2000, 2001, 2002, 2003]:
+                    continue
+
                 for v in VENUE_ID_MAPPING.keys():
                     if venue.startswith(v):
                         venue_id = VENUE_ID_MAPPING[v]
@@ -68,3 +71,4 @@ if __name__ == '__main__':
                         continue
 
         out_article.close()
+        out_article_topic.close()

@@ -1,0 +1,10 @@
+id,name,acronym,type,n_pubs,n_citations,flexibility
+0,Conference on Computer Vision and Pattern Recognition,CVPR,Conference,2701,555,0.0
+1,European Conference on Computer Vision,ECCV,Conference,1286,559,0.0
+2,International Conference on Computer Vision,ICCV,Conference,1681,565,0.0
+3,Knowledge Discovery and Data Mining,KDD,Conference,1062,1405,0.0
+4,International Conference on Machine Learning,ICML,Conference,70,28,0.0
+5,Conference on Neural Information Processing Systems,NeurIPS,Conference,427,58,0.0
+6,Association for Computational Linguistics,ACL,Conference,2142,7795,0.0
+7,Empirical Methods in Natural Language Processing,EMNLP,Conference,881,2850,0.0
+8,North American Chapter of the Association for Computational Linguistics - Human Language Technologies,NAACL-HLT,Conference,2483,5254,0.0
