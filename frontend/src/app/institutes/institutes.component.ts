@@ -20,6 +20,7 @@ export class InstitutesComponent implements OnInit {
   displayedColumns = ["name", "country", "n_members", "n_pubs", "n_citations"];
   subscription = new Subscription();
   institutes: Array<Institute> = [];
+  allInstitutes: Array<Institute> = [];
   topicFilter = new FormControl();
   topicList: string[] = ['all'];
   countryFilter = new FormControl();
@@ -64,6 +65,7 @@ export class InstitutesComponent implements OnInit {
         });
         this.dataSource.data = this.institutes;
         this.dataSource.paginator = this.paginator;
+        this.allInstitutes = this.institutes;
       })
     );
   }
@@ -158,15 +160,25 @@ export class InstitutesComponent implements OnInit {
     this.qs.getInstitutesNewInfo(this.start_year, this.end_year, this.topics, this.countries).subscribe(
       (res: any) => {
         this.institutes = [];
-        res.forEach((row: any) => {
-          this.institutes.push({
-            id: row['i']['id'],
-            name: row['i']['name'],
-            country: row['country'],
-            n_members: row['i']['n_members'],
-            n_pubs: row['n_pubs'],
-            n_citations: row['n_citations'] 
-          });
+        var citationMap = new Map();
+        var pubMap = new Map();
+        res[0].forEach((row: any) => {
+          pubMap.set(row.i.id, row.n_pubs);
+        });
+        res[1].forEach((row: any) => {
+          citationMap.set(row.i.id, row.n_citations);
+        });
+        this.allInstitutes.forEach(row => {
+          if (pubMap.has(row.id))
+            row.n_pubs = pubMap.get(row.id);
+          else
+            row.n_pubs = 0;
+          if (citationMap.has(row.id))
+            row.n_citations = citationMap.get(row.id);
+          else
+            row.n_citations = 0;
+          if (row.n_pubs > 0 || row.n_citations > 0)
+            this.institutes.push(row);
         });
         this.dataSource.data = this.institutes;
         this.dataSource.paginator = this.paginator;
