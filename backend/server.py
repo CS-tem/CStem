@@ -94,9 +94,10 @@ def get_author(author_id : int):
     query = """
     CALL {{MATCH (i:Author{{id : {}}})
     OPTIONAL MATCH (i)-[:AuthorArticle]->(j)-[:CitedBy]->(k)
-    RETURN i, j, COALESCE(COUNT(DISTINCT k), 0) AS citations}}
+    MATCH (i)<-[:InstituteMember]-(x)
+    RETURN i, j, COALESCE(COUNT(DISTINCT k), 0) AS citations, x}}
     WITH *
-    RETURN i, COALESCE(SUM(citations),0) AS n_citations;""".format(author_id)
+    RETURN i, COALESCE(SUM(citations),0) AS n_citations, x.name as i_name;""".format(author_id)
     result = neo_db.neo4j_query(query)
     return result
 
