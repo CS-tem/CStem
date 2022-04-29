@@ -1,6 +1,6 @@
 import os
 
-DNAME = "artificial"
+DNAME = "real"
 
 PATH_BASE = os.path.dirname(__file__)
 PATH_CSV_BASE = f'{PATH_BASE}/data/{DNAME}/pre_spark'
