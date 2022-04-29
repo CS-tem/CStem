@@ -433,14 +433,14 @@ class NewVenuesCondition(BaseModel):
     to : int
     venues : list
 
-# @app.post('/new-articles-info/')
-# def post_new_articles_info(request: NewArticlesCondition):
-#     query = """
-#     MATCH (i: Article)
-#     MATCH (j: Venue{id : i.venue_id})
-#     WHERE j.acronym IN {}
-#     AND i.year >= {} AND i.year <= {}
-#     RETURN i,j.acronym AS acronym
-#     """.format(request.venues, request.frm, request.to)
-#     result = neo_db.neo4j_query(query)
-#     return result
+@app.post('/new-articles-info/')
+def post_new_articles_info(request: NewVenuesCondition):
+    query = """
+    MATCH (i: Article)
+    MATCH (j: Venue{id : i.venue_id})
+    WHERE j.acronym IN {}
+    AND i.year >= {} AND i.year <= {}
+    RETURN i,j.acronym AS acronym
+    """.format(request.venues, request.frm, request.to)
+    result = neo_db.neo4j_query(query)
+    return result
