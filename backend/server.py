@@ -369,6 +369,18 @@ def get_venues():
     result = neo_db.neo4j_query(query)
     return [entry['i'] for entry in result]
 
+class VenuesByCondition(BaseModel):
+    topics : list
+    types: list
+
+@app.post('/venues-by-condition/')
+def get_venues_by_condition(request: VenuesByCondition):
+    query = query = '''MATCH (i: Venue)<-[r: VenueTopic]-(j) WHERE 
+        i.type IN {} AND j.name in {} RETURN DISTINCT i;'''.format(
+            request.types, request.topics
+        )
+    result = neo_db.neo4j_query(query)
+    return [entry['i'] for entry in result]
 
 class NewInstitutesCondition(BaseModel):
     frm : int

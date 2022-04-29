@@ -131,6 +131,14 @@ export class QueryserviceService {
     return this.http.get(`http://127.0.0.1:8000/countries/`);
   }
 
+  public getVenuesByCondition(topics: Array<string>, types: Array<string>) {
+    var data = {
+      'topics': topics,
+      'types': types
+    };
+    return this.http.post('http://127.0.0.1:8000/venues-by-condition/', data);
+  }
+
   public getAuthorsNewInfo(from: number, to: number, topics: Array<string>) {
     var data = {
       'frm': from,

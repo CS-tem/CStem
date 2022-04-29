@@ -7,6 +7,8 @@ import { Venue } from '../venue';
 import { ViewChild } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
+import { FormControl } from '@angular/forms';
+import { MatSelectChange } from '@angular/material/select';
 
 @Component({
   selector: 'app-venues',
@@ -17,8 +19,16 @@ export class VenuesComponent implements OnInit {
   displayedColumns = ["name", "acronym", "type", "n_pubs", "n_citations", "flexibility"];
   subscription = new Subscription();
   venues: Array<Venue> = [];
+  allVenues: Array<Venue> = [];
   @ViewChild('paginator') paginator: MatPaginator | any;
   dataSource: MatTableDataSource<Venue>;
+
+  topicFilter = new FormControl();
+  topicList: string[] = ['all'];
+  topics: Array<string> = [];
+  typeFilter = new FormControl();
+  typeList: string[] = ['all'];
+  types: Array<string> = [];
 
   constructor(private router: Router, private qs: QueryserviceService) { 
     this.dataSource = new MatTableDataSource(this.venues);
@@ -27,12 +37,15 @@ export class VenuesComponent implements OnInit {
 
   ngOnInit(): void {
     this.updateVenuesInfo();
+    this.updateTopicsInfo();
   }
 
   updateVenuesInfo() : void {
     this.subscription.add(
       this.qs.getVenues().subscribe(res => {
         this.venues = [];
+        this.typeList = ['All'];
+        var types = new Set();
         res.forEach((row: any) => {
           this.venues.push({
             id: row['id'],
@@ -43,7 +56,13 @@ export class VenuesComponent implements OnInit {
             n_citations: row['n_citations'],
             type : row['type']
           });
+          if (!types.has(row['type'])) {
+            types.add(row['type']);
+            this.typeList.push(row['type']);
+          }
         });
+        this.types = this.typeList;
+        this.allVenues = this.venues;
         // No need to update datasource here; done in sortData below
         this.sortData({
           active: 'n_citations',
@@ -53,9 +72,58 @@ export class VenuesComponent implements OnInit {
     );
   }
 
+  updateTopicsInfo() : void {
+    this.subscription.add(
+      this.qs.getTopics().subscribe(res => {
+        this.topicList = ['All'];
+        res.forEach((element: any) => {
+          this.topicList.push(element.name);
+        });
+        this.topics = this.topicList;
+      })
+    );
+  }
+
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
+  }
+
+  chooseTopics(event: MatSelectChange) {
+    this.topics = event.value;
+    if (this.topics[0] == 'All' || this.topics.length == 0) {
+      this.topics = this.topicList.slice(1);
+    }
+    this.handleUserChange();
+  }
+
+  chooseTypes(event: MatSelectChange) {
+    this.types = event.value;
+    if (this.types[0] == 'All' || this.types.length == 0) {
+      this.types = this.typeList.slice(1);
+    }
+    this.handleUserChange();
+  }
+
+  handleUserChange() {
+    this.qs.getVenuesByCondition(this.topics, this.types).subscribe((res: any) => {
+      this.venues = [];
+      res.forEach((row: any) => {
+        this.venues.push({
+          id: row['id'],
+          name : row['name'],
+          flexibility: row['flexibility'],
+          acronym : row['acronym'],
+          n_pubs: row['n_pubs'],
+          n_citations: row['n_citations'],
+          type : row['type']
+        });
+      });
+      this.sortData({
+        active: 'n_citations',
+        direction: 'desc'
+      });
+    });
   }
 
   sortData(sort: Sort) {
@@ -90,6 +158,15 @@ export class VenuesComponent implements OnInit {
     });
     this.dataSource.data = this.venues;
     this.dataSource.paginator = this.paginator;
+  }
+
+  capitalize(input: string) {  
+    var words = input.split(' ');  
+    var CapitalizedWords: Array<string> = [];  
+    words.forEach((element: string) => {  
+        CapitalizedWords.push(element[0].toUpperCase() + element.slice(1, element.length));  
+    });  
+    return CapitalizedWords.join(' ');  
   }
 
   openRow(row: any) {
