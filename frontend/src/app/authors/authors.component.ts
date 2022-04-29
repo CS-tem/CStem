@@ -24,7 +24,8 @@ export class AuthorsComponent implements OnInit {
   topicFilter = new FormControl();
   topicList: string[] = ['all'];
   @ViewChild('paginator') paginator: MatPaginator | any;
-  dataSource: MatTableDataSource<Author>;
+  dataSource!: MatTableDataSource<Author>;
+  haveDS = false;
 
   start_year: number = 2005;
   end_year: number = 2023;
@@ -35,8 +36,6 @@ export class AuthorsComponent implements OnInit {
   };
 
   constructor(private router: Router, private qs : QueryserviceService) { 
-    this.dataSource = new MatTableDataSource(this.authors);
-    this.dataSource.paginator = this.paginator;
   }
 
   ngOnInit(): void {
@@ -142,7 +141,12 @@ export class AuthorsComponent implements OnInit {
           n_citations: row['n_citations']
         });
       });
-      this.dataSource.data = this.authors;
+      if (this.haveDS)
+        this.dataSource.data = this.authors;
+      else {
+        this.dataSource = new MatTableDataSource(this.authors);
+        this.haveDS = true;
+      }
       this.dataSource.paginator = this.paginator;
     });
   }
