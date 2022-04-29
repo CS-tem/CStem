@@ -34,6 +34,10 @@ export class ArticleComponent implements OnInit {
 
   graphOption: EChartsOption | any;
 
+  // citations-related
+  nodes_list: any;
+  edges_list: any;
+
   @ViewChild('citations', { static: false }) citations!: ElementRef;
   private networkInstance: any;
 
@@ -164,8 +168,38 @@ export class ArticleComponent implements OnInit {
 
   citationGraph(): void{
     this.subscription.add(
-      this.qs.getArticleCitationGraph(this.article_id, 1).subscribe(res => {
-        console.log(res);
+      this.qs.getArticleCitationGraph(this.article_id, 3).subscribe(res => {
+        this.nodes_list = [];
+        this.edges_list = [];
+        var nodes_set = new Set();
+        var edges_set = new Set();
+        res.forEach((path: any) => {
+          for (var i = 0; i < path.nodes.length -1; i++) {
+            if (!nodes_set.has(path.nodes[i].id)) {
+              nodes_set.add(path.nodes[i].id);
+              this.nodes_list.push({
+                id: path.nodes[i].id,
+                label: path.nodes[i].title
+              });
+            }
+            if (!nodes_set.has(path.nodes[i+1].id)) {
+              nodes_set.add(path.nodes[i+1].id);
+              this.nodes_list.push({
+                id: path.nodes[i+1].id,
+                label: path.nodes[i+1].title
+              });
+            }
+            // Use the concatenated string as the 'key' to check if already done
+            var key = path.nodes[i].id + "#" + path.nodes[i+1].id;
+            if (!edges_set.has(key)) {
+              edges_set.add(key);
+              this.edges_list.push({
+                from: ''+path.nodes[i].id,
+                to: ''+path.nodes[i+1].id
+              });
+            }
+          }
+        });
       })
     );
   }

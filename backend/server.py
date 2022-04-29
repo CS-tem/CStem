@@ -295,7 +295,7 @@ def get_topics(type_string : str,q: Optional[str] = None):
 
 #citation graph based on depths
 @app.get('/article/citation-graph/{query_str}') #article_id-depth_upperbound
-def get_topics(query_str : str,q: Optional[str] = None):
+def get_citation_graph(query_str : str,q: Optional[str] = None):
     if q:
         query = q
     query = query_str.split('-')
