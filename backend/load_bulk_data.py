@@ -2,7 +2,7 @@ import os
 
 import pandas as pd
 
-from config import NODES, RELS, PATH_CSV_FINAL
+from config import NODES, RELS, INDICES, PATH_CSV_FINAL
 
 from py2neo import Graph, errors
 from py2neo.bulk import create_nodes, create_relationships
@@ -127,9 +127,9 @@ if __name__ == '__main__':
 
     g = Graph('bolt://localhost:7687', auth=('neo4j', PASSWORD))
     g.delete_all()
-    for label in NODES.keys():
+    for label, index in INDICES:
         try:
-            g.schema.create_index(label, 'id')
+            g.schema.create_index(label, index)
         except errors.ClientError:
             continue
     createNodes(g, PATH_CSV_FINAL)

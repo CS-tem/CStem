@@ -111,3 +111,13 @@ RELS = {
         'attrs': ['n_colab']
     },
 }
+
+INDICES = {
+    ('Article', 'id'),
+    ('Article', 'year'),
+    ('Author', 'id'),
+    ('Institute', 'id'),
+    ('Venue', 'id'),
+    ('Topic', 'id'),
+    ('Country', 'id'),
+}
