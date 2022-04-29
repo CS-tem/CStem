@@ -9,6 +9,29 @@
           </mat-form-field>
       </div>
 
+      <div class="flex-center" id="block_container">
+        <mat-form-field appearance="fill" class="dropdown">
+          <mat-label>Select Venues</mat-label>
+          <mat-select (selectionChange)="chooseVenues($event)" [formControl]="venueFilter" multiple>
+              <mat-select-trigger>
+              {{(venueFilter.value && venueFilter.value.length > 0) ? 
+                capitalize(venueFilter.value[0]) : "All"}}
+              <span *ngIf="venueFilter.value?.length > 1" class="example-additional-selection">
+                  (+{{venueFilter.value.length - 1}} {{venueFilter.value?.length === 2 ? 'other' : 'others'}})
+              </span>
+              </mat-select-trigger>
+              <mat-option *ngFor="let venue of venueList" [value]="venue">{{capitalize(venue)}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <ngx-slider
+          [(value)]="start_year"
+          [(highValue)]="end_year"
+          [options]="options"
+          (valueChange)="handleUserChange()"
+          (highValueChange)="handleUserChange()"
+        ></ngx-slider>
+      </div>
+
       <table mat-table [dataSource]="dataSource" class=""
       matSort (matSortChange)="sortData($event)">
            
