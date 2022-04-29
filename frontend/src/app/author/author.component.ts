@@ -63,6 +63,7 @@ export class AuthorComponent implements OnInit {
     n_citations: 0
   };
   articles : Array<Article> = [];
+  inst_name: string = "";
   pubs_x : string[]= [];
   pubs_y : string[]= [];
   citations_x : string[]= [];
@@ -181,6 +182,7 @@ export class AuthorComponent implements OnInit {
           n_pubs: res[0].i['n_pubs'],
           n_citations: res[0]['n_citations']
         };
+        this.inst_name = res[0].i_name;
       })
     );
   }
