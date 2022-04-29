@@ -20,6 +20,8 @@
 
   </mat-list>
 
+  <h3>Articles</h3>
+
   <table mat-table [dataSource]="articles" class=""
       matSort (matSortChange)="articles_sortData($event)">
     
@@ -42,6 +44,8 @@
       <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="openRow(row)" class="clickable"></tr>
   </table>
 
+  <h3>Statistics</h3>
+
   <div class="chart">
       <apx-chart
         [series]="pubs_chartOptions.series"
@@ -50,7 +54,7 @@
         [title]="pubs_chartOptions.title"
       >
       </apx-chart>
-      <br/>
+
       <apx-chart
         [series]="citations_chartOptions.series"
         [chart]="citations_chartOptions.chart"
@@ -58,18 +62,22 @@
         [title]="citations_chartOptions.title"
       >
       </apx-chart>
-      <br/>
+
       <apx-chart
         [series]="pie_chartOptions.series"
         [chart]="pie_chartOptions.chart"
         [labels]="pie_chartOptions.labels"
         [responsive]="pie_chartOptions.responsive"
+        [title]="pie_chartOptions.title"
       >
       </apx-chart>
-  </div>
-  
-</div>
 
-<div class="graph">
-  <div id="coauthors" #coauthors></div>
+  </div>
+
+  <h3>Coauthors</h3>
+  
+  <div class="graph">
+    <div id="coauthors" #coauthors></div>
+  </div>
+
 </div>
