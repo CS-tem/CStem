@@ -24,7 +24,7 @@ if __name__ == '__main__':
 
             out_author.write('id,name\n')
             out_author_country.write('author_id,country_id\n')
-            out_author_institute.write('institute,author_id\n')
+            out_author_institute.write('institute_id,author_id\n')
 
             author_id = int(next(in_author)[:-1])
             count = 0
