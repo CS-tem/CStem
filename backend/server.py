@@ -323,46 +323,24 @@ def get_citation_graph(query_str : str,q: Optional[str] = None):
     
 #author-slider-selected topics
 
-#npubs
-@app.get('/author/modified_n_pubs/') #author[id]-start-end-<selected topics>
-def get_modified_npubs():
-    start = 2016
-    end = 2018
-    selected_topics = ['Machine Learning']
-    query = """
-    MATCH (i: Author)
-    OPTIONAL MATCH (i)-[:AuthorArticle]->(j)<-[:ArticleTopic]-(k)
-    WHERE k.name in {}
-    AND {} <= j.year <= {}
-    RETURN i, COALESCE(COUNT(DISTINCT j),0) AS n_pubs;""".format(
-        selected_topics, start, end
-    )
-    print(query)
-    result = neo_db.neo4j_query(query)
-    return result
-
-#n_citations
-@app.get('/author/modified_n_citations/{query_str}') #author[id]-start-end-<selected topics>
-def get_modified_npubs(query_str : str, q : Optional[str] = None):
-    if q:
-        query = q
-    author_id = 1
-    query = query_str.split('-')
-    start = 2016
-    end = 2018
-    selected_topics = ['Machine Learning']
-    query = """
-    CALL {{
-    MATCH (i: Author{{id : {}}})
-    OPTIONAL MATCH (i)-[:AuthorArticle]->(j)<-[:ArticleTopic]-(k)
-    OPTIONAL MATCH (j)-[:CitedBy]->(l)
-    WHERE k.name in {}
-    AND {} <= j.year <= {}
-    RETURN i, COALESCE(COUNT(DISTINCT j),0) AS n_cits}}
-    WITH *
-    RETURN i, SUM(n_cits) AS n_citations;""".format(author_id, start, end, selected_topics)
-    result = neo_db.neo4j_query(query)
-    return result
+# #npubs
+# @app.get('/author/modified_n_pubs/') #author[id]-start-end-<selected topics>
+# def get_modified_npubs():
+#     start = 2016
+#     end = 2018
+#     selected_topics = ['Machine Learning']
+    
+# #n_citations
+# @app.get('/author/modified_n_citations/{query_str}') #author[id]-start-end-<selected topics>
+# def get_modified_npubs(query_str : str, q : Optional[str] = None):
+#     if q:
+#         query = q
+#     author_id = 1
+#     query = query_str.split('-')
+#     start = 2016
+#     end = 2018
+#     selected_topics = ['Machine Learning']
+    
 
 class NewAuthorsCondition(BaseModel):
     frm: int
@@ -371,4 +349,41 @@ class NewAuthorsCondition(BaseModel):
 
 @app.post('/new-authors-info/')
 def post_new_authors_info(request: NewAuthorsCondition):
-    return 0
+    query = """
+    CALL {{MATCH (i: Author)
+    OPTIONAL MATCH (i)-[:AuthorArticle]->(j)<-[:ArticleTopic]-(k)
+    OPTIONAL MATCH (j)-[:CitedBy]->(t)
+    WHERE k.name in {}
+    AND {} <= j.year <= {}
+    RETURN i, COALESCE(COUNT(DISTINCT j),0) AS n_pubs, COALESCE(COUNT(DISTINCT t),0) AS n_cits}}
+    WITH *
+    RETURN i, n_pubs, SUM(n_cits) AS n_citations;""".format(
+        request.topics, request.frm, request.to
+    )
+    result = neo_db.neo4j_query(query)
+    return result
+
+
+class NewInstitutesCondition(BaseModel):
+    frm : int
+    to : int
+    topics : list
+    countries: list
+
+@app.post('/new-institutes-info/')
+def post_new_institutes_info(request: NewInstitutesCondition):
+    query = """
+    CALL {{MATCH (i : Institute)-[:InstituteMember]-(j)
+    OPTIONAL MATCH (i)<-[:InstituteCountry]-(a:Country)
+    OPTIONAL MATCH (j)-[:AuthorArticle]->(k)<-[:ArticleTopic]-(l)
+    OPTIONAL MATCH (k)-[:CitedBy]->(t)
+    WHERE {} <= k.year <= {}
+    AND l.name in {}
+    AND a.name in {}
+    RETURN i, a.name as country, COALESCE(COUNT(DISTINCT k),0) AS n_pubs,COALESCE(COUNT(DISTINCT t),0) AS n_cits}}
+    WITH *
+    RETURN i, country, n_pubs, SUM(n_cits) AS n_citations;""".format(
+        request.frm, request.to, request.topics, request.countries
+    )
+    result = neo_db.neo4j_query(query)
+    return result
