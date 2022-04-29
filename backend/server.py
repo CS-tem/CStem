@@ -73,10 +73,17 @@ def get_institute_citations(institute_id : int):
 
 @app.get('/institutes/')
 def get_institutes():
-    query = 'MATCH (i: Institute)<-[:InstituteCountry]-(j) RETURN i,j.name AS c_name;'
+    query = """
+    CALL {MATCH (i: Institute)<-[:InstituteCountry]-(j) 
+    OPTIONAL MATCH (i)-[:InstituteMember]->(x)-[:AuthorArticle]->(k)-
+    [:CitedBy]->(l)
+    RETURN i, j.name AS c_name, x,k, COALESCE(COUNT(DISTINCT l),0) AS citations}
+    WITH *
+    RETURN i,c_name, sum(citations) AS n_citations ;"""
     result = neo_db.neo4j_query(query)
     for entry in result:
         entry['i']['country'] = entry['c_name']
+        entry['i']['n_citations'] = entry['n_citations']
     return [entry['i'] for entry in result]
 
 @app.get('/author/{author_id}')
