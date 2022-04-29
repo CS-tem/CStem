@@ -1,36 +1,36 @@
-import re
+import csv
 
-from config import PATH_DATA, AMINER_AUTHOR
+from config import PATH_DATA
 
 if __name__ == '__main__':
-    with open(PATH_DATA + '/AMiner-Author.txt', 'r') as f:
-        count = 0
-        line = next(f)
-        while (True):
-            if line.startswith('#index'):
-                id = line[7:-1]
-                print(id)
+    with open(PATH_DATA + '/constant/country.csv', 'r') as f:
+        out = open(PATH_DATA + '/s0/country.csv', 'w')
+        out.write('id,name\n')
 
-                line = next(f)
-                if not line.startswith('#n'):
-                    print('Error: no name')
-                    break
-                name = line[3:-1].split(';')
-                print(len(name), name)
+        id = 0
+        csv_reader = csv.reader(f, delimiter=',')
+        next(csv_reader)
+        country_dict = {}
+        for row in csv_reader:
+            country_dict[row[0].lower()] = id
+            out.write(f'{id},{row[3]}\n')
+            id += 1
 
-                line = next(f)
-                if not line.startswith('#a'):
-                    print('Error: no affiliation')
-                    break
-                affiliation = line[3:-1].split(';')
-                print(len(affiliation), affiliation)
+        out.close()
 
-                count += 1
+    with open(PATH_DATA + '/constant/institute.csv', 'r') as f:
+        out_institute = open(PATH_DATA + '/s0/institute.csv', 'w')
+        out_institute_country = open(PATH_DATA + '/s0/institute_country.csv', 'w')
+        out_institute.write('id,name\n')
+        out_institute_country.write('institute_id,country_id\n')
 
-            if count == 100:
-                break
+        id = 0
+        csv_reader = csv.reader(f, delimiter=',')
+        next(csv_reader)
+        for row in csv_reader:
+            out_institute.write(f'{id},{row[0]}\n')
+            out_institute_country.write(f'{id},{country_dict[row[1]]}\n')
+            id += 1
 
-            try:
-                line = next(f)
-            except StopIteration:
-                break
+        out_institute.close()
+        out_institute_country.close()
