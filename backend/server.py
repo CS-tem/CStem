@@ -134,10 +134,11 @@ def get_author_pubs(author_id : int):
 @app.get('/author-citations/{author_id}')
 def get_author_citations(author_id : int):
     query = """
-    MATCH(j : Author{{id: {}}})-[:AuthorArticle]->(k: Article)
-    OPTIONAL MATCH (k)-[:CitedBy]->(l) RETURN 
-    COALESCE(COUNT(DISTINCT l),0) AS n_citations, k.year as year
-    ORDER BY year;""".format(author_id)
+    CALL {{MATCH(j : Author{{id: {}}})-[:AuthorArticle]->(k: Article)
+    OPTIONAL MATCH (k)-[:CitedBy]->(l) 
+    RETURN k, COALESCE(COUNT(DISTINCT l),0) AS n_citation, k.year as year
+    ORDER BY year}}
+    RETURN k.year, SUM(n_citation) AS n_citations;""".format(author_id)
     result = neo_db.neo4j_query(query)
     
     return result

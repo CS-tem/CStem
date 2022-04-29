@@ -54,7 +54,7 @@ export class AuthorsComponent implements OnInit {
             name: row['name'],
             h_index: row['h_index'],
             n_pubs: row['n_pubs'],
-            n_citations: row['n_citations']
+            n_citations: row['i']['n_citations']
           });
         });
         this.dataSource.data = this.authors;
