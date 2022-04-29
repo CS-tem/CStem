@@ -1,3 +1,4 @@
+# Old code
 from config import NODES, RELS, PATH_CSV
 
 

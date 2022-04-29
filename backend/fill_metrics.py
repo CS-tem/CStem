@@ -93,6 +93,14 @@ if __name__ == "__main__":
             fillna(0)
         df_inst.toPandas().to_csv(f'{PATH_CSV_FINAL}/institute.csv', index=False)
 
+    # Author-topic metrics
+    elif opt == 'author_topic':
+        df_aut = df_aa.join(df_art, 'article_id', 'leftouter').\
+            select('author_id', 'article_id', 'topic_id').\
+            groupBy('author_id', 'topic_id').count().\
+            withColumnRenamed('count', 'n_pubs')
+        df_aut.toPandas().to_csv(f'{PATH_CSV_FINAL}/author_topic.csv', index=False)
+
     # Topic metrics
     elif opt == 'topic':
         df_arta = df_art.join(df_article, [df_article.id == df_art.article_id], 'leftouter').\
@@ -136,14 +144,6 @@ if __name__ == "__main__":
             withColumn('flexibility', F.col('n_oot') / F.col('n_pubs')).\
             select('id', 'name', 'acronym', 'type', 'n_pubs', 'n_citations', 'flexibility')
         df_venue.toPandas().to_csv(f'{PATH_CSV_FINAL}/venue.csv', index=False)
-
-    # Author-topic metrics
-    elif opt == 'author_topic':
-        df_aut = df_aa.join(df_art, 'article_id', 'leftouter').\
-            select('author_id', 'article_id', 'topic_id').\
-            groupBy('author_id', 'topic_id').count().\
-            withColumnRenamed('count', 'n_pubs')
-        df_aut.toPandas().to_csv(f'{PATH_CSV_FINAL}/author_topic.csv', index=False)
 
     # Coauthor metrics
     elif opt == 'coauthor':
