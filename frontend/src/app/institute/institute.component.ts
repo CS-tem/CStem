@@ -1,11 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { QueryserviceService } from '../queryservice.service';
 import { Subscription } from 'rxjs';
-import { ActivatedRoute } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { Institute } from '../institute';
 import { Sort } from '@angular/material/sort';
 import { ChartOptions } from '../app.component';
-import { Router } from '@angular/router';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { ViewChild } from '@angular/core';
@@ -36,10 +35,10 @@ export class InstituteComponent implements OnInit {
   };
   institute_id = 0;
   members: Array<Member> = [];
-  pubs_x : string[]= [];
-  pubs_y : string[]= [];
-  citations_x : string[]= [];
-  citations_y : string[]= [];
+  pubs_x: string[] = [];
+  pubs_y: string[] = [];
+  citations_x: string[] = [];
+  citations_y: string[] = [];
   @ViewChild('paginator') paginator: MatPaginator | any;
   dataSource: MatTableDataSource<Member>;
 
@@ -48,12 +47,12 @@ export class InstituteComponent implements OnInit {
   public pubs_chartOptions: Partial<ChartOptions> | any;
   public citations_chartOptions: Partial<ChartOptions> | any;
 
-  constructor(private router: Router, private activatedRoute : ActivatedRoute, private qs : QueryserviceService) { 
+  constructor(private router: Router, private activatedRoute: ActivatedRoute, private qs: QueryserviceService) {
     this.pubs_chartOptions = {
       series: [
         {
           name: "Publications",
-          data: ['1','2','3','4']
+          data: ['1', '2', '3', '4']
         }
       ],
       chart: {
@@ -64,7 +63,7 @@ export class InstituteComponent implements OnInit {
         text: "Yearwise publications"
       },
       xaxis: {
-        categories: ['2016','2017','2018','2019']
+        categories: ['2016', '2017', '2018', '2019']
       },
       color: 'green'
     };
@@ -72,7 +71,7 @@ export class InstituteComponent implements OnInit {
       series: [
         {
           name: "Citations",
-          data: ['1','2','3','4']
+          data: ['1', '2', '3', '4']
         }
       ],
       chart: {
@@ -83,11 +82,11 @@ export class InstituteComponent implements OnInit {
         text: "Yearwise citations"
       },
       xaxis: {
-        categories: ['2016','2017','2018','2019']
+        categories: ['2016', '2017', '2018', '2019']
       }
     };
     this.dataSource = new MatTableDataSource(this.members);
-    this.dataSource.paginator = this.paginator; 
+    this.dataSource.paginator = this.paginator;
   }
 
   ngOnInit(): void {
@@ -138,11 +137,11 @@ export class InstituteComponent implements OnInit {
   updatePubsInfo(): void {
     this.subscription.add(
       this.qs.getInstitutePubs(this.institute_id).subscribe(res => {
-        for(var ele of res){
-          this.pubs_x.push(""+ele.year);
-          this.pubs_y.push(""+ele.n_pubs);
-        }  
-        this.pubs_updateSeries(); 
+        for (var ele of res) {
+          this.pubs_x.push("" + ele.year);
+          this.pubs_y.push("" + ele.n_pubs);
+        }
+        this.pubs_updateSeries();
       })
     );
   }
@@ -150,11 +149,11 @@ export class InstituteComponent implements OnInit {
   updateCitationsInfo(): void {
     this.subscription.add(
       this.qs.getInstituteCitations(this.institute_id).subscribe(res => {
-        for(var ele of res){
-          this.citations_x.push(""+ele.year);
-          this.citations_y.push(""+ele.n_citations);
-        }  
-        this.citations_updateSeries(); 
+        for (var ele of res) {
+          this.citations_x.push("" + ele.year);
+          this.citations_y.push("" + ele.n_citations);
+        }
+        this.citations_updateSeries();
       })
     );
   }
@@ -163,14 +162,14 @@ export class InstituteComponent implements OnInit {
     this.pubs_chartOptions.series = [{
       data: this.pubs_y
     }];
-    this.pubs_chartOptions.xaxis = {categories : this.pubs_x};
+    this.pubs_chartOptions.xaxis = { categories: this.pubs_x };
   }
 
   public citations_updateSeries() {
     this.citations_chartOptions.series = [{
       data: this.citations_y,
     }];
-    this.citations_chartOptions.xaxis = {categories : this.citations_x};
+    this.citations_chartOptions.xaxis = { categories: this.citations_x };
   }
 
   members_sortData(sort: Sort) {
@@ -195,8 +194,8 @@ export class InstituteComponent implements OnInit {
           return compare(a.n_pubs, b.n_pubs, isAsc);
         case 'n_citations':
           return compare(a.n_citations, b.n_citations, isAsc);
-      // ] case 'country':
-      //     return compare(a.n_country, b.country, isAsc);
+        // ] case 'country':
+        //     return compare(a.n_country, b.country, isAsc);
         default:
           return 0;
       }

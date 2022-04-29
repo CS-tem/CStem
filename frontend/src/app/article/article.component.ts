@@ -1,7 +1,7 @@
 import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { QueryserviceService } from '../queryservice.service';
 import { Subscription } from 'rxjs';
-import { ActivatedRoute } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { ChartOptions } from '../app.component';
 import { Article } from '../article';
 import { DataSet } from 'vis-data';
@@ -15,7 +15,7 @@ import { Network } from 'vis-network';
 export class ArticleComponent implements OnInit {
   article_id = 0;
   subscription = new Subscription();
-  article :Article = {
+  article: Article = {
     id: 0,
     n_citations: 0,
     title: 'null',
@@ -26,8 +26,8 @@ export class ArticleComponent implements OnInit {
   };
   authors: string[] = [];
   topics: string[] = [];
-  citations_x : string[]= [];
-  citations_y : string[]= [];
+  citations_x: string[] = [];
+  citations_y: string[] = [];
   cited_from = [];
   cited_by = [];
   public citations_chartOptions: Partial<ChartOptions> | any;
@@ -39,8 +39,8 @@ export class ArticleComponent implements OnInit {
   @ViewChild('citations', { static: false }) citations!: ElementRef;
   private networkInstance: any;
 
-  constructor(private activatedRoute: ActivatedRoute, private qs : QueryserviceService) { 
-    
+  constructor(private router: Router, private activatedRoute: ActivatedRoute, private qs: QueryserviceService) {
+
   }
 
   ngOnInit(): void {
@@ -55,7 +55,7 @@ export class ArticleComponent implements OnInit {
       series: [
         {
           name: "Citations",
-          data: ['1','2','3','4']
+          data: ['1', '2', '3', '4']
         }
       ],
       chart: {
@@ -66,12 +66,12 @@ export class ArticleComponent implements OnInit {
         text: "Yearwise citations"
       },
       xaxis: {
-        categories: ['2016','2017','2018','2019']
+        categories: ['2016', '2017', '2018', '2019']
       }
     };
   }
 
-  updateArticleInfo() : void {
+  updateArticleInfo(): void {
     this.subscription.add(
       this.qs.getArticle(this.article_id).subscribe(res => {
         this.article = {
@@ -103,16 +103,16 @@ export class ArticleComponent implements OnInit {
     this.citations_chartOptions.series = [{
       data: this.citations_y,
     }];
-    this.citations_chartOptions.xaxis = {categories : this.citations_x};
+    this.citations_chartOptions.xaxis = { categories: this.citations_x };
   }
 
   updateCitationsInfo(): void {
     this.subscription.add(
       this.qs.getArticleCitations(this.article_id).subscribe(res => {
-        for(var ele of res){
-          this.citations_x.push(""+ele.year);
-          this.citations_y.push(""+ele.n_citations);
-        }  
+        for (var ele of res) {
+          this.citations_x.push("" + ele.year);
+          this.citations_y.push("" + ele.n_citations);
+        }
         this.citations_updateSeries();
       })
     );
@@ -138,7 +138,7 @@ export class ArticleComponent implements OnInit {
         var nodes_set = new Set();
         var edges_set = new Set();
         res.forEach((path: any) => {
-          for (var i = 0; i < path.nodes.length -1; i++) {
+          for (var i = 0; i < path.nodes.length - 1; i++) {
             if (!nodes_set.has(path.nodes[i].id)) {
               nodes_set.add(path.nodes[i].id);
               this.nodes_list.push({
@@ -149,21 +149,21 @@ export class ArticleComponent implements OnInit {
                 shape: 'diamond'
               });
             }
-            if (!nodes_set.has(path.nodes[i+1].id)) {
-              nodes_set.add(path.nodes[i+1].id);
+            if (!nodes_set.has(path.nodes[i + 1].id)) {
+              nodes_set.add(path.nodes[i + 1].id);
               this.nodes_list.push({
-                id: path.nodes[i+1].id,
+                id: path.nodes[i + 1].id,
                 // label: ''+path.nodes[i+1].id,
-                title: path.nodes[i+1].title
+                title: path.nodes[i + 1].title
               });
             }
             // Use the concatenated string as the 'key' to check if already done
-            var key = path.nodes[i].id + "#" + path.nodes[i+1].id;
+            var key = path.nodes[i].id + "#" + path.nodes[i + 1].id;
             if (!edges_set.has(key)) {
               edges_set.add(key);
               this.edges_list.push({
-                from: ''+path.nodes[i].id,
-                to: ''+path.nodes[i+1].id
+                from: '' + path.nodes[i].id,
+                to: '' + path.nodes[i + 1].id
               });
             }
           }
@@ -173,11 +173,11 @@ export class ArticleComponent implements OnInit {
         var edges = new DataSet<any>(this.edges_list);
 
         const data = { nodes, edges };
- 
+
         const container = this.citations;
 
         this.networkInstance = new Network(container.nativeElement, data, {
-          
+
           autoResize: true,
 
           height: '100%',
@@ -199,7 +199,7 @@ export class ArticleComponent implements OnInit {
             },
           },
 
-          interaction: {hover:true}
+          interaction: { hover: true }
 
         });
 
@@ -207,21 +207,23 @@ export class ArticleComponent implements OnInit {
     );
   }
 
-  capitalize(input: string) {  
-    var words = input.split(' ');  
-    var CapitalizedWords: Array<string> = [];  
-    words.forEach((element: string) => {  
+  capitalize(input: string) {
+    var words = input.split(' ');
+    var CapitalizedWords: Array<string> = [];
+    words.forEach((element: string) => {
+      CapitalizedWords.push(element[0].toUpperCase() + element.slice(1, element.length));
         CapitalizedWords.push(element[0].toUpperCase() + element.slice(1, element.length));  
-    });  
-    return CapitalizedWords.join(' ');  
+      CapitalizedWords.push(element[0].toUpperCase() + element.slice(1, element.length));
+    });
+    return CapitalizedWords.join(' ');
   }
 
   getCommaSeparatedString(words: string[], caps: Boolean): string {
     if (words.length == 0)
       return "";
-    var ret = caps? this.capitalize(words[0]) : words[0];
-    for (var i = 1; i < words.length; i++) 
-      ret += caps? (", " + this.capitalize(words[i])) : (", " + words[i]);
+    var ret = caps ? this.capitalize(words[0]) : words[0];
+    for (var i = 1; i < words.length; i++)
+      ret += caps ? (", " + this.capitalize(words[i])) : (", " + words[i]);
     return ret;
   }
 

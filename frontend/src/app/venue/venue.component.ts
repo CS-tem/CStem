@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { QueryserviceService } from '../queryservice.service';
 import { Subscription } from 'rxjs';
-import { ActivatedRoute } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { ChartOptions } from '../app.component';
 import { Venue } from '../venue';
 
@@ -13,17 +13,17 @@ import { Venue } from '../venue';
 export class VenueComponent implements OnInit {
   subscription = new Subscription();
   venue_id = 0;
-  venue : Venue | any = {};
-  pubs_x : string[]= [];
-  pubs_y : string[]= [];
+  venue: Venue | any = {};
+  pubs_x: string[] = [];
+  pubs_y: string[] = [];
   public pubs_chartOptions: Partial<ChartOptions> | any;
 
-  constructor(private activatedRoute: ActivatedRoute, private qs: QueryserviceService) { 
+  constructor(private router: Router, private activatedRoute: ActivatedRoute, private qs: QueryserviceService) {
     this.pubs_chartOptions = {
       series: [
         {
           name: "Publications",
-          data: ['1','2','3','4']
+          data: ['1', '2', '3', '4']
         }
       ],
       chart: {
@@ -34,10 +34,10 @@ export class VenueComponent implements OnInit {
         text: "Yearwise publications"
       },
       xaxis: {
-        categories: ['2016','2017','2018','2019']
+        categories: ['2016', '2017', '2018', '2019']
       },
     };
-   }
+  }
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(params => {
@@ -47,7 +47,7 @@ export class VenueComponent implements OnInit {
     });
   }
 
-  updateVenueInfo() : void {
+  updateVenueInfo(): void {
     this.subscription.add(
       this.qs.getVenue(this.venue_id).subscribe(res => {
         this.venue = {
@@ -66,11 +66,11 @@ export class VenueComponent implements OnInit {
   updatePubsInfo(): void {
     this.subscription.add(
       this.qs.getVenuePubs(this.venue_id).subscribe(res => {
-        for(var ele of res){
-          this.pubs_x.push(""+ele.year);
-          this.pubs_y.push(""+ele.n_pubs);
-        }  
-        this.pubs_updateSeries(); 
+        for (var ele of res) {
+          this.pubs_x.push("" + ele.year);
+          this.pubs_y.push("" + ele.n_pubs);
+        }
+        this.pubs_updateSeries();
       })
     );
   }
@@ -79,7 +79,7 @@ export class VenueComponent implements OnInit {
     this.pubs_chartOptions.series = [{
       data: this.pubs_y
     }];
-    this.pubs_chartOptions.xaxis = {categories : this.pubs_x};
+    this.pubs_chartOptions.xaxis = { categories: this.pubs_x };
   }
 
 }

@@ -1,69 +1,59 @@
 <div class="container">
-    
-      <h2>Articles</h2>
 
-      <div class="flex-center">
-          <mat-form-field appearance="fill" class="filter">
-              <mat-label>Search</mat-label>
-              <input matInput (keyup)="applyFilter($event)" placeholder="Enter" #input>
-          </mat-form-field>
-      </div>
+  <h2>Articles</h2>
 
-      <div class="flex-center" id="block_container">
-        <mat-form-field appearance="fill" class="dropdown">
-          <mat-label>Select Venues</mat-label>
-          <mat-select (selectionChange)="chooseVenues($event)" [formControl]="venueFilter" multiple>
-              <mat-select-trigger>
-              {{(venueFilter.value && venueFilter.value.length > 0) ? 
+  <div class="flex-center">
+    <mat-form-field appearance="fill" class="filter">
+      <mat-label>Search</mat-label>
+      <input matInput (keyup)="applyFilter($event)" placeholder="Enter" #input>
+    </mat-form-field>
+  </div>
+
+  <div class="flex-center" id="block_container">
+    <mat-form-field appearance="fill" class="dropdown">
+      <mat-label>Select Venues</mat-label>
+      <mat-select (selectionChange)="chooseVenues($event)" [formControl]="venueFilter" multiple>
+        <mat-select-trigger>
+          {{(venueFilter.value && venueFilter.value.length > 0) ? 
                 capitalize(venueFilter.value[0]) : "All"}}
-              <span *ngIf="venueFilter.value?.length > 1" class="example-additional-selection">
-                  (+{{venueFilter.value.length - 1}} {{venueFilter.value?.length === 2 ? 'other' : 'others'}})
-              </span>
-              </mat-select-trigger>
-              <mat-option *ngFor="let venue of venueList" [value]="venue">{{capitalize(venue)}}</mat-option>
-          </mat-select>
-        </mat-form-field>
-        <ngx-slider
-          [(value)]="start_year"
-          [(highValue)]="end_year"
-          [options]="options"
-          (valueChange)="handleUserChange()"
-          (highValueChange)="handleUserChange()"
-        ></ngx-slider>
-      </div>
+          <span *ngIf="venueFilter.value?.length > 1" class="example-additional-selection">
+            (+{{venueFilter.value.length - 1}} {{venueFilter.value?.length === 2 ? 'other' : 'others'}})
+          </span>
+        </mat-select-trigger>
+        <mat-option *ngFor="let venue of venueList" [value]="venue">{{capitalize(venue)}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <ngx-slider [(value)]="start_year" [(highValue)]="end_year" [options]="options" (valueChange)="handleUserChange()"
+      (highValueChange)="handleUserChange()"></ngx-slider>
+  </div>
 
-      <table mat-table [dataSource]="dataSource" class=""
-      matSort (matSortChange)="sortData($event)">
-           
-      <ng-container matColumnDef="title">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header="title"> Title </th>
-        <td mat-cell *matCellDef="let article"> {{article.title}} </td>
-      </ng-container>
-    
-      <ng-container matColumnDef="vacr">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header="vacr"> Venue </th>
-        <td mat-cell *matCellDef="let article"> {{article.vacr}} </td>
-      </ng-container>
+  <table mat-table [dataSource]="dataSource" class="" matSort (matSortChange)="sortData($event)">
 
-      <ng-container matColumnDef="n_citations">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header="n_citations"> Citations </th>
-        <td mat-cell *matCellDef="let article"> {{article.n_citations}} </td>
-      </ng-container> 
+    <ng-container matColumnDef="title">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header="title"> Title </th>
+      <td mat-cell *matCellDef="let article"> {{article.title}} </td>
+    </ng-container>
 
-      <ng-container matColumnDef="year">
-          <th mat-header-cell *matHeaderCellDef mat-sort-header="year"> Year </th>
-          <td mat-cell *matCellDef="let article"> {{article.year}} </td>
-        </ng-container>
-  
-      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-      <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="openRow(row)" class="clickable"></tr>
-  
+    <ng-container matColumnDef="vacr">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header="vacr"> Venue </th>
+      <td mat-cell *matCellDef="let article"> {{article.vacr}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="n_citations">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header="n_citations"> Citations </th>
+      <td mat-cell *matCellDef="let article"> {{article.n_citations}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="year">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header="year"> Year </th>
+      <td mat-cell *matCellDef="let article"> {{article.year}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="openRow(row)" class="clickable"></tr>
+
   </table>
-  <mat-paginator  #paginator
-                  [length]="100"
-                  [pageSize]="10"
-                  [pageSizeOptions]="[5, 10, 25, 100]"
-                  aria-label="Select page">
+  <mat-paginator #paginator [length]="100" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]"
+    aria-label="Select page">
   </mat-paginator>
 </div>
-  

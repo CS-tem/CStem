@@ -1,25 +1,26 @@
 <div class="container">
-  
+
   <h2>{{institute['name']}}</h2>
 
   <mat-list>
-    
-      <mat-list-item> Name: {{institute.name}} </mat-list-item>
-      <mat-divider></mat-divider>
 
-      <mat-list-item> Country: {{institute.country}} </mat-list-item>
-      <mat-divider></mat-divider>
+    <mat-list-item> Name: {{institute.name}} </mat-list-item>
+    <mat-divider></mat-divider>
 
-      <mat-list-item> Members: {{institute.n_members | number}} </mat-list-item>
-      <mat-divider></mat-divider>
+    <mat-list-item> Country: {{institute.country}} </mat-list-item>
+    <mat-divider></mat-divider>
 
-      <mat-list-item> Total publications: {{institute.n_pubs}} </mat-list-item>
-      <mat-divider></mat-divider>
+    <mat-list-item> Members: {{institute.n_members | number}} </mat-list-item>
+    <mat-divider></mat-divider>
 
-      <mat-list-item> Total citations: {{institute.n_citations}} </mat-list-item>
-      <mat-divider></mat-divider>
+    <mat-list-item> Total publications: {{institute.n_pubs}} </mat-list-item>
+    <mat-divider></mat-divider>
 
-      <mat-list-item> Average citations: {{(institute.n_pubs == 0)? 0 : institute.n_citations / institute.n_pubs | number : '1.2-2'}} </mat-list-item>
+    <mat-list-item> Total citations: {{institute.n_citations}} </mat-list-item>
+    <mat-divider></mat-divider>
+
+    <mat-list-item> Average citations:
+      {{(institute.n_pubs == 0)? 0 : institute.n_citations / institute.n_pubs | number : '1.2-2'}} </mat-list-item>
 
   </mat-list>
 

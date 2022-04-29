@@ -14,15 +14,15 @@ import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   { path: 'institutes', component: InstitutesComponent },
-  { path: 'institute/:institute_id', component: InstituteComponent},
+  { path: 'institute/:institute_id', component: InstituteComponent },
   { path: 'author/:author_id', component: AuthorComponent },
   { path: 'authors', component: AuthorsComponent },
-  { path: 'venues', component: VenuesComponent},
-  { path: 'venue/:venue_id', component: VenueComponent},
-  { path: 'topics', component: TopicsComponent},
-  { path: 'topic/:topic_id', component: TopicComponent},
-  { path: 'articles', component : ArticlesComponent},
-  { path: 'article/:article_id', component: ArticleComponent},
+  { path: 'venues', component: VenuesComponent },
+  { path: 'venue/:venue_id', component: VenueComponent },
+  { path: 'topics', component: TopicsComponent },
+  { path: 'topic/:topic_id', component: TopicComponent },
+  { path: 'articles', component: ArticlesComponent },
+  { path: 'article/:article_id', component: ArticleComponent },
   { path: 'home', component: HomeComponent },
   { path: '**', redirectTo: 'home' },
 ];

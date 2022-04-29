@@ -5,4 +5,4 @@ export interface Institute {
     n_members: number,
     n_pubs: number,
     n_citations: number
-  }
+}

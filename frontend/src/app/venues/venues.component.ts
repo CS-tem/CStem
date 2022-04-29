@@ -31,7 +31,7 @@ export class VenuesComponent implements OnInit {
   typeList: string[] = ['all'];
   types: Array<string> = [];
 
-  constructor(private router: Router, private qs: QueryserviceService) { 
+  constructor(private router: Router, private qs: QueryserviceService) {
   }
 
   ngOnInit(): void {
@@ -39,7 +39,7 @@ export class VenuesComponent implements OnInit {
     this.updateTopicsInfo();
   }
 
-  updateVenuesInfo() : void {
+  updateVenuesInfo(): void {
     this.subscription.add(
       this.qs.getVenues().subscribe(res => {
         this.venues = [];
@@ -48,12 +48,12 @@ export class VenuesComponent implements OnInit {
         res.forEach((row: any) => {
           this.venues.push({
             id: row['id'],
-            name : row['name'],
+            name: row['name'],
             flexibility: row['flexibility'],
-            acronym : row['acronym'],
+            acronym: row['acronym'],
             n_pubs: row['n_pubs'],
             n_citations: row['n_citations'],
-            type : row['type']
+            type: row['type']
           });
           if (!types.has(row['type'])) {
             types.add(row['type']);
@@ -70,7 +70,7 @@ export class VenuesComponent implements OnInit {
     );
   }
 
-  updateTopicsInfo() : void {
+  updateTopicsInfo(): void {
     this.subscription.add(
       this.qs.getTopics().subscribe(res => {
         this.topicList = ['All'];
@@ -109,12 +109,12 @@ export class VenuesComponent implements OnInit {
       res.forEach((row: any) => {
         this.venues.push({
           id: row['id'],
-          name : row['name'],
+          name: row['name'],
           flexibility: row['flexibility'],
-          acronym : row['acronym'],
+          acronym: row['acronym'],
           n_pubs: row['n_pubs'],
           n_citations: row['n_citations'],
-          type : row['type']
+          type: row['type']
         });
       });
       this.sortData({
@@ -168,13 +168,13 @@ export class VenuesComponent implements OnInit {
     this.dataSource.paginator = this.paginator;
   }
 
-  capitalize(input: string) {  
-    var words = input.split(' ');  
-    var CapitalizedWords: Array<string> = [];  
-    words.forEach((element: string) => {  
-        CapitalizedWords.push(element[0].toUpperCase() + element.slice(1, element.length));  
-    });  
-    return CapitalizedWords.join(' ');  
+  capitalize(input: string) {
+    var words = input.split(' ');
+    var CapitalizedWords: Array<string> = [];
+    words.forEach((element: string) => {
+      CapitalizedWords.push(element[0].toUpperCase() + element.slice(1, element.length));
+    });
+    return CapitalizedWords.join(' ');
   }
 
   openRow(row: any) {

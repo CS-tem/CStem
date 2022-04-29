@@ -20,7 +20,7 @@ export class TopicsComponent implements OnInit {
   @ViewChild('paginator') paginator: MatPaginator | any;
   dataSource: MatTableDataSource<Topic>;
 
-  constructor(private router: Router, private qs : QueryserviceService) { 
+  constructor(private router: Router, private qs: QueryserviceService) {
     this.dataSource = new MatTableDataSource(this.topics);
     this.dataSource.paginator = this.paginator;
   }
@@ -29,7 +29,7 @@ export class TopicsComponent implements OnInit {
     this.updateTopicsInfo();
   }
 
-  updateTopicsInfo() : void {
+  updateTopicsInfo(): void {
     this.subscription.add(
       this.qs.getTopics().subscribe(res => {
         this.topics = [];

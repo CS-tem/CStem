@@ -1,10 +1,9 @@
 import { Component, OnInit, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
 import { QueryserviceService } from '../queryservice.service';
 import { Subscription } from 'rxjs';
-import { ActivatedRoute } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { DataSet } from 'vis-data';
 import { Network } from 'vis-network';
-import { Router } from '@angular/router';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 
@@ -55,25 +54,25 @@ export type ChartOptions = {
 })
 export class AuthorComponent implements OnInit {
   author_id = 0;
-  author : Author = {
+  author: Author = {
     id: 0,
     name: 'null',
     h_index: 0,
     n_pubs: 0,
     n_citations: 0
   };
-  articles : Array<Article> = [];
+  articles: Array<Article> = [];
   inst_name: string = "";
-  pubs_x : string[]= [];
-  pubs_y : string[]= [];
-  citations_x : string[]= [];
-  citations_y : string[]= [];
-  pie_x : string[]= [];
-  pie_y : string[]= [];
+  pubs_x: string[] = [];
+  pubs_y: string[] = [];
+  citations_x: string[] = [];
+  citations_y: string[] = [];
+  pie_x: string[] = [];
+  pie_y: string[] = [];
 
   nodes_list: any;
   edges_list: any;
-  
+
   @ViewChild('paginator') paginator: MatPaginator | any;
   dataSource: MatTableDataSource<Article>;
 
@@ -89,7 +88,7 @@ export class AuthorComponent implements OnInit {
 
   public pie_chartOptions: Partial<ChartOptions> | any;
 
-  constructor(private router: Router, private activatedRoute : ActivatedRoute, private qs : QueryserviceService) { 
+  constructor(private router: Router, private activatedRoute: ActivatedRoute, private qs: QueryserviceService) {
     this.pubs_chartOptions = {
       series: [
         {
@@ -112,7 +111,7 @@ export class AuthorComponent implements OnInit {
       series: [
         {
           name: "Citations",
-          data: ['1','2','3','4']
+          data: ['1', '2', '3', '4']
         }
       ],
       chart: {
@@ -123,14 +122,14 @@ export class AuthorComponent implements OnInit {
         text: "Yearwise citations"
       },
       xaxis: {
-        categories: ['2016','2017','2018','2019']
+        categories: ['2016', '2017', '2018', '2019']
       }
-    }; 
+    };
     this.pie_chartOptions = {
       series: [
         {
           name: "n_pubs",
-          data: [1,2,3]
+          data: [1, 2, 3]
         }
       ],
       chart: {
@@ -158,8 +157,8 @@ export class AuthorComponent implements OnInit {
     this.dataSource = new MatTableDataSource(this.articles);
     this.dataSource.paginator = this.paginator;
   }
-  
-    
+
+
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(params => {
       this.author_id = params['author_id'];
@@ -238,11 +237,11 @@ export class AuthorComponent implements OnInit {
   updatePubsInfo(): void {
     this.subscription.add(
       this.qs.getAuthorPubs(this.author_id).subscribe(res => {
-        for(var ele of res){
-          this.pubs_x.push(""+ele.year);
+        for (var ele of res) {
+          this.pubs_x.push("" + ele.year);
           this.pubs_y.push(ele.n_pubs);
-        }  
-        this.pubs_updateSeries(); 
+        }
+        this.pubs_updateSeries();
       })
     );
   }
@@ -250,11 +249,11 @@ export class AuthorComponent implements OnInit {
   updateCitationsInfo(): void {
     this.subscription.add(
       this.qs.getAuthorCitations(this.author_id).subscribe(res => {
-        for(var ele of res){
-          this.citations_x.push(""+ele.year);
+        for (var ele of res) {
+          this.citations_x.push("" + ele.year);
           this.citations_y.push(ele.n_citations);
-        }  
-        this.citations_updateSeries(); 
+        }
+        this.citations_updateSeries();
       })
     );
   }
@@ -262,10 +261,10 @@ export class AuthorComponent implements OnInit {
   updatePubsperTopicInfo(): void {
     this.subscription.add(
       this.qs.getAuthorPubsPerTopic(this.author_id).subscribe(res => {
-        for(var ele of res){
+        for (var ele of res) {
           this.pie_x.push(ele.topic);
           this.pie_y.push(ele.n_pubs);
-        }  
+        }
         this.pie_updateSeries();
       })
     );
@@ -275,23 +274,23 @@ export class AuthorComponent implements OnInit {
     this.pubs_chartOptions.series = [{
       data: this.pubs_y
     }];
-    this.pubs_chartOptions.xaxis = {categories : this.pubs_x};
+    this.pubs_chartOptions.xaxis = { categories: this.pubs_x };
   }
 
   public citations_updateSeries() {
     this.citations_chartOptions.series = [{
       data: this.citations_y,
     }];
-    this.citations_chartOptions.xaxis = {categories : this.citations_x};
+    this.citations_chartOptions.xaxis = { categories: this.citations_x };
   }
 
   public pie_updateSeries() {
     this.pie_chartOptions.series = this.pie_y;
     this.pie_chartOptions.labels = this.pie_x;
   }
-  
+
   ngAfterViewInit(): void {
-    
+
     // create an array with nodes
     const nodes = new DataSet<any>([
       { id: 1, label: 'Node 1' },
@@ -300,7 +299,7 @@ export class AuthorComponent implements OnInit {
       { id: 4, label: 'Node 4' },
       { id: 5, label: 'Node 5' },
     ]);
- 
+
     // create an array with edges
     const edges = new DataSet<any>([
       { from: '1', to: '3' },
@@ -308,9 +307,9 @@ export class AuthorComponent implements OnInit {
       { from: '2', to: '4' },
       { from: '2', to: '5' },
     ]);
- 
+
     const data = { nodes, edges };
- 
+
     const container = this.coauthors;
     this.networkInstance = new Network(container.nativeElement, data, {
       height: '100%',
@@ -338,7 +337,7 @@ export class AuthorComponent implements OnInit {
     this.router.navigate([route]);
   }
 
-  coauthorGraph(): void{
+  coauthorGraph(): void {
     this.subscription.add(
       this.qs.getAuthorColabs(this.author_id, 5).subscribe(res => {
 
@@ -352,7 +351,7 @@ export class AuthorComponent implements OnInit {
 
           if (!nodes_set.has(edge.v1.id)) {
             nodes_set.add(edge.v1.id);
-            if (edge.v1.id == this.author_id){
+            if (edge.v1.id == this.author_id) {
               this.nodes_list.push({
                 id: edge.v1.id,
                 title: edge.v1.name,
@@ -360,7 +359,7 @@ export class AuthorComponent implements OnInit {
                 shape: 'diamond'
               });
             }
-            else{
+            else {
               this.nodes_list.push({
                 id: edge.v1.id,
                 title: edge.v1.name
@@ -370,7 +369,7 @@ export class AuthorComponent implements OnInit {
 
           if (!nodes_set.has(edge.v2.id)) {
             nodes_set.add(edge.v2.id);
-            if (edge.v2.id == this.author_id){
+            if (edge.v2.id == this.author_id) {
               this.nodes_list.push({
                 id: edge.v2.id,
                 title: edge.v2.name,
@@ -378,7 +377,7 @@ export class AuthorComponent implements OnInit {
                 shape: 'diamond'
               });
             }
-            else{
+            else {
               this.nodes_list.push({
                 id: edge.v2.id,
                 title: edge.v2.name
@@ -393,14 +392,14 @@ export class AuthorComponent implements OnInit {
           if (!edges_set.has(key1) && !edges_set.has(key2)) {
             edges_set.add(key1);
             this.edges_list.push({
-              from: ''+edge.v1.id,
-              to: ''+edge.v2.id,
-              label: ''+edge.n_colab
+              from: '' + edge.v1.id,
+              to: '' + edge.v2.id,
+              label: '' + edge.n_colab
             });
           }
 
         });
-        
+
         // console.log(this.nodes_list);
         // console.log(this.edges_list);
 
@@ -430,11 +429,11 @@ export class AuthorComponent implements OnInit {
         var edges = new DataSet<any>(this.edges_list);
 
         const data = { nodes, edges };
- 
+
         const container = this.coauthors;
 
         this.networkInstance = new Network(container.nativeElement, data, {
-          
+
           autoResize: true,
 
           height: '100%',
@@ -448,10 +447,10 @@ export class AuthorComponent implements OnInit {
           },
 
           edges: {
-            
+
           },
 
-          interaction: {hover:true}
+          interaction: { hover: true }
 
         });
 

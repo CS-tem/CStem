@@ -42,7 +42,7 @@ export class ArticlesComponent implements OnInit {
     ceil: 2022
   };
 
-  constructor(private router: Router, private qs : QueryserviceService) {
+  constructor(private router: Router, private qs: QueryserviceService) {
     this.dataSource = new MatTableDataSource(this.articles);
     this.dataSource.paginator = this.paginator;
   }
@@ -52,7 +52,7 @@ export class ArticlesComponent implements OnInit {
     this.updateVenuesInfo();
   }
 
-  updateArticlesInfo() : void {
+  updateArticlesInfo(): void {
     this.subscription.add(
       this.qs.getArticles().subscribe(res => {
         this.articles = [];
@@ -73,7 +73,7 @@ export class ArticlesComponent implements OnInit {
     );
   }
 
-  updateVenuesInfo() : void {
+  updateVenuesInfo(): void {
     this.subscription.add(
       this.qs.getVenues().subscribe(res => {
         this.venueList = ['All'];
@@ -116,7 +116,7 @@ export class ArticlesComponent implements OnInit {
     this.dataSource.data = this.articles;
     this.dataSource.paginator = this.paginator;
   }
-  
+
   sortData(sort: Sort) {
     const data = this.articles.slice();
     if (!sort.active || sort.direction === '') {
@@ -152,13 +152,13 @@ export class ArticlesComponent implements OnInit {
     this.router.navigate([route]);
   }
 
-  capitalize(input: string) {  
-    var words = input.split(' ');  
-    var CapitalizedWords: Array<string> = [];  
-    words.forEach((element: string) => {  
-        CapitalizedWords.push(element[0].toUpperCase() + element.slice(1, element.length));  
-    });  
-    return CapitalizedWords.join(' ');  
+  capitalize(input: string) {
+    var words = input.split(' ');
+    var CapitalizedWords: Array<string> = [];
+    words.forEach((element: string) => {
+      CapitalizedWords.push(element[0].toUpperCase() + element.slice(1, element.length));
+    });
+    return CapitalizedWords.join(' ');
   }
 
 }

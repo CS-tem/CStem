@@ -1,78 +1,73 @@
 <div class="container">
-    
-    <h2>Venues</h2>
 
-    <div class="flex-center" id="block_container">
-      <mat-form-field appearance="fill" class="dropdown">
-        <mat-label>Select Topics</mat-label>
-        <mat-select (selectionChange)="chooseTopics($event)" [formControl]="topicFilter" multiple>
-            <mat-select-trigger>
-            {{(topicFilter.value && topicFilter.value.length > 0) ? 
+  <h2>Venues</h2>
+
+  <div class="flex-center" id="block_container">
+    <mat-form-field appearance="fill" class="dropdown">
+      <mat-label>Select Topics</mat-label>
+      <mat-select (selectionChange)="chooseTopics($event)" [formControl]="topicFilter" multiple>
+        <mat-select-trigger>
+          {{(topicFilter.value && topicFilter.value.length > 0) ? 
               capitalize(topicFilter.value[0]) : "All"}}
-            <span *ngIf="topicFilter.value?.length > 1" class="example-additional-selection">
-                (+{{topicFilter.value.length - 1}} {{topicFilter.value?.length === 2 ? 'other' : 'others'}})
-            </span>
-            </mat-select-trigger>
-            <mat-option *ngFor="let topic of topicList" [value]="topic">{{capitalize(topic)}}</mat-option>
-        </mat-select>
-      </mat-form-field>
-      <mat-form-field appearance="fill" class="dropdown">
-        <mat-label>Select Types</mat-label>
-        <mat-select (selectionChange)="chooseTypes($event)" [formControl]="typeFilter" multiple>
-            <mat-select-trigger>
-            {{(typeFilter.value && typeFilter.value.length > 0) ? 
+          <span *ngIf="topicFilter.value?.length > 1" class="example-additional-selection">
+            (+{{topicFilter.value.length - 1}} {{topicFilter.value?.length === 2 ? 'other' : 'others'}})
+          </span>
+        </mat-select-trigger>
+        <mat-option *ngFor="let topic of topicList" [value]="topic">{{capitalize(topic)}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="dropdown">
+      <mat-label>Select Types</mat-label>
+      <mat-select (selectionChange)="chooseTypes($event)" [formControl]="typeFilter" multiple>
+        <mat-select-trigger>
+          {{(typeFilter.value && typeFilter.value.length > 0) ? 
               capitalize(typeFilter.value[0]) : "All"}}
-            <span *ngIf="typeFilter.value?.length > 1" class="example-additional-selection">
-                (+{{typeFilter.value.length - 1}} {{typeFilter.value?.length === 2 ? 'other' : 'others'}})
-            </span>
-            </mat-select-trigger>
-            <mat-option *ngFor="let type of typeList" [value]="type">{{capitalize(type)}}</mat-option>
-        </mat-select>
-      </mat-form-field>
-    </div>
+          <span *ngIf="typeFilter.value?.length > 1" class="example-additional-selection">
+            (+{{typeFilter.value.length - 1}} {{typeFilter.value?.length === 2 ? 'other' : 'others'}})
+          </span>
+        </mat-select-trigger>
+        <mat-option *ngFor="let type of typeList" [value]="type">{{capitalize(type)}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
 
-    <table mat-table [dataSource]="dataSource" class=""
-        matSort (matSortChange)="sortData($event)">
-      
-        <ng-container matColumnDef="name">
-          <th mat-header-cell *matHeaderCellDef mat-sort-header="name"> Venue Name </th>
-          <td mat-cell *matCellDef="let venue"> {{venue.name}} </td>
-        </ng-container>
-      
-        <ng-container matColumnDef="acronym">
-          <th mat-header-cell *matHeaderCellDef mat-sort-header="acronym"> Acronym </th>
-          <td mat-cell *matCellDef="let venue"> {{venue.acronym}} </td>
-        </ng-container>
+  <table mat-table [dataSource]="dataSource" class="" matSort (matSortChange)="sortData($event)">
 
-        <ng-container matColumnDef="flexibility">
-            <th mat-header-cell *matHeaderCellDef mat-sort-header="flexibility"> Flexibility </th>
-            <td mat-cell *matCellDef="let venue"> {{venue.flexibility}} </td>
-          </ng-container>
-      
-        <ng-container matColumnDef="n_pubs">
-          <th mat-header-cell *matHeaderCellDef mat-sort-header="n_pubs"> Total Publications </th>
-          <td mat-cell *matCellDef="let venue"> {{venue.n_pubs}} </td>
-        </ng-container>
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header="name"> Venue Name </th>
+      <td mat-cell *matCellDef="let venue"> {{venue.name}} </td>
+    </ng-container>
 
-        <ng-container matColumnDef="n_citations">
-            <th mat-header-cell *matHeaderCellDef mat-sort-header="n_citations"> Total Citations </th>
-            <td mat-cell *matCellDef="let venue"> {{venue.n_citations}} </td>
-          </ng-container>
+    <ng-container matColumnDef="acronym">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header="acronym"> Acronym </th>
+      <td mat-cell *matCellDef="let venue"> {{venue.acronym}} </td>
+    </ng-container>
 
-        <ng-container matColumnDef="type">
-            <th mat-header-cell *matHeaderCellDef mat-sort-header="type"> Type </th>
-            <td mat-cell *matCellDef="let venue"> {{venue.type}} </td>
-          </ng-container>
-      
-        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-        <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="openRow(row)" class="clickable"></tr>
-    </table>
+    <ng-container matColumnDef="flexibility">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header="flexibility"> Flexibility </th>
+      <td mat-cell *matCellDef="let venue"> {{venue.flexibility}} </td>
+    </ng-container>
 
-    <mat-paginator  #paginator
-                  [length]="100"
-                  [pageSize]="10"
-                  [pageSizeOptions]="[5, 10, 25, 100]"
-                  aria-label="Select page">
-    </mat-paginator>
+    <ng-container matColumnDef="n_pubs">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header="n_pubs"> Total Publications </th>
+      <td mat-cell *matCellDef="let venue"> {{venue.n_pubs}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="n_citations">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header="n_citations"> Total Citations </th>
+      <td mat-cell *matCellDef="let venue"> {{venue.n_citations}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="type">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header="type"> Type </th>
+      <td mat-cell *matCellDef="let venue"> {{venue.type}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="openRow(row)" class="clickable"></tr>
+  </table>
+
+  <mat-paginator #paginator [length]="100" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]"
+    aria-label="Select page">
+  </mat-paginator>
 </div>
-  

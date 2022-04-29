@@ -39,7 +39,7 @@ export class InstitutesComponent implements OnInit {
   };
 
 
-  constructor(private router: Router, private qs : QueryserviceService) {
+  constructor(private router: Router, private qs: QueryserviceService) {
   }
 
   ngOnInit(): void {
@@ -48,7 +48,7 @@ export class InstitutesComponent implements OnInit {
     this.updateCountriesInfo();
   }
 
-  updateInstitutesInfo() : void {
+  updateInstitutesInfo(): void {
     this.subscription.add(
       this.qs.getInstitutes().subscribe(res => {
         this.institutes = [];
@@ -59,7 +59,7 @@ export class InstitutesComponent implements OnInit {
             country: row['country'],
             n_members: row['n_members'],
             n_pubs: row['n_pubs'],
-            n_citations: row['n_citations'] 
+            n_citations: row['n_citations']
           });
         });
         this.allInstitutes = this.institutes;
@@ -73,7 +73,7 @@ export class InstitutesComponent implements OnInit {
     );
   }
 
-  updateTopicsInfo() : void {
+  updateTopicsInfo(): void {
     this.subscription.add(
       this.qs.getTopics().subscribe(res => {
         this.topicList = ['All'];
@@ -85,7 +85,7 @@ export class InstitutesComponent implements OnInit {
     );
   }
 
-  updateCountriesInfo() : void {
+  updateCountriesInfo(): void {
     this.subscription.add(
       this.qs.getCountries().subscribe(res => {
         this.countryList = ['All'];
@@ -150,14 +150,14 @@ export class InstitutesComponent implements OnInit {
     this.handleUserChange();
   }
 
-  capitalize(input: string) {  
-    var words = input.split(' ');  
-    var CapitalizedWords: Array<string> = [];  
-    words.forEach((element: string) => {  
-        CapitalizedWords.push(element[0].toUpperCase() + element.slice(1, element.length));  
-    });  
-    return CapitalizedWords.join(' ');  
-  } 
+  capitalize(input: string) {
+    var words = input.split(' ');
+    var CapitalizedWords: Array<string> = [];
+    words.forEach((element: string) => {
+      CapitalizedWords.push(element[0].toUpperCase() + element.slice(1, element.length));
+    });
+    return CapitalizedWords.join(' ');
+  }
 
   handleUserChange() {
     this.qs.getInstitutesNewInfo(this.start_year, this.end_year, this.topics, this.countries).subscribe(

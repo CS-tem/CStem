@@ -1,22 +1,23 @@
 <div class="container">
-  
+
   <h2>{{topic.name | titlecase}}</h2>
 
   <mat-list>
-    
-      <mat-list-item> Name: {{topic.name | titlecase}} </mat-list-item>
-      <mat-divider></mat-divider>
 
-      <mat-list-item> Total publications in this topic: {{topic.n_articles}} </mat-list-item>
-      <mat-divider></mat-divider>
+    <mat-list-item> Name: {{topic.name | titlecase}} </mat-list-item>
+    <mat-divider></mat-divider>
 
-      <mat-list-item> Total authors publishing in this topic: {{topic.n_authors}} </mat-list-item>
-      <mat-divider></mat-divider>
+    <mat-list-item> Total publications in this topic: {{topic.n_articles}} </mat-list-item>
+    <mat-divider></mat-divider>
 
-      <mat-list-item> Total citations: {{topic.n_citations}} </mat-list-item>
-      <mat-divider></mat-divider>
+    <mat-list-item> Total authors publishing in this topic: {{topic.n_authors}} </mat-list-item>
+    <mat-divider></mat-divider>
 
-      <mat-list-item> Average citations: {{(topic.n_articles == 0)? 0 : topic.n_citations / topic.n_articles | number : '1.2-2'}} </mat-list-item>
+    <mat-list-item> Total citations: {{topic.n_citations}} </mat-list-item>
+    <mat-divider></mat-divider>
+
+    <mat-list-item> Average citations:
+      {{(topic.n_articles == 0)? 0 : topic.n_citations / topic.n_articles | number : '1.2-2'}} </mat-list-item>
 
   </mat-list>
 

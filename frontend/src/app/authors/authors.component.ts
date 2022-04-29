@@ -21,6 +21,7 @@ export class AuthorsComponent implements OnInit {
   displayedColumns = ["name", "h_index", "n_pubs", "n_citations"];
   subscription = new Subscription();
   authors: Array<Author> = [];
+  allAuthors: Array<Author> = [];
   topicFilter = new FormControl();
   topicList: string[] = ['all'];
   @ViewChild('paginator') paginator: MatPaginator | any;
@@ -34,7 +35,7 @@ export class AuthorsComponent implements OnInit {
     ceil: 2022
   };
 
-  constructor(private router: Router, private qs : QueryserviceService) { 
+  constructor(private router: Router, private qs: QueryserviceService) {
     this.dataSource = new MatTableDataSource(this.authors);
   }
 
@@ -43,7 +44,7 @@ export class AuthorsComponent implements OnInit {
     this.updateTopicsInfo();
   }
 
-  updateAuthorsInfo() : void {
+  updateAuthorsInfo(): void {
     this.subscription.add(
       this.qs.getAuthors().subscribe(res => {
         this.authors = [];
@@ -58,11 +59,12 @@ export class AuthorsComponent implements OnInit {
         });
         this.dataSource.data = this.authors;
         this.dataSource.paginator = this.paginator;
+        this.allAuthors = this.authors;
       })
     );
   }
 
-  updateTopicsInfo() : void {
+  updateTopicsInfo(): void {
     this.subscription.add(
       this.qs.getTopics().subscribe(res => {
         this.topicList = ['All'];
@@ -105,7 +107,7 @@ export class AuthorsComponent implements OnInit {
           return 0;
       }
     });
-    this.dataSource = new MatTableDataSource(this.authors);
+    this.dataSource.data = this.authors;
     this.dataSource.paginator = this.paginator;
   }
 
@@ -122,26 +124,37 @@ export class AuthorsComponent implements OnInit {
     this.handleUserChange();
   }
 
-  capitalize(input: string) {  
-    var words = input.split(' ');  
-    var CapitalizedWords: Array<string> = [];  
-    words.forEach((element: string) => {  
-        CapitalizedWords.push(element[0].toUpperCase() + element.slice(1, element.length));  
-    });  
-    return CapitalizedWords.join(' ');  
+  capitalize(input: string) {
+    var words = input.split(' ');
+    var CapitalizedWords: Array<string> = [];
+    words.forEach((element: string) => {
+      CapitalizedWords.push(element[0].toUpperCase() + element.slice(1, element.length));
+    });
+    return CapitalizedWords.join(' ');
   }
 
   handleUserChange(): void {
     this.qs.getAuthorsNewInfo(this.start_year, this.end_year, this.topics).subscribe((res: any) => {
       this.authors = [];
-      res.forEach((row: any) => {
-        this.authors.push({
-          id: row['i']['id'],
-          name: row['i']['name'],
-          h_index: row['i']['h_index'],
-          n_pubs: row['n_pubs'],
-          n_citations: row['n_citations']
-        });
+      var citationMap = new Map();
+      var pubMap = new Map();
+      res[0].forEach((row: any) => {
+        pubMap.set(row.i.id, row.n_pubs);
+      });
+      res[1].forEach((row: any) => {
+        citationMap.set(row.i.id, row.n_citations);
+      });
+      this.allAuthors.forEach(row => {
+        if (pubMap.has(row.id))
+          row.n_pubs = pubMap.get(row.id);
+        else
+          row.n_pubs = 0;
+        if (citationMap.has(row.id))
+          row.n_citations = citationMap.get(row.id);
+        else
+          row.n_citations = 0;
+        if (row.n_pubs > 0 || row.n_citations > 0)
+          this.authors.push(row);
       });
       this.dataSource.data = this.authors;
       this.dataSource.paginator = this.paginator;

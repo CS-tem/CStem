@@ -3,88 +3,91 @@
   <h2>{{author.name}}</h2>
 
   <mat-list>
-    
-      <mat-list-item> Name: {{author.name}} </mat-list-item>
-      <mat-divider></mat-divider>
 
-      <mat-list-item> Institute: {{inst_name}} </mat-list-item>
-      <mat-divider></mat-divider>
+    <mat-list-item> Name: {{author.name}} </mat-list-item>
+    <mat-divider></mat-divider>
 
-      <mat-list-item> Total publications: {{author.n_pubs}} </mat-list-item>
-      <mat-divider></mat-divider>
+    <mat-list-item> Institute: {{inst_name}} </mat-list-item>
+    <mat-divider></mat-divider>
 
-      <mat-list-item> Total citations: {{author.n_citations}} </mat-list-item>
-      <mat-divider></mat-divider>
+    <mat-list-item> Total publications: {{author.n_pubs}} </mat-list-item>
+    <mat-divider></mat-divider>
 
-      <mat-list-item> Average citations: {{(author.n_pubs == 0)? 0 : author.n_citations / author.n_pubs | number : '1.2-2'}} </mat-list-item>
-      <mat-divider></mat-divider>
+    <mat-list-item> Total citations: {{author.n_citations}} </mat-list-item>
+    <mat-divider></mat-divider>
 
-      <mat-list-item> H-index: {{author.h_index}} </mat-list-item>
+    <mat-list-item> Average citations:
+      {{(author.n_pubs == 0)? 0 : author.n_citations / author.n_pubs | number : '1.2-2'}} </mat-list-item>
+    <mat-divider></mat-divider>
+
+    <mat-list-item> H-index: {{author.h_index}} </mat-list-item>
 
   </mat-list>
 
-  <h3>Articles</h3>
+  <div *ngIf="author.n_pubs">
 
-  <table mat-table [dataSource]="dataSource" class=""
-      matSort (matSortChange)="articles_sortData($event)">
-    
+    <h3>Top 5 Articles</h3>
+
+    <table mat-table [dataSource]="dataSource" class="" matSort (matSortChange)="articles_sortData($event)">
+
       <ng-container matColumnDef="title">
         <th mat-header-cell *matHeaderCellDef mat-sort-header="title"> Title </th>
         <td mat-cell *matCellDef="let article"> {{article.title}} </td>
       </ng-container>
-    
+
       <ng-container matColumnDef="year">
         <th mat-header-cell *matHeaderCellDef mat-sort-header="year"> Year </th>
         <td mat-cell *matCellDef="let article"> {{article.year}} </td>
       </ng-container>
 
       <ng-container matColumnDef="n_citations">
-          <th mat-header-cell *matHeaderCellDef mat-sort-header="n_citations"> Total Citations </th>
-          <td mat-cell *matCellDef="let article"> {{article.citations}} </td>
-        </ng-container>
-    
+        <th mat-header-cell *matHeaderCellDef mat-sort-header="n_citations"> Total Citations </th>
+        <td mat-cell *matCellDef="let article"> {{article.citations}} </td>
+      </ng-container>
+
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
       <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="openRow(row)" class="clickable"></tr>
-  </table>
-  <mat-paginator #paginator
-                 [length]="100"
-                 [pageSize]="10"
-                 [pageSizeOptions]="[5, 10, 25, 100]"
-                 aria-label="Select page">
-  </mat-paginator>
-
-  <h3>Statistics</h3>
-
-  <div class="chart">
-      <apx-chart
-        [series]="pubs_chartOptions.series"
-        [chart]="pubs_chartOptions.chart"
-        [xaxis]="pubs_chartOptions.xaxis"
-        [title]="pubs_chartOptions.title"
-      >
-      </apx-chart>
-
-      <apx-chart
-        [series]="citations_chartOptions.series"
-        [chart]="citations_chartOptions.chart"
-        [xaxis]="citations_chartOptions.xaxis"
-        [title]="citations_chartOptions.title"
-      >
-      </apx-chart>
-
-      <apx-chart
-        [series]="pie_chartOptions.series"
-        [chart]="pie_chartOptions.chart"
-        [labels]="pie_chartOptions.labels"
-        [responsive]="pie_chartOptions.responsive"
-        [title]="pie_chartOptions.title"
-      >
-      </apx-chart>
+    </table>
+    <mat-paginator #paginator [length]="100" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]"
+      aria-label="Select page">
+    </mat-paginator>
 
   </div>
 
+  <div *ngIf="author.n_pubs">
+
+    <h3>Statistics</h3>
+
+    <div class="chart">
+      <apx-chart [series]="pubs_chartOptions.series" [chart]="pubs_chartOptions.chart" [xaxis]="pubs_chartOptions.xaxis"
+        [title]="pubs_chartOptions.title">
+      </apx-chart>
+
+      <div *ngIf="author.n_citations">
+
+        <apx-chart [series]="citations_chartOptions.series" [chart]="citations_chartOptions.chart"
+          [xaxis]="citations_chartOptions.xaxis" [title]="citations_chartOptions.title">
+        </apx-chart>
+
+      </div>
+
+      <apx-chart [series]="pie_chartOptions.series" [chart]="pie_chartOptions.chart" [labels]="pie_chartOptions.labels"
+        [responsive]="pie_chartOptions.responsive" [title]="pie_chartOptions.title">
+      </apx-chart>
+
+    </div>
+
+  </div>
+
+  <div *ngIf="author.n_pubs == 0">
+    <h3>No Publication analysis</h3>
+    <div *ngIf="author.n_citations == 0">
+      <h3>No Citation analysis</h3>
+    </div>
+  </div>
+
   <h3>Coauthors</h3>
-  
+
   <div class="graph">
     <div id="coauthors" #coauthors></div>
   </div>
