@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { QueryserviceService } from '../queryservice.service';
 import { Subscription } from 'rxjs';
 import { ActivatedRoute } from '@angular/router';
@@ -50,6 +50,7 @@ export class ArticleComponent implements OnInit {
       this.article_id = params['article_id'];
       this.updateArticleInfo();
       this.updateCitationsInfo();
+      this.citationGraph();
     });
     // this.updatedCitingandCitedby();
     this.citations_chartOptions = {
@@ -70,53 +71,6 @@ export class ArticleComponent implements OnInit {
         categories: ['2016','2017','2018','2019']
       }
     };
-  }
-
-  ngAfterViewInit(): void {
-
-    this.citationGraph();
-    
-    // create an array with nodes
-    const nodes = new DataSet<any>([
-      { id: 1, label: 'Node 1' },
-      { id: 2, label: 'Node 2' },
-      { id: 3, label: 'Node 3' },
-      { id: 4, label: 'Node 4' },
-      { id: 5, label: 'Node 5' },
-    ]);
- 
-    // create an array with edges
-    const edges = new DataSet<any>([
-      { from: '1', to: '3' },
-      { from: '1', to: '2' },
-      { from: '2', to: '4' },
-      { from: '2', to: '5' },
-    ]);
- 
-    const data = { nodes, edges };
- 
-    const container = this.citations;
-
-    this.networkInstance = new Network(container.nativeElement, data, {
-      height: '100%',
-      width: '100%',
-      nodes: {
-        shape: 'hexagon',
-        font: {
-          color: 'white',
-        },
-      },
-      edges: {
-        smooth: true,
-        arrows: {
-          to: {
-            enabled: true,
-            type: 'vee',
-          },
-        },
-      },
-    });
-
   }
 
   updateArticleInfo() : void {
@@ -200,6 +154,37 @@ export class ArticleComponent implements OnInit {
             }
           }
         });
+
+        // console.log(this.nodes_list);
+        // console.log(this.edges_list);
+
+        var nodes = new DataSet<any>(this.nodes_list);
+        var edges = new DataSet<any>(this.edges_list);
+
+        const data = { nodes, edges };
+ 
+        const container = this.citations;
+
+        this.networkInstance = new Network(container.nativeElement, data, {
+          height: '100%',
+          width: '100%',
+          nodes: {
+            shape: 'hexagon',
+            font: {
+              color: 'white',
+            },
+          },
+          edges: {
+            smooth: true,
+            arrows: {
+              to: {
+                enabled: true,
+                type: 'vee',
+              },
+            },
+          },
+        });
+
       })
     );
   }

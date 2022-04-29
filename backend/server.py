@@ -320,4 +320,46 @@ def get_citation_graph(query_str : str,q: Optional[str] = None):
     return result
 
     
+#author-slider-selected topics
+
+#npubs
+@app.get('/author/modified_n_pubs/{query_str}') #author[id]-start-end-<selected topics>
+def get_modified_npubs(query_str : str, q : Optional[str] = None):
+    if q:
+        query = q
+    query = query_str.split('-')
+    start = 2016
+    end = 2018
+    selected_topics = ['Machine Learning']
+    query = """
+    MATCH (i: Author{id : 1})
+    OPTIONAL MATCH (i)-[:AuthorArticle]->(j)<-[:ArticleTopic]-(k)
+    WHERE k.name in ["machine learning", "computer vision"]
+    AND 2016 <= j.year <= 2022
+    RETURN i, COALESCE(COUNT(DISTINCT j),0) AS n_pubs;"""
+    result = neo_db.neo4j_query(query)
+    return result
+
+#n_citations
+@app.get('/author/modified_n_citations/{query_str}') #author[id]-start-end-<selected topics>
+def get_modified_npubs(query_str : str, q : Optional[str] = None):
+    if q:
+        query = q
+    author_id = 1
+    query = query_str.split('-')
+    start = 2016
+    end = 2018
+    selected_topics = ['Machine Learning']
+    query = """
+    CALL {{
+    MATCH (i: Author{{id : {}}})
+    OPTIONAL MATCH (i)-[:AuthorArticle]->(j)<-[:ArticleTopic]-(k)
+    OPTIONAL MATCH (j)-[:CitedBy]->(l)
+    WHERE k.name in {}
+    AND {} <= j.year <= {}
+    RETURN i, COALESCE(COUNT(DISTINCT j),0) AS n_cits}}
+    WITH *
+    RETURN i, SUM(n_cits) AS n_citations;""".format(author_id, start, end, selected_topics)
+    result = neo_db.neo4j_query(query)
+    return result
 
