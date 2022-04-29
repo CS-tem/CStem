@@ -64,8 +64,8 @@ def get_institutes():
         entry['i']['country'] = entry['c_name']
     return [entry['i'] for entry in result]
 
-@app.get('/authors/{author_id}')
-def get_authors(author_id : int):
+@app.get('/author/{author_id}')
+def get_author(author_id : int):
     query = """
     CALL {{MATCH (i:Author{{id : {}}})
     OPTIONAL MATCH (i)-[:AuthorArticle]->(j)-[:CitedBy]->(k)

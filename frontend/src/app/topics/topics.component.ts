@@ -3,6 +3,10 @@ import { QueryserviceService } from '../queryservice.service';
 import { Subscription } from 'rxjs';
 import { Sort } from '@angular/material/sort';
 import { Router } from '@angular/router';
+import { Topic } from '../topic';
+import { ViewChild } from '@angular/core';
+import { MatTableDataSource } from '@angular/material/table';
+import { MatPaginator } from '@angular/material/paginator';
 
 @Component({
   selector: 'app-topics',
@@ -12,9 +16,14 @@ import { Router } from '@angular/router';
 export class TopicsComponent implements OnInit {
   displayedColumns = ["name", "n_articles", "n_authors", "n_citations"];
   subscription = new Subscription();
-  topics: any = [{}];
+  topics: Array<Topic> = [];
+  @ViewChild('paginator') paginator: MatPaginator | any;
+  dataSource: MatTableDataSource<Topic>;
 
-  constructor(private router: Router, private qs : QueryserviceService) { }
+  constructor(private router: Router, private qs : QueryserviceService) { 
+    this.dataSource = new MatTableDataSource(this.topics);
+    this.dataSource.paginator = this.paginator;
+  }
 
   ngOnInit(): void {
     this.updateTopicsInfo();
@@ -23,7 +32,18 @@ export class TopicsComponent implements OnInit {
   updateTopicsInfo() : void {
     this.subscription.add(
       this.qs.getTopics().subscribe(res => {
-        this.topics = res;
+        this.topics = [];
+        res.forEach((row: any) => {
+          this.topics.push({
+            id: row['id'],
+            name: row['name'],
+            n_pubs: row['n_pubs'],
+            n_authors: row['n_authors'],
+            n_articles: row['n_articles'],
+            n_citations: row['n_citations']
+          });
+        });
+        // No need to update datasource here; done in sortData below
         this.sortData({
           active: 'n_citations',
           direction: 'desc',
@@ -36,6 +56,8 @@ export class TopicsComponent implements OnInit {
     const data = this.topics.slice();
     if (!sort.active || sort.direction === '') {
       this.topics = data;
+      this.dataSource.data = this.topics;
+      this.dataSource.paginator = this.paginator;
       return;
     }
 
@@ -56,6 +78,8 @@ export class TopicsComponent implements OnInit {
           return 0;
       }
     });
+    this.dataSource.data = this.topics;
+    this.dataSource.paginator = this.paginator;
   }
 
   openRow(row: any) {

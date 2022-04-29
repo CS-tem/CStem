@@ -18,7 +18,7 @@ import { Institute } from '../institute';
 export class InstitutesComponent implements OnInit {
   displayedColumns = ["name", "country", "n_members", "n_pubs", "n_citations"];
   subscription = new Subscription();
-  institutes: any = [{}];
+  institutes: Array<Institute> = [];
   topicFilter = new FormControl();
   topicList: string[] = ['all'];
   chosenTopics = [];
@@ -50,7 +50,7 @@ export class InstitutesComponent implements OnInit {
             n_citations: row['n_citations'] 
           });
         });
-        this.dataSource = new MatTableDataSource(this.institutes);
+        this.dataSource.data = this.institutes;
         this.dataSource.paginator = this.paginator;
       })
     );
@@ -71,6 +71,8 @@ export class InstitutesComponent implements OnInit {
     const data = this.institutes.slice();
     if (!sort.active || sort.direction === '') {
       this.institutes = data;
+      this.dataSource.data = this.institutes;
+      this.dataSource.paginator = this.paginator;
       return;
     }
 
@@ -93,6 +95,8 @@ export class InstitutesComponent implements OnInit {
           return 0;
       }
     });
+    this.dataSource.data = this.institutes;
+    this.dataSource.paginator = this.paginator;
   }
 
   chooseTopics(event: MatSelectChange) {
