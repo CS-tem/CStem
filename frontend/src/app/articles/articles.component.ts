@@ -18,7 +18,7 @@ export interface Article {
   styleUrls: ['./articles.component.scss']
 })
 export class ArticlesComponent implements OnInit {
-  displayedColumns = ["id", "n_citations", "title", "venue_id", "year"];
+  displayedColumns = ["title", "venue_id", "n_citations", "year"];
   
   subscription = new Subscription();
   articles: any = [{}];

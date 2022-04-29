@@ -22,7 +22,7 @@ export interface Venue {
   styleUrls: ['./venues.component.scss']
 })
 export class VenuesComponent implements OnInit {
-  displayedColumns = ["id", "name", "flexibility", "acronym", "n_pubs", "n_citations", "type"];
+  displayedColumns = ["name", "acronym", "type", "n_pubs", "n_citations", "flexibility"];
   subscription = new Subscription();
   venues: any = [{}];
 

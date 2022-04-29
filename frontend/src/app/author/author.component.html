@@ -22,11 +22,6 @@
 
   <table mat-table [dataSource]="articles" class=""
       matSort (matSortChange)="articles_sortData($event)">
-
-      <ng-container matColumnDef="id">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header="id"> Article ID </th>
-        <td mat-cell *matCellDef="let article"> {{article.id}} </td>
-      </ng-container>
     
       <ng-container matColumnDef="title">
         <th mat-header-cell *matHeaderCellDef mat-sort-header="title"> Title </th>
@@ -39,7 +34,7 @@
       </ng-container>
 
       <ng-container matColumnDef="n_citations">
-          <th mat-header-cell *matHeaderCellDef mat-sort-header="n_citations"> Num. of Citations </th>
+          <th mat-header-cell *matHeaderCellDef mat-sort-header="n_citations"> Total Citations </th>
           <td mat-cell *matCellDef="let article"> {{article.n_citations}} </td>
         </ng-container>
     

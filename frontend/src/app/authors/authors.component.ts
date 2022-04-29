@@ -20,7 +20,7 @@ export interface Author {
 })
 export class AuthorsComponent implements OnInit {
 
-  displayedColumns = ["id", "name", "h_index", "n_pubs", "n_citations"];
+  displayedColumns = ["name", "h_index", "n_pubs", "n_citations"];
   subscription = new Subscription();
   authors: any = [{}];
 

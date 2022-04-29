@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./institutes.component.scss'],
 })
 export class InstitutesComponent implements OnInit {
-  displayedColumns = ["id", "name","country", "n_members", "n_pubs", "n_citations"];
+  displayedColumns = ["name", "country", "n_members", "n_pubs", "n_citations"];
   subscription = new Subscription();
   institutes: any = [{}];
   topicFilter = new FormControl();

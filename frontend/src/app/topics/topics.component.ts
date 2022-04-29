@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./topics.component.scss']
 })
 export class TopicsComponent implements OnInit {
-  displayedColumns = ["id", "name", "n_articles", "n_authors", "n_citations"];
+  displayedColumns = ["name", "n_articles", "n_authors", "n_citations"];
   subscription = new Subscription();
   topics: any = [{}];
 
@@ -23,9 +23,6 @@ export class TopicsComponent implements OnInit {
   updateTopicsInfo() : void {
     this.subscription.add(
       this.qs.getTopics().subscribe(res => {
-        for (var i = 0; i < res.length; i++) {
-          res[i].name = this.capitalize(res[i].name);
-        }
         this.topics = res;
         this.sortData({
           active: 'n_citations',
@@ -60,15 +57,6 @@ export class TopicsComponent implements OnInit {
       }
     });
   }
-
-  capitalize(input: string) {  
-    var words = input.split(' ');  
-    var CapitalizedWords: Array<string> = [];  
-    words.forEach((element: string) => {  
-        CapitalizedWords.push(element[0].toUpperCase() + element.slice(1, element.length));  
-    });  
-    return CapitalizedWords.join(' ');  
-  } 
 
   openRow(row: any) {
     let route = '/topic/' + row.id;

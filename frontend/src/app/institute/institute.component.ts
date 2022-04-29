@@ -29,7 +29,7 @@ export class InstituteComponent implements OnInit {
   citations_x : string[]= [];
   citations_y : string[]= [];
 
-  members_displayedColumns = ["id", "name","h_index", "n_pubs", "n_citations"];
+  members_displayedColumns = ["name", "h_index", "n_pubs", "n_citations"];
 
   public pubs_chartOptions: Partial<ChartOptions> | any;
   public citations_chartOptions: Partial<ChartOptions> | any;

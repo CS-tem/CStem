@@ -60,7 +60,7 @@ export class AuthorComponent implements OnInit {
   pie_x : string[]= [];
   pie_y : string[]= [];
 
-  displayedColumns = ["id", "title", "year", "n_citations"];
+  displayedColumns = ["title", "year", "n_citations"];
 
   @ViewChild('coauthors', { static: false }) coauthors!: ElementRef;
   private networkInstance: any;

@@ -4,29 +4,24 @@
 
   <table mat-table [dataSource]="topics" class=""
       matSort (matSortChange)="sortData($event)">
-    
-      <ng-container matColumnDef="id">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header="id"> Topic ID </th>
-        <td mat-cell *matCellDef="let topic"> {{topic.id}} </td>
-      </ng-container>
-    
+
       <ng-container matColumnDef="name">
         <th mat-header-cell *matHeaderCellDef mat-sort-header="name"> Topic Name </th>
-        <td mat-cell *matCellDef="let topic"> {{topic.name}} </td>
+        <td mat-cell *matCellDef="let topic"> {{topic.name | titlecase}} </td>
       </ng-container>
     
       <ng-container matColumnDef="n_articles">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header="n_articles"> Num. of Articles </th>
+        <th mat-header-cell *matHeaderCellDef mat-sort-header="n_articles"> Total Articles </th>
         <td mat-cell *matCellDef="let topic"> {{topic.n_articles}} </td>
       </ng-container>
     
       <ng-container matColumnDef="n_authors">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header="n_authors"> Num. of Authors </th>
+        <th mat-header-cell *matHeaderCellDef mat-sort-header="n_authors"> Total Authors </th>
         <td mat-cell *matCellDef="let topic"> {{topic.n_authors}} </td>
       </ng-container>
 
       <ng-container matColumnDef="n_citations">
-          <th mat-header-cell *matHeaderCellDef mat-sort-header="n_citations"> Num. of Citations </th>
+          <th mat-header-cell *matHeaderCellDef mat-sort-header="n_citations"> Total Citations </th>
           <td mat-cell *matCellDef="let topic"> {{topic.n_citations}} </td>
         </ng-container>
     
