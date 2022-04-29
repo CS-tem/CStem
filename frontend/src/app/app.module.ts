@@ -38,6 +38,7 @@ import { MatIconModule } from '@angular/material/icon'
 import { MatSortModule } from '@angular/material/sort';
 import { MatSelectModule } from '@angular/material/select';
 import { HomeComponent } from './home/home.component';
+import { NgxSliderModule } from '@angular-slider/ngx-slider';
 
 @NgModule({
   declarations: [
@@ -77,6 +78,8 @@ import { HomeComponent } from './home/home.component';
     MatProgressSpinnerModule,
     MatMenuModule,
     MatIconModule,
+
+    NgxSliderModule,
 
     NgApexchartsModule,
     NgxEchartsModule.forRoot({

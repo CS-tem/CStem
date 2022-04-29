@@ -120,7 +120,7 @@ export class ArticleComponent implements OnInit {
     );
   }
 
-  citationGraph(): void{
+  citationGraph(): void {
     this.subscription.add(
       this.qs.getArticleCitationGraph(this.article_id, 3).subscribe(res => {
         this.nodes_list = [];

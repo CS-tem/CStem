@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
+import { HttpHeaders } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -124,5 +125,16 @@ export class QueryserviceService {
 
   public getArticleCitationGraph(id: number, d: number) : Observable<any> {
     return this.http.get(`http://127.0.0.1:8000/article/citation-graph/${id}-${d}`);
+  }
+
+  public getAuthorNewInfo(from: number, to: number, topics: Array<String>) {
+    var data = {
+      'frm': from,
+      'to': to,
+      'topics': topics
+    };
+    const headers = new HttpHeaders();
+    headers.append('Content-Type', 'application/json');
+    return this.http.post('http://127.0.0.1:8000/new-authors-info/', data);
   }
 }

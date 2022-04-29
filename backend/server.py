@@ -1,8 +1,9 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from neoquery import Graph
 from typing import Optional
 from password import PASSWORD
+from pydantic import BaseModel
 
 app = FastAPI()
 origins = ['*']
@@ -323,20 +324,20 @@ def get_citation_graph(query_str : str,q: Optional[str] = None):
 #author-slider-selected topics
 
 #npubs
-@app.get('/author/modified_n_pubs/{query_str}') #author[id]-start-end-<selected topics>
-def get_modified_npubs(query_str : str, q : Optional[str] = None):
-    if q:
-        query = q
-    query = query_str.split('-')
+@app.get('/author/modified_n_pubs/') #author[id]-start-end-<selected topics>
+def get_modified_npubs():
     start = 2016
     end = 2018
     selected_topics = ['Machine Learning']
     query = """
-    MATCH (i: Author{id : 1})
+    MATCH (i: Author)
     OPTIONAL MATCH (i)-[:AuthorArticle]->(j)<-[:ArticleTopic]-(k)
-    WHERE k.name in ["machine learning", "computer vision"]
-    AND 2016 <= j.year <= 2022
-    RETURN i, COALESCE(COUNT(DISTINCT j),0) AS n_pubs;"""
+    WHERE k.name in {}
+    AND {} <= j.year <= {}
+    RETURN i, COALESCE(COUNT(DISTINCT j),0) AS n_pubs;""".format(
+        selected_topics, start, end
+    )
+    print(query)
     result = neo_db.neo4j_query(query)
     return result
 
@@ -363,3 +364,11 @@ def get_modified_npubs(query_str : str, q : Optional[str] = None):
     result = neo_db.neo4j_query(query)
     return result
 
+class NewAuthorsCondition(BaseModel):
+    frm: int
+    to: int
+    topics: list
+
+@app.post('/new-authors-info/')
+def post_new_authors_info(request: NewAuthorsCondition):
+    return 0
