@@ -57,7 +57,7 @@ export class VenueComponent implements OnInit {
           type: res[0]['i']['type'],
           n_pubs: res[0]['i']['n_pubs'],
           n_citations: res[0]['i']['n_citations'],
-          flexibility: res[0]['i']['flexiblity']
+          flexibility: res[0]['i']['flexibility']
         }
       })
     );
