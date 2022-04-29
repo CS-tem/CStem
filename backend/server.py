@@ -22,19 +22,32 @@ def test():
 
 @app.get('/institutes/{institute_id}')
 def get_institutes(institute_id : int):
-    query = 'MATCH (i: Institute {{id : {}}})<-[:InstituteCountry]-(j) RETURN i,j.name AS c_name;'.format(institute_id)
+    query = """
+    CALL {{MATCH (i: Institute {{id : {}}})<-[:InstituteCountry]-(j) 
+    OPTIONAL MATCH (i)-[:InstituteMember]->(x)-[:AuthorArticle]->(k)-
+    [:CitedBy]->(l)
+    RETURN i, j.name AS c_name, x,k, COALESCE(COUNT(DISTINCT l),0) AS citations}}
+    WITH *
+    RETURN i,c_name, sum(citations) AS n_citations ;""".format(institute_id)
     result = neo_db.neo4j_query(query)
     for entry in result:
         entry['i']['country'] = entry['c_name']
+        entry['i']['n_citations'] = entry['n_citations']
     return [entry['i'] for entry in result]
 
 @app.get('/institute-members/{institute_id}')
 def get_institute_members(institute_id : int):
     query = '''
-        MATCH (i:Institute{{id : {}}})-[:InstituteMember]->(j)
-        RETURN j;
+        CALL {{MATCH (i:Institute{{id : {}}})-[:InstituteMember]->(j)
+        OPTIONAL MATCH (j)-[:AuthorArticle]->(k)-[:CitedBy]->(l)
+        RETURN i, j,k, COALESCE(COUNT(DISTINCT l),0) as citations}}
+        WITH *
+        RETURN j, SUM(citations) AS n_citations;
         '''.format(institute_id)
+
     result = neo_db.neo4j_query(query)
+    for entry in result:
+        entry['j']['citations'] = entry['n_citations']
     return [entry['j'] for entry in result]
 
 @app.get('/institute-pubs/{institute_id}')
@@ -49,9 +62,11 @@ def get_institute_pubs(institute_id : int):
 @app.get('/institute-citations/{institute_id}')
 def get_institute_citations(institute_id : int):
     query = """
-    MATCH (i : Institute{{id: {}}})-[:InstituteMember]->(j : Author)-[:AuthorArticle]->(k: Article)
+    CALL {{MATCH (i : Institute{{id: {}}})-[:InstituteMember]->(j : Author)-[:AuthorArticle]->(k: Article)
     OPTIONAL MATCH (k)-[:CitedBy]->(l) RETURN 
-    COALESCE(COUNT(DISTINCT l),0) AS n_citations, k.year as year ORDER BY year; """.format(institute_id)
+    j,COALESCE(COUNT(DISTINCT l),0) AS citations, k.year as year ORDER BY year}}
+    WITH *
+    RETURN SUM(citations) AS n_citations, year;""".format(institute_id)
     result = neo_db.neo4j_query(query)
     
     return result
@@ -87,8 +102,15 @@ def get_authors_top5(author_id : int):
 
 @app.get('/authors/')
 def get_authors():
-    query = 'MATCH (i: Author) RETURN i;'
+    query = """
+    CALL {MATCH (i: Author)
+    OPTIONAL MATCH (i)-[:AuthorArticle]->(j)-[:CitedBy]->(k)
+    RETURN i,j, COALESCE(COUNT(DISTINCT k),0) as cits}
+    WITH *
+    RETURN i, SUM(cits) AS n_citations;"""
     result = neo_db.neo4j_query(query)
+    for entry in result:
+        entry['i']['n_citations'] = entry['n_citations']
     return [entry['i'] for entry in result]
 
 @app.get('/author-pubs/{author_id}')
@@ -128,7 +150,7 @@ def get_author_colabs(author_id : int):
 @app.get('/articles/')
 def get_articles():
     # query = 'MATCH (i: Article) RETURN i;'
-    query = 'MATCH (i: Article), (v: Venue {id : i.venue_id}) RETURN i, v.acronym as vacr;'
+    query = """MATCH (i: Article), (v: Venue {id : i.venue_id}) RETURN i, v.acronym as vacr;"""
     result = neo_db.neo4j_query(query)
     for entry in result:
         entry['i']['vacr'] = entry['vacr'] 
