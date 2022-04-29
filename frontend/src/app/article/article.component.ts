@@ -127,7 +127,10 @@ export class ArticleComponent implements OnInit {
           venue_name: res[0].vname,
           venue_acronym: res[0].vacr
         };
+<<<<<<< HEAD
         // console.log(res);
+=======
+>>>>>>> 07bf922ca329a3334db3f7bd94d25e1ae6999b17
       })
     );
   }
@@ -146,12 +149,7 @@ export class ArticleComponent implements OnInit {
           this.citations_x.push(""+ele.year);
           this.citations_y.push(""+ele.n_citations);
         }  
-        // if(this.citations_x[0] != 'null')
-        // {
-          this.citations_updateSeries(); 
-        //   console.log("H", this.citations_x);
-        // }
-          
+        this.citations_updateSeries();
       })
     );
   }

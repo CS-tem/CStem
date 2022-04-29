@@ -43,11 +43,15 @@ export class AuthorsComponent implements OnInit {
             n_citations: row['n_citations']
           });
         });
-        console.log(res);
         this.dataSource.data = this.authors;
         this.dataSource.paginator = this.paginator;
       })
     );
+  }
+
+  applyFilter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 
   sortData(sort: Sort) {

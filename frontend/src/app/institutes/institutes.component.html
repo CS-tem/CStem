@@ -1,7 +1,10 @@
 <div class="container">
     
     <h2>Institutes</h2>
-
+    <mat-form-field appearance="standard" class="filter">
+        <mat-label>Filter</mat-label>
+        <input matInput (keyup)="applyFilter($event)" placeholder="Search columns" #input>
+    </mat-form-field>
     <table mat-table [dataSource]="dataSource" class=""
         matSort (matSortChange)="sortData($event)">
       
