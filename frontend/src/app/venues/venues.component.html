@@ -3,10 +3,38 @@
     <h2>Venues</h2>
 
     <div class="flex-center">
-        <mat-form-field appearance="standard" class="filter">
+
+        <mat-form-field appearance="fill" class="filter">
             <mat-label>Search</mat-label>
             <input matInput (keyup)="applyFilter($event)" placeholder="Enter" #input>
         </mat-form-field>
+
+        <mat-form-field appearance="fill" class="dropdown">
+            <mat-label>Select Topics</mat-label>
+            <mat-select (selectionChange)="chooseTopics($event)" [formControl]="topicFilter" multiple>
+                <mat-select-trigger>
+                {{topicFilter.value ? topicFilter.value[0] : "All"}}
+                <span *ngIf="topicFilter.value?.length > 1" class="example-additional-selection">
+                    (+{{topicFilter.value.length - 1}} {{topicFilter.value?.length === 2 ? 'other' : 'others'}})
+                </span>
+                </mat-select-trigger>
+                <mat-option *ngFor="let topic of topicList" [value]="topic">{{capitalize(topic)}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+        <mat-form-field appearance="fill" class="dropdown">
+        <mat-label>Select Types</mat-label>
+        <mat-select (selectionChange)="chooseTypes($event)" [formControl]="typeFilter" multiple>
+            <mat-select-trigger>
+            {{typeFilter.value ? typeFilter.value[0] : "All"}}
+            <span *ngIf="typeFilter.value?.length > 1" class="example-additional-selection">
+                (+{{typeFilter.value.length - 1}} {{typeFilter.value?.length === 2 ? 'other' : 'others'}})
+            </span>
+            </mat-select-trigger>
+            <mat-option *ngFor="let type of typeList" [value]="type">{{capitalize(type)}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+
     </div>
 
     <table mat-table [dataSource]="dataSource" class=""
@@ -52,31 +80,6 @@
                   [pageSizeOptions]="[5, 10, 25, 100]"
                   aria-label="Select page">
     </mat-paginator>
-    <div class="flex-center" id="block_container">
-      <mat-form-field appearance="fill" class="dropdown">
-        <mat-label>Select Topics</mat-label>
-        <mat-select (selectionChange)="chooseTopics($event)" [formControl]="topicFilter" multiple>
-            <mat-select-trigger>
-            {{topicFilter.value ? topicFilter.value[0] : "All"}}
-            <span *ngIf="topicFilter.value?.length > 1" class="example-additional-selection">
-                (+{{topicFilter.value.length - 1}} {{topicFilter.value?.length === 2 ? 'other' : 'others'}})
-            </span>
-            </mat-select-trigger>
-            <mat-option *ngFor="let topic of topicList" [value]="topic">{{capitalize(topic)}}</mat-option>
-        </mat-select>
-      </mat-form-field>
-      <mat-form-field appearance="fill" class="dropdown">
-        <mat-label>Select Types</mat-label>
-        <mat-select (selectionChange)="chooseTypes($event)" [formControl]="typeFilter" multiple>
-            <mat-select-trigger>
-            {{typeFilter.value ? typeFilter.value[0] : "All"}}
-            <span *ngIf="typeFilter.value?.length > 1" class="example-additional-selection">
-                (+{{typeFilter.value.length - 1}} {{typeFilter.value?.length === 2 ? 'other' : 'others'}})
-            </span>
-            </mat-select-trigger>
-            <mat-option *ngFor="let type of typeList" [value]="type">{{capitalize(type)}}</mat-option>
-        </mat-select>
-      </mat-form-field>
-    </div>
+
 </div>
   
