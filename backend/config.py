@@ -101,7 +101,7 @@ RELS = {
     'CitedBy': {
         'csv': 'cited_by',
         'between': ('Article', 'Article'),
-        'direction': '<-',
+        'direction': '->',
         'attrs': []
     },
     'Coauthor': {
