@@ -21,7 +21,8 @@ export class VenuesComponent implements OnInit {
   venues: Array<Venue> = [];
   allVenues: Array<Venue> = [];
   @ViewChild('paginator') paginator: MatPaginator | any;
-  dataSource: MatTableDataSource<Venue>;
+  dataSource!: MatTableDataSource<Venue>;
+  haveDS = false;
 
   topicFilter = new FormControl();
   topicList: string[] = ['all'];
@@ -31,8 +32,6 @@ export class VenuesComponent implements OnInit {
   types: Array<string> = [];
 
   constructor(private router: Router, private qs: QueryserviceService) { 
-    this.dataSource = new MatTableDataSource(this.venues);
-    this.dataSource.paginator = this.paginator;
   }
 
   ngOnInit(): void {
@@ -63,7 +62,6 @@ export class VenuesComponent implements OnInit {
         });
         this.types = this.typeList;
         this.allVenues = this.venues;
-        // No need to update datasource here; done in sortData below
         this.sortData({
           active: 'n_citations',
           direction: 'desc'
@@ -130,7 +128,12 @@ export class VenuesComponent implements OnInit {
     const data = this.venues.slice();
     if (!sort.active || sort.direction === '') {
       this.venues = data;
-      this.dataSource.data = this.venues;
+      if (this.haveDS)
+        this.dataSource.data = this.venues;
+      else {
+        this.dataSource = new MatTableDataSource(this.venues);
+        this.haveDS = true;
+      }
       this.dataSource.paginator = this.paginator;
       return;
     }
@@ -156,7 +159,12 @@ export class VenuesComponent implements OnInit {
           return 0;
       }
     });
-    this.dataSource.data = this.venues;
+    if (this.haveDS)
+      this.dataSource.data = this.venues;
+    else {
+      this.dataSource = new MatTableDataSource(this.venues);
+      this.haveDS = true;
+    }
     this.dataSource.paginator = this.paginator;
   }
 
