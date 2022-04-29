@@ -1,5 +1,4 @@
 id,name,n_pubs,n_citations,h_index
-91299,P. Burt,1,1,1
 95940,S. Ahmed,1,0,0
 124798,Xiaobo Ren,1,0,0
 128935,Steven Rowe,1,0,0
@@ -40,7 +39,7 @@ id,name,n_pubs,n_citations,h_index
 898478,Koldo Gojenola,1,0,0
 909073,Fahad Alotaiby,1,0,0
 916358,Kristy Sim,2,3,1
-971217,Qifa Ke,5,2,1
+971217,Qifa Ke,4,1,1
 973473,Larry S. Shapiro,2,1,1
 977050,Felice Dell'Orletta,1,3,1
 1032128,Adriana Roventini,2,0,0
@@ -83,7 +82,7 @@ id,name,n_pubs,n_citations,h_index
 290478,Bernd Fischer,1,0,0
 306888,J. Mrozinski,2,1,1
 315401,N. Ireson,1,0,0
-325728,Kiril Ribarov,1,61,1
+325728,Kiril Ribarov,1,60,1
 330783,Ryohei Sasano,2,3,1
 349181,Yongdong Zhang,1,0,0
 359452,Yu-Chiang Frank Wang,1,0,0
@@ -127,7 +126,7 @@ id,name,n_pubs,n_citations,h_index
 1015206,Minghan Hu,1,1,1
 1030022,Pierre Kornprobst,3,1,1
 1061410,S. Kevin Zhou,1,0,0
-1062151,Denise Danielson,4,2,1
+1062151,Denise Danielson,4,1,1
 1071818,Jane Shore,1,0,0
 1077025,Henk Muller,1,1,1
 1110812,Jiali Zhao,1,0,0
@@ -181,7 +180,7 @@ id,name,n_pubs,n_citations,h_index
 511593,Sharon L. Oviatt,4,2,1
 511834, Xianghua Xie,1,0,0
 524551,Henry Thompson,6,5,1
-539498,Slav Petrov,13,77,7
+539498,Slav Petrov,13,76,7
 549513,D. Sinclair,1,0,0
 562612,C. Sbert,1,0,0
 566061,S. Shankar Sasrty,1,0,0
@@ -226,12 +225,11 @@ id,name,n_pubs,n_citations,h_index
 1490272,Elliot Smith,1,0,0
 1508935,Jyh-Shing R. Jang,1,0,0
 1525315, Xiangyang Xue,2,0,0
-1546607,Mary Ann Marcinkiewicz,1,27,1
+1546607,Mary Ann Marcinkiewicz,1,26,1
 1551457,Eli Shechtman,4,2,1
 1603275,Srinivas Bangalore,13,20,2
 1605154,Gholamreza Haffari,5,6,2
 1610105,Kevin Regan,1,0,0
-1620278,Peter Beyerlein,1,0,0
 1623655,R. W. Smith,1,0,0
 1629884,N. Papanikolopoulos,2,0,0
 1631535,J. Andrew Bagnell,2,0,0
@@ -264,7 +262,7 @@ id,name,n_pubs,n_citations,h_index
 595867,Hari Sundaram,1,0,0
 610000,Chunyu Wang,1,0,0
 615016,Mark Holler,1,0,0
-619851,Z. Li,5,36,3
+619851,Z. Li,5,35,3
 622140, Tian-Tsong Ng,1,0,0
 634450,Richard Lawrence,1,3,1
 654910,Bernhard Schökopf,1,6,1
@@ -422,7 +420,7 @@ id,name,n_pubs,n_citations,h_index
 363962,Jianping Fan,1,0,0
 424132,Libby Barak,2,3,1
 427641, Bi Song,1,0,0
-434448,John Chen,1,5,1
+434448,John Chen,1,4,1
 500611,Chih-Fan Chen,1,0,0
 516956,H A Mallot,2,0,0
 530430,Frédéric Guichard Jean-Philippe Tarel,1,2,1
@@ -454,7 +452,7 @@ id,name,n_pubs,n_citations,h_index
 919617,Eleazar Eskin,2,1,1
 959027,Eric Altendorf,1,0,0
 972308,Harshit Chopra,1,0,0
-994559,X. D. Huang,10,29,3
+994559,X. D. Huang,10,28,3
 1014666,Myle Ott,1,4,1
 1027972,Tadeusz Pietraszek,1,0,0
 1061319,Karen Ryan,1,0,0
@@ -473,7 +471,7 @@ id,name,n_pubs,n_citations,h_index
 1292968,Reuven Zaritsky,1,0,0
 1302474,Michael Heilman,5,12,3
 1306677,T. N. Tan,3,0,0
-1311625,Marie-Catherine de Marneffe,3,9,1
+1311625,Marie-Catherine de Marneffe,2,8,1
 1336673,Mohammed Noamany,2,0,0
 1353689,Darrell Laham,1,3,1
 1390845,E. L. Terra,1,4,1
@@ -522,7 +520,7 @@ id,name,n_pubs,n_citations,h_index
 471865,Xianchao Wu,5,5,2
 472676,Michael Cohen,3,8,2
 477328,John Elder,2,3,1
-498021,Roy J. Byrd,6,19,2
+498021,Roy J. Byrd,6,18,1
 503127,Qin Lu,2,0,0
 505864,Jun Zhao,7,14,3
 525730, Zhenxing Niu,1,0,0
@@ -653,14 +651,14 @@ id,name,n_pubs,n_citations,h_index
 106008,Uri Zernik,3,3,1
 111843,J Nakamura,2,5,2
 115213,S. M. Omohundro,1,8,1
-144713,Stefan Riezler,10,93,5
+144713,Stefan Riezler,9,63,5
 151238,Christian Matenar,1,0,0
 179551,Kui Jia,4,0,0
 207503,Amr El-Desoky,1,0,0
 227577,Tawanda Sibanda,1,0,0
 271841,Jason Naradowsky,4,15,2
 293126,Charles Rich,1,2,1
-303069,Eugene Charniak,29,449,9
+303069,Eugene Charniak,29,445,9
 310951,Pierre Moulin,2,0,0
 329854,Andrew Blake,1,0,0
 355269,Mario Ferraro,1,0,0
@@ -702,7 +700,7 @@ id,name,n_pubs,n_citations,h_index
 1015376,Wee-Kheng Leow,1,0,0
 1024177,Abdelhadi Soudi,1,0,0
 1049861,Hui Ye,3,9,2
-1070244,Hsiao-Wuen Hon,8,22,3
+1070244,Hsiao-Wuen Hon,8,21,3
 1076332,Mayank Bansal,2,0,0
 1095147,Steven Baker,1,3,1
 1100746,Deryle W. Lonsdale,1,0,0
@@ -750,7 +748,7 @@ id,name,n_pubs,n_citations,h_index
 392166,Gregory Baratoff,1,1,1
 439504, Zhanyi Hu,1,0,0
 444593,Hilda Hardy,3,3,1
-473858,Fernando Pereira,30,712,10
+473858,Fernando Pereira,30,711,10
 488847,Martin D. Levine,1,0,0
 491680,S. Zhang,1,0,0
 516385,Ping Xue,1,0,0
@@ -837,7 +835,7 @@ id,name,n_pubs,n_citations,h_index
 429039, Jungmin Lee,1,0,0
 443159,Youichi Hidano,1,0,0
 455484, Miao Liao,1,0,0
-464599,A. Schwing,5,0,0
+464599,A. Schwing,4,0,0
 469327,Sreerupa Das,2,0,0
 471502,Jin-Ji Li,2,2,1
 486150,Vincent P. Wade,1,0,0
@@ -936,7 +934,7 @@ id,name,n_pubs,n_citations,h_index
 1128510,Daniel Fernández-González,1,0,0
 1132499,Stephen M. Chu,1,0,0
 1135378,Christopher Leckie,1,0,0
-1157233,Christopher Potts,2,2,1
+1157233,Christopher Potts,1,1,1
 1165678,Ken Litkowski,1,0,0
 1173450,Naoki Abe,1,0,0
 1181636,Karin Mauge,1,0,0
@@ -971,7 +969,7 @@ id,name,n_pubs,n_citations,h_index
 139629,Jiri Havel,1,0,0
 143260,Fred A. Hamprecht,6,0,0
 143684,Larry S Davis,34,22,2
-162711,Chris Callison-Burch,20,295,6
+162711,Chris Callison-Burch,20,294,6
 178900,Robert Evan Frank,1,0,0
 179533,Daniel Galron,1,0,0
 187253,Donald Engel,1,2,1
@@ -1107,7 +1105,7 @@ id,name,n_pubs,n_citations,h_index
 1111047,Ashok Veeraraghavan,4,1,1
 1115756,F. Wolinski,1,1,1
 1119478,Marilyn Walker,1,0,0
-1170605,James Glass,23,53,4
+1170605,James Glass,23,52,4
 1178600,Frank Schilder,2,2,1
 1220208,H. Jegou,1,0,0
 1268071,Yi Li,1,0,0
@@ -1260,7 +1258,7 @@ id,name,n_pubs,n_citations,h_index
 815500,Sing Bing Kang,1,0,0
 816162,Silja Huttunen,2,1,1
 843072,Graham McNeill,1,0,0
-875089,Andrew Y. Ng,28,115,6
+875089,Andrew Y. Ng,27,114,6
 881730,Michele Mammini,1,0,0
 922301,Eric Joanis,1,1,1
 929700,H. Weissman,1,0,0
@@ -1339,7 +1337,7 @@ id,name,n_pubs,n_citations,h_index
 905637,Satoshi Sato,1,2,1
 906812,Min-Yen Kan,7,19,3
 909612,Paul Sladky,1,3,1
-960358,Ondrej Chum,4,0,0
+960358,Ondrej Chum,3,0,0
 964464,Pascal Fua,1,0,0
 988296,Yang Liu,1,0,0
 1079137,Christopher S. Mellish,5,9,2
@@ -1376,7 +1374,7 @@ id,name,n_pubs,n_citations,h_index
 144344,Brian Hutchinson,1,0,0
 145154,Andrea Trucco,1,0,0
 173558,Bo Wang,1,0,0
-179063,Bonnie L Webber,17,25,3
+179063,Bonnie L Webber,17,24,3
 186193,Scott S. L. Piao,1,0,0
 188491,Baoquan Chen,1,0,0
 289579,Donald Mark Chiarulli,1,0,0
@@ -1429,7 +1427,7 @@ id,name,n_pubs,n_citations,h_index
 1447568,Yinghuan Shi,1,0,0
 1477438,Jinzhong Yang,1,0,0
 1493859,Qing Dou,1,0,0
-1513201,Kaleem Siddiqi,7,7,2
+1513201,Kaleem Siddiqi,6,6,2
 1552251,Hyuckchul Jung,1,0,0
 1601569,Cecile Tiberghien Balkanski,1,2,1
 1618746,Valeria de Paiva,1,1,1
@@ -1454,7 +1452,7 @@ id,name,n_pubs,n_citations,h_index
 350853,Ping Tan,4,0,0
 357026,Ross Eaton,1,0,0
 371602,Xiaojie Guo,1,0,0
-445293,C. Schmid,1,1,1
+445293,C. Schmid,1,0,0
 454872,David Goss-Grubbs,1,0,0
 473135,Kevin Lerman,1,2,1
 520265,Yi Ma,1,0,0
@@ -1567,7 +1565,7 @@ id,name,n_pubs,n_citations,h_index
 1042446,Jianming Liang,1,0,0
 1043770,A. Meygret,2,0,0
 1044413,Bruno Pouliquen,1,0,0
-1062154,Jason Baldridge,12,23,3
+1062154,Jason Baldridge,12,22,3
 1064218,Karl Weilhammer,3,9,2
 1075026,Hao Zhang,1,2,1
 1091183,Bin Ma,1,1,1
@@ -1629,7 +1627,7 @@ id,name,n_pubs,n_citations,h_index
 591964,Jeremy Z. Kolter,3,2,1
 658154,Björn Krebs,2,0,0
 685988,Shivakumar Vaithyanathan,7,107,3
-747059,Simon Prince,2,0,0
+747059,Simon Prince,1,0,0
 757532,Neelakantan Sundaresan,1,0,0
 767550,Shih-Chii Liu,1,0,0
 811710,Shih-Fu Chang,1,0,0
@@ -1742,7 +1740,7 @@ id,name,n_pubs,n_citations,h_index
 1693686,Albert M. Vossepoel,1,0,0
 35009,Jonathan Bidwell,1,0,0
 38147,Andrew Way,8,19,3
-95878,Jason Michael Eisner,30,254,9
+95878,Jason Michael Eisner,30,253,9
 123415,Qingping Tao,1,2,1
 130066,Sudipta N. Sinha,1,0,0
 145215,John Lee,2,4,1
@@ -1750,7 +1748,7 @@ id,name,n_pubs,n_citations,h_index
 153593,Syed A. Rizvi,2,6,1
 163495,Isao Goto,1,0,0
 221712,K. Storjohann,2,0,0
-258080,Li Fei-Fei,14,4,1
+258080,Li Fei-Fei,13,1,1
 317817,James Ze Wang,2,2,1
 332930,Toru Shimizu,1,0,0
 346237,Mugizi Robert Rwebangira,1,5,1
@@ -1796,7 +1794,7 @@ id,name,n_pubs,n_citations,h_index
 994130,Gregory F. Welch,2,0,0
 1014137,Sukree Sinthupinyo,1,0,0
 1016091,Fu-dong Chiou,1,0,0
-1018689,Cédrick Fairon,2,4,1
+1018689,Cédrick Fairon,1,4,1
 1054651,Zijia Li,1,0,0
 1082878,Richard Mann,3,0,0
 1110738,Carsten Steger,2,0,0
@@ -1815,7 +1813,7 @@ id,name,n_pubs,n_citations,h_index
 1321005,T. Poibeau,2,2,1
 1331869,Dean P. Foster,4,1,1
 1370344,Derrick Holder,2,0,0
-1412133,Cory Barr,1,8,1
+1412133,Cory Barr,1,7,1
 1423738,Guo-Zheng Sun,1,0,0
 1453900,Amitava Das,2,1,1
 1460752,Sangho Park,1,0,0
@@ -1878,7 +1876,7 @@ id,name,n_pubs,n_citations,h_index
 986155,Jason J. Corso,1,0,0
 990857,Anthony R. Dick,5,1,1
 1014154,Jangmin O,1,0,0
-1035694,Chris Dyer,14,246,6
+1035694,Chris Dyer,14,245,6
 1049992,Yen-Liang Lin,1,0,0
 1060490,Vincent Torre,6,0,0
 1061895,Toshikazu Fukushima,2,1,1
@@ -1890,7 +1888,7 @@ id,name,n_pubs,n_citations,h_index
 1197948,David G. Hays,1,0,0
 1209342,Weiming Hu,1,0,0
 1227592,Rui Zhao,2,0,0
-1237504,Franz Josef Och,18,686,9
+1237504,Franz Josef Och,17,684,9
 1245785,Yulan Yan,1,0,0
 1249139,Tony Veale,2,0,0
 1265824,T. B. Y. Lai,2,0,0
@@ -2044,10 +2042,10 @@ id,name,n_pubs,n_citations,h_index
 1009561,Keh-Yih Su,3,5,2
 1027827,Saša Petrović,1,0,0
 1031203,Matthieu Hébert,1,0,0
-1032534,Hieu Hoang,2,170,1
+1032534,Hieu Hoang,2,169,1
 1040961,K. Wang,2,1,1
 1076805,Zoran Duric,4,0,0
-1081362,Hy Murveit,17,48,4
+1081362,Hy Murveit,17,47,4
 1118611,Mohammed Korayem,1,0,0
 1143958,Qiang Qiu,1,0,0
 1263135, Guangming Shi,1,0,0
@@ -2100,7 +2098,7 @@ id,name,n_pubs,n_citations,h_index
 644516,Yutaka Kusanagi,1,0,0
 682899,M. Teicher,1,0,0
 693429,Paul L. Rosin,3,0,0
-733451,O. Etzioni,15,111,6
+733451,O. Etzioni,15,109,5
 738380,Dacheng Tao,2,0,0
 775150,Brian Curless,1,0,0
 805629,Tetsuya Ishikawa,5,8,2
@@ -2128,7 +2126,7 @@ id,name,n_pubs,n_citations,h_index
 1176148,Janez Dem&#353/ar,2,0,0
 1197430,Zhenglong Zhou,1,0,0
 1199310,Greg Mori,11,5,2
-1202689,Lokesh Shrestha,1,5,1
+1202689,Lokesh Shrestha,1,4,1
 1208538,Spencer Whitt,1,0,0
 1213631,Mitsuhiro Kondo,1,0,0
 1298317,Naushad UzZaman,1,0,0
@@ -2156,7 +2154,7 @@ id,name,n_pubs,n_citations,h_index
 1684080,Katsuhiko Sakaue,1,0,0
 1686268,R. H. Penner,1,0,0
 13297,Adam Kowalczyk,2,0,0
-95198,Y. Bengio,9,21,2
+95198,Y. Bengio,9,20,2
 123938,T. D. Pham,1,0,0
 134224,Jun Wang,1,4,1
 144466,Pei Dong,1,0,0
@@ -2221,7 +2219,7 @@ id,name,n_pubs,n_citations,h_index
 1382028,Yizhak Idan,1,0,0
 1469538,Michel Gangnet,2,2,1
 1488080,Yan Tong,3,0,0
-1497968,Joao P. Barreto,2,0,0
+1497968,Joao P. Barreto,1,0,0
 1499616,Alioscia Petrelli,1,0,0
 1509950,L. Moss,1,0,0
 1517767,Saeedeh Momtazi,1,0,0
@@ -2239,7 +2237,6 @@ id,name,n_pubs,n_citations,h_index
 1618133,D. D. Lewis,3,5,1
 1622190,K S Choi,4,0,0
 1633757,Robert E. Tillman,1,0,0
-1638547,R. Melo,1,0,0
 1652022,Kun Zhou,1,0,0
 1664823,Gaurav Garg,1,0,0
 3546,G. Wets,1,0,0
@@ -2254,7 +2251,7 @@ id,name,n_pubs,n_citations,h_index
 154919,J. Fiérrez-Aguilar,1,0,0
 165101,Meinard Müller,2,0,0
 199189,Ying Chen,1,0,0
-300727,Jonas Gârding,4,3,1
+300727,Jonas Gârding,4,2,1
 300728,J. Garding,1,1,1
 306632,Anthony LaVigna,1,0,0
 337798,Zhi Zhong,1,0,0
@@ -2275,7 +2272,7 @@ id,name,n_pubs,n_citations,h_index
 474982,John Burger,3,12,2
 512653, Heng Wang,1,0,0
 526539, Yuan Yao,1,0,0
-538055,Robert S Roth,9,21,3
+538055,Robert S Roth,9,20,3
 549316,D. Sinclair,1,0,0
 553931,Saša Petrović,3,9,1
 595513,Pau Gargallo,1,0,0
@@ -2317,7 +2314,7 @@ id,name,n_pubs,n_citations,h_index
 1191316,Lisa Harper,1,0,0
 1253590,Akira Hayashi,1,0,0
 1256383,G. Socher,2,0,0
-1283415,David Ellis,1,12,1
+1283415,David Ellis,1,11,1
 1317164,Tsz-Ho Yu,1,0,0
 1318350,James Clarke,4,35,3
 1326080,Laurent Prevot,1,0,0
@@ -2460,7 +2457,7 @@ id,name,n_pubs,n_citations,h_index
 1135459,Siavosh Bahrami,1,0,0
 1162921,Shu-Fan Wang,1,0,0
 1198740,Ankur Gandhe,1,1,1
-1214835,Nicola Bertoldi,3,171,1
+1214835,Nicola Bertoldi,3,170,1
 1225342,Chai Wutiwiwatchai,1,0,0
 1228708,Michael Wand,1,0,0
 1229514,Wen-Tai Hsieh,1,0,0
@@ -2572,7 +2569,7 @@ id,name,n_pubs,n_citations,h_index
 160038,Sam Pilato,1,1,1
 161003,Lois Childs,1,0,0
 237585,Levi Valgaerts,1,0,0
-264210,T Kanade,34,47,3
+264210,T Kanade,33,46,3
 273586,Keith Neil Vander Linden,2,0,0
 292230,René Witte,1,0,0
 314210,Johannes Wallner,1,0,0
@@ -2690,7 +2687,7 @@ id,name,n_pubs,n_citations,h_index
 804514,Hanspeter Pfister,2,0,0
 841634,Jianxing Yu,3,3,1
 873963,Geoffrey Numberg,1,9,1
-878209,Dmitriy Genzel,4,14,3
+878209,Dmitriy Genzel,3,13,3
 891033,Michael Bloodgood,2,4,1
 922196,Kristian Woodsend,4,10,2
 933934,Ilana Bromberg,1,0,0
@@ -2743,7 +2740,7 @@ id,name,n_pubs,n_citations,h_index
 424005,Onur Çobanoǧlu,1,0,0
 433826,Susan W. Talbott,1,0,0
 434356,Jie Chen,1,0,0
-457072,Varada Kolhatkar,2,0,0
+457072,Varada Kolhatkar,1,0,0
 459872,Moshe Koppel,3,1,1
 468473,S S Venkatesh,2,0,0
 478337,Andreas Baak,2,0,0
@@ -2820,7 +2817,7 @@ id,name,n_pubs,n_citations,h_index
 348042,Marcia Bush,1,0,0
 363687,Kadri Hacioglu,9,28,3
 418062,G. D. Konidaris,1,1,1
-420218,Andrea Mennucci,2,0,0
+420218,Andrea Mennucci,1,0,0
 425474, Seungil Huh,1,0,0
 429077, Yang Li,1,0,0
 450896, Yao-Hsiang Yang,1,0,0
@@ -2968,7 +2965,7 @@ id,name,n_pubs,n_citations,h_index
 1668608,Kyuseok Shim,2,2,1
 1671395,J. Cavanaugh,2,0,0
 1674070,Xiuwen Liu,2,1,1
-1693056,Lance Ramshaw,15,101,5
+1693056,Lance Ramshaw,15,100,5
 1708697,Jilin Tu,1,0,0
 26099,Meghna Singh,1,0,0
 26944,Ikushi Yoda,1,0,0
@@ -3120,7 +3117,7 @@ id,name,n_pubs,n_citations,h_index
 1538097,Andras Ferencz,3,1,1
 1548371,Bo Wang,1,0,0
 1553978, Do Hang Nga,1,0,0
-1554109,Song-Chun Zhu,7,0,0
+1554109,Song-Chun Zhu,6,0,0
 1567582,Alan S. Driscoll,1,0,0
 1568160, Shenghui Liao,1,0,0
 1635948,Renuka Shenoy,1,0,0
@@ -3207,7 +3204,7 @@ id,name,n_pubs,n_citations,h_index
 1603451,Scott Novotney,1,1,1
 1609637,Furu Wei,3,6,1
 1613348,Marko Robnik-Šikonja,3,0,0
-1632486,James Brinton Henderson,13,30,3
+1632486,James Brinton Henderson,13,29,3
 1654628,Nicholas Everett,1,0,0
 1657289,Siyu Tang,1,0,0
 25531,David L. Bean,1,10,1
@@ -3271,7 +3268,6 @@ id,name,n_pubs,n_citations,h_index
 1151867,Sugata Ghosal,1,0,0
 1152772,Roberto Navigli,7,13,2
 1155480,John Prager,7,13,3
-1169247,Utkarsh Gaur,1,0,0
 1169776,Christian Wachinger,1,0,0
 1207164,Ali El Kahki,1,0,0
 1222970,Nanning Zheng,1,0,0
@@ -3320,7 +3316,7 @@ id,name,n_pubs,n_citations,h_index
 464718, Chunjie Zhang,1,0,0
 477524,Viviana A. Nastase,5,6,1
 485534,Xiaoguang Lu,1,1,1
-487432,Michael Strube,17,58,4
+487432,Michael Strube,17,57,4
 511176,S. Bhattacharyya,1,0,0
 513486,Christian Matthiessen,2,0,0
 552664,J. B. Pollack,3,0,0
@@ -3431,12 +3427,12 @@ id,name,n_pubs,n_citations,h_index
 1115630,Prasad M. Deshpande,1,1,1
 1118640,Alice J. O'Toole,1,0,0
 1118659,David P. Dobkin,1,0,0
-1152684,Marc Dymetman,6,9,2
+1152684,Marc Dymetman,6,8,2
 1170073,Kristy Hollingshead,3,11,2
 1175070,Dan Pelleg,3,2,1
 1197658,Dragan Gamberger,2,0,0
 1200549,Rhodri H. Davies,1,0,0
-1305969,Ryan T. Mcdonald,15,221,7
+1305969,Ryan T. Mcdonald,15,220,7
 1341144,Venu Govindaraju,2,0,0
 1356619,S. Shankar Sastry,1,0,0
 1416241,Juan K. Lin,1,0,0
@@ -3464,7 +3460,7 @@ id,name,n_pubs,n_citations,h_index
 101675,Gwenaelle Piriou,1,0,0
 102792,Seo Jung Yun,1,0,0
 129702,David Vera,1,0,0
-134551,Michael Phillips,17,51,4
+134551,Michael Phillips,17,50,4
 170695,Andreas Wedel,1,0,0
 197547,Shujie Liu,3,1,1
 230488,Bla&#382/ Zupan,2,0,0
@@ -3507,7 +3503,7 @@ id,name,n_pubs,n_citations,h_index
 880620,Günther Palm,1,0,0
 900237,Se Young Park,1,1,1
 1008019,Ahmet Engin Ural,1,3,1
-1071777,Christine Moran,1,170,1
+1071777,Christine Moran,1,169,1
 1073869,Patrice Delmas,1,0,0
 1086916,Haifeng Chen,2,0,0
 1086988,Aaron Hertzmann,3,1,1
@@ -3541,7 +3537,7 @@ id,name,n_pubs,n_citations,h_index
 59420,Vinay Sharma,1,0,0
 95996,T. Okabe,2,0,0
 113561,Joseph Rosenzweig,1,0,0
-127383,M. Marcus,20,139,5
+127383,M. Marcus,20,137,5
 199122,André Bittar,2,0,0
 318486,Longin Latecki,3,1,1
 322218,Eero Peter Simoncelli,2,1,1
@@ -3629,7 +3625,6 @@ id,name,n_pubs,n_citations,h_index
 406238,Xiaopeng Zhang,1,0,0
 426363, Fengjun Lv,2,0,0
 431620,Jeffrey Ho,2,0,0
-441023,G. Falcão,1,0,0
 443154,Markus Lappe,1,0,0
 469337, Chenglei Wu,1,0,0
 475799,Sundar Vedula,1,1,1
@@ -3652,7 +3647,7 @@ id,name,n_pubs,n_citations,h_index
 784738,Jari Hannuksela,1,0,0
 793560,Jennifer Stromer-Galley,1,0,0
 803482,Demetrios Betsis,1,0,0
-805339,Mark Johnson,42,402,11
+805339,Mark Johnson,41,367,10
 805733,Mohammad T. Islam,1,0,0
 839831,Jimin Liu,1,0,0
 879925,Drahomíra  johanka  Spoustová,1,0,0
@@ -3706,7 +3701,7 @@ id,name,n_pubs,n_citations,h_index
 48666,Hema Raghavan,1,2,1
 89673,Douglas A. Talbert,1,0,0
 99183,R. M. J. Cotterill,1,0,0
-100385,Jeremy Moore,1,12,1
+100385,Jeremy Moore,1,11,1
 113255,Björn Gambäck,2,5,2
 138820,Maria Fuentes,1,0,0
 166697,Vaibhav Vaish,2,0,0
@@ -3752,7 +3747,7 @@ id,name,n_pubs,n_citations,h_index
 1072077,Tom Sie Ho Lee,1,0,0
 1080632,Jen-Hsiang Lin,1,0,0
 1085926,Shen-Shyang Ho,1,0,0
-1102663,Kevin Knight,39,334,10
+1102663,Kevin Knight,39,333,10
 1108858,Ryan Gabbard,4,5,1
 1157925,Mark A. Ruzon,1,0,0
 1198770,Jonathan May,1,8,1
@@ -3843,7 +3838,7 @@ id,name,n_pubs,n_citations,h_index
 1576742,Onureena Banerjee,1,2,1
 1586317,David Ross,2,0,0
 1599685,Hyun-Je Song,1,0,0
-1615886,Gregory Shakhnarovich,13,3,1
+1615886,Gregory Shakhnarovich,12,3,1
 1646534,Luc Steels,1,0,0
 5992,Kari Torkkola,3,1,1
 25020,Daniil Ryabko,2,0,0
@@ -3966,7 +3961,7 @@ id,name,n_pubs,n_citations,h_index
 943274,Christof Koch,11,0,0
 949467,Elizabeth Shtrom,1,0,0
 960596,Alan W. Carter,1,0,0
-989015,Moira Regelson,1,8,1
+989015,Moira Regelson,1,7,1
 1028245,Alice M. Chiang,1,0,0
 1035823,Qinxun Bai,1,0,0
 1050358,Amir Rosenfeld,1,0,0
@@ -4004,7 +3999,7 @@ id,name,n_pubs,n_citations,h_index
 120607,Jinseog Kim,1,0,0
 150137,D. Lingrand,1,2,1
 160978,Jose C. Principe,2,0,0
-162238,Isaac Haxton,1,12,1
+162238,Isaac Haxton,1,11,1
 173903,L. Van Gool,24,15,1
 179093,Alain Lehmann,1,0,0
 208764,Praveen Srinivasan,1,0,0
@@ -4046,7 +4041,7 @@ id,name,n_pubs,n_citations,h_index
 1020840,Taro Watanabe,1,0,0
 1021306,John O'Keefe,1,0,0
 1024389,Maki Sugimoto,1,0,0
-1034397,Dan Roth,36,115,6
+1034397,Dan Roth,35,110,6
 1041386,Xian Qian,2,2,1
 1043648,Luiz Velho,1,0,0
 1047834,Xinquan Shen,1,0,0
@@ -4106,7 +4101,7 @@ id,name,n_pubs,n_citations,h_index
 397997,Johnny T. Chang,1,0,0
 424700,Rynson W. H. Lau,1,0,0
 487192,Brian Edward Roark,21,85,5
-520154,Shachar Mirkin,2,5,1
+520154,Shachar Mirkin,2,4,1
 523070,Martha Evens,2,3,1
 624318,Michael Schonwetter,1,0,0
 676897,Alper Ayvacy,1,0,0
@@ -4197,14 +4192,14 @@ id,name,n_pubs,n_citations,h_index
 1003800,Raul Guerra,1,0,0
 1066606,A. Humayun,2,0,0
 1123210,M. L. Gini,1,0,0
-1133531,Alex Lascarides,7,17,3
+1133531,Alex Lascarides,7,16,3
 1154229,Bastian Leibe,11,2,1
 1163215,Björn Bringmann,1,0,0
 1198629, Liqing Zhang,1,0,0
 1209891,James Lin,6,11,2
 1212287,Bodla Rakesh Babu,1,0,0
 1242123,R. I. Hartley,18,49,5
-1260754,R M Weischedel,39,117,5
+1260754,R M Weischedel,39,116,5
 1263629,Sergei Nirenburg,10,5,2
 1283743,Sophie Roekhaut,1,4,1
 1316748,Nina Dethlefs,3,1,1
@@ -4217,7 +4212,7 @@ id,name,n_pubs,n_citations,h_index
 1550530,Christopher Kemp,1,0,0
 1572490,Filip Zelezný,1,0,0
 1586135,Sobhan Naderi Parizi,1,0,0
-1620859,B. Peskin,4,6,1
+1620859,B. Peskin,4,5,1
 1623653,Chunhua Shen,3,0,0
 1628169,Franz Guenthner,1,0,0
 1659660,Xiaohua Liu,1,0,0
@@ -4274,7 +4269,7 @@ id,name,n_pubs,n_citations,h_index
 757661,Fred Nicolls,1,0,0
 763589,Christian Walder,1,0,0
 821399,Feiyu Xu,2,3,1
-832273,Andrew W. Fitzgibbon,20,25,2
+832273,Andrew W. Fitzgibbon,20,24,2
 876492,François G. Meyer,3,1,1
 878580,Dahua Lin,7,0,0
 909564,S T. Dumais,2,2,1
@@ -4293,7 +4288,7 @@ id,name,n_pubs,n_citations,h_index
 1243970,Pierre Anderson,1,0,0
 1246121,Yashar Mehdad,5,14,3
 1257469,Joaquin Quiñonero Candela,1,1,1
-1297352,Nicholas Dames,1,7,1
+1297352,Nicholas Dames,1,6,1
 1302338,Dan Moldovan,1,0,0
 1320056,Kristina Striegnitz,1,1,1
 1322689,Michael I. Miller,3,1,1
@@ -4321,7 +4316,7 @@ id,name,n_pubs,n_citations,h_index
 1693256,L. Benoit,1,0,0
 1695819,F. Q. Duan,1,0,0
 36092,Shuguang Li,1,0,0
-47884,Ani Nenkova,18,52,5
+47884,Ani Nenkova,18,51,5
 55184,J. K. Johnstone,1,0,0
 60336,Zhiyu Chen,1,0,0
 91300,Peter J. Burt,2,0,0
@@ -4356,7 +4351,6 @@ id,name,n_pubs,n_citations,h_index
 587260,Canasai Kruengkrai,1,14,1
 587773,P. Ishwar,1,0,0
 597170,Soumith Chintala,1,0,0
-606404,Clare Voss,1,1,1
 620531,Zoltán Kato,2,0,0
 649856,M. Epstein,2,0,0
 662143,Ikkjin Ahn,1,0,0
@@ -4375,7 +4369,7 @@ id,name,n_pubs,n_citations,h_index
 919085,Qian Wang,1,0,0
 959401,L. Campbell,1,2,1
 982785,Lillian Jane Lee,12,263,6
-989083,A Tannenbaum,11,9,2
+989083,A Tannenbaum,10,8,2
 1013803,Shingo Takamatsu,1,0,0
 1018230,Shangxuan Tian,1,0,0
 1018371,Meladel Mistica,1,0,0
@@ -4414,10 +4408,8 @@ id,name,n_pubs,n_citations,h_index
 202302,Eiji Aramaki,1,1,1
 225425,Swapna Somasundaran,3,30,3
 228658,Christine Doran,5,1,1
-243756,L. Wixson,1,1,1
 278702,Eugene Ie,1,0,0
 293442,K. Baek,1,0,0
-317420,Jan Sochman,1,0,0
 336597,I. Reid,4,0,0
 337221,Oncel Tuzel,2,0,0
 357788,P. Perez,1,0,0
@@ -4456,7 +4448,7 @@ id,name,n_pubs,n_citations,h_index
 944253,M. Coors,1,0,0
 992457,Ali Erol,1,0,0
 1012242,Zheng Wu,1,0,0
-1028277,Surabhi Gupta,2,4,1
+1028277,Surabhi Gupta,1,3,1
 1045802,Jiang Yu Zheng,3,1,1
 1059998,L. F. Abbott,1,0,0
 1088227,Alessandro Sperduti,1,0,0
@@ -4523,7 +4515,7 @@ id,name,n_pubs,n_citations,h_index
 528536,Wei Xu,2,0,0
 532257,Q. Zhu,2,0,0
 549230,F. La Rosa,1,0,0
-562662,Mark Everingham,4,1,1
+562662,Mark Everingham,3,1,1
 568463,Jose L. Marroquin,2,1,1
 572786,Yu Hao,1,0,0
 605512,Thomas Pressburger,1,0,0
@@ -4537,7 +4529,7 @@ id,name,n_pubs,n_citations,h_index
 760993,Hamed Pirsiavash,4,0,0
 764862,Kim Steenstrup Pedersen,1,0,0
 766460, Ran He,2,0,0
-796390,Michel Galley,12,79,5
+796390,Michel Galley,12,77,5
 797183,Swapna Gottipati,1,1,1
 813903,Palaiahnakote Shivakumara,1,0,0
 814352,Qian Zheng,1,0,0
@@ -4624,7 +4616,7 @@ id,name,n_pubs,n_citations,h_index
 574026,Ruigang Yang,8,3,1
 596159,Yihong Wu,1,0,0
 607382,Yoshihiro Matsuo,1,2,1
-622652,Hatte R. Blejer,2,1,1
+622652,Hatte R. Blejer,1,1,1
 633127,Jens Rittscher,4,2,1
 633793,C. Ducottet,1,0,0
 651884,Dongdong Zhang,2,8,2
@@ -4672,7 +4664,7 @@ id,name,n_pubs,n_citations,h_index
 13791,T. Thórhallson,1,1,1
 40243,D. Samaras,3,0,0
 99709,Steven Bills,1,30,1
-106610,Hiyan Alshawi,13,56,5
+106610,Hiyan Alshawi,12,44,4
 107515,Jeannette G. Neal,2,0,0
 143547,Djamel Bouchaffra,1,0,0
 171177,José Santos-Victor,2,0,0
@@ -4714,7 +4706,7 @@ id,name,n_pubs,n_citations,h_index
 1066045,Alessandro Rudi,1,0,0
 1066397,George A. Miller,1,0,0
 1066654,T. Serre,1,0,0
-1090616,Sharon Flank,3,1,1
+1090616,Sharon Flank,2,1,1
 1108587,Shinko Y. Cheng,1,0,0
 1113954,M. Bilodeau,2,0,0
 1166184,Klaus Ries,1,0,0
@@ -4757,7 +4749,7 @@ id,name,n_pubs,n_citations,h_index
 167520,Kevin Regan,1,1,1
 193506,D. Capel,1,3,1
 204395,Majid Yazdani,1,0,0
-222294,Sinisa Todorovic,11,2,1
+222294,Sinisa Todorovic,10,2,1
 309074,Ilkay Ulusoy,1,0,0
 371700,Martin Byröd,1,0,0
 391241,Tatsuya Akutsu,1,1,1
@@ -4794,7 +4786,7 @@ id,name,n_pubs,n_citations,h_index
 1198766,Raúl Díaz,1,0,0
 1235262,J. Antonis,1,0,0
 1247790,Yaser Al-Onaizan,6,16,2
-1265519,David K. Elson,2,7,1
+1265519,David K. Elson,2,6,1
 1297230,Marcia Linebarger,12,47,5
 1300465,Martin Rajchl,1,0,0
 1315408,David McAllester,2,8,1
@@ -4958,7 +4950,7 @@ id,name,n_pubs,n_citations,h_index
 909281,Atsuto Maki,6,6,2
 910439,D. Terence Langendoen,1,0,0
 921236,Hiroaki Sato,1,0,0
-942997,Ravi Kumar,3,3,1
+942997,Ravi Kumar,2,2,1
 948134,David Wingate,3,0,0
 967581,Anne de Roeck,1,1,1
 971204,Y. Ke,4,3,1
@@ -5005,7 +4997,7 @@ id,name,n_pubs,n_citations,h_index
 341547,C. E. Schreiner,1,0,0
 343691,John Weng,2,0,0
 372119,Andrew Wilson,1,0,0
-373653,Fredrik Kahl,14,2,1
+373653,Fredrik Kahl,13,1,1
 392907,Venkat Chandrasekaran,1,0,0
 413627,Paul N. Bennett,1,0,0
 441474,Amelie Banks,1,2,1
@@ -5111,11 +5103,11 @@ id,name,n_pubs,n_citations,h_index
 689432,Ingrid Zukerman,3,1,1
 704287,J. Denzler,4,0,0
 715913,M. Asada,2,0,0
-722200,Ann Bies,4,27,1
+722200,Ann Bies,4,26,1
 730502,David Talbot,4,8,2
 754631,J. L. Prince,2,0,0
 769963,Erik F. Tjong Kim Sang,1,1,1
-772896,Ronan Collobert,5,9,2
+772896,Ronan Collobert,5,8,2
 824130,Yuchen Guo,1,0,0
 836552,Harris Papageorgiou,1,0,0
 911793,L. Tarassenko,1,0,0
@@ -5134,7 +5126,7 @@ id,name,n_pubs,n_citations,h_index
 1203762,Athanassios Papagelis,1,0,0
 1327514,Benjamin Bustos,1,0,0
 1440831,Chi Wang,1,0,0
-1456214,David Eric Yarowsky,23,269,10
+1456214,David Eric Yarowsky,23,267,10
 1465792,Jonathan Betz,1,5,1
 1485926,Fabio De Bona,1,0,0
 1487792,Naokazu Yokoya,1,0,0
@@ -5226,7 +5218,7 @@ id,name,n_pubs,n_citations,h_index
 1589011,C. Stoll,1,0,0
 1592842,Michelle X. Zhou,2,1,1
 1601303,Luc Oth,1,0,0
-1645786,Leonid Taycher,3,0,0
+1645786,Leonid Taycher,2,0,0
 1650251, Xi Chen,1,0,0
 1650454,T. Darrell,1,0,0
 1677178,Kevin Wilson,1,0,0
@@ -5482,7 +5474,7 @@ id,name,n_pubs,n_citations,h_index
 310620,Aaron E. Rosenberg,2,8,1
 383879,Charless Fowlkes,6,0,0
 389838,Jing Jiang,9,10,2
-405756,Philipp Koehn,13,473,6
+405756,Philipp Koehn,13,472,6
 420945,Will Brockman,1,0,0
 422036,Maite Taboada,1,0,0
 441172, Yao-Jen Chang,1,0,0
@@ -5604,7 +5596,7 @@ id,name,n_pubs,n_citations,h_index
 1078041,Th. Gevers,11,1,1
 1175349,Steven Bethard,4,3,1
 1196861,Ronen Feldman,3,0,0
-1226323,Frederik Schaffalitzky,4,2,1
+1226323,Frederik Schaffalitzky,3,1,1
 1253538,Joichi Hayashi,1,0,0
 1298749,Joern Wuebker,2,7,1
 1320575,Inchang Choi,1,0,0
@@ -5643,7 +5635,6 @@ id,name,n_pubs,n_citations,h_index
 494194,Ronny Meir,2,1,1
 502488,Kari Kanto,1,0,0
 507408,Shinichi Tamura,1,0,0
-543465,Rainer Kuhlen,1,0,0
 554577,J. Matas,1,0,0
 559408,Anil K. Jain,1,0,0
 562370,Xiaodong Wang,3,2,1
@@ -5661,7 +5652,7 @@ id,name,n_pubs,n_citations,h_index
 839850,Kap Luk Chan,5,0,0
 867108,Jan Fornell,1,0,0
 872136,Paul van Pelt,1,2,1
-874723,O D Faugeras,39,49,4
+874723,O D Faugeras,38,49,4
 876117,Edmund S. Yu,3,3,1
 880864,Judita Preiss,2,0,0
 918172,Mumtaz Sheikh,1,0,0
@@ -5721,7 +5712,7 @@ id,name,n_pubs,n_citations,h_index
 357506,Freddy Y. Y. Choi,1,15,1
 366014,Terrance E. Boult,5,2,1
 367820,Feng Han,4,1,1
-370749,Stephen Lowe,3,5,1
+370749,Stephen Lowe,3,4,1
 372338,Carole T. Boster,1,0,0
 378032,Anthony G. Cohn,2,2,1
 387807,James L. McClelland,1,0,0
@@ -5904,7 +5895,7 @@ id,name,n_pubs,n_citations,h_index
 525598, Jingyi Yu,4,0,0
 537679,E. Strekalovskiy,6,0,0
 585040,Seungyong Lee,1,0,0
-621973,Daniel Saul Jurafsky,34,213,8
+621973,Daniel Saul Jurafsky,32,198,8
 623521, Qi Song,1,0,0
 626558,Elizabeth D. Peña,1,2,1
 683691,Mark Yatskar,1,5,1
@@ -5914,17 +5905,17 @@ id,name,n_pubs,n_citations,h_index
 752316,Jingjing Zheng,1,0,0
 753061,Piew Datta,1,0,0
 791749,Ananth Ranganathan,1,0,0
-848184,John A. Bateman,3,2,1
+848184,John A. Bateman,3,1,1
 863102,Slaven Bilac,1,3,1
 867877,Wensheng Hu,1,0,0
 899610,T. D. Rikert,1,2,1
 902599,Paul Deane,2,1,1
 905795,Ben Medlock,1,3,1
-941904,Chirsty Lauridsen,1,5,1
+941904,Chirsty Lauridsen,1,4,1
 943420,Marcello Pelillo,5,0,0
 948858,Mingmin Chi,1,1,1
 980129,Matthieu Constant,1,0,0
-1002396,Valentin I. Spitkovsky,6,23,3
+1002396,Valentin I. Spitkovsky,5,11,2
 1044798,Satyan R. Coorg,1,0,0
 1046144,Gang Xu,1,0,0
 1056088,Seung-Wook Lee,1,0,0
@@ -5941,7 +5932,7 @@ id,name,n_pubs,n_citations,h_index
 1284839,J. Lorenzo Navarro,1,0,0
 1314463,Nikolaos Trogkanis,1,0,0
 1327421,Jacob Devlin,3,1,1
-1369867,Julia Hirschberg,24,60,4
+1369867,Julia Hirschberg,24,59,4
 1398931,Justin Mott,2,0,0
 1414424,Daniel Reichman,1,0,0
 1430839,Peter Rander,3,4,1
@@ -5965,7 +5956,6 @@ id,name,n_pubs,n_citations,h_index
 270730,Paola Velardi,3,2,1
 288494,Xiaoyun Zhang,1,0,0
 359872,Neal Snider,1,0,0
-366029,Hyeonseo Ku,1,0,0
 366775,Alessandro Magnani,2,1,1
 383946,Zhiyong Huang,1,0,0
 387091,Pascal Germain,1,0,0
@@ -5975,7 +5965,7 @@ id,name,n_pubs,n_citations,h_index
 454024,C. Che,1,0,0
 471815,Silviu Cucerzan,3,10,2
 506752,Thomas K. Harris,1,2,1
-508666,Mitch Weintraub,17,48,4
+508666,Mitch Weintraub,17,47,4
 511755, Yandong Tang,1,0,0
 538321,Akira Oishi,1,0,0
 541284,James Denny,1,1,1
@@ -6140,7 +6130,7 @@ id,name,n_pubs,n_citations,h_index
 505599,Ralph Linsker,1,0,0
 533463,Ming-Wen Wu,1,1,1
 537597,J Csirik,1,0,0
-567385,Christopher D. Manning,55,600,12
+567385,Christopher D. Manning,54,596,12
 629382,Philip M. Long,1,0,0
 664563,Georges Natsoulis,1,2,1
 691938,Pierre Mahé,1,1,1
@@ -6183,7 +6173,7 @@ id,name,n_pubs,n_citations,h_index
 1503482,Alessandro Lombardo,1,0,0
 1532766,Huimin Yu,1,0,0
 1598081,Alex Holub,3,0,0
-1602343,Kristen Grauman,8,3,1
+1602343,Kristen Grauman,7,3,1
 1604728,C L Giles,6,1,1
 1615192,Graham Wilcock,1,0,0
 1631519,Alice X. Zheng,1,0,0
@@ -6222,12 +6212,11 @@ id,name,n_pubs,n_citations,h_index
 478081,Haiyuan Wu,1,0,0
 492288,Dongqing Zhang,1,0,0
 506537,Haiqin Zhang,1,0,0
-509817,G. Salgian,1,1,1
 514536,G. Hirzinger,1,0,0
-523273,Carol Van Ess-Dykema,3,6,2
+523273,Carol Van Ess-Dykema,2,5,2
 525725, Bangpeng Yao,2,0,0
 526048,Seiji Miike,1,1,1
-535511,Victor W. Zue,26,62,5
+535511,Victor W. Zue,26,61,5
 575474,Xiuhong Zhang,1,1,1
 598925,Margaret King,1,0,0
 608455,Jan Erik Solem,2,0,0
@@ -6239,7 +6228,7 @@ id,name,n_pubs,n_citations,h_index
 768239,Elisa Ricci,2,0,0
 785720,Martin Trudeau,2,0,0
 832103,Madeleine Bates,1,3,1
-876970,Amnon Shashua,27,33,3
+876970,Amnon Shashua,27,32,3
 890141,Hamdi Dibeklioglu,1,0,0
 910582,Marwan Torki,1,0,0
 919634,Lidia Fraczak,1,0,0
@@ -6310,7 +6299,7 @@ id,name,n_pubs,n_citations,h_index
 625390,Robert Porzel,2,1,1
 625406, Wenye Ma,1,0,0
 644972,Guangshan Jiang,3,0,0
-650363,Eduard H. Hovy,50,217,7
+650363,Eduard H. Hovy,49,210,7
 674333,Liam Ellis,1,0,0
 680277,Masaru Miyazaki,1,0,0
 704686,Ivelina Nikolova,1,0,0
@@ -6380,7 +6369,7 @@ id,name,n_pubs,n_citations,h_index
 221531,Ying Li,1,0,0
 247791,A. Perina,2,0,0
 266923,Stanley F. Chen,2,7,2
-307786,Richard Zens,6,187,3
+307786,Richard Zens,6,186,3
 354933,J Engelfriet,1,0,0
 364156,Fatiha Sadat,2,14,2
 367721,Mohan M. Trivedi,5,0,0
@@ -6413,7 +6402,7 @@ id,name,n_pubs,n_citations,h_index
 685672,Stephen Hsu,1,0,0
 763153,Xiao Jiang,1,1,1
 793196,Jiao Wang,1,0,0
-804747,Mei-Yuh Hwang,6,22,3
+804747,Mei-Yuh Hwang,6,21,3
 830966,Xiaogang Wang,1,0,0
 833094,Nicholas Dowson,1,0,0
 837581,Avihai Mejer,3,1,1
@@ -6450,7 +6439,7 @@ id,name,n_pubs,n_citations,h_index
 1530651,Qixing Huang,1,0,0
 1562938,Luping Zhou,1,0,0
 1581043,Alberto Paccanaro,1,0,0
-1612420,Sarah Schwarm,1,6,1
+1612420,Sarah Schwarm,1,5,1
 1624674,Ankur Patel,1,0,0
 1636719,Daniel M. Bikel,3,14,2
 1670732,Julian A. Cerruti,1,0,0
@@ -6462,7 +6451,6 @@ id,name,n_pubs,n_citations,h_index
 100141,Linnea Micciulla,1,0,0
 145305,David S Warren,1,1,1
 149474,Sylvain PetitJean,2,0,0
-149989,Andrew T. Freeman,1,3,1
 210955,Richard Harvey,4,0,0
 215619,Rui Wang,2,1,1
 236115,Jean-François Isabelle,1,0,0
@@ -6507,7 +6495,7 @@ id,name,n_pubs,n_citations,h_index
 868923,P. Anandan,1,0,0
 902238,Jacob Eisenstein,5,17,3
 934793,Steven C.  H. Hoi,6,0,0
-957864,Douglas B. Paul,19,50,5
+957864,Douglas B. Paul,19,48,5
 966469,Daniel B. Russakoff,1,0,0
 992170,Noga Levy,1,0,0
 999505,Eakta Jain,1,0,0
@@ -6569,10 +6557,10 @@ id,name,n_pubs,n_citations,h_index
 511058,Tae-Gil Noh,1,0,0
 541768,"Martin Cooperson, Jr.",1,0,0
 551783,H. Brendan McMahan,1,0,0
-556997,Nancy Lee Green,4,7,2
+556997,Nancy Lee Green,4,6,2
 618166,Anil S. Chakravarthy,1,0,0
 619250, Weisheng Dong,1,0,0
-621202,Jesse Davis,3,12,2
+621202,Jesse Davis,3,11,2
 653886,Steve Bourgeois,1,0,0
 665836,Guido Boella,1,0,0
 667658,Pedro Isasi,2,0,0
@@ -6764,7 +6752,6 @@ id,name,n_pubs,n_citations,h_index
 1224541,Thomas Mayer,1,0,0
 1228895,Richard J. Mammone,2,7,1
 1231788,Minghua Zhang,1,0,0
-1242005,H. Y. Wu,1,0,0
 1246250,J. J. Guerrero,1,0,0
 1310883,Ronald Miller,1,0,0
 1315755,Dongxu Han,1,0,0
@@ -6832,7 +6819,7 @@ id,name,n_pubs,n_citations,h_index
 886440,Nadia Mana,1,1,1
 897671,Eric Chown,1,0,0
 921040,Masaru Tomita,3,3,1
-921683,K. Mikolajczyk,3,1,1
+921683,K. Mikolajczyk,3,0,0
 951981,Matthew W. Turek,1,0,0
 954827,Vol Van Dalsem,1,0,0
 964496,Mehmet Ali Yatbaz,1,0,0
@@ -6863,7 +6850,7 @@ id,name,n_pubs,n_citations,h_index
 1431671,D. Nahamoo,2,2,1
 1448832, Yuxin Peng,1,0,0
 1501332,Meng Yang,1,0,0
-1524848,Stuart Geman,3,38,2
+1524848,Stuart Geman,2,8,1
 1530701,Helmut Mayer,1,0,0
 1536460,F. Chaumette,4,0,0
 1536624,Jack Tumblin,2,0,0
@@ -6994,7 +6981,7 @@ id,name,n_pubs,n_citations,h_index
 1253558,David W. Jacobs,15,13,2
 1256548,Ahmed T. Kamal,1,0,0
 1297897,Tanja Samardžić,1,0,0
-1308793,Martha Stone Palmer,27,137,6
+1308793,Martha Stone Palmer,27,136,6
 1331016,Betty Edelman,1,0,0
 1338645,Marcin Sydow,1,0,0
 1352936,Hong-Kwang Kuo,1,0,0
@@ -7071,7 +7058,7 @@ id,name,n_pubs,n_citations,h_index
 1003862,Nico Schlaefer,1,1,1
 1005575,Jacques J. Vidal,1,0,0
 1183138,J. Krumm,1,2,1
-1186909,Ido Dagan,26,74,5
+1186909,Ido Dagan,26,72,5
 1270922,Robert Freund,1,13,1
 1276857,Lihong Li,3,2,1
 1323347,Mikhail Sizintsev,2,0,0
@@ -7171,7 +7158,7 @@ id,name,n_pubs,n_citations,h_index
 62725,B. Kimia,7,3,1
 69298,Prasad V. Tadepalli,7,1,1
 87050,Hongyuan Zha,2,0,0
-111250,Russell Greiner,6,2,1
+111250,Russell Greiner,5,2,1
 189473,Carol Van Ess-Dykema,1,1,1
 208807,Elisabeth Maier,1,6,1
 230672,S. Ozawa,1,0,0
@@ -7185,7 +7172,7 @@ id,name,n_pubs,n_citations,h_index
 520171,I. Craw,2,0,0
 525425, Li Cheng,1,0,0
 532980,Peter Heeman,8,10,2
-534055,Wei-Jing Zhu,2,318,2
+534055,Wei-Jing Zhu,2,317,2
 541348,Hung H. Bui,3,0,0
 553877,Valentin Jijkoun,3,5,1
 592908,J. O. Kephart,2,0,0
@@ -7260,8 +7247,8 @@ id,name,n_pubs,n_citations,h_index
 505276,Robert A Amsler,2,6,1
 512509, Ying Wu,5,0,0
 515417,Thomas Lippincott,1,0,0
-521844,Daniel V. Klein,51,648,15
-522702,Robert Weide,2,6,2
+521844,Daniel V. Klein,51,645,15
+522702,Robert Weide,2,5,2
 525583, Kai-Yueh Chang,2,0,0
 526176, Kuang-Yu Chang,1,0,0
 533515,Manli Zhu,1,0,0
@@ -7284,8 +7271,8 @@ id,name,n_pubs,n_citations,h_index
 1109692,Ruben Leta,1,0,0
 1134996,Simon I. Hill,1,0,0
 1142069,Mark Dras,7,9,2
-1165140,Chong Wah Ngo,2,0,0
-1179823,Jun Suzuki,6,28,3
+1165140,Chong Wah Ngo,1,0,0
+1179823,Jun Suzuki,6,27,3
 1227065,Xiaoqin Zhang,1,0,0
 1249192,Naoki Abe,1,0,0
 1266027,Klaus-Robert Müller,1,0,0
@@ -7336,7 +7323,7 @@ id,name,n_pubs,n_citations,h_index
 521535,John R Kender,6,1,1
 522329,Johannes Fürnkranz,1,0,0
 524562, Liang Li,1,0,0
-525274,Noah A. Smith,45,235,8
+525274,Noah A. Smith,45,233,8
 534326,Dipti Misra Sharma,1,0,0
 548794,Kiyohide Satoh,1,2,1
 560621,D. Roesner,1,1,1
@@ -7385,7 +7372,7 @@ id,name,n_pubs,n_citations,h_index
 1518928,Julio H. Zaragoza,1,0,0
 1535495,Charles L. Wayne,1,0,0
 1547138,Peter Hansen,1,0,0
-1603699,Stefano Soatto,29,4,1
+1603699,Stefano Soatto,28,4,1
 1673368,E. Nelimarkka,1,0,0
 1674519,Yansong Feng,4,14,3
 1689103,Yee-Hong Yang,1,0,0
@@ -7467,7 +7454,7 @@ id,name,n_pubs,n_citations,h_index
 1536522,Qing Yang,2,0,0
 1542326,Xianpei Han,3,4,1
 1606164,Joshua B. Gordon,1,0,0
-1618124,Mark Ferguson,1,27,1
+1618124,Mark Ferguson,1,26,1
 1677786,George Wilson,5,17,1
 45268,Dimitrios Katsoulas,1,0,0
 64318,Yuichi Motai,1,0,0
@@ -7864,7 +7851,7 @@ id,name,n_pubs,n_citations,h_index
 1355215,Hideki Koike,1,0,0
 1392075,W. Y. Ma,7,4,1
 1406626,Giorgos Tolias,2,0,0
-1424390,Lucia Specia,1,4,1
+1424390,Lucia Specia,1,3,1
 1443083,Weiliang Li,1,0,0
 1508054,K. Waters,1,1,1
 1520982, Dongryeol Lee,1,0,0
@@ -7876,7 +7863,6 @@ id,name,n_pubs,n_citations,h_index
 1657891,Tae-Kyun Kim,2,0,0
 1667681,Elizabeth Bradley,1,0,0
 1678229,M. Oliveira,1,0,0
-11567,Dan Xie,1,0,0
 13635,W. Neuenschwander,1,0,0
 36971,Hiroyuki Ishimoto,1,2,1
 61973,H. I. Christensen,3,2,1
@@ -7931,7 +7917,7 @@ id,name,n_pubs,n_citations,h_index
 1226433, Erkang Cheng,1,0,0
 1235330,Abdallah El,1,0,0
 1242102,A. R. Thomson,2,0,0
-1266815,Christian Müller,4,28,3
+1266815,Christian Müller,4,27,3
 1313564,B. E. Dom,1,0,0
 1329640,Lambros Cranias,1,0,0
 1368284,Bernd Korn,2,0,0
@@ -7974,7 +7960,7 @@ id,name,n_pubs,n_citations,h_index
 305498,Stefan Gehlen,1,0,0
 316326,David B. Kirch,1,0,0
 320536,Liz Shriberg,1,0,0
-323926,R. Shrivaths,1,12,1
+323926,R. Shrivaths,1,11,1
 328009,Kenji Sagae,6,38,3
 331242,Rui Wang,1,5,1
 340875,Michael W. Tao,1,0,0
@@ -7988,7 +7974,7 @@ id,name,n_pubs,n_citations,h_index
 442114,Yossi Rubner,4,7,2
 452852,Douglas W. Oard,1,0,0
 471081,Naman K. Gupta,1,0,0
-477326,James H. Elder,8,6,2
+477326,James H. Elder,7,6,2
 526228,Lawrence Hamilton Staib,2,1,1
 540506,Hanspeter Pfister,1,0,0
 543968,Sven J. Dickinson,8,2,1
@@ -8018,7 +8004,7 @@ id,name,n_pubs,n_citations,h_index
 987331,Frank Jäkel,1,1,1
 1006286,Jason Turner-Maier,1,0,0
 1033495,Evelina Andersson,1,0,0
-1034241,Alexandra Birch,4,183,3
+1034241,Alexandra Birch,4,182,3
 1078434,Myung Jin Choi,1,0,0
 1084028,Randall Fish,1,1,1
 1169271,Nobuyuki Morioka,1,0,0
@@ -8091,7 +8077,7 @@ id,name,n_pubs,n_citations,h_index
 879661,Wen Gao,4,0,0
 929014,Marius Popescu,1,0,0
 974198,Patrik Lambert,1,0,0
-977110,Emily Pitler,8,25,4
+977110,Emily Pitler,8,24,4
 977992,Jin-Xia Huang,1,0,0
 1004977,Greg Hamerly,1,0,0
 1037761,Jia Yuan Yu,1,0,0
@@ -8130,7 +8116,6 @@ id,name,n_pubs,n_citations,h_index
 165913,Thomas Kleinbauer,1,0,0
 182960,T. Thormahlen,1,0,0
 193464,Marc Toussaint,7,3,1
-211639,V. G. Vinod Vydiswaran,1,5,1
 247938,Hideki Yasukawa,1,0,0
 335081,Anja Belz,2,2,1
 349339,Mehdi Sajjadi,1,0,0
@@ -8171,7 +8156,7 @@ id,name,n_pubs,n_citations,h_index
 1046568,Maureen Clerc,1,0,0
 1095854,François Lauze,1,0,0
 1144045,Peng Zang,1,0,0
-1155267,Kishore Papineni,6,334,3
+1155267,Kishore Papineni,6,333,3
 1197032,Remy Kessler,1,0,0
 1209981,Sudhir Raman,1,0,0
 1213362,Michael Jenkin,3,0,0
@@ -8306,7 +8291,7 @@ id,name,n_pubs,n_citations,h_index
 826318, Chao Liang,1,0,0
 829144,Dedre Gentner,1,0,0
 859494,Magnus Burenius,1,0,0
-863381,T. Lindeberg,12,12,2
+863381,T. Lindeberg,12,11,2
 868934,P. Anandan,1,0,0
 908554,Elliot Joel Bernstein,1,0,0
 909566,Ruiping Wang,1,0,0
@@ -8337,7 +8322,7 @@ id,name,n_pubs,n_citations,h_index
 1474932,Jenny Liu,1,0,0
 1504439,Chris Bowman,1,0,0
 1519017,Yen-Yu Lin,1,0,0
-1520408,Jennifer Foster,3,6,2
+1520408,Jennifer Foster,2,2,1
 1552973, Tian Lan,1,0,0
 1553480, Ha Quang Minh,1,0,0
 1559734,Dominic Widdows,3,6,1
@@ -8398,7 +8383,7 @@ id,name,n_pubs,n_citations,h_index
 1069123,Hyungjong Noh,1,0,0
 1073761,Zhengyou Zhang,1,0,0
 1126535,Joviša D. Žunic,1,0,0
-1127160,Christopher Zach,5,0,0
+1127160,Christopher Zach,4,0,0
 1136624,V. Kadirkamanathan,1,0,0
 1166000,Antoine Letouzey,1,0,0
 1166491,Gabriel J. Brostow,5,0,0
@@ -8414,7 +8399,6 @@ id,name,n_pubs,n_citations,h_index
 1391779,Barry Oken,1,0,0
 1403686,Wongun Choi,1,0,0
 1407977,N. V. Vinodchandran,1,2,1
-1410114,Manaal Faruqui,1,0,0
 1411282,M. Stone,1,0,0
 1422443,Michael Stark,3,0,0
 1466827,A. Torralba,1,0,0
@@ -8433,7 +8417,7 @@ id,name,n_pubs,n_citations,h_index
 1668544,T. Geisel,1,0,0
 1685940,Yang Yang,1,0,0
 54901,Jean-Baptiste Authesserre,1,0,0
-68688,David Demirdjian,6,1,1
+68688,David Demirdjian,5,1,1
 69761,Aapo Hyvärinen,1,0,0
 74083,Elli Angelopoulou,7,1,1
 148492,Hiromi Ozaku,1,3,1
@@ -8443,7 +8427,7 @@ id,name,n_pubs,n_citations,h_index
 319575,Chien-Yuan Huang,2,1,1
 321905,Winston Hsu,1,0,0
 429536,Ramarathnam Venkatesan,1,1,1
-432232,Saif Mohammad,7,26,4
+432232,Saif Mohammad,7,25,4
 432347,Thomas H. Kunz,1,0,0
 445169,Erin Fitzgerald,2,1,1
 448526,Muhittin Gökmen,1,0,0
@@ -8485,7 +8469,6 @@ id,name,n_pubs,n_citations,h_index
 1140642,C. S. Xydeas,1,0,0
 1152020,Ruobing Wu,1,0,0
 1158202,Jian Li,1,0,0
-1186242,Y. Zheng,1,0,0
 1194204,Jean-François Lalonde,1,0,0
 1198854,Tian Shen,1,0,0
 1227113,John Sebastian Mashford,1,0,0
@@ -8586,7 +8569,6 @@ id,name,n_pubs,n_citations,h_index
 1254967,John Zweck,1,0,0
 1259726,Chris Leggetter,1,6,1
 1287507,Feng Lin,1,0,0
-1298889,Bi Song,1,0,0
 1344990,Jure Leskovec,1,0,0
 1355258,Srivatsan Laxman,1,0,0
 1365908,Johan Bos,4,13,2
@@ -8658,7 +8640,7 @@ id,name,n_pubs,n_citations,h_index
 901485,F. Worgotter,1,0,0
 903919,Jelena Prokić,1,0,0
 908718,Christian Siefkes,1,0,0
-949372,Aleix M. Martínez,4,0,0
+949372,Aleix M. Martínez,3,0,0
 956204,A. Verri,4,0,0
 991041,David J. Coombs,1,1,1
 1005627,Mario Romero,1,0,0
@@ -8775,7 +8757,7 @@ id,name,n_pubs,n_citations,h_index
 1559322,Masaki Katsumaru,1,0,0
 1565515,Jean-Nicolas Ouellet,1,0,0
 1585064,Ayush Bandhari,1,0,0
-1593499,Grace Ngai,6,76,4
+1593499,Grace Ngai,6,75,4
 1618301,Felisa Verdejo,4,8,2
 1649272,Hua Wu,1,0,0
 1669533,Don Metzler,4,5,2
@@ -8888,7 +8870,7 @@ id,name,n_pubs,n_citations,h_index
 362237,G. I. Salama,1,0,0
 380153,Isabelle L. Herlin,8,4,2
 413993,Yao Meng,1,1,1
-431572,Kathleen R. McKeown,44,202,8
+431572,Kathleen R. McKeown,44,200,8
 437154,Darko Zikic,1,0,0
 440173,Rebecca Nesson,1,0,0
 514558,G. Hirzinger,1,0,0
@@ -8979,7 +8961,6 @@ id,name,n_pubs,n_citations,h_index
 618494,Ben Hachey,4,0,0
 636499,David Reitter,3,4,1
 649343,Chris Brockett,2,13,2
-679806,Onur C. Hamsici,1,0,0
 715868,Tien-Tsin Wong,2,0,0
 732037,Qiao Wang,1,0,0
 738573,Jianke Zhu,2,0,0
@@ -8989,7 +8970,7 @@ id,name,n_pubs,n_citations,h_index
 827003,A. Shokoufandeh,3,2,1
 836086,Kiran Varanasi,2,0,0
 836251,Peter Nicholas Yianilos,3,2,1
-875600,Lonneke van der Plas,3,3,1
+875600,Lonneke van der Plas,3,2,1
 878058,E. Kent,1,0,0
 884481,Robbie Hertel,1,0,0
 888589,Ricardo Sánchez-Sáez,1,0,0
@@ -9040,7 +9021,7 @@ id,name,n_pubs,n_citations,h_index
 332676,Dominik Hörnel,1,0,0
 346354,Jiayi Ma,1,0,0
 347730,Daniel Gildea,18,97,6
-347802,Bonnie J. Dorr,17,50,4
+347802,Bonnie J. Dorr,17,49,4
 425858, Xiaoshan Yang,1,0,0
 450952, Fang Fang,1,0,0
 454081,Richard Ducott,1,0,0
@@ -9057,7 +9038,7 @@ id,name,n_pubs,n_citations,h_index
 754357,Kohji Itoh,1,0,0
 757333,Katja Markert,11,26,2
 765068,David E. Johnson,2,3,1
-804971,Catherine Hill,1,12,1
+804971,Catherine Hill,1,11,1
 830534,Timothy Yau,1,0,0
 841097,M Teillaud,1,0,0
 852755,Zhili Wu,1,1,1
@@ -9081,7 +9062,7 @@ id,name,n_pubs,n_citations,h_index
 1260417,Karthik Sankaranarayanan,1,0,0
 1322705,Michael R. Miller,1,0,0
 1345560,Ibrahim Eden,1,0,0
-1354463,Paul Bamberg,5,17,3
+1354463,Paul Bamberg,5,16,3
 1358401,Chris Jordan,1,0,0
 1404982,Priyam Chatterjee,1,0,0
 1454783,Alex Zamanian,2,5,1
@@ -9093,7 +9074,7 @@ id,name,n_pubs,n_citations,h_index
 1535016,Hsin-Hsi Chen,6,1,1
 1537496, Qinghua Hu,1,0,0
 1568502, Miaomiao Liu,1,0,0
-1592261,Liang Zhou,7,19,3
+1592261,Liang Zhou,6,13,2
 1625774,Dídac Busquets,1,0,0
 1661158,Oren Boiman,2,1,1
 1667214,Thilo T. Frieß,1,1,1
@@ -9103,7 +9084,7 @@ id,name,n_pubs,n_citations,h_index
 29568,Zhile Ren,1,0,0
 51107,Barbara C. Sangster,1,0,0
 61580,Marc P. Christensen,1,0,0
-70889,Vera Helman,1,4,1
+70889,Vera Helman,1,3,1
 103719,Hans van Halteren,2,4,1
 115869,Yudong Liu,1,1,1
 135643,Jean Charles Bazin,1,0,0
@@ -9161,7 +9142,7 @@ id,name,n_pubs,n_citations,h_index
 1107111,Keith Bonawitz,1,0,0
 1154695,S. J. Young,7,23,3
 1183241,Sandra M. Aluísio,1,0,0
-1192850,Sebastian Padó,9,30,2
+1192850,Sebastian Padó,8,29,2
 1203076,R. Vidal,1,0,0
 1212202,Susan F. Chipman,1,0,0
 1214329,Tae Yano,1,5,1
@@ -9178,7 +9159,7 @@ id,name,n_pubs,n_citations,h_index
 1431064,Hema Swetha Koppula,1,0,0
 1451194,Daniël de Kok,1,0,0
 1464976,Liang Sun,1,0,0
-1469840,Larry Gillick,5,6,1
+1469840,Larry Gillick,5,5,1
 1475390,Tali Basha,1,0,0
 1503381,R. Fergus,4,0,0
 1563638,Todd K. Leen,4,0,0
@@ -9362,7 +9343,7 @@ id,name,n_pubs,n_citations,h_index
 556402,Xi Li,1,0,0
 558859,Rahul Nair,1,0,0
 558911,P. Caudal,1,0,0
-567999,Grace Kim,1,27,1
+567999,Grace Kim,1,26,1
 568211,Kyriakos N. Sgarbas,1,0,0
 589250,A. Kong,1,0,0
 621090,Laura A. Mather,2,5,2
@@ -9402,7 +9383,7 @@ id,name,n_pubs,n_citations,h_index
 1402876,Duy-Dinh Le,1,0,0
 1432235,Parth Gupta,1,1,1
 1441320,M. Horowitz,1,0,0
-1553198,S. Avidan,12,12,3
+1553198,S. Avidan,12,11,3
 1563319,David J. Fleet,1,0,0
 1597022,Roser Morante,3,1,1
 1600557,Michael A. Smith,1,2,1
@@ -9466,7 +9447,7 @@ id,name,n_pubs,n_citations,h_index
 1178523,Frank Stolle,2,0,0
 1187107,James D. Keeler,1,0,0
 1192856,Seyoun Park,1,0,0
-1194519,Andrew Zisserman,67,95,5
+1194519,Andrew Zisserman,64,89,5
 1215005,K. Schindler,6,0,0
 1253443,J. H. Wright,2,9,2
 1253534,Shinji Hayashi,1,0,0
@@ -9475,7 +9456,7 @@ id,name,n_pubs,n_citations,h_index
 1326096,Carlo Costanzo,1,0,0
 1326408,N. Hasler,1,0,0
 1336464,Galileo Namata,1,7,1
-1379870,P. Perona,37,39,4
+1379870,P. Perona,35,36,4
 1398240,Mark Palatucci,1,1,1
 1405974,Xin Li,2,0,0
 1427374,Jason Medero,1,0,0
@@ -9534,14 +9515,14 @@ id,name,n_pubs,n_citations,h_index
 885804,R. Basili,4,8,2
 891233,Stefan Pharies,1,3,1
 982741,L-S Lee,2,0,0
-1112456,Jason Weston,6,11,3
+1112456,Jason Weston,6,10,3
 1130976,Ioannis Tsochantaridis,1,31,1
 1261597,João P. Hespanha,1,3,1
 1275588,Kuan Li,1,1,1
 1310329,Eric Atwell,2,0,0
 1328465,Pushmeet Kohli,6,2,1
 1334118,Bing Qin,1,0,0
-1337695,Paola Giovanna Merlo,9,12,2
+1337695,Paola Giovanna Merlo,9,11,2
 1395964,Nikolas P. Galatsanos,1,0,0
 1484094,R. Vaillant,7,0,0
 1484322,Ville T. Turunen,1,0,0
@@ -9606,7 +9587,7 @@ id,name,n_pubs,n_citations,h_index
 1291695,Stefan Atev,1,0,0
 1298924,Emanuele Coviello,1,0,0
 1333223,Margaret Marler,1,0,0
-1333706,P. A. Beardsley,6,19,2
+1333706,P. A. Beardsley,6,18,2
 1357151,J. Xiao,3,1,1
 1367828,U B Desai,1,0,0
 1388006,Matthew Rudary,2,0,0
@@ -9746,7 +9727,7 @@ id,name,n_pubs,n_citations,h_index
 722796,Ching-Yun Chang,2,1,1
 730458,Kim Steenstrup Pedersen,1,0,0
 735744,Geoffrey Zweig,6,3,1
-737798,Alexandra Constantin,1,170,1
+737798,Alexandra Constantin,1,169,1
 743476,Andrew Wilhelm,2,0,0
 749076,A. Smearson,1,0,0
 760402,Jean Ponce,26,11,2
@@ -9849,7 +9830,7 @@ id,name,n_pubs,n_citations,h_index
 1116151,Reinhold Kliegl,1,4,1
 1120302,Paul Thompson,2,0,0
 1120524,Matthew Stone,2,8,2
-1154615,T. P. Minka,6,2,1
+1154615,T. P. Minka,5,2,1
 1171778,Jeremy H. Holleman,1,0,0
 1196440,Sholom M. Weiss,1,2,1
 1203895,Jian-ming Xu,1,1,1
@@ -9968,7 +9949,7 @@ id,name,n_pubs,n_citations,h_index
 505962,Chengqing Zong,6,6,1
 510271,Terry Tai,1,0,0
 514162,Lance Williams,6,4,1
-515542,Christian Darken,2,2,1
+515542,Christian Darken,1,2,1
 519298,Sylvie Billot,1,20,1
 525262,A. V. Zalesny,1,0,0
 538106, Wei-Shi Zheng,3,0,0
@@ -10033,14 +10014,14 @@ id,name,n_pubs,n_citations,h_index
 256572,Khe Chai Sim,1,0,0
 263389,B. Doyon,1,0,0
 303965,X.-C. Tai,1,0,0
-307867,Bo Pang,13,206,5
+307867,Bo Pang,12,205,5
 364167,Ping Liang,1,0,0
 365587,Finnegan Southey,3,1,1
 373757,Chin-Yew Lin,1,0,0
 385675,Carol Friedman,1,1,1
 403479,Jesús Cerquides,1,0,0
 427361, Bin Wu,1,0,0
-429456,Emmanuel Prados,5,1,1
+429456,Emmanuel Prados,4,1,1
 430251,Aaron D'souza,2,1,1
 440558,Vivek Srikumar,4,6,1
 441679, Wei-Lwun Lu,1,0,0
@@ -10170,7 +10151,7 @@ id,name,n_pubs,n_citations,h_index
 1450964,Yi Yang,1,0,0
 1453082,Cosmin Ancuti,1,0,0
 1458989,Yasuhiro Akiba,1,0,0
-1566983,Raymond J. Mooney,20,94,5
+1566983,Raymond J. Mooney,19,94,5
 1600024,Pierre-Henri Wuillemin,1,0,0
 1605266,S. Minneman,1,0,0
 1623231,Jinwei Gu,1,0,0
@@ -10240,7 +10221,7 @@ id,name,n_pubs,n_citations,h_index
 897688,Yu-Fei Ma,1,0,0
 902218,Rin-ichiro Taniguchi,1,0,0
 905075,Alla Rozovskaya,5,17,3
-908564,Jared Bernstein,9,6,2
+908564,Jared Bernstein,9,5,1
 965050,Richard Lehrer,1,0,0
 1028964,Lisbeth Duncan,1,1,1
 1038799,Alexander Berman,1,0,0
@@ -10377,7 +10358,7 @@ id,name,n_pubs,n_citations,h_index
 279854,Anthony Jayakumar,2,0,0
 282771,Peng Wang,1,0,0
 307088,R. E. Schapire,11,31,3
-310682,George R. Doddington,5,55,3
+310682,George R. Doddington,5,54,2
 335089,Justin A. Boyan,3,1,1
 374894,Graham Coleman,1,0,0
 391646,Mathias Verbeke,1,0,0
@@ -10483,13 +10464,13 @@ id,name,n_pubs,n_citations,h_index
 865237,See-Kiong Ng,1,1,1
 869385,Ran He,1,0,0
 927714,Genquan Duan,1,0,0
-933729,Jakob Uszkoreit,6,25,2
+933729,Jakob Uszkoreit,5,24,2
 945878,Tony X. Han,1,0,0
 947223,K. M. Ponting,1,0,0
 949510,Shiv Naga Prasad Vitaladevuni,2,0,0
 989444,Ralph Gross,1,1,1
 1033610,Bruce Benson Tesar,2,1,1
-1034718,Wade Shen,1,170,1
+1034718,Wade Shen,1,169,1
 1049588,M. Gleicher,1,2,1
 1055070,Koichiro Deguchi,1,0,0
 1126090,Mao Ye,1,0,0
@@ -10497,14 +10478,14 @@ id,name,n_pubs,n_citations,h_index
 1169041,Daniel C. Alexander,1,1,1
 1177970,L. M. Alvarez,1,0,0
 1194198,Yang Tang,1,6,1
-1240079,S W Zucker,21,12,2
+1240079,S W Zucker,20,11,2
 1293741,Margaret Mitchell,1,0,0
 1350220,Julien P. Stern,1,0,0
 1404020,Shuicheng Yan,1,0,0
 1415236,Binyamin Rosenfeld,1,0,0
 1468644,Morimichi Nishigaki,1,0,0
 1475104,Matthias Hartung,1,1,1
-1490753,Nicola Cancedda,7,11,2
+1490753,Nicola Cancedda,7,10,2
 1504386,Tim O'Keefe,1,0,0
 1526470,M. Michaelis,1,1,1
 1532519,Filippo Bergamasco,2,0,0
@@ -10538,7 +10519,7 @@ id,name,n_pubs,n_citations,h_index
 351704,Qiang Zhou,1,0,0
 378630,Atanas Kiryakov,1,0,0
 388176,Ye-Yi Wang,2,5,1
-414173,Todd Ward,5,319,2
+414173,Todd Ward,5,318,2
 446226,Zhi Zhong,1,2,1
 449587, Qionghai Dai,2,0,0
 474406,F. Artiles,1,0,0
@@ -10684,7 +10665,7 @@ id,name,n_pubs,n_citations,h_index
 1675732,Patrick Sulger,1,3,1
 1698830,Christopher Rasmussen,2,0,0
 62889,Robert C. Berwick,9,8,1
-70562,P. H. S. Torr,27,41,3
+70562,P. H. S. Torr,27,40,3
 70891,Ullrich Köthe,3,0,0
 117765,Yefeng Zheng,2,0,0
 137758,Riad Hammoud,2,0,0
@@ -10710,7 +10691,6 @@ id,name,n_pubs,n_citations,h_index
 466506,Michael Oren,5,6,2
 468616,M. Hornacek,2,0,0
 495140,Lin Du,2,0,0
-509863,Andrew R. Mitchell,1,0,0
 516410,G. Crisafulli,1,1,1
 523906, Han-Pang Chiu,1,0,0
 526431,Steven P. Shwartz,1,0,0
@@ -10742,7 +10722,7 @@ id,name,n_pubs,n_citations,h_index
 1038345,Katsushi Ikeuchi,1,0,0
 1060150,Zheng Chen,1,2,1
 1069942,Jordi Sanchez-Riera,1,0,0
-1096451,Brooke Cowan,3,177,2
+1096451,Brooke Cowan,3,176,2
 1105765,Robert E. Frederking,8,2,1
 1113337,Ehsan Shahrian,1,0,0
 1131280,Thomas Lin,2,0,0
@@ -10797,9 +10777,9 @@ id,name,n_pubs,n_citations,h_index
 471902,Andreas Eisele,1,2,1
 503276,Art Munson,1,4,1
 525703,Somayajulu Sripada,1,0,0
-546860,M. Ostendorf,47,57,4
+546860,M. Ostendorf,47,56,4
 556447,Bob Roth,1,3,1
-566942,Britta Schasberger,1,27,1
+566942,Britta Schasberger,1,26,1
 580586,D. Ormoneit,1,1,1
 580769,J. Tsutsumi,1,1,1
 601150,Hee Seok Lee,1,0,0
@@ -10834,7 +10814,7 @@ id,name,n_pubs,n_citations,h_index
 1037564,Katsushi Ikeuchi,1,0,0
 1048821,Gay Baldwin,1,4,1
 1060419,Christian Siagian,1,0,0
-1081501,Simone Gasparini,2,0,0
+1081501,Simone Gasparini,1,0,0
 1088059,Yang Song,3,1,1
 1092518,P. Bojanowski,1,0,0
 1093202,Silvan Heintze,1,0,0
@@ -10856,7 +10836,6 @@ id,name,n_pubs,n_citations,h_index
 1430572,Judith Klein-Seetharaman,1,0,0
 1436579,Charles Pisula,1,0,0
 1471761,M. K. Reed,1,0,0
-1478260,Y. Zhu,1,0,0
 1491783,Till Quack,1,0,0
 1508137,Christopher Bowman,1,0,0
 1512319,Tom Duckett,1,0,0
@@ -11010,7 +10989,7 @@ id,name,n_pubs,n_citations,h_index
 929627,Pascal Fua,28,5,1
 942544,Marc Eisenstadt,1,0,0
 973272,Andrew D. Bagdanov,1,0,0
-991524,James K. Baker,7,11,2
+991524,James K. Baker,7,10,2
 1008882,N. F. Law,1,0,0
 1014923,Sandra Kübler,4,4,1
 1023163,Gregory Druck,4,10,2
@@ -11030,7 +11009,7 @@ id,name,n_pubs,n_citations,h_index
 1402983,Honglei Guo,2,5,2
 1454395,Huifeng Li,1,1,1
 1458488,G. E. Legge,1,0,0
-1467243,Joseph Austerweil,1,12,1
+1467243,Joseph Austerweil,1,11,1
 1513061,Mark Ollila,1,0,0
 1514820,Michael Wiegand,1,1,1
 1555107,Shuji Doshita,2,0,0
@@ -11162,7 +11141,7 @@ id,name,n_pubs,n_citations,h_index
 1135371,Masaki Sohma,2,0,0
 1135730,Simon Colton,1,0,0
 1168328,Magnús Snorrason,1,0,0
-1178356,Rebecca J. Passonneau,14,43,4
+1178356,Rebecca J. Passonneau,14,42,4
 1183025,Wei Wu,2,1,1
 1203645,Kayo Tatsukawa,1,0,0
 1231377,Samuel D. Fenster,1,0,0
@@ -11270,7 +11249,7 @@ id,name,n_pubs,n_citations,h_index
 1136175,Microsoft Engkoo Team,1,0,0
 1154275,Alan F. Murray,3,0,0
 1155184,Nancy L. Dahlgren,1,4,1
-1161735,Jan Hajic,7,98,4
+1161735,Jan Hajic,7,97,4
 1162136,N. Craft,1,0,0
 1169023,René Vidal,9,0,0
 1286054,Todd W. Troyer,1,0,0
@@ -11306,7 +11285,7 @@ id,name,n_pubs,n_citations,h_index
 114012,Rodney D. Nielsen,2,0,0
 175678,Yuta Tsuboi,1,0,0
 219642,Martijn Van Otterlo,1,1,1
-315137,Michael Pozar,1,12,1
+315137,Michael Pozar,1,11,1
 326658,Zili Liu,1,0,0
 330696,Sašo Džeroski,9,3,1
 341132,Kurt Cornelis,2,0,0
@@ -11422,7 +11401,7 @@ id,name,n_pubs,n_citations,h_index
 1216938,Yan Liu,1,0,0
 1244945,A. Tefas,1,0,0
 1250392,Cunzhao Shi,2,0,0
-1271623,Anthony Yezzi,13,5,1
+1271623,Anthony Yezzi,12,5,1
 1286194,G. J. F. Jones,1,0,0
 1314828,Vivek Kwatra,3,0,0
 1365250,Douglas O'Shaughnessy,4,2,1
@@ -11472,7 +11451,7 @@ id,name,n_pubs,n_citations,h_index
 775624,Ikuhisa Mitsugami,1,0,0
 795359,Junwei Han,1,0,0
 805923,Wei Wei,1,0,0
-806477,Rolf Carlson,2,0,0
+806477,Rolf Carlson,1,0,0
 811400,Chunhua Shen,1,0,0
 879385,L. H. Berman,1,0,0
 894309,Li Wang,1,1,1
@@ -11584,7 +11563,7 @@ id,name,n_pubs,n_citations,h_index
 1469208,Xin Tong,1,0,0
 1474048,Shai Avidan,4,0,0
 1475804,M. A. Vouk,1,2,1
-1479900,Michael Collins,28,626,13
+1479900,Michael Collins,28,625,13
 1489113,Peter Carbonetto,1,0,0
 1504973,Minh Hoai,2,0,0
 1543865,Zhaoyin Jia,1,0,0
@@ -11616,7 +11595,6 @@ id,name,n_pubs,n_citations,h_index
 196306,Peter Schröder,1,0,0
 200773,Alison Alvarez,1,0,0
 202688,Dan Wu,1,5,1
-259968,L. A. Miller,1,0,0
 275513,M. Mazo,1,0,0
 315500,M. Dalrymple,2,3,1
 324841,Liheng Xu,1,0,0
@@ -11627,7 +11605,7 @@ id,name,n_pubs,n_citations,h_index
 412555,Jarrett Rosenberg,1,0,0
 431245,Diego Nehab,1,0,0
 434625,Baochang Zhang,1,0,0
-445928,Stefan Schoenmackers,3,20,3
+445928,Stefan Schoenmackers,3,18,3
 473037,Zhuolin Jiang,1,0,0
 503011,I. Konstantinidis,2,0,0
 505056,Gideon Mann,1,7,1
@@ -11770,7 +11748,7 @@ id,name,n_pubs,n_citations,h_index
 141621,N I Badler,2,0,0
 147983,Roger Levy,8,25,3
 163787,Eric Fosler-Lussier,8,19,2
-180208,Graeme Hirst,11,17,2
+180208,Graeme Hirst,10,16,2
 195375,Pavel id,1,0,0
 205420,Harry Bratt,2,0,0
 229771,Anja Belz,1,1,1
@@ -11780,7 +11758,7 @@ id,name,n_pubs,n_citations,h_index
 299615,Zhanyi Liu,3,6,2
 299808,Ziheng Lin,2,9,2
 316784,Rashmi Prasad,2,3,1
-324717,Rion Snow,3,71,2
+324717,Rion Snow,3,70,2
 347553,Koichiro Ishihara,1,0,0
 355132,Gabriel Pereira Lopes,2,0,0
 360120,Martin Fischer,1,0,0
@@ -11842,7 +11820,7 @@ id,name,n_pubs,n_citations,h_index
 1357760,W. Snyder,1,0,0
 1378250,Rong Jin,1,0,0
 1399735,Jochen L. Leidner,1,0,0
-1405406,Rosie Jones,2,11,2
+1405406,Rosie Jones,2,10,2
 1428458,Richard M. Karp,1,0,0
 1429879,Jinsong Su,1,0,0
 1436089,Litian Tao,1,0,0
@@ -11864,7 +11842,7 @@ id,name,n_pubs,n_citations,h_index
 252480,William M. Darling,1,0,0
 264020,Takeo Kanade,1,0,0
 277718,Michael Elad,2,0,0
-308260,Hongbin Zha,4,0,0
+308260,Hongbin Zha,3,0,0
 335900,Yuji Matsumoto,24,82,5
 341248,S. C. Schwartz,1,0,0
 356960,Jennifer C. Lai,1,22,1
@@ -12119,13 +12097,13 @@ id,name,n_pubs,n_citations,h_index
 762967,F. Kahl,1,0,0
 770176,G. Gerig,1,3,1
 804275,Stuart Evan Kirtman,1,0,0
-807601,Michel Antunes,2,0,0
+807601,Michel Antunes,1,0,0
 819290,Victor H. Yngve,1,0,0
 856740,Pradeep Natarajan,1,0,0
 869115,Justin Ma,1,0,0
 880188,Shravan Vasishth,1,4,1
 882444,Ahcene Sadi,1,0,0
-890763,Ondřej Bojar,1,170,1
+890763,Ondřej Bojar,1,169,1
 901230,John Adcock,1,0,0
 910678,Shmuel Peleg,11,9,2
 912382,Ozge C. Ozcanli,1,0,0
@@ -12155,7 +12133,7 @@ id,name,n_pubs,n_citations,h_index
 1243106,Rean Isabella Fedriga,1,0,0
 1248040,Hai Zhao,3,8,2
 1263488,Christophe Pallier,1,4,1
-1295033,Zezhen Huang,1,4,1
+1295033,Zezhen Huang,1,3,1
 1388746,Shuicheng Yan,4,0,0
 1402338,Saad Ali,1,0,0
 1447995,Xinyu Dai,1,0,0
@@ -12179,7 +12157,7 @@ id,name,n_pubs,n_citations,h_index
 134723,Tobias Baumgartner,1,0,0
 195823,Wei Feng,1,0,0
 265760,Alexander Franz,1,0,0
-267960,Rosalind Wright Picard,3,2,1
+267960,Rosalind Wright Picard,2,2,1
 303695,Gunhee Kim,1,0,0
 308769,Patrick Hanks,2,29,2
 329329,Qun Liu,1,0,0
@@ -12322,7 +12300,7 @@ id,name,n_pubs,n_citations,h_index
 7003,Jie Zhang,2,17,2
 48750,S. Panchanathan,1,0,0
 52250,Andreas Ruf,4,1,1
-99437,David McClosky,7,76,4
+99437,David McClosky,7,74,4
 108314,Roberto Cipolla,1,0,0
 134108,Mihir Jain,1,0,0
 143797,Richard Whitney,1,0,0
@@ -12374,14 +12352,13 @@ id,name,n_pubs,n_citations,h_index
 1093593,Ying-Wung Lee,1,0,0
 1095139,Simon Baker,7,6,1
 1138343,Darya Frolova,1,0,0
-1139474,Fil Alleva,4,16,3
+1139474,Fil Alleva,4,15,2
 1143352,Stefan Holzer,1,0,0
 1148652,Boaz J. Super,1,0,0
 1155692,Guido Minnen,2,1,1
 1164379,Marco A. Clemente-Salazar,1,0,0
 1176851,Lara C.  R. Coelho,1,0,0
 1198497,Peihua Li,2,0,0
-1222165,Karsten Konrad,1,0,0
 1246911,Zhengdong Zhang,1,0,0
 1258857,Erica Greene,1,2,1
 1264355,Peter Welinder,1,0,0
@@ -12390,9 +12367,8 @@ id,name,n_pubs,n_citations,h_index
 1302280,Stéphane Dupont,1,0,0
 1307021,Simon Maskell,1,0,0
 1378023,Javier A. Montoya-Zegarra,1,0,0
-1451409,G. Heidorn,2,20,2
+1451409,G. Heidorn,2,19,2
 1461799,William Coster,1,0,0
-1466831,Christopher M. Ackerman,1,3,1
 1510093,Kenji Mase,1,0,0
 1510222,Douglas E. Appelt,15,39,3
 1520904,Nikolaos Pitelis,1,0,0
@@ -12585,7 +12561,7 @@ id,name,n_pubs,n_citations,h_index
 209213,Jianqiang Wang,1,0,0
 210628,Harpreet S. Sawhney,13,12,2
 250732,Stephan Gammeter,2,0,0
-254060,Elizabeth Shriberg,11,65,5
+254060,Elizabeth Shriberg,11,64,5
 268603,Zhongyang Fu,1,0,0
 280339,Miron Livny,1,0,0
 317864,Patrick Paul,1,1,1
@@ -12706,7 +12682,7 @@ id,name,n_pubs,n_citations,h_index
 1228704,Y. Ushiku,1,0,0
 1231247,Aaron Fenster,1,0,0
 1242129,Tanya Korelsky,1,6,1
-1265399,Joseph Polifroni,16,42,4
+1265399,Joseph Polifroni,16,41,4
 1303830,W. Geoffrey Owen,1,0,0
 1304547,Qi Zhang,2,6,2
 1306027,Yi Yang,2,0,0
@@ -12780,7 +12756,7 @@ id,name,n_pubs,n_citations,h_index
 883308,C. L. Wu,1,0,0
 925939,Brett C. Tjaden,1,4,1
 970054,Wei-Tsih Lee,1,0,0
-991552,Janet M. Baker,12,17,2
+991552,Janet M. Baker,12,15,2
 994449,Stuart M. Shieber,13,67,5
 1001479,Tapas Kanungo,2,1,1
 1002686,Harry Tennant,2,0,0
@@ -12823,7 +12799,7 @@ id,name,n_pubs,n_citations,h_index
 201745,Jian Su,8,60,5
 237868,Karol Wieloch,1,0,0
 256377,Henrik Fredholm,1,0,0
-261571,D S Weld,7,48,5
+261571,D S Weld,7,46,5
 264901,Simone Graf,1,0,0
 266131,Yannick Parmentier,1,0,0
 290793,Todor Georgiev,2,0,0
@@ -12867,7 +12843,7 @@ id,name,n_pubs,n_citations,h_index
 1182930,M. Gasic,1,3,1
 1198253, Yi Ma,1,0,0
 1210718,Tomokazu Sato,1,0,0
-1231897,M. Hearst,13,50,3
+1231897,M. Hearst,13,49,3
 1269438,D. G. Jones,2,4,2
 1464869,Shuanak Chatterjee,1,0,0
 1498268,Alberto Sanchis,1,0,0
@@ -12890,7 +12866,7 @@ id,name,n_pubs,n_citations,h_index
 330582,Sam Roweis,5,10,2
 356177,K. Zesar,1,0,0
 369220,P. Bobet,4,0,0
-380231,Marcello Federico,7,179,3
+380231,Marcello Federico,7,178,3
 384226,Tzu-Kuo Huang,1,0,0
 400500,Leonid V. Tsap,1,0,0
 403072,Gözde Özbal,1,0,0
@@ -12950,7 +12926,7 @@ id,name,n_pubs,n_citations,h_index
 1637162,N. Jeremy Hill,1,1,1
 1643372,Zheng Song,1,0,0
 1683081,Bernard Merialdo,1,0,0
-27697,Xavier Carreras,3,19,2
+27697,Xavier Carreras,3,18,2
 50648,J. M. Conroy,3,0,0
 74259,Par Hammarstedt,1,0,0
 98055,Cristina Giannone,1,1,1
@@ -12958,7 +12934,7 @@ id,name,n_pubs,n_citations,h_index
 193558,Pradit Mittrapiyanuruk,1,0,0
 273642,LiMin Wang,1,0,0
 322174,Pietro Perona,1,0,0
-340358,J. Matas,9,1,1
+340358,J. Matas,7,1,1
 394378,Machiel Westerdijk,1,0,0
 441226, Siying Liu,1,0,0
 469077, Honghui Zhang,1,0,0
@@ -12996,7 +12972,7 @@ id,name,n_pubs,n_citations,h_index
 1068556,Shyam Sunder Kumar,1,0,0
 1081023,Shilpa Arora,2,2,1
 1088641,Antonio Gonzalez,1,0,0
-1094272,Pascal Denis,2,10,1
+1094272,Pascal Denis,2,9,1
 1111760,Anastasios Roussos,1,0,0
 1127643,B. V. K.  Vijaya Kumar,1,0,0
 1134665,Ana L. C. Bazzan,1,0,0
@@ -13030,7 +13006,7 @@ id,name,n_pubs,n_citations,h_index
 287062,Min Sun,1,0,0
 320869,D. Lippe,1,0,0
 348500,Sergei Startchik,1,0,0
-364643,Kathleen Bishop,1,4,1
+364643,Kathleen Bishop,1,3,1
 371291,Yi Zhang,1,0,0
 383857,Masaaki Nagata,9,6,1
 390900,Rodger Kibble,1,1,1
@@ -13129,7 +13105,7 @@ id,name,n_pubs,n_citations,h_index
 461134,Raphael Maree,1,0,0
 477968,A. G. Amitha Perera,3,0,0
 493151,Panayiotis Georgiou,2,0,0
-505886,V. Caglioti,2,0,0
+505886,V. Caglioti,1,0,0
 507307,Daniel Francis Hardt,3,0,0
 521253,Julie E. Boland,1,6,1
 525355, Nam Vo,1,0,0
@@ -13287,7 +13263,7 @@ id,name,n_pubs,n_citations,h_index
 255733,Beth A Hockey,6,0,0
 273195,Nigel Boston,1,0,0
 306333,Yan Huang,2,0,0
-320954,Mark Sammons,2,5,1
+320954,Mark Sammons,1,0,0
 325490,Dan Povey,1,0,0
 344413,H. P. Seidel,1,0,0
 362955,Christof Monz,4,10,2
@@ -13427,7 +13403,7 @@ id,name,n_pubs,n_citations,h_index
 1608678,Grant Schindler,1,0,0
 1618483,Koichiro Deguchi,1,0,0
 1622784,J Carbonell,14,27,3
-1650436,Trevor Darrell,20,10,2
+1650436,Trevor Darrell,19,10,2
 1677870,C. A. Knoblock,2,6,1
 1691119,David Graff,1,2,1
 1697674,L. Wehenkel,3,0,0
@@ -13447,7 +13423,7 @@ id,name,n_pubs,n_citations,h_index
 214946,Jingni Chen,2,0,0
 229745,Andreas V. M. Herz,1,0,0
 245875,Sanaz Jabbari,1,0,0
-263376,Claire Gardent,9,4,1
+263376,Claire Gardent,8,4,1
 264363,Paulo R. S. Mendonça,3,2,1
 318923,Peng Sun,1,1,1
 325294,Bing Yu,1,0,0
@@ -13475,7 +13451,7 @@ id,name,n_pubs,n_citations,h_index
 705198,Max Whitney,1,0,0
 720464,Anni Cai,1,0,0
 751897, Yuelei Xie,1,0,0
-772572,S. Roukos,28,490,8
+772572,S. Roukos,28,489,8
 804270,Youji Kiyota,1,0,0
 814919,Nikos Canterakis,1,2,1
 861000,Hayong Shin,1,0,0
@@ -13563,11 +13539,10 @@ id,name,n_pubs,n_citations,h_index
 989346,Takeshi Mita,1,0,0
 1027253,Stephen J. Green,1,0,0
 1032665,Matthew Berland,1,19,1
-1060669,Stephen Canon,1,30,1
 1076971,Virongrong Tesprasit,1,0,0
 1079431,Martina Naughton,1,0,0
 1087543,P. Schauble,1,0,0
-1111699,Jérôme Louradour,1,5,1
+1111699,Jérôme Louradour,1,4,1
 1124712,Jens Hühn,1,0,0
 1160356,Fernando Lozano,1,0,0
 1284091,Bing Li,1,0,0
@@ -13628,7 +13603,6 @@ id,name,n_pubs,n_citations,h_index
 507136,Alexandre Nanchen,1,0,0
 517456,Jos de Bruin,2,1,1
 528793,Yuval Netzer,1,0,0
-545646,Hung-Khoon Tan,1,0,0
 551399,Yi Sun,3,0,0
 593165,Ad Aertsen,1,0,0
 633711,Ronald Parr,5,5,2
@@ -13684,7 +13658,7 @@ id,name,n_pubs,n_citations,h_index
 299106,Yikun Guo,1,0,0
 341209,Andrew Lippman,5,2,1
 346412,Yuquan Chen,1,0,0
-354072,Rob Fergus,4,3,1
+354072,Rob Fergus,3,0,0
 393017,S. Ayer,4,7,2
 393556,Shaobing Gao,2,0,0
 426236, Huayan Wang,1,0,0
@@ -13694,7 +13668,7 @@ id,name,n_pubs,n_citations,h_index
 514801,Bo Lang,1,0,0
 527469,Jonathan King,1,6,1
 534693,Antonio Ferrández,3,1,1
-536427,Matthew Purver,2,1,1
+536427,Matthew Purver,1,0,0
 550557,Michael Ming-Yuen Chang,1,0,0
 580868,Xiaojie Guo,1,0,0
 586938,Angel Domingo Sappa,4,1,1
@@ -13800,7 +13774,7 @@ id,name,n_pubs,n_citations,h_index
 800422,Rita McCardell,1,1,1
 804094,Jinxi Xu,7,11,2
 809596,David A. duVerle,1,7,1
-831418,Martin S. Chodorow,10,34,3
+831418,Martin S. Chodorow,10,33,3
 837742,Carla B. Zoltowski,1,0,0
 841088,Jong-Hyeok Lee,2,2,1
 857448,Andrew Wagner,1,0,0
@@ -13893,7 +13867,7 @@ id,name,n_pubs,n_citations,h_index
 871701,Antoine Raux,4,7,2
 883114,David Huggins-Daines,3,2,1
 898462,Xiaomei Liu,1,0,0
-912138,Chung Hee Hwang,3,9,2
+912138,Chung Hee Hwang,2,2,1
 939304,Christian Lebiere,1,0,0
 978757,Cheng Li,1,0,0
 986638,Abdelmajid Ben Hamadou,1,0,0
@@ -13902,7 +13876,6 @@ id,name,n_pubs,n_citations,h_index
 1165902,A Vicino,1,0,0
 1177265,Ralf Engel,1,0,0
 1180792,Anne Demedts,3,1,1
-1212708,Sindhu Raghavan,1,0,0
 1228117,Dennis Tell,2,2,1
 1252953,K. Hedengren,1,0,0
 1303428,Yuji Matsumoto,1,0,0
@@ -13989,7 +13962,7 @@ id,name,n_pubs,n_citations,h_index
 1542353,Carlos D. Castillo,1,0,0
 1605837,Gal Elidan,1,1,1
 1664972,R. Garg,1,0,0
-1671107,Jacob Goldberger,8,13,2
+1671107,Jacob Goldberger,8,12,2
 51878,D. Saad,2,0,0
 61926,Shin-ichiro Kamei,1,3,1
 118345,Chong Min Lee,1,0,0
@@ -14038,7 +14011,7 @@ id,name,n_pubs,n_citations,h_index
 1336720,Srikumar Ramalingam,1,0,0
 1426519,Wei-Hau Pan,1,0,0
 1440863,Chao Wang,2,2,1
-1464934,Jonathan Berant,7,12,2
+1464934,Jonathan Berant,7,11,2
 1473939,Fabian Nater,1,0,0
 1523154, Jinwei Gu,1,0,0
 1538282,Mark Brodie,1,0,0
@@ -14057,7 +14030,7 @@ id,name,n_pubs,n_citations,h_index
 151531,Jörg Kappes,5,0,0
 171585,Afra Alishahi,1,0,0
 199312,Olga Gurevich,2,0,0
-236353,Evan Herbst,1,170,1
+236353,Evan Herbst,1,169,1
 250957,Gideon F. Inbar,1,0,0
 276035,Bhaskar D. Rao,1,0,0
 307885,Tapio Pahikkala,1,0,0
@@ -14100,7 +14073,7 @@ id,name,n_pubs,n_citations,h_index
 1282291,Konstantina Garoufi,1,0,0
 1361013,Miyao Yusuke,1,13,1
 1372398,Federico Cesari,1,1,1
-1382650,Sandra Carberry,8,17,2
+1382650,Sandra Carberry,8,16,2
 1404611,Ser-Nam Lim,1,0,0
 1484337,Marc Vaillant,1,0,0
 1497894,Christoph Bregler,5,19,2
@@ -14150,7 +14123,7 @@ id,name,n_pubs,n_citations,h_index
 558445,Toyomi Saiga,1,10,1
 580621,John Cavazos,2,0,0
 596813,Adnan Ansar,1,0,0
-626127,D. Pallett,19,46,4
+626127,D. Pallett,18,45,4
 628925,Santhoshkumar Sunderrajan,1,0,0
 636102,E. Hayman,4,0,0
 654242,Thi V. Duong,1,0,0
@@ -14201,7 +14174,7 @@ id,name,n_pubs,n_citations,h_index
 1604392,YanNing Zhang,1,0,0
 1612923,Erin Bredensteiner,1,0,0
 1642803,Martin Riedl,2,1,1
-1666647,N Asher,3,8,2
+1666647,N Asher,3,7,2
 1672329,Yang Liu,1,0,0
 25468,Frank Dellaert,6,0,0
 37212,Nicola Joy Ferrier,1,0,0
@@ -14320,7 +14293,6 @@ id,name,n_pubs,n_citations,h_index
 545723,Jeff Martin,1,0,0
 549389,B. Dubuc,1,0,0
 568407,Dennis DeCoste,2,1,1
-618785,Zhiyi Chi,1,30,1
 625003, Yi-Hsuan Yang,1,0,0
 647347,E. François,2,0,0
 647377,Patrick Grother,1,0,0
@@ -14376,7 +14348,7 @@ id,name,n_pubs,n_citations,h_index
 181588,K.-T. Cheng,2,0,0
 186440,Wanqing Li,1,0,0
 273432,Anton Andriyenko,1,0,0
-281683,Theresa Vu,1,12,1
+281683,Theresa Vu,1,11,1
 294333,Sebastian R. Spiegler,1,0,0
 299507,Yang Li,1,0,0
 307532,E. Motta,1,0,0
@@ -14416,7 +14388,7 @@ id,name,n_pubs,n_citations,h_index
 1534453,H H Nagel,19,7,1
 1535755,Liang Wang,1,0,0
 1540111,Matthias Eck,2,1,1
-1548561,M. Pollefeys,10,0,0
+1548561,M. Pollefeys,9,0,0
 1566379, Liu Ren,1,0,0
 1600747,D. Bohus,3,5,2
 1649587, Tsuhan Chen,3,0,0
@@ -14530,7 +14502,7 @@ id,name,n_pubs,n_citations,h_index
 1110718,T. Poggio,1,0,0
 1119074,Xiang Ji,1,0,0
 1133396,Joakim Nivre,11,36,3
-1133740,Tobias Scheffer,9,3,1
+1133740,Tobias Scheffer,8,3,1
 1168602,Ed Kaiser,1,0,0
 1174937,Irena Koprinska,1,0,0
 1196248,Giulio Sandini,6,0,0
@@ -14687,7 +14659,6 @@ id,name,n_pubs,n_citations,h_index
 904300,Giuseppe DiFabbrizio,1,0,0
 928401,Michael Skinner,1,3,1
 938127,Takeshi Sakaki,1,2,1
-1015123,Thomas François,1,0,0
 1033918,Z. Y. Zhang,1,0,0
 1088942,Mark Schwabacher,1,0,0
 1099335,Andrew D. J. Cross,4,1,1
@@ -14805,7 +14776,7 @@ id,name,n_pubs,n_citations,h_index
 260124,Larry Matthies,1,0,0
 280802,Florian Becker,1,0,0
 309155,Daisuke Kawahara,7,9,2
-321501,Francesco Scattone,3,7,2
+321501,Francesco Scattone,3,6,2
 322817,John K. Tsotsos,1,0,0
 367047,Geoffrey J. Gordon,4,4,1
 376719,Jeffrey F. Cohn,5,1,1
@@ -14833,13 +14804,12 @@ id,name,n_pubs,n_citations,h_index
 741727,Sarah Zelikovitz,1,0,0
 743178,G. Zang,1,0,0
 784635,S. Sclaroff,2,0,0
-803302,Micha Elsner,5,26,3
+803302,Micha Elsner,5,25,3
 832371,Djemel Ziou,3,2,1
 842111,Andre Stechert,1,0,0
 856755,Beate Neumann,1,0,0
 861330,H.-P. Seidel,7,0,0
 865544,B. -L. Yeo,1,1,1
-877349,Carsten Meyer,1,0,0
 879371,Zuoguan Wang,1,0,0
 917018,Peter Sturm,13,19,2
 964588,Travis Choma,1,1,1
@@ -14854,7 +14824,7 @@ id,name,n_pubs,n_citations,h_index
 1094265,Florian Sieker,1,1,1
 1138895,Paul Kidwell,1,0,0
 1143016,Harry Keeling,1,0,0
-1236201,Shay B. Cohen,6,42,3
+1236201,Shay B. Cohen,6,41,3
 1271516,"J. C. ,. Ii McEachen",1,0,0
 1291405,Shin Ando,1,0,0
 1356402,Xiaoyan Li,1,0,0
@@ -14896,7 +14866,7 @@ id,name,n_pubs,n_citations,h_index
 390400,Richard Keith Fox,1,0,0
 406502,Stanley E. Scharoff,12,3,1
 422529,Linlin Li,3,6,2
-453495,Yoshiko Ito,2,5,1
+453495,Yoshiko Ito,2,4,1
 455459, Heng Huang,2,0,0
 502893,Benjamin Han,2,1,1
 550592,Zhe Feng,1,0,0
@@ -15055,7 +15025,7 @@ id,name,n_pubs,n_citations,h_index
 460129,N. Edenborough,1,0,0
 466010,H. Tunley,1,1,1
 467045,Dimitry Levin,1,4,1
-478973,Ronald Rosenfeld,6,32,4
+478973,Ronald Rosenfeld,6,31,4
 489621,Dili Zhang,1,0,0
 523664,R. Goodman,5,0,0
 538110,J. A. Gámez,1,0,0
@@ -15070,7 +15040,7 @@ id,name,n_pubs,n_citations,h_index
 699233,H. V. Jagadish,1,3,1
 720716,William T. Morgan,2,0,0
 723084,Mark E. Stickel,2,10,1
-752370,Andrew Scott Kehler,6,8,2
+752370,Andrew Scott Kehler,5,8,2
 752845,Yuri A. Ivanov,2,0,0
 767423,Junchi Yan,1,0,0
 768685,Bruno Vasselle,1,0,0
@@ -15082,7 +15052,7 @@ id,name,n_pubs,n_citations,h_index
 935868,Shomir Wilson,1,0,0
 951319,Hagen Fürstenau,3,18,3
 973484,Tu Bao Ho,1,0,0
-976100,Idan Szpektor,2,4,1
+976100,Idan Szpektor,2,3,1
 986183,Brendan O'Connor,3,13,3
 986234,Toshifumi Tanabe,1,0,0
 1001312, Xiaobai Liu,2,0,0
@@ -15179,7 +15149,7 @@ id,name,n_pubs,n_citations,h_index
 1220436,H. L. Roitblat,1,0,0
 1221880,Mark A. Gluck,1,0,0
 1253352,Radu Soricut,5,27,3
-1279966,Sujith Ravi,9,48,5
+1279966,Sujith Ravi,9,47,5
 1287428,Roger Evans,3,5,2
 1328381,Peter J Olver,2,5,1
 1350790,Lam Tran,1,0,0
@@ -15208,7 +15178,7 @@ id,name,n_pubs,n_citations,h_index
 129332,Percy Liang,9,98,5
 152148,Bo Wang,1,0,0
 152591,Naoki Yoshinaga,2,2,1
-180338,L Schubert,12,20,3
+180338,L Schubert,11,13,2
 193634,Gill Bejerano,2,0,0
 230601,Gangyao Kuang,1,0,0
 239170,R. Owens,1,0,0
@@ -15347,7 +15317,7 @@ id,name,n_pubs,n_citations,h_index
 1139509,F. Lumbreras,1,0,0
 1193767,Richard Souvenir,2,0,0
 1217092,Behjat Siddiquie,1,0,0
-1222874,Amit K. Roy-Chowdhury,7,1,1
+1222874,Amit K. Roy-Chowdhury,6,1,1
 1235175,Limin Yao,4,16,2
 1235974,Jianshi Feng,1,0,0
 1260705,Takahiro Ikeda,1,0,0
@@ -15365,7 +15335,7 @@ id,name,n_pubs,n_citations,h_index
 1475889,Andreas Maletti,5,4,1
 1571641,Yuanhui Zhou,1,0,0
 1594505,Allen Y. Yang,5,0,0
-1627475,Robert MacIntyre,1,27,1
+1627475,Robert MacIntyre,1,26,1
 1662801,Percy Liang,1,0,0
 1673424,Nicolò Cesa-Bianchi,3,0,0
 22066,Derrick Parkhurst,1,0,0
@@ -15373,7 +15343,7 @@ id,name,n_pubs,n_citations,h_index
 92660,Dacheng Tao,3,0,0
 111860,Joaquin Gonzalez-Rodriguez,1,0,0
 148258,Yaozong Gao,1,0,0
-162042,Aria Haghighi,12,136,7
+162042,Aria Haghighi,12,135,7
 194999,Saad Ali,3,0,0
 203813,Alexis Nasr,4,3,1
 208407,Stanko Dimitrov,2,0,0
@@ -15405,7 +15375,7 @@ id,name,n_pubs,n_citations,h_index
 605175,Raghavendra Udupa,4,5,1
 618588,Susan Windisch Brown,2,0,0
 623706,Gerhard Rigoll,2,0,0
-644075,Sherri Condon,2,3,1
+644075,Sherri Condon,1,0,0
 701005,Vinay Varadan,1,0,0
 738098,Wangmeng Zuo,3,0,0
 741194,Davi Geiger,17,15,2
@@ -15471,7 +15441,7 @@ id,name,n_pubs,n_citations,h_index
 315274,Xavier Otazu,1,0,0
 358163,Ramani Duraiswami,5,3,1
 360865,Eric Sven Ristad,7,2,1
-372986,John Butzberger,7,35,4
+372986,John Butzberger,7,34,4
 413909,G. Mainetto,1,0,0
 461783, Junfeng He,1,0,0
 461843, Zicheng Liu,1,0,0
@@ -15513,7 +15483,7 @@ id,name,n_pubs,n_citations,h_index
 1306787,Thomas Huang,1,0,0
 1328100,K. Brunnström,3,0,0
 1337187,Houfeng Wang,1,0,0
-1351006,Brendan O'Connor,1,41,1
+1351006,Brendan O'Connor,1,40,1
 1360723,Song Wang,1,0,0
 1360908,Nicolas Martel-Brisson,1,0,0
 1379132,Chi-Ho Li,1,0,0
@@ -15574,7 +15544,7 @@ id,name,n_pubs,n_citations,h_index
 863620,Paula Carvalho,1,0,0
 869672,Mei-Chen Yeh,1,0,0
 877400,Michael S. Lewicki,2,0,0
-935348,"William P. Headden, III",3,18,1
+935348,"William P. Headden, III",3,17,1
 950850,N. Udhyakumar,1,0,0
 953034,Ivan Bratko,5,1,1
 1036383,Philip Harrison,2,0,0
@@ -15654,12 +15624,12 @@ id,name,n_pubs,n_citations,h_index
 647366,Jian Zhang,1,0,0
 649198,Samuel Bayer,5,1,1
 654742,Rujie Liu,1,0,0
-666476,Owen Rambow,22,80,5
+666476,Owen Rambow,21,79,5
 749139, Lingqiao Liu,2,0,0
 797084,Borislav Antic,1,0,0
 798830,Arkady Borkovsky,1,18,1
 805091,Hiroyuki Kaji,2,1,1
-805604,Hideki Isozaki,11,36,3
+805604,Hideki Isozaki,11,35,3
 811706,Christian Leistner,5,0,0
 837947,Dimitri Metaxas,1,0,0
 845567,Judy Hoffman,1,0,0
@@ -15670,7 +15640,6 @@ id,name,n_pubs,n_citations,h_index
 942704,Enrico Blanzieri,1,0,0
 951268,David Mareček,1,0,0
 997020,Eva Maria Vecchi,1,0,0
-1008654,N. Gonçalves,1,0,0
 1021910,D. Horn,1,0,0
 1035344,Haibin Ling,3,0,0
 1051841,Nicolas Ward,1,0,0
@@ -15979,7 +15948,7 @@ id,name,n_pubs,n_citations,h_index
 483848,Luminita Vese,1,0,0
 486723,José Gaspar,1,0,0
 487117,Javier R. Movellan,3,0,0
-501344,Karen Katz,1,27,1
+501344,Karen Katz,1,26,1
 503373,Srini Narayanan,1,1,1
 507571,R. H. Storer,2,0,0
 516363,Huichuan Duan,1,0,0
@@ -16035,5 +16004,5 @@ id,name,n_pubs,n_citations,h_index
 1589251,Shuicheng Yan,2,0,0
 1597217,Meng Yang,2,0,0
 1674999,A. Oliva,4,0,0
-1708361,H. Ney,26,215,6
+1708361,H. Ney,26,214,6
 1708489,M. Cristani,2,0,0

@@ -1239,7 +1239,6 @@ id,title,year,venue_id
 457819,"Hyperdynamics Importance Sampling",2002,1
 457820,"Computing the Physical Parameters of Rigid-Body Motion from Video",2002,1
 457821,"Fast Difference Schemes for Edge Enhancing Beltrami Flow",2002,1
-457822,"Multi-view Matching for Unordered Image Sets, or "How Do I Organize My Holiday Snaps?"",2002,1
 457823,"Phase-Based Local Features",2002,1
 457824,"Color-Based Probabilistic Tracking",2002,1
 457825,"Image Processing Done Right",2002,1
@@ -1681,7 +1680,6 @@ id,title,year,venue_id
 464773,"Integrating Experimentation and Guidance in Relational Reinforcement Learning",2002,3
 464774,"Syllables and other String Kernel Extensions",2002,3
 464775,"Representational Upper Bounds of Bayesian Networks",2002,3
-464776,"Towards "Large Margin" Speech Recognizers by Boosting and Discriminative Training",2002,3
 464777,"Combining Labeled and Unlabeled Data for MultiClass Text Categorization",2002,3
 464778,"Algorithm-Directed Exploration for Model-Based Reinforcement Learning in Factored MDPs",2002,3
 464779,"Constraint-based Learning of Long Relational Concepts",2002,3
@@ -1690,7 +1688,6 @@ id,title,year,venue_id
 464782,"How to Make Stacking Better and Faster While Also Taking Care of an Unknown Weakness",2002,3
 464783,"Interpreting and Extending Classical Agglomerative Clustering Algorithms using a Model-Based approach",2002,3
 464784,"Learning word normalization using word suffix and context from unlabeled data",2002,3
-465736,"Preventing "Overfitting" of Cross-Validation Data",1997,3
 465737,"On Learning From Multi-Instance Examples: Empirical Evaluation of a Theoretical Approach",1997,3
 465738,"Improving Minority Class Prediction Using Case-Specific Feature Weights",1997,3
 465739,"Hierarchical Explanation-Based Reinforcement Learning",1997,3
@@ -1733,7 +1730,6 @@ id,title,year,venue_id
 465900,"On the Decomposition of Polychotomies into Dichotomies",1997,3
 465901,"Predicting Multiprocessor Memory Access Patterns with Learning Models",1997,3
 465902,"Robot Learning From Demonstration",1997,3
-465903,"Why Experimentation can be better than "Perfect Guidance"",1997,3
 465904,"Bayesian Network Classification with Continuous Attributes: Getting the Best of Both Discretization and Parametric Fitting",1998,3
 465905,"On Feature Selection: Learning with Exponentially Many Irrelevant Features as Training Examples",1998,3
 465906,"Collaborative Filtering Using Weighted Majority Prediction Algorithms",1998,3
@@ -1937,7 +1933,6 @@ id,title,year,venue_id
 466729,"Learning Declarative Control Rules for Constraint-BAsed Planning",2000,3
 466730,"An Algorithm for Distributed Reinforcement Learning in Cooperative Multi-Agent Systems",2000,3
 466731,"A Bayesian Framework for Reinforcement Learning",2000,3
-466732,""Boosting'' a Positive-Data-Only Learner",2000,3
 466733,"Crafting Papers on Machine Learning",2000,3
 466734,"Learning in Non-stationary Conditions: A Control Theoretic Approach",2000,3
 466735,"Unpacking Multi-valued Symbolic Features and Classes in Memory-Based Language Learning",2000,3
@@ -2520,7 +2515,6 @@ id,title,year,venue_id
 592268,"Nonlinear Shape Restoration For Document Images",1996,0
 592269,"Robust Recovery of Camera Rotation from Three Frames",1996,0
 592270,"Canonical Decomposition of Steerable Functions",1996,0
-592271,"Reducing "structure from motion"",1996,0
 592272,"Factorization Methods for Projective Structure and Motion",1996,0
 592273,"Motion from fixation",1996,0
 592274,"Stereo Vision for View Synthesis",1996,0
@@ -2528,7 +2522,6 @@ id,title,year,venue_id
 592276,"Multilinear Constraints in the Infinitesimal-time Case",1996,0
 592277,"A Factorization Method for Affine Structure from Line Correspondences",1996,0
 592278,"Dealing with occlusions in the eigenspace approach",1996,0
-592279,"Interactive Learning with a "Society of Models"",1996,0
 592280,"Video Browsing Using Edges and Motion",1996,0
 592281,"Recognition of Handwritten Phrases as Applied to Street Name Images",1996,0
 592282,"Target Detection in Foveal ATR Systems",1996,0
@@ -2790,7 +2783,6 @@ id,title,year,venue_id
 625142,"Gabor wavelets for 3-D object recognition",1995,2
 625143,"Indexing visual representations through the complexity map",1995,2
 625144,"Rigid body segmentation and shape description from dense optical flow under weak perspective",1995,2
-625145,"Electronically directed "focal" stereo",1995,2
 625146,"Scale-space from nonlinear filters",1995,2
 625147,"Motion from the frontier of curved surfaces",1995,2
 625148,"A multibaseline stereo system with active illumination and real-time image acquisition",1995,2
@@ -3045,7 +3037,6 @@ id,title,year,venue_id
 718433,"Shading Primitives: Finding Folds and Shallow Grooves",1998,2
 718434,"The Cascaded Hough Transform as an Aid in Aerial Image Interpretation",1998,2
 718435,"A Fast Automatic Method for Registration of Partially-Overlapping Range Images",1998,2
-718436,"Hyperbolic "Smoothing" of Shapes",1998,2
 718437,"A Metric for Distributions with Applications to Image Databases",1998,2
 718438,"Three-Dimensional MR Brain Segmentation",1998,2
 718439,"Detecting Changes in Aerial Views of Man-Made Structures",1998,2
@@ -3238,7 +3229,6 @@ id,title,year,venue_id
 724281,"Bayesian Clustering of Optical Flow Fields",2003,2
 724282,"Variational Space-Time Motion Segmentation",2003,2
 724283,"Controlling Model Complexity in Flow Estimation",2003,2
-724284,""Perspective Shape from Shading" and Viscosity Solutions",2003,2
 724285,"Polarization-based Inverse Rendering from a Single View",2003,2
 724286,"Spectral Partitioning for Structure from Motion",2003,2
 724287,"Recognition of Group Activities using Dynamic Probabilistic Networks",2003,2
@@ -3347,7 +3337,6 @@ id,title,year,venue_id
 742239,"Finite-state reduplication in one-level prosodic morphology",2000,8
 742240,"A finite state and data-oriented method for grapheme to phoneme conversion",2000,8
 742241,"A framework for robust semantic interpretation",2000,8
-742242,"Understanding "each other"",2000,8
 742243,"An empirical assessment of semantic interpretation",2000,8
 744420,"Proceedings of the 35th Annual Meeting of the Association for Computational Linguistics and Eighth Conference of the European Chapter of the Association for Computational Linguistics",1997,6
 746863,"Interleaving universal principles and relational constraints over typed feature logic",1997,6
@@ -3538,7 +3527,6 @@ id,title,year,venue_id
 747674,"Argumentation in representation semantics",1984,6
 747675,"Voice simulation: factors affecting quality and naturalness",1984,6
 747676,"Interpreting syntactically ill-formed sentences",1984,6
-747677,"An international Delphi poll on future trends in "information linguistics"",1984,6
 747678,"Machine Translation: its history, current status, and future prospects",1984,6
 747733,"Proceedings of the 36th Annual Meeting of the Association for Computational Linguistics and 17th International Conference on Computational Linguistics - Volume 2",1998,6
 747851,"Discovering phonotactic finite-state automata by genetic search",1998,6
@@ -3709,7 +3697,6 @@ id,title,year,venue_id
 748280,"Scruffy text understanding: design and implementation of 'tolerant' understanders",1982,6
 748281,"On the linguistic character of non-standard input",1982,6
 748282,"Ill-formed and non-standard language problems",1982,6
-748283,""Natural language texts are not necessarily grammatical and unambiguous of even complete."",1982,6
 748284,"Solutions to issues depend on the knowledge representation",1982,6
 748294,"Proceedings of the 21st annual meeting on Association for Computational Linguistics",1983,6
 748295,"Context-freeness and the computer processing of human languages",1983,6
@@ -3901,7 +3888,6 @@ id,title,year,venue_id
 748500,"Lexical access in connected speech recognition",1989,6
 748501,"Dictionaries, dictionary grammars and dictionary entry parsing",1989,6
 748502,"Some chart-based techniques for parsing ill-formed input",1989,6
-748503,"On representing governed prepositions and handling "incorrect" and novel prepositions",1989,6
 748504,"Acquiring disambiguation rules from text",1989,6
 748505,"The effects of interaction on spoken discourse",1989,6
 748506,"How to cover a grammar",1989,6
@@ -4198,7 +4184,6 @@ id,title,year,venue_id
 748820,"A unification-based semantic interpretation for coordinate constructs",1992,6
 748821,"Corpus-based acquisition of relative pronoun disambiguation heuristics",1992,6
 748822,"Association-based natural language processing with neural networks",1992,6
-748823,"Tense trees as the "fine structure" of discourse",1992,6
 748824,"Connection relations and quantifier scope",1992,6
 748825,"Estimating upper and lower bounds on the performance of word-sense disambiguation programs",1992,6
 748826,"A parameterized approach to integrating aspect with lexical-semantics for machine translation",1992,6
@@ -4211,7 +4196,6 @@ id,title,year,venue_id
 748833,"An LR category-neutral parser with left corner prediction",1992,6
 748834,"Incremental dependency parsing",1992,6
 748835,"Documentation parser to extract software test conditions",1992,6
-748836,"A linguistic and computational analysis of the German "third construction"",1992,6
 748837,"A CCG approach to free word order languages",1992,6
 748838,"Information states as first class citizens",1992,6
 748839,"Spatial lexicalization in the translation of prepositional phrases",1992,6
@@ -4487,7 +4471,6 @@ id,title,year,venue_id
 786573,"Automatic compensation for parser figure-of-merit flaws",1999,6
 786574,"Automatic identification of word translations from unrelated English and German corpora",1999,6
 786575,"Mining the Web for bilingual text",1999,6
-786576,"Estimators for stochastic "Unification-Based" grammars",1999,6
 786577,"Relating probabilistic grammars and automata",1999,6
 786578,"Information fusion in the context of multi-document summarization",1999,6
 786579,"Improving summaries by revising them",1999,6
@@ -4524,7 +4507,6 @@ id,title,year,venue_id
 812326,"3D Reconstruction by Fitting Low-Rank Matrices with Missing Data",2005,0
 812327,"Multi-View Geometry for General Camera Models",2005,0
 812328,"A Rational Function Lens Distortion Model for General Cameras",2005,0
-812329,"Matching with PROSAC " Progressive Sample Consensus",2005,0
 812330,"Kernel-Based Bayesian Filtering for Object Tracking",2005,0
 812331,"Appearance-Guided Particle Filtering for Articulated Hand Tracking",2005,0
 812332,"Dynamic Environment Exploration Using a Virtual White Cane",2005,0
@@ -4595,7 +4577,6 @@ id,title,year,venue_id
 812397,"Efficient Multiclass Object Detection by a Hierarchy of Classifiers",2005,0
 812398,"Learning to Track: Conceptual Manifold Map for Closed-Form Tracking",2005,0
 812399,"Learning with Constrained and Unlabelled Data",2005,0
-812400,"Robust L" Norm Factorization in the Presence of Outliers and Missing Data by Alternative Convex Programming",2005,0
 812401,"Local Color Transfer via Probabilistic Segmentation by Expectation-Maximization",2005,0
 812402,"Interactive Graph Cut Based Segmentation with Shape Priors",2005,0
 812403,"Multilabel Random Walker Image Segmentation Using Prior Models",2005,0
@@ -4680,7 +4661,6 @@ id,title,year,venue_id
 812482,"Automatic 3D to 2D Registration for the Photorealistic Rendering of Urban Scenes",2005,0
 812483,"Discriminative Training for Object Recognition Using Image Patches",2005,0
 812484,"Jensen-Shannon Boosting Learning for Object Recognition",2005,0
-812485,"WaldBoost " Learning for Time Constrained Sequential Detection",2005,0
 812486,"Formulating Semantic Image Annotation as a Supervised Learning Problem",2005,0
 812487,"Discriminative Learning of Markov Random Fields for Segmentation of 3D Scan Data",2005,0
 812488,"Feature Kernel Functions: Improving SVMs Using High-Level Knowledge",2005,0
@@ -4720,7 +4700,6 @@ id,title,year,venue_id
 812522,"Top-Down and Bottom-Up Strategies in Lesion Detection of Background Diabetic Retinopathy",2005,0
 812523,"Database-Guided Segmentation of Anatomical Structures with Complex Appearance",2005,0
 812524,"Blob Segmentation Using Joint Space-Intensity Likelihood Ratio Test: Application to 3D Tumor Segmentation",2005,0
-812525,"Creating Invariance to "Nuisance Parameters" in Face Recognition",2005,0
 812526,"Face Recognition Based on Frontal Views Generated from Non-Frontal Images",2005,0
 812527,"Face Verification across Age Progression",2005,0
 812528,"A High Resolution Grammatical Model for Face Representation and Sketching",2005,0
@@ -5532,7 +5511,6 @@ id,title,year,venue_id
 817869,"CSR corpus development",1992,8
 817870,"Collection and analyses of WSJ-CSR data at MIT",1992,8
 817871,"Spontaneous speech collection for the CSR corpus",1992,8
-817872,"DARPA February 1992 pilot corpus CSR "dry run" benchmark test results",1992,8
 817873,"Large vocabulary recognition of Wall Street Journal sentences at Dragon Systems",1992,8
 817874,"Applying SPHINX-II to the DARPA Wall Street Journal CSR task",1992,8
 817875,"The Lincoln large-vocabulary HMM CSR",1992,8
@@ -5703,7 +5681,6 @@ id,title,year,venue_id
 818050,"Tagging speech repairs",1994,8
 818051,"Information based intonation synthesis",1994,8
 818052,"Pegasus: a spoken language interface for on-line air travel planning",1994,8
-818053,"Recent developments in the experimental "Waxholm" dialog system",1994,8
 818054,"Recent improvements in the CMU spoken language understanding system",1994,8
 818055,"Combining knowledge sources to reorder N-best speech hypothesis lists",1994,8
 818056,"Predicting and managing spoken disfluencies during human-computer interaction",1994,8
@@ -5849,7 +5826,6 @@ id,title,year,venue_id
 836712,"Detection of Concentric Circles for Camera Calibration",2005,2
 836713,"Shape and Spatially-Varying BRDFs from Photometric Stereo",2005,2
 836714,"Multi-View Reconstruction Using Photo-consistency and Exact Silhouette Constraints: A Maximum-Flow Formulation",2005,2
-836715,"Avoiding the "Streetlight Effect": Tracking by Exploring Likelihood Modes",2005,2
 836716,"A Theoretical Limit on the Number of Effective Pixels that can be Optically Resolved on a Non-Planar Subject",2005,2
 836717,"Discovering Objects and their Localization in Images",2005,2
 836718,"Vehicle Identification between Non-Overlapping Cameras without Direct Feature Matching",2005,2
@@ -5922,7 +5898,6 @@ id,title,year,venue_id
 836785,"Shadow Flow: A Recursive Method to Learn Moving Cast Shadows",2005,2
 836786,"Vignette and Exposure Calibration and Compensation",2005,2
 836787,"An Enhanced Correlation-Based Method for Stereo Correspondence with Sub-Pixel Accuracy",2005,2
-836788,"Conformal Metrics and True "Gradient Flows" for Curves",2005,2
 836789,"Effciently Solving Dynamic Markov Random Fields Using Graph Cuts",2005,2
 836790,"A Shape-Based Segmentation Approach: An Improved Technique Using Level Sets",2005,2
 836791,"An Iterative Optimization Approach for Unified Image Segmentation and Matting",2005,2
@@ -5933,7 +5908,6 @@ id,title,year,venue_id
 836796,"Globally Optimal Estimates for Geometric Reconstruction Problems",2005,2
 836797,"Quasiconvex Optimization for Robust Geometric Reconstruction",2005,2
 836798,"Shapelets Correlated with Surface Normals Produce Surfaces",2005,2
-836799,"Multiple View Geometry and the L_"-norm",2005,2
 836800,"Object Detection in Aerial Imagery Based on Enhanced Semi-Supervised Learning",2005,2
 836801,"A New Framework for Approximate Labeling via Graph Cuts",2005,2
 836802,"Okapi-Chamfer Matching for Articulated Object Recognition",2005,2
@@ -5947,7 +5921,6 @@ id,title,year,venue_id
 836810,"Fitting Globally Stabilized Algebraic Surfaces to Range Data",2005,2
 836811,"Lighting Normalization with Generic Intrinsic Illumination Subspace for Face Recognition",2005,2
 836812,"Layered Active Appearance Models",2005,2
-836813,"Identifying Individuals in Video by Combining "Generative" and Discriminative Head Models",2005,2
 836814,"A General Framework for Temporal Video Scene Segmentation",2005,2
 836815,"Geometric and Photometric Restoration of Distorted Documents",2005,2
 836816,"A Model-Based Vehicle Segmentation Method for Tracking",2005,2
@@ -5963,7 +5936,6 @@ id,title,year,venue_id
 836826,"Consistent Surface Color for Texturing Large Objects in Outdoor Scenes",2005,2
 836827,"Neighborhood Preserving Embedding",2005,2
 836828,"Scale-Invariant Contour Completion Using Conditional Random Fields",2005,2
-836829,"Common Pattern Discovery Using Earth Mover"s Distance and Local Flow Maximization",2005,2
 836830,"Progressive Surface Reconstruction from Images Using a Local Prior",2005,2
 836831,"Video Behaviour Profiling and Abnormality Detection without Manual Labelling",2005,2
 836832,"A Robust Algorithm for Point Set Registration Using Mixture of Gaussians",2005,2
@@ -6038,7 +6010,6 @@ id,title,year,venue_id
 836901,"Bottom-up/Top-Down Image Parsing by Attribute Graph Grammar",2005,2
 836902,"Variational-Based Method to Extract Parametric Shapes from Images",2005,2
 836903,"Local Features for Object Class Recognition",2005,2
-836904,"Learning Object Categories from Google"s Image Search",2005,2
 836905,"Object Categorization by Learned Universal Visual Dictionary",2005,2
 836906,"Conditional Random Fields for Contextual Human Motion Recognition",2005,2
 836907,"Shape from Symmetry",2005,2
@@ -6218,7 +6189,6 @@ id,title,year,venue_id
 838857,"An Illuminance-Reflectance Model for Nonlinear Enhancement of Color Images",2005,0
 838858,"A New Nonlinear Dimensionality Reduction Technique for Pose and Lighting Invariant Face Recognition",2005,0
 838859,"Pose Angle Determination by Face, Eyes and Nose Localization",2005,0
-838860,"Evaluation of the Modelling of Local Areas and Errors of Localization in FRGC"05",2005,0
 838861,"Fast and Accurate Face Recognition Using Support Vector Machines",2005,0
 838862,"A New Face Recognition Algorithm using Bijective Mappings",2005,0
 838863,"Integral Normalized Gradient Image A Novel Illumination Insensitive Representation",2005,0
@@ -6399,7 +6369,6 @@ id,title,year,venue_id
 853653,"Multi-document summarization by visualizing topical content",2000,8
 853654,"Using summarization for automatic briefing generation",2000,8
 853655,"Proceedings of the 2000 NAACL-ANLP Workshop on Embedded machine translation systems - Volume 5",2000,8
-853656,"When is an embedded MT system "good enough" for filtering?",2000,8
 853657,"Task tolerance of MT output in integrated text processes",2000,8
 853658,"At your service: embedded MT as a service",2000,8
 853659,"Mandarin-English Information (MEI): investigating translingual speech retrieval",2000,8
@@ -6956,7 +6925,6 @@ id,title,year,venue_id
 883948,"Real-Time Visual SLAM with Resilience to Erratic Motion",2006,0
 883949,"Homography from Coplanar Ellipses with Application to Forensic Blood Splatter Reconstruction",2006,0
 883950,"Epipolar Geometry of Central Projection Systems Using Veronese Maps",2006,0
-883951,""How many planar viewing surfaces are there in noncentral catadioptric cameras?" Towards singe-image localization of space lines",2006,0
 883952,"Efficient Maximally Stable Extremal Region (MSER) Tracking",2006,0
 883953,"Identifying Color in Motion in Video Sensors",2006,0
 883954,"Robust multi-target tracking using spatio-temporal context",2006,0
@@ -7254,7 +7222,6 @@ id,title,year,venue_id
 939365,"Dependency treelet translation: syntactically informed phrasal SMT",2005,6
 939366,"QARLA: a framework for the evaluation of text summarization systems",2005,6
 939367,"Supervised and unsupervised learning for sentence compression",2005,6
-939368,"Digesting virtual "geek" culture: the summarization of technical internet relay chats",2005,6
 939369,"Lexicalization in crosslinguistic probabilistic parsing: the case of French",2005,6
 939370,"What to do when lexicalization fails: parsing German with suffix analysis and smoothing",2005,6
 939371,"Detecting errors in discontinuous structural annotation",2005,6
@@ -7483,7 +7450,6 @@ id,title,year,venue_id
 940047,"ParaEval: using paraphrases to evaluate summaries automatically",2006,8
 940048,"Paraphrasing for automatic evaluation",2006,8
 940049,"An information-theoretic approach to automatic evaluation of summaries",2006,8
-940050,"Cross linguistic name matching in English and Arabic: a "one to many mapping" extension of the Levenshtein edit distance algorithm",2006,8
 940051,"Language model-based document clustering using random walks",2006,8
 940052,"Unlimited vocabulary speech recognition for agglutinative languages",2006,8
 943793,"Proceedings of HLT/EMNLP on Interactive Demonstrations",2005,8
@@ -8128,7 +8094,6 @@ id,title,year,venue_id
 1215347,"Generating usable formats for metadata and annotations in a large meeting corpus",2007,6
 1215348,"Exploration of term dependence in sentence retrieval",2007,6
 1215349,"Minimum Bayes Risk decoding for BLEU",2007,6
-1215350,"Disambiguating between generic and referential "you" in dialog",2007,6
 1215351,"On the formalization of invariant mappings for metaphor interpretation",2007,6
 1215352,"Real-time correction of closed-captions",2007,6
 1215353,"Learning to rank definitions to generate quizzes for interactive information presentation",2007,6
@@ -9157,7 +9122,6 @@ id,title,year,venue_id
 1470619,"Predicting human-targeted translation edit rate via untrained human annotators",2010,8
 1470620,"Improving semantic role classification with Selectional Preferences",2010,8
 1470621,"Generalizing syntactic structures for product attribute candidate extraction",2010,8
-1470622,""cba to check the spelling" investigating parser performance on discussion forum posts",2010,8
 1470623,"Coreference resolution in a modular, entity-centered model",2010,8
 1470624,"Stream-based translation models for statistical machine translation",2010,8
 1470625,"Extracting parallel sentences from comparable corpora using document level alignment",2010,8
@@ -9213,7 +9177,6 @@ id,title,year,venue_id
 1470675,"Bitext-based resolution of German subject-object ambiguities",2010,8
 1470676,"Music, language, and computational modeling: lessons from the key-finding problem",2010,8
 1470677,"An efficient algorithm for easy-first non-directional dependency parsing",2010,8
-1470678,"From baby steps to Leapfrog: how "Less is More" in unsupervised dependency parsing",2010,8
 1470679,"Relaxed marginal inference and its application to dependency parsing",2010,8
 1470680,"Optimal parsing strategies for linear context-free rewriting systems",2010,8
 1470681,"The viability of web-derived polarity lexicons",2010,8
@@ -9274,7 +9237,6 @@ id,title,year,venue_id
 1471193,"Extracting social networks from literary fiction",2010,6
 1471194,"Pseudo-word for phrase-based machine translation",2010,6
 1471195,"Hierarchical search for word alignment",2010,6
-1471196,""Was it good? It was provocative." Learning the meaning of scalar adjectives",2010,6
 1471197,"Importance-Driven Turn-Bidding for spoken dialogue systems",2010,6
 1471198,"Entity-based local coherence modelling using topological fields",2010,6
 1471199,"Syntactic and semantic factors in processing difficulty: an integrated measure",2010,6
@@ -9378,7 +9340,6 @@ id,title,year,venue_id
 1471297,"A rational model of eye movement control in reading",2010,6
 1471298,"The influence of discourse on syntax a psycholinguistic model of sentence processing",2010,6
 1471299,"Complexity metrics in an incremental right-corner parser",2010,6
-1471300,""Ask not what textual entailment can do for you..."",2010,6
 1471301,"Assessing the role of discourse references in entailment inference",2010,6
 1471302,"Global learning of focused entailment graphs",2010,6
 1471303,"Modeling semantic relevance for question-answer pairs in web social communities",2010,6
@@ -9433,7 +9394,6 @@ id,title,year,venue_id
 1481548,"Improving translation via targeted paraphrasing",2010,7
 1481549,"Soft syntactic constraints for hierarchical phrase-based translation using latent syntactic distributions",2010,7
 1481550,"A hybrid morpheme-word representation for machine translation of morphologically rich languages",2010,7
-1481551,""Poetic" statistical machine translation: rhyme and meter",2010,7
 1481552,"Efficient graph-based semi-supervised learning of structured tagging models",2010,7
 1481553,"Better punctuation prediction with dynamic conditional random fields",2010,7
 1481554,"Joint training and decoding using virtual nodes for cascaded segmentation and tagging tasks",2010,7
@@ -9787,7 +9747,6 @@ id,title,year,venue_id
 1592165,"Question detection in spoken conversations using textual conversations",2011,8
 1592166,"Extending the entity grid with entity-specific features",2011,8
 1592167,"French TimeBank: an ISO-TimeML annotated reference corpus",2011,8
-1592168,"Search in the lost sense of "query": question formulation in web search queries and its temporal changes",2011,8
 1592169,"A corpus of scope-disambiguated English text",2011,8
 1592170,"From bilingual dictionaries to interlingual document representations",2011,8
 1592171,"AM-FM: a semantic framework for translation quality assessment",2011,8
@@ -9845,7 +9804,6 @@ id,title,year,venue_id
 1592223,"Reordering modeling using weighted alignment matrices",2011,8
 1592224,"Two easy improvements to lexical weighting",2011,8
 1592225,"Why initialization matters for IBM model 1: multiple optima and non-strict convexity",2011,8
-1592226,""I thou thee, thou traitor": predicting formal vs. informal address in English literature",2011,8
 1592227,"Clustering comparable corpora for bilingual lexicon extraction",2011,8
 1592228,"Identifying word translations from comparable corpora using latent topic models",2011,8
 1592229,"Why press backspace?: understanding user input behaviors in Chinese Pinyin input method",2011,8
@@ -10444,7 +10402,6 @@ id,title,year,venue_id
 1750629,"A non-convex relaxation approach to sparse dictionary learning",2011,0
 1750630,"Using 3D scene structure to improve tracking",2011,0
 1750631,"Supervised local subspace learning for continuous head pose estimation",2011,0
-1750632,"Adaptive random forest -- How many "experts" to ask before making a decision?",2011,0
 1750633,"Local isomorphism to solve the pre-image problem in kernel methods",2011,0
 1750634,"Robust and efficient regularized boosting using total Bregman divergence",2011,0
 1750635,"Nonlinear shape manifolds as shape priors in level set segmentation and tracking",2011,0
@@ -11193,7 +11150,6 @@ id,title,year,venue_id
 1885683,"A graph cut algorithm for higher-order Markov Random Fields",2011,2
 1885684,"Stereo time-of-flight",2011,2
 1885685,"Dense one-shot 3D reconstruction by detecting continuous regions with parallel line projection",2011,2
-1885686,"Robust consistent correspondence between 3D non-rigid shapes based on "Dual Shape-DNA"",2011,2
 1885687,"Discriminative high order SVD: Adaptive tensor subspace selection for image classification, clustering, and retrieval",2011,2
 1885688,"Dynamic and hierarchical multi-structure geometric model fitting",2011,2
 1885689,"Linear dependency modeling for feature fusion",2011,2
@@ -11290,7 +11246,6 @@ id,title,year,venue_id
 1885780,"Multiplexed illumination for scene recovery in the presence of global illumination",2011,2
 1885781,"Oral session 2-2",2011,2
 1885782,"Data-driven crowd analysis in videos",2011,2
-1885783,"A "string of feature graphs" model for recognition of complex activities in natural videos",2011,2
 1885784,"Human action recognition by learning bases of action attributes and parts",2011,2
 1885785,"Spatio-temporal clustering of probabilistic region trajectories",2011,2
 1885786,"Generalized background subtraction based on hybrid inference by belief propagation and Bayesian filtering",2011,2
@@ -11555,7 +11510,6 @@ id,title,year,venue_id
 1913277,"Modeling review comments",2012,6
 1913278,"A joint model for discovery of aspects in utterances",2012,6
 1913279,"Aspect extraction through semi-supervised modeling",2012,6
-1913280,"Learning to "read between the lines" using Bayesian logic programs",2012,6
 1913281,"Collective generation of natural image descriptions",2012,6
 1913282,"Concept-to-text generation via discriminative reranking",2012,6
 1913283,"A discriminative hierarchical model for fast coreference at large scale",2012,6
@@ -11750,7 +11704,6 @@ id,title,year,venue_id
 1913609,"Unsupervised PCFG induction for grounded language learning with highly ambiguous supervision",2012,7
 1913610,"Forced derivation tree based model training to statistical machine translation",2012,7
 1913611,"Multi-instance multi-label learning for relation extraction",2012,7
-1913612,"An "AI readability" formula for French as a foreign language",2012,7
 1913613,"Dynamic programming for higher order parsing of gap-minding trees",2012,7
 1913614,"Joint entity and event coreference resolution across documents",2012,7
 1913615,"Joint Chinese word segmentation, POS tagging and parsing",2012,7
@@ -11822,7 +11775,6 @@ id,title,year,venue_id
 1913681,"First-order vs. higher-order modification in distributional semantics",2012,7
 1913682,"Learning-based multi-sieve co-reference resolution with knowledge",2012,7
 1913683,"Joint learning for coreference resolution with Markov logic",2012,7
-1913684,"Resolving "this-issue" anaphora",2012,7
 1913685,"Entity based Q&A retrieval",2012,7
 1913686,"Constructing task-specific taxonomies for document collection browsing",2012,7
 1913687,"Besting the quiz master: crowdsourcing incremental classification games",2012,7
@@ -12330,7 +12282,6 @@ id,title,year,venue_id
 2070746,"Network Principles for SfM: Disambiguating Repeated Structures with Local Context",2013,2
 2070747,"Efficient and Robust Large-Scale Rotation Averaging",2013,2
 2070748,"Pose Estimation with Unknown Focal Length Using Points, Directions and Lines",2013,2
-2070749,"Unsupervised Intrinsic Calibration from a Single Frame Using a "Plumb-Line" Approach",2013,2
 2070750,"Structured Light in Sunlight",2013,2
 2070751,"Content-Aware Rotation",2013,2
 2070752,"A Max-Margin Perspective on Sparse Representation-Based Classification",2013,2
@@ -12549,7 +12500,6 @@ id,title,year,venue_id
 2070965,"Discriminant Tracking Using Tensor Representation with Semi-supervised Improvement",2013,2
 2070966,"Non-convex P-Norm Projection for Robust Sparsity",2013,2
 2070967,"Robust Dictionary Learning by Error Source Decomposition",2013,2
-2070968,"Inferring "Dark Matter" and "Dark Energy" from Videos",2013,2
 2070969,"Video Co-segmentation for Meaningful Action Extraction",2013,2
 2070970,"Flattening Supervoxel Hierarchies by the Uniform Entropy Slice",2013,2
 2070971,"A Learning-Based Approach to Reduce JPEG Artifacts in Image Matting",2013,2

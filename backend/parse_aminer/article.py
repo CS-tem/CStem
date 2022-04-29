@@ -53,6 +53,9 @@ if __name__ == '__main__':
                     continue
                 venue = line[3:-1]
 
+                if '"' in title:
+                    continue
+
                 for v in VENUE_ID_MAPPING.keys():
                     if venue.startswith(v):
                         venue_id = VENUE_ID_MAPPING[v]

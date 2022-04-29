@@ -1,6 +1,6 @@
 cd "$(dirname "$0")"
 
-DNAME="artificial"
+DNAME="real"
 
 mkdir -p data/$DNAME/post_spark
 cp data/$DNAME/pre_spark/* data/$DNAME/post_spark
