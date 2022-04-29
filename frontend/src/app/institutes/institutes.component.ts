@@ -31,10 +31,10 @@ export class InstitutesComponent implements OnInit {
   dataSource!: MatTableDataSource<Institute>;
   haveDS = false;
 
-  start_year: number = 2005;
-  end_year: number = 2023;
+  start_year: number = 1975;
+  end_year: number = 2022;
   options: Options = {
-    floor: 2005,
+    floor: 1975,
     ceil: 2022
   };
 

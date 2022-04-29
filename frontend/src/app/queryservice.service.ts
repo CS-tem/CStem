@@ -59,7 +59,7 @@ export class QueryserviceService {
   }
 
   public getArticles() : Observable<any> {
-    return this.http.get(`http://127.0.0.1:8000/articles`);
+    return this.http.get(`http://127.0.0.1:8000/articles/`);
   }
 
   public getArticle(id: number) : Observable<any> {

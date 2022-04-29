@@ -24,18 +24,18 @@ export class AuthorsComponent implements OnInit {
   topicFilter = new FormControl();
   topicList: string[] = ['all'];
   @ViewChild('paginator') paginator: MatPaginator | any;
-  dataSource!: MatTableDataSource<Author>;
-  haveDS = false;
+  dataSource: MatTableDataSource<Author>;
 
-  start_year: number = 2005;
-  end_year: number = 2023;
+  start_year: number = 1975;
+  end_year: number = 2022;
   topics: any = [];
   options: Options = {
-    floor: 2005,
+    floor: 1975,
     ceil: 2022
   };
 
   constructor(private router: Router, private qs : QueryserviceService) { 
+    this.dataSource = new MatTableDataSource(this.authors);
   }
 
   ngOnInit(): void {
@@ -56,6 +56,8 @@ export class AuthorsComponent implements OnInit {
             n_citations: row['n_citations']
           });
         });
+        this.dataSource = new MatTableDataSource(this.authors);
+        this.dataSource.paginator = this.paginator;
       })
     );
   }
@@ -103,7 +105,7 @@ export class AuthorsComponent implements OnInit {
           return 0;
       }
     });
-    this.dataSource.data = this.authors;
+    this.dataSource = new MatTableDataSource(this.authors);
     this.dataSource.paginator = this.paginator;
   }
 
@@ -141,12 +143,7 @@ export class AuthorsComponent implements OnInit {
           n_citations: row['n_citations']
         });
       });
-      if (this.haveDS)
-        this.dataSource.data = this.authors;
-      else {
-        this.dataSource = new MatTableDataSource(this.authors);
-        this.haveDS = true;
-      }
+      this.dataSource.data = this.authors;
       this.dataSource.paginator = this.paginator;
     });
   }
