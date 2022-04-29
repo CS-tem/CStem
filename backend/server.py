@@ -424,7 +424,7 @@ class NewVenuesCondition(BaseModel):
     venues : list
 
 @app.post('/new-articles-info/')
-def post_new_articles_info(request: NewArticlesCondition):
+def post_new_articles_info(request: NewVenuesCondition):
     query = """
     MATCH (i: Article)
     MATCH (j: Venue{id : i.venue_id})
