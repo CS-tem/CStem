@@ -11,5 +11,12 @@ VENUE_ID_MAPPING = {
     'KDD ': 4,
     'NIPS ': 5,
     'NIPS-3 ': 5,
-    'Advances in Neural Information Processing Systems ': 5
+    'Advances in Neural Information Processing Systems ': 5,
+    'ACL ': 6,
+    'EMNLP ': 7,
+    'EMNLP-CoNLL': 7,
+    'NAACL ': 8,
+    'NAACL-': 8,
+    'HLT ': 8,
+    'HLT-': 8,
 }
