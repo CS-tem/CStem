@@ -1,0 +1,5 @@
+id,name,acronym,type,n_pubs,n_citations,flexibility
+0,Conference on Computer Vision and Pattern Recognition,CVPR,Conference,5,11,0.6
+1,International Conference on Computer Vision,ICCV,Conference,3,4,0.0
+2,European Conference on Computer Vision,ECCV,Conference,2,2,0.0
+3,International Conference on Machine Learning,ICML,Conference,4,5,0.25
