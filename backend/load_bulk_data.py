@@ -7,8 +7,10 @@ from config import NODES, RELS, PATH_CSV_FINAL
 from py2neo import Graph
 from py2neo.bulk import create_nodes, create_relationships
 
+from password import PASSWORD
 
-BATCH_SIZE = 10000 # change this accordingly
+
+BATCH_SIZE = 100 # change this accordingly
 
 
 def pyType(v):
@@ -58,16 +60,19 @@ def createRelations(g, path_base):
 
         between = RELS[rel]['between']
 
-        node1 = between[0]
-        node2 = between[1]
-
         table = RELS[rel]['csv']
 
         attrs = RELS[rel]['attrs']
         n_attrs = len(attrs)
 
         direction = RELS[rel]['direction']
-        d_start, d_end = dir2Cypher(direction)
+
+        if direction == '<-':
+            node1 = between[1]
+            node2 = between[0]
+        else:
+            node1 = between[0]
+            node2 = between[1]
 
         fpath = os.path.join(path_base, table + '.csv')
         df = pd.read_csv(fpath)
@@ -82,14 +87,18 @@ def createRelations(g, path_base):
             if n_attrs > 0:
                 vals = [row[a] for a in attrs]
                 typed_vals = [pyType(v) for v in vals]
-                props = {k:v for k, v in zip(attrs, typed_vals)}
+                props = typed_vals #{k:v for k, v in zip(attrs, typed_vals)}
             else:
                 props = {}
 
-            node1_id = row[cols[0]]
-            node2_id = row[cols[1]]
+            if direction == '<-':
+                node1_id = row[cols[1]]
+                node2_id = row[cols[0]]
+            else:
+                node1_id = row[cols[0]]
+                node2_id = row[cols[1]]
 
-            data.append((str(node1_id), props, str(node2_id)))
+            data.append(((int(node1_id), props, int(node2_id))))
 
             l_data = len(data)
             if l_data % BATCH_SIZE == 0 and l_data != 0:
@@ -98,7 +107,8 @@ def createRelations(g, path_base):
                     data, 
                     rel, 
                     start_node_key = (node1, 'id'),
-                    end_node_key = (node2, 'id')
+                    end_node_key = (node2, 'id'),
+                    keys = attrs
                 )
                 data = []
 
@@ -108,15 +118,14 @@ def createRelations(g, path_base):
                 data, 
                 rel, 
                 start_node_key = (node1, 'id'),
-                end_node_key = (node2, 'id')
+                end_node_key = (node2, 'id'),
+                keys = attrs
             )
             data = []
 
 
 if __name__ == '__main__':
 
-    g = Graph()
+    g = Graph('bolt://localhost:7687', auth = ('neo4j', PASSWORD))
     createNodes(g, PATH_CSV_FINAL)
     createRelations(g, PATH_CSV_FINAL)
-
-    
