@@ -56,7 +56,7 @@ export class AuthorsComponent implements OnInit {
             n_citations: row['n_citations']
           });
         });
-        this.dataSource = new MatTableDataSource(this.authors);
+        this.dataSource.data = this.authors;
         this.dataSource.paginator = this.paginator;
       })
     );

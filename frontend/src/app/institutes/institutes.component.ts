@@ -63,6 +63,12 @@ export class InstitutesComponent implements OnInit {
           });
         });
         this.allInstitutes = this.institutes;
+        if (this.haveDS)
+          this.dataSource.data = this.institutes;
+        else {
+          this.dataSource = new MatTableDataSource(this.institutes);
+          this.haveDS = true;
+        }
       })
     );
   }
