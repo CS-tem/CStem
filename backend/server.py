@@ -350,15 +350,15 @@ class NewAuthorsCondition(BaseModel):
 @app.post('/new-authors-info/')
 def post_new_authors_info(request: NewAuthorsCondition):
     query = """
-    CALL {{MATCH (i: Author)
-    OPTIONAL MATCH (i)-[:AuthorArticle]->(j)<-[:ArticleTopic]-(k)
-    OPTIONAL MATCH (j)-[:CitedBy]->(t)
-    WHERE k.name in {}
-    AND {} <= j.year <= {}
-    RETURN i, COALESCE(COUNT(DISTINCT j),0) AS n_pubs, COALESCE(COUNT(DISTINCT t),0) AS n_cits}}
-    WITH *
-    RETURN i, n_pubs, SUM(n_cits) AS n_citations;""".format(
-        request.topics, request.frm, request.to
+    CALL {{MATCH (i: Author)-[:AuthorArticle]->(j)<-[:ArticleTopic]-(x)
+    WHERE j.year >={} AND j.year <={} AND x.name in {}
+    RETURN i, COALESCE(count(DISTINCT j),0) AS n_pubs}}
+    CALL {{ WITH *  MATCH (a: Author)-[:AuthorArticle]->(b)
+    OPTIONAL MATCH (b)-[:CitedBy]->(k)
+    WHERE b.year >= {} AND b.year <= {} AND k.year >= {} AND k.year <= {}
+    RETURN a,b,COALESCE(COUNT(DISTINCT k),0) AS n_cits}}
+    RETURN i, n_pubs, COALESCE(SUM(CASE WHEN a.id = i.id THEN n_cits ELSE 0 END),0) AS n_citations;""".format(
+        request.frm, request.to, request.topics, request.frm, request.to, request.frm, request.to
     )
     result = neo_db.neo4j_query(query)
     return result
