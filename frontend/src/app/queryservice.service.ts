@@ -158,4 +158,13 @@ export class QueryserviceService {
     };
     return this.http.post('http://127.0.0.1:8000/new-institutes-info/', data);
   }
+  
+    public getArticlesNewInfo(from: number, to: number, venues: Array<string>) {
+      var data = {
+        'frm': from,
+        'to': to,
+        'venues' : venues
+      };
+      return this.http.post('http://127.0.0.1:8000/new-articles-info/', data);
+  }
 }
