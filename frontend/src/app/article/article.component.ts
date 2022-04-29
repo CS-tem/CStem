@@ -69,7 +69,7 @@ export class ArticleComponent implements OnInit {
       this.qs.getArticle(this.article_id).subscribe(res => {
         this.article = {
           id: res[0].i['id'],
-          n_citations: res[0].i['n_citations'],
+          n_citations: res[0]['citations'],
           title: res[0].i['title'],
           venue_id: res[0].i['venue_id'],
           year: res[0].i['year'],
@@ -95,7 +95,12 @@ export class ArticleComponent implements OnInit {
           this.citations_x.push(""+ele.year);
           this.citations_y.push(""+ele.n_citations);
         }  
-        this.citations_updateSeries(); 
+        // if(this.citations_x[0] != 'null')
+        // {
+          this.citations_updateSeries(); 
+        //   console.log("H", this.citations_x);
+        // }
+          
       })
     );
   }
@@ -113,133 +118,133 @@ export class ArticleComponent implements OnInit {
   }
 
   updateCitationGraph(): void {
-    var gOption : any = {
-      title: {
-        text: 'Citation Graph'
-      },
-      tooltip: {},
-      animationDurationUpdate: 1500,
-      animationEasingUpdate: 'quinticInOut',
-      series: [
-        {
-          type: 'graph',
-          layout: 'none',
-          symbolSize: 50,
-          roam: true,
-          label: {
-            show: true
-          },
-          edgeSymbol: ['circle', 'arrow'],
-          edgeSymbolSize: [4, 10],
-          edgeLabel: {
-            fontSize: 20
-          },
-          data: [
-            {
-              name: 'Node 1',
-              x: 300,
-              y: 300
-            },
-            {
-              name: 'Node 2',
-              x: 800,
-              y: 300
-            },
-            {
-              name: 'Node 3',
-              x: 550,
-              y: 100
-            },
-            {
-              name: 'Node 4',
-              x: 550,
-              y: 500
-            }
-          ],
-          links: [
-            {
-              source: 0,
-              target: 1,
-              symbolSize: [5, 20],
-              label: {
-                show: true
-              },
-              lineStyle: {
-                width: 5,
-                curveness: 0.2
-              }
-            },
-            {
-              source: 'Node 2',
-              target: 'Node 1',
-              label: {
-                show: true
-              },
-              lineStyle: {
-                curveness: 0.2
-              }
-            },
-            {
-              source: 'Node 1',
-              target: 'Node 3'
-            },
-            {
-              source: 'Node 2',
-              target: 'Node 3'
-            },
-            {
-              source: 'Node 2',
-              target: 'Node 4'
-            },
-            {
-              source: 'Node 1',
-              target: 'Node 4'
-            }
-          ],
-          lineStyle: {
-            opacity: 0.9,
-            width: 2,
-            curveness: 0
-          }
-        }
-      ]
-    }; 
-    var data = [];
-    var links = [];
-    data.push({
-      name: ""+this.article_id,
-      x: 500,
-      y: 500
-    });
-    var n_citedfrom = this.cited_from.length;
-    var n_citedby = this.cited_by.length;
-    for (var i = 0; i < n_citedfrom; i++) {
-      var yc = 250*(1+(i*1.0/n_citedfrom));
-      data.push({
-        name: ""+this.cited_from[i]['j']['id'],
-        x: 250,
-        y: yc
-      });
-      links.push({
-        source: ""+this.cited_from[i]['j']['id'],
-        target: ""+this.article_id
-      });
-    }
-    for (var i = 0; i < n_citedby; i++) {
-      var yc = 250*(1+(i*1.0/n_citedfrom));
-      data.push({
-        name: ""+this.cited_by[i]['j']['id'],
-        x: 750,
-        y: yc
-      });
-      links.push({
-        source: ""+this.article_id,
-        target: ""+this.cited_from[i]['j']['id']
-      });
-    }
-    gOption['data'] = data;
-    gOption['links'] = links;
-    console.log(gOption);
-    this.graphOption = gOption;
+    // var gOption : any = {
+    //   title: {
+    //     text: 'Citation Graph'
+    //   },
+    //   tooltip: {},
+    //   animationDurationUpdate: 1500,
+    //   animationEasingUpdate: 'quinticInOut',
+    //   series: [
+    //     {
+    //       type: 'graph',
+    //       layout: 'none',
+    //       symbolSize: 50,
+    //       roam: true,
+    //       label: {
+    //         show: true
+    //       },
+    //       edgeSymbol: ['circle', 'arrow'],
+    //       edgeSymbolSize: [4, 10],
+    //       edgeLabel: {
+    //         fontSize: 20
+    //       },
+    //       data: [
+    //         {
+    //           name: 'Node 1',
+    //           x: 300,
+    //           y: 300
+    //         },
+    //         {
+    //           name: 'Node 2',
+    //           x: 800,
+    //           y: 300
+    //         },
+    //         {
+    //           name: 'Node 3',
+    //           x: 550,
+    //           y: 100
+    //         },
+    //         {
+    //           name: 'Node 4',
+    //           x: 550,
+    //           y: 500
+    //         }
+    //       ],
+    //       links: [
+    //         {
+    //           source: 0,
+    //           target: 1,
+    //           symbolSize: [5, 20],
+    //           label: {
+    //             show: true
+    //           },
+    //           lineStyle: {
+    //             width: 5,
+    //             curveness: 0.2
+    //           }
+    //         },
+    //         {
+    //           source: 'Node 2',
+    //           target: 'Node 1',
+    //           label: {
+    //             show: true
+    //           },
+    //           lineStyle: {
+    //             curveness: 0.2
+    //           }
+    //         },
+    //         {
+    //           source: 'Node 1',
+    //           target: 'Node 3'
+    //         },
+    //         {
+    //           source: 'Node 2',
+    //           target: 'Node 3'
+    //         },
+    //         {
+    //           source: 'Node 2',
+    //           target: 'Node 4'
+    //         },
+    //         {
+    //           source: 'Node 1',
+    //           target: 'Node 4'
+    //         }
+    //       ],
+    //       lineStyle: {
+    //         opacity: 0.9,
+    //         width: 2,
+    //         curveness: 0
+    //       }
+    //     }
+    //   ]
+    // }; 
+    // var data = [];
+    // var links = [];
+    // data.push({
+    //   name: ""+this.article_id,
+    //   x: 500,
+    //   y: 500
+    // });
+    // var n_citedfrom = this.cited_from.length;
+    // var n_citedby = this.cited_by.length;
+    // for (var i = 0; i < n_citedfrom; i++) {
+    //   var yc = 250*(1+(i*1.0/n_citedfrom));
+    //   data.push({
+    //     name: ""+this.cited_from[i]['j']['id'],
+    //     x: 250,
+    //     y: yc
+    //   });
+    //   links.push({
+    //     source: ""+this.cited_from[i]['j']['id'],
+    //     target: ""+this.article_id
+    //   });
+    // }
+    // for (var i = 0; i < n_citedby; i++) {
+    //   var yc = 250*(1+(i*1.0/n_citedfrom));
+    //   data.push({
+    //     name: ""+this.cited_by[i]['j']['id'],
+    //     x: 750,
+    //     y: yc
+    //   });
+    //   links.push({
+    //     source: ""+this.article_id,
+    //     target: ""+this.cited_from[i]['j']['id']
+    //   });
+    // }
+    // gOption['data'] = data;
+    // gOption['links'] = links;
+    // console.log(gOption);
+    // this.graphOption = gOption;
   };
 }
