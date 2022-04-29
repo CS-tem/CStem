@@ -70,6 +70,7 @@ export class AuthorsComponent implements OnInit {
         res.forEach((element: any) => {
           this.topicList.push(element.name);
         });
+        this.topics = this.topicList;
       })
     );
   }
@@ -132,7 +133,20 @@ export class AuthorsComponent implements OnInit {
   }
 
   handleUserChange(): void {
-    this.qs.getAuthorNewInfo(this.start_year, this.end_year, this.topics);
+    this.qs.getAuthorsNewInfo(this.start_year, this.end_year, this.topics).subscribe((res: any) => {
+      this.authors = [];
+      res.forEach((row: any) => {
+        this.authors.push({
+          id: row['i']['id'],
+          name: row['i']['name'],
+          h_index: row['i']['h_index'],
+          n_pubs: row['n_pubs'],
+          n_citations: row['n_citations']
+        });
+      });
+      this.dataSource.data = this.authors;
+      this.dataSource.paginator = this.paginator;
+    });
   }
 
 }

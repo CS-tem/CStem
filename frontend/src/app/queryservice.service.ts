@@ -127,7 +127,7 @@ export class QueryserviceService {
     return this.http.get(`http://127.0.0.1:8000/article/citation-graph/${id}-${d}`);
   }
 
-  public getAuthorNewInfo(from: number, to: number, topics: Array<String>) {
+  public getAuthorsNewInfo(from: number, to: number, topics: Array<String>) {
     var data = {
       'frm': from,
       'to': to,
