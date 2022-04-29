@@ -133,16 +133,17 @@ export class ArticleComponent implements OnInit {
               nodes_set.add(path.nodes[i].id);
               this.nodes_list.push({
                 id: path.nodes[i].id,
-                label: path.nodes[i].id,
+                label: ''+path.nodes[i].id,
                 title: path.nodes[i].title,
-                color: 'green'
+                color: '#C2FABC',
+                shape: 'diamond'
               });
             }
             if (!nodes_set.has(path.nodes[i+1].id)) {
               nodes_set.add(path.nodes[i+1].id);
               this.nodes_list.push({
                 id: path.nodes[i+1].id,
-                label: path.nodes[i+1].id,
+                label: ''+path.nodes[i+1].id,
                 title: path.nodes[i+1].title
               });
             }
@@ -173,7 +174,6 @@ export class ArticleComponent implements OnInit {
           autoResize: true,
 
           height: '100%',
-          width: '60%',
 
           nodes: {
             shape: 'ellipse',
@@ -187,10 +187,12 @@ export class ArticleComponent implements OnInit {
             arrows: {
               to: {
                 enabled: true,
-                // type: 'vee',
+                type: 'triangle',
               },
             },
           },
+
+          interaction: {hover:true}
 
         });
 
