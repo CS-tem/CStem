@@ -120,6 +120,9 @@ export class AuthorComponent implements OnInit {
         width: 600,
         type: "pie"
       },
+      title: {
+        text: "Topicwise Publications"
+      },
       labels: ["Topic1", "Topic 2", "Topic 3"],
       responsive: [
         {

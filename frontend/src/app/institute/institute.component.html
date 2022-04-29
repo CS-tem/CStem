@@ -23,6 +23,8 @@
 
   </mat-list>
 
+  <h3>Members</h3>
+
   <table mat-table [dataSource]="members" class="" matSort (matSortChange)="members_sortData($event)">
 
       <ng-container matColumnDef="name">
@@ -48,6 +50,8 @@
       <tr mat-header-row *matHeaderRowDef="members_displayedColumns"></tr>
       <tr mat-row *matRowDef="let row; columns: members_displayedColumns;" (click)="openRow(row)" class="clickable"></tr>
   </table>
+
+  <h3>Statistics</h3>
     
   <div class="chart">
     <apx-chart
