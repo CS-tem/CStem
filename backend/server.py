@@ -150,10 +150,13 @@ def get_author_colabs(author_id : int):
 @app.get('/articles/')
 def get_articles():
     # query = 'MATCH (i: Article) RETURN i;'
-    query = """MATCH (i: Article), (v: Venue {id : i.venue_id}) RETURN i, v.acronym as vacr;"""
+    query = """MATCH (i: Article), (v: Venue {id : i.venue_id})
+    OPTIONAL MATCH (i)-[:CitedBy]->(j)
+    RETURN i, COALESCE(COUNT(DISTINCT j),0) AS n_citations, v.acronym as vacr;"""
     result = neo_db.neo4j_query(query)
     for entry in result:
         entry['i']['vacr'] = entry['vacr'] 
+        entry['i']['n_citations'] = entry['n_citations']
     return [entry['i'] for entry in result]
 
 @app.get('/articles/{article_id}')
