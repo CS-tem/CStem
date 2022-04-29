@@ -5,6 +5,10 @@ import { Sort } from '@angular/material/sort';
 import { FormControl } from '@angular/forms';
 import { MatSelectChange } from '@angular/material/select';
 import { Router } from '@angular/router';
+import { ViewChild } from '@angular/core';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatTableDataSource } from '@angular/material/table';
+import { Institute } from '../institute';
 
 @Component({
   selector: 'app-institutes',
@@ -18,8 +22,14 @@ export class InstitutesComponent implements OnInit {
   topicFilter = new FormControl();
   topicList: string[] = ['all'];
   chosenTopics = [];
+  @ViewChild('paginator') paginator: MatPaginator | any;
+  dataSource: MatTableDataSource<Institute>;
 
-  constructor(private router: Router, private qs : QueryserviceService) { }
+
+  constructor(private router: Router, private qs : QueryserviceService) { 
+    this.dataSource = new MatTableDataSource(this.institutes);
+    this.dataSource.paginator = this.paginator;
+  }
 
   ngOnInit(): void {
     this.updateInstitutesInfo();
@@ -29,8 +39,19 @@ export class InstitutesComponent implements OnInit {
   updateInstitutesInfo() : void {
     this.subscription.add(
       this.qs.getInstitutes().subscribe(res => {
-        this.institutes = res;
-        console.log(res);
+        this.institutes = [];
+        res.forEach((row: any) => {
+          this.institutes.push({
+            id: row['id'],
+            name: row['name'],
+            country: row['country'],
+            n_members: row['n_members'],
+            n_pubs: row['n_pubs'],
+            n_citations: row['n_citations'] 
+          });
+        });
+        this.dataSource = new MatTableDataSource(this.institutes);
+        this.dataSource.paginator = this.paginator;
       })
     );
   }
