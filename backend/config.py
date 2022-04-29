@@ -1,8 +1,10 @@
 import os
 
+DNAME = "artificial"
+
 PATH_BASE = os.path.dirname(__file__)
-PATH_CSV_BASE = f'{PATH_BASE}/data/real/pre_spark'
-PATH_CSV_FINAL = f'{PATH_BASE}/data/real/post_spark'
+PATH_CSV_BASE = f'{PATH_BASE}/data/{DNAME}/pre_spark'
+PATH_CSV_FINAL = f'{PATH_BASE}/data/{DNAME}/post_spark'
 PATH_CYPHER = f'{PATH_BASE}/insert.cypher'
 
 TABLES = [
