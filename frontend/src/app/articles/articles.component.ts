@@ -18,7 +18,7 @@ export interface Article {
   styleUrls: ['./articles.component.scss']
 })
 export class ArticlesComponent implements OnInit {
-  displayedColumns = ["title", "venue_id", "n_citations", "year"];
+  displayedColumns = ["title", "vacr", "n_citations", "year"];
   
   subscription = new Subscription();
   articles: any = [{}];
@@ -33,7 +33,6 @@ export class ArticlesComponent implements OnInit {
     this.subscription.add(
       this.qs.getArticles().subscribe(res => {
         console.log(res);
-        console.log(res)
         this.articles = res;
       })
     );
@@ -51,8 +50,8 @@ export class ArticlesComponent implements OnInit {
       switch (sort.active) {
         case 'id':
           return compare(a.id, b.id, isAsc);
-        case 'venue_id':
-          return compare(a.venue_id, b.venue_id, isAsc);
+        case 'vacr':
+          return compare(a.vacr, b.vacr, isAsc);
         case 'year':
           return compare(a.year, b.year, isAsc);
         case 'title':
