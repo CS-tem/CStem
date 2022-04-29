@@ -63,8 +63,6 @@ export class InstitutesComponent implements OnInit {
             n_citations: row['n_citations'] 
           });
         });
-        this.dataSource.data = this.institutes;
-        this.dataSource.paginator = this.paginator;
         this.allInstitutes = this.institutes;
       })
     );

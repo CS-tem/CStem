@@ -57,8 +57,6 @@ export class AuthorsComponent implements OnInit {
             n_citations: row['n_citations']
           });
         });
-        this.dataSource.data = this.authors;
-        this.dataSource.paginator = this.paginator;
       })
     );
   }
