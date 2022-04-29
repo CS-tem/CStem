@@ -13,7 +13,7 @@
       <mat-list-item> Total citations: {{venue.n_citations}} </mat-list-item>
       <mat-divider></mat-divider>
 
-      <mat-list-item> Average citations: {{venue.n_citations / venue.n_pubs}} </mat-list-item>
+      <mat-list-item> Average citations: {{(venue.n_pubs == 0)? 0 : venue.n_citations / venue.n_pubs | number : '1.2-2'}} </mat-list-item>
 
   </mat-list>
 
