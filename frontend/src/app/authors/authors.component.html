@@ -20,7 +20,15 @@
             </mat-select-trigger>
             <mat-option *ngFor="let topic of topicList" [value]="topic">{{capitalize(topic)}}</mat-option>
         </mat-select>
-      </mat-form-field>
+        </mat-form-field>
+
+        <ngx-slider
+            [(value)]="start_year"
+            [(highValue)]="end_year"
+            [options]="options"
+            (valueChange)="handleUserChange()"
+            (highValueChange)="handleUserChange()"
+        ></ngx-slider>
 
     </div>
 
@@ -57,14 +65,6 @@
                     [pageSizeOptions]="[5, 10, 25, 100]"
                     aria-label="Select page">
     </mat-paginator>
-
-    <ngx-slider
-        [(value)]="start_year"
-        [(highValue)]="end_year"
-        [options]="options"
-        (valueChange)="handleUserChange()"
-        (highValueChange)="handleUserChange()"
-      ></ngx-slider>
 
 </div>
   
