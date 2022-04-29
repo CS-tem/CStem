@@ -54,8 +54,8 @@ export class QueryserviceService {
     return this.http.get(`http://127.0.0.1:8000/author-pubs-per-topic/${id}`);
   }
 
-  public getAuthorColabs(id: number) : Observable<any> {
-    return this.http.get(`http://127.0.0.1:8000/author-colab/${id}`);
+  public getAuthorColabs(id: number, k:number) : Observable<any> {
+    return this.http.get(`http://127.0.0.1:8000/author-colab/${id}-${k}`);
   }
 
   public getArticles() : Observable<any> {

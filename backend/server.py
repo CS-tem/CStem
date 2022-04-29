@@ -150,13 +150,23 @@ def get_author_pubs_per_topic(author_id : int):
     result = neo_db.neo4j_query(query)
     return result
 
-@app.get('/author-colab/{author_id}')
-def get_author_colabs(author_id : int):
-    query = f"""MATCH (i : Author{{id:{author_id}}})
-    OPTIONAL MATCH r=(i)-[:Coauthor*..]->(j)
-    WITH r, length(r) AS depth
-    WHERE depth <= 1
-    RETURN nodes(r) as nodes;""".format(author_id)
+@app.get('/author-colab/{query_str}')
+def get_author_colabs(query_str : str):
+    qlist = query_str.split('-')
+    author_id = qlist[0]
+    k = qlist[1]
+    query = f"""
+    CALL{{
+        MATCH (a1 {{id: {author_id}}})-[r:Coauthor]-(a2)  
+        RETURN a2
+        ORDER BY r.n_colab
+        LIMIT {k}
+    }}
+    UNWIND a2 as ua2
+    WITH collect(DISTINCT ua2) as V
+    MATCH (v1)-[r:Coauthor]-(v2)
+    WHERE v1 in V and v2 in V
+    RETURN v1, v2, r.n_colab"""
     result = neo_db.neo4j_query(query)
     return result
 
@@ -424,7 +434,7 @@ class NewArticlesCondition(BaseModel):
     venues : list
 
 @app.post('/new-articles-info/')
-def post_new_articles_info(request: NewArticlesCondition):
+def post_new_articles_info(request: NewVenuesCondition):
     query = """
     MATCH (i: Article)
     MATCH (j: Venue{id : i.venue_id})
