@@ -38,10 +38,10 @@ CREATE (topic_0:Topic { id : 0, name : 'Computer Vision', n_articles : 8, n_auth
 CREATE (topic_1:Topic { id : 1, name : 'Machine Learning', n_articles : 6, n_authors : 6, n_citations : 5 });
 CREATE (topic_2:Topic { id : 2, name : 'Data Generation', n_articles : 3, n_authors : 7, n_citations : 5 });
 
-CREATE (venue_0:Venue { id : 0, name : 'Conference on Computer Vision and Pattern Recognition', acronym : 'CVPR', type : 'Conference', n_pubs : 5, n_citations : 11, flexibility : 0 });
+CREATE (venue_0:Venue { id : 0, name : 'Conference on Computer Vision and Pattern Recognition', acronym : 'CVPR', type : 'Conference', n_pubs : 5, n_citations : 11, flexibility : 0.6 });
 CREATE (venue_1:Venue { id : 1, name : 'International Conference on Computer Vision', acronym : 'ICCV', type : 'Conference', n_pubs : 3, n_citations : 4, flexibility : 0 });
 CREATE (venue_2:Venue { id : 2, name : 'European Conference on Computer Vision', acronym : 'ECCV', type : 'Conference', n_pubs : 2, n_citations : 2, flexibility : 0 });
-CREATE (venue_3:Venue { id : 3, name : 'International Conference on Machine Learning', acronym : 'ICML', type : 'Conference', n_pubs : 4, n_citations : 5, flexibility : 0 });
+CREATE (venue_3:Venue { id : 3, name : 'International Conference on Machine Learning', acronym : 'ICML', type : 'Conference', n_pubs : 4, n_citations : 5, flexibility : 0.25 });
 
 MATCH (a:Article), (b:Topic) WHERE a.id = 44 AND b.id = 0 CREATE (a)<-[article_topic_0:ArticleTopic]-(b);
 MATCH (a:Article), (b:Topic) WHERE a.id = 45 AND b.id = 0 CREATE (a)<-[article_topic_1:ArticleTopic]-(b);

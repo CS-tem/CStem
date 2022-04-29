@@ -7,7 +7,12 @@ from config import NODES, RELS, PATH_CSV_FINAL, PATH_CYPHER
 
 def pyType(v):
     try:
-        o = int(float(v))
+        f = float(v)
+        i = int(f)
+        if i == f:
+            o = int(i)
+        else:
+            o = f
     except Exception:
         o = str(v)
     return o
