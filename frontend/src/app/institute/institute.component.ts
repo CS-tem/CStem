@@ -102,6 +102,9 @@ export class InstituteComponent implements OnInit {
   updateInstituteInfo(): void {
     this.subscription.add(
       this.qs.getInstitute(this.institute_id).subscribe(res => {
+        if (res.length < 1) {
+          this.router.navigateByUrl('/institutes');
+        }
         this.institute = {
           id: res[0]['id'],
           name: res[0]['name'],

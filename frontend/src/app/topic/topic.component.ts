@@ -74,6 +74,9 @@ export class TopicComponent implements OnInit {
   updateTopicInfo(): void {
     this.subscription.add(
       this.qs.getTopic(this.topic_id).subscribe(res => {
+        if (res.length < 1) {
+          this.router.navigateByUrl('/topics');
+        }
         this.topic = {
           id: res[0]['i']['id'],
           name: res[0]['i']['name'],

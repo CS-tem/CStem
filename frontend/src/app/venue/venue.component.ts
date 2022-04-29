@@ -50,6 +50,9 @@ export class VenueComponent implements OnInit {
   updateVenueInfo(): void {
     this.subscription.add(
       this.qs.getVenue(this.venue_id).subscribe(res => {
+        if (res.length < 1) {
+          this.router.navigateByUrl('/venues');
+        }
         this.venue = {
           id: res[0]['i']['id'],
           name: res[0]['i']['name'],

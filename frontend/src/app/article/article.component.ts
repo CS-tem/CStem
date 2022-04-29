@@ -74,6 +74,9 @@ export class ArticleComponent implements OnInit {
   updateArticleInfo(): void {
     this.subscription.add(
       this.qs.getArticle(this.article_id).subscribe(res => {
+        if (res.length < 1) {
+          this.router.navigateByUrl('/articles');
+        }
         this.article = {
           id: res[0].i['id'],
           n_citations: res[0]['citations'],

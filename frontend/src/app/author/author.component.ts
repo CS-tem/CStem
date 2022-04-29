@@ -174,6 +174,9 @@ export class AuthorComponent implements OnInit {
   updateAuthorInfo(): void {
     this.subscription.add(
       this.qs.getAuthor(this.author_id).subscribe(res => {
+        if (res.length < 1) {
+          this.router.navigateByUrl('/authors');
+        }
         this.author = {
           id: res[0].i['id'],
           name: res[0].i['name'],
