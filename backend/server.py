@@ -149,8 +149,11 @@ def get_author_pubs_per_topic(author_id : int):
 
 @app.get('/author-colab/{author_id}')
 def get_author_colabs(author_id : int):
-    query = """MATCH (j : Author{{id : {}}})-[k:Coauthor]->(i)
-            RETURN j AS author1, i AS author2, k.n_colab as n_colab;""".format(author_id)
+    query = """MATCH (i : Author{id:0})
+    OPTIONAL MATCH r=(i)-[:Coauthor*..]->(j)
+    WITH r, length(r) AS depth
+    WHERE depth <= 2
+    RETURN nodes(r) as nodes;""".format(author_id)
     result = neo_db.neo4j_query(query)
     return result
 
