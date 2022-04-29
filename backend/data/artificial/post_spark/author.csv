@@ -1,9 +1,9 @@
 id,name,n_pubs,n_citations,h_index
-1171,Prof. Author 1,0,0,0
-1172,PhD Author 2,0,0,0
-1175,UG Author 5,0,0,0
-213,Prof. Author 4,0,0,0
-214,Prof. Author 5,0,0,0
-776,Prof. Author 6,0,0,0
-777,Post Doc Author 7,0,0,0
+1171,Prof. Author 1,6,9,2
+1172,PhD Author 2,4,6,2
+1175,UG Author 5,4,4,1
+213,Prof. Author 4,5,6,1
+214,Prof. Author 5,5,6,1
+776,Prof. Author 6,5,7,2
+777,Post Doc Author 7,4,6,2
 778,UG Author 8 No paper,0,0,0
