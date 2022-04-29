@@ -1,0 +1,7 @@
+id,name,acronym,type
+0,Conference on Computer Vision and Pattern Recognition,CVPR,Conference
+1,European Conference on Computer Vision,ECCV,Conference
+2,International Conference on Computer Vision,ICCV,Conference
+3,Knowledge Discovery and Data Mining,KDD,Conference
+4,International Conference on Machine Learning,ICML,Conference
+5,Conference on Neural Information Processing Systems,NeurIPS,Conference
