@@ -408,10 +408,10 @@ def post_new_institutes_info(request: NewInstitutesCondition):
     }}
     CALL{{
         WITH *
-        RETURN cntry AS country, i0 AS i, j0 AS j, n_pub as n_pub1, SUM(CASE WHEN j1.id = j0.id THEN n_cits ELSE 0 END) AS n_citation
+        RETURN cntry AS country, i0 AS i, j0 AS j, SUM(CASE WHEN j1.id = j0.id THEN n_pub ELSE 0 END) as n_pubs, SUM(CASE WHEN j1.id = j0.id THEN n_cits ELSE 0 END) AS n_citation
     }}
     WITH *
-    RETURN country, i, SUM(n_pub1) AS n_pubs, SUM(n_citation) AS n_citations;""".format(
+    RETURN country, i, n_pubs, SUM(n_citation) AS n_citations;""".format(
         request.countries, request.frm, request.to, request.frm, request.to, request.frm, request.to, request.topics
     )
     result = neo_db.neo4j_query(query)
