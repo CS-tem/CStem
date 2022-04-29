@@ -6,6 +6,9 @@ import { Router } from '@angular/router';
 import { ViewChild } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
+import { FormControl } from '@angular/forms';
+import { MatSelectChange } from '@angular/material/select';
+import { Options } from '@angular-slider/ngx-slider';
 
 interface Article {
   id: number,
@@ -25,8 +28,19 @@ export class ArticlesComponent implements OnInit {
   displayedColumns = ["title", "vacr", "n_citations", "year"];
   subscription = new Subscription();
   articles: Array<Article> = [];
+  allArticles: Array<Article> = [];
   @ViewChild('paginator') paginator: MatPaginator | any;
   dataSource: MatTableDataSource<Article>;
+  venueFilter = new FormControl();
+  venueList: string[] = ['all'];
+  venues: Array<string> = [];
+
+  start_year: number = 2005;
+  end_year: number = 2023;
+  options: Options = {
+    floor: 2005,
+    ceil: 2022
+  };
 
   constructor(private router: Router, private qs : QueryserviceService) {
     this.dataSource = new MatTableDataSource(this.articles);
@@ -35,6 +49,7 @@ export class ArticlesComponent implements OnInit {
 
   ngOnInit(): void {
     this.updateArticlesInfo();
+    this.updateVenuesInfo();
   }
 
   updateArticlesInfo() : void {
@@ -53,6 +68,19 @@ export class ArticlesComponent implements OnInit {
         });
         this.dataSource.data = this.articles;
         this.dataSource.paginator = this.paginator;
+        this.allArticles = this.articles;
+      })
+    );
+  }
+
+  updateVenuesInfo() : void {
+    this.subscription.add(
+      this.qs.getVenues().subscribe(res => {
+        this.venueList = ['All'];
+        res.forEach((element: any) => {
+          this.venueList.push(element.acronym);
+        });
+        this.venues = this.venueList;
       })
     );
   }
@@ -60,6 +88,33 @@ export class ArticlesComponent implements OnInit {
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
+  }
+
+  chooseVenues(event: MatSelectChange) {
+    this.venues = event.value;
+    if (this.venues[0] == 'All' || this.venues.length == 0) {
+      this.venues = this.venueList.slice(1);
+    }
+    this.handleUserChange();
+  }
+
+  handleUserChange() {
+    this.articles = [];
+    this.allArticles.forEach((res: any) => {
+      if (this.venues.includes(res.vacr) && res.year >= this.start_year &&
+        res.year <= this.end_year) {
+        this.articles.push({
+          id: res.id,
+          n_citations: res.n_citations,
+          title: res.title,
+          vacr: res.vacr,
+          venue_id: res.venue_id,
+          year: res.year,
+        });
+      }
+    });
+    this.dataSource.data = this.articles;
+    this.dataSource.paginator = this.paginator;
   }
   
   sortData(sort: Sort) {
@@ -95,6 +150,15 @@ export class ArticlesComponent implements OnInit {
   openRow(row: any) {
     let route = '/article/' + row.id;
     this.router.navigate([route]);
+  }
+
+  capitalize(input: string) {  
+    var words = input.split(' ');  
+    var CapitalizedWords: Array<string> = [];  
+    words.forEach((element: string) => {  
+        CapitalizedWords.push(element[0].toUpperCase() + element.slice(1, element.length));  
+    });  
+    return CapitalizedWords.join(' ');  
   }
 
 }

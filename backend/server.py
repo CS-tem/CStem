@@ -418,7 +418,7 @@ def post_new_institutes_info(request: NewInstitutesCondition):
     return result
 
 
-class NewVenuesCondition(BaseModel):
+class NewArticlesCondition(BaseModel):
     frm : int
     to : int
     venues : list
