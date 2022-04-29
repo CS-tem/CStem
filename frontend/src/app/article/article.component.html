@@ -25,13 +25,17 @@
 
   </mat-list>
 
-  <div class="chart">
-      <apx-chart
-        [series]="citations_chartOptions.series"
-        [chart]="citations_chartOptions.chart"
-        [xaxis]="citations_chartOptions.xaxis"
-        [title]="citations_chartOptions.title"
-      ></apx-chart>
+  <div *ngIf="article.n_citations">
+
+    <div class="chart">
+      <apx-chart [series]="citations_chartOptions.series" [chart]="citations_chartOptions.chart"
+        [xaxis]="citations_chartOptions.xaxis" [title]="citations_chartOptions.title"></apx-chart>
+    </div>
+
+  </div>
+
+  <div *ngIf="article.n_citations == 0">
+    <h3>No Citation analysis</h3>
   </div>
 
   <h3>Citation Graph</h3>

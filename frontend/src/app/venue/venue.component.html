@@ -21,13 +21,15 @@
 
   </mat-list>
 
+  <div *ngIf="venue.n_pubs">
     <div class="chart">
-        <apx-chart
-            [series]="pubs_chartOptions.series"
-            [chart]="pubs_chartOptions.chart"
-            [xaxis]="pubs_chartOptions.xaxis"
-            [title]="pubs_chartOptions.title"
-        ></apx-chart>
+      <apx-chart [series]="pubs_chartOptions.series" [chart]="pubs_chartOptions.chart" [xaxis]="pubs_chartOptions.xaxis"
+        [title]="pubs_chartOptions.title"></apx-chart>
     </div>
+  </div>
+
+  <div *ngIf="venue.n_pubs == 0">
+    <h3>No Publication analysis</h3>
+  </div>
 
 </div>

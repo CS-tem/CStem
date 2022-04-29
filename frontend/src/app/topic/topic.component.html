@@ -21,20 +21,23 @@
 
   </mat-list>
 
-  <div class="chart">
-    <apx-chart
-      [series]="pubs_chartOptions.series"
-      [chart]="pubs_chartOptions.chart"
-      [xaxis]="pubs_chartOptions.xaxis"
-      [title]="pubs_chartOptions.title"
-    ></apx-chart>
-    <br/>
-    <apx-chart
-      [series]="citations_chartOptions.series"
-      [chart]="citations_chartOptions.chart"
-      [xaxis]="citations_chartOptions.xaxis"
-      [title]="citations_chartOptions.title"
-    ></apx-chart>
+  <div *ngIf="topic.n_articles">
+    <div class="chart">
+      <apx-chart [series]="pubs_chartOptions.series" [chart]="pubs_chartOptions.chart" [xaxis]="pubs_chartOptions.xaxis"
+        [title]="pubs_chartOptions.title"></apx-chart>
+      <br />
+      <div *ngIf="topic.n_citations">
+        <apx-chart [series]="citations_chartOptions.series" [chart]="citations_chartOptions.chart"
+          [xaxis]="citations_chartOptions.xaxis" [title]="citations_chartOptions.title"></apx-chart>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="topic.n_articles == 0">
+    <h3>No Publication analysis</h3>
+    <div *ngIf="topic.n_citations == 0">
+      <h3>No Citation analysis</h3>
+    </div>
   </div>
 
 </div>
