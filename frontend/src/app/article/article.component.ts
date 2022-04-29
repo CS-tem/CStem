@@ -127,10 +127,6 @@ export class ArticleComponent implements OnInit {
           venue_name: res[0].vname,
           venue_acronym: res[0].vacr
         };
-<<<<<<< HEAD
-        // console.log(res);
-=======
->>>>>>> 07bf922ca329a3334db3f7bd94d25e1ae6999b17
       })
     );
   }
