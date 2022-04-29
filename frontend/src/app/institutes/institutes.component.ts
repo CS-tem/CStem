@@ -157,7 +157,7 @@ export class InstitutesComponent implements OnInit {
   handleUserChange() {
     this.qs.getInstitutesNewInfo(this.start_year, this.end_year, this.topics, this.countries).subscribe(
       (res: any) => {
-        console.log(res);
+        // console.log(res);
       }
     );
   }

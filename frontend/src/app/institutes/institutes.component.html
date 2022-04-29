@@ -2,17 +2,13 @@
     
     <h2>Institutes</h2>
 
-    <div class="flex-center">
-        <mat-form-field appearance="standard" class="filter">
-            <mat-label>Search</mat-label>
-            <input matInput (keyup)="applyFilter($event)" placeholder="Enter" #input>
-        </mat-form-field>
-
-        <mat-form-field appearance="fill" class="dropdown">
-        <mat-label>Filter by topics</mat-label>
+    <div class="flex-center" id="block_container">
+      <mat-form-field appearance="fill" class="dropdown">
+        <mat-label>Select Topics</mat-label>
         <mat-select (selectionChange)="chooseTopics($event)" [formControl]="topicFilter" multiple>
             <mat-select-trigger>
-            {{topicFilter.value ? topicFilter.value[0] : "All"}}
+            {{(topicFilter.value && topicFilter.value.length > 0) ? 
+              capitalize(topicFilter.value[0]) : "All"}}
             <span *ngIf="topicFilter.value?.length > 1" class="example-additional-selection">
                 (+{{topicFilter.value.length - 1}} {{topicFilter.value?.length === 2 ? 'other' : 'others'}})
             </span>
@@ -20,6 +16,26 @@
             <mat-option *ngFor="let topic of topicList" [value]="topic">{{capitalize(topic)}}</mat-option>
         </mat-select>
       </mat-form-field>
+      <mat-form-field appearance="fill" class="dropdown">
+        <mat-label>Select Countries</mat-label>
+        <mat-select (selectionChange)="chooseCountries($event)" [formControl]="countryFilter" multiple>
+            <mat-select-trigger>
+            {{(countryFilter.value && countryFilter.value.length > 0) ? 
+              capitalize(countryFilter.value[0]) : "All"}}
+            <span *ngIf="countryFilter.value?.length > 1" class="example-additional-selection">
+                (+{{countryFilter.value.length - 1}} {{countryFilter.value?.length === 2 ? 'other' : 'others'}})
+            </span>
+            </mat-select-trigger>
+            <mat-option *ngFor="let country of countryList" [value]="country">{{capitalize(country)}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <ngx-slider
+        [(value)]="start_year"
+        [(highValue)]="end_year"
+        [options]="options"
+        (valueChange)="handleUserChange()"
+        (highValueChange)="handleUserChange()"
+      ></ngx-slider>
     </div>
 
     <table mat-table [dataSource]="dataSource" class=""
@@ -59,39 +75,6 @@
                     [pageSizeOptions]="[5, 10, 25, 100]"
                     aria-label="Select page">
     </mat-paginator>
-    <div class="flex-center" id="block_container">
-      <mat-form-field appearance="fill" class="dropdown">
-        <mat-label>Select Topics</mat-label>
-        <mat-select (selectionChange)="chooseTopics($event)" [formControl]="topicFilter" multiple>
-            <mat-select-trigger>
-            {{topicFilter.value ? topicFilter.value[0] : "All"}}
-            <span *ngIf="topicFilter.value?.length > 1" class="example-additional-selection">
-                (+{{topicFilter.value.length - 1}} {{topicFilter.value?.length === 2 ? 'other' : 'others'}})
-            </span>
-            </mat-select-trigger>
-            <mat-option *ngFor="let topic of topicList" [value]="topic">{{capitalize(topic)}}</mat-option>
-        </mat-select>
-      </mat-form-field>
-      <mat-form-field appearance="fill" class="dropdown">
-        <mat-label>Select Countries</mat-label>
-        <mat-select (selectionChange)="chooseCountries($event)" [formControl]="countryFilter" multiple>
-            <mat-select-trigger>
-            {{countryFilter.value ? countryFilter.value[0] : "All"}}
-            <span *ngIf="countryFilter.value?.length > 1" class="example-additional-selection">
-                (+{{countryFilter.value.length - 1}} {{countryFilter.value?.length === 2 ? 'other' : 'others'}})
-            </span>
-            </mat-select-trigger>
-            <mat-option *ngFor="let country of countryList" [value]="country">{{capitalize(country)}}</mat-option>
-        </mat-select>
-      </mat-form-field>
-      <ngx-slider
-        [(value)]="start_year"
-        [(highValue)]="end_year"
-        [options]="options"
-        (valueChange)="handleUserChange()"
-        (highValueChange)="handleUserChange()"
-      ></ngx-slider>
-    </div>
 </div>
   
   
