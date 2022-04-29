@@ -4,13 +4,13 @@ import pandas as pd
 
 from config import NODES, RELS, PATH_CSV_FINAL
 
-from py2neo import Graph
+from py2neo import Graph, errors
 from py2neo.bulk import create_nodes, create_relationships
 
 from password import PASSWORD
 
 
-BATCH_SIZE = 100 # change this accordingly
+BATCH_SIZE = 1000  # change this accordingly
 
 
 def pyType(v):
@@ -45,13 +45,12 @@ def createNodes(g, path_base):
             data.append(typed_vals)
             l_data = len(data)
             if l_data % BATCH_SIZE == 0 and l_data != 0:
-                create_nodes(g.auto(), data, labels = {node}, keys = attrs)
+                create_nodes(g.auto(), data, labels={node}, keys=attrs)
                 data = []
 
         if len(data) != 0:
-            create_nodes(g.auto(), data, labels = {node}, keys = attrs)
+            create_nodes(g.auto(), data, labels={node}, keys=attrs)
             data = []
-
 
 
 def createRelations(g, path_base):
@@ -87,7 +86,7 @@ def createRelations(g, path_base):
             if n_attrs > 0:
                 vals = [row[a] for a in attrs]
                 typed_vals = [pyType(v) for v in vals]
-                props = typed_vals #{k:v for k, v in zip(attrs, typed_vals)}
+                props = typed_vals  # {k:v for k, v in zip(attrs, typed_vals)}
             else:
                 props = {}
 
@@ -103,29 +102,35 @@ def createRelations(g, path_base):
             l_data = len(data)
             if l_data % BATCH_SIZE == 0 and l_data != 0:
                 create_relationships(
-                    g.auto(), 
-                    data, 
-                    rel, 
-                    start_node_key = (node1, 'id'),
-                    end_node_key = (node2, 'id'),
-                    keys = attrs
+                    g.auto(),
+                    data,
+                    rel,
+                    start_node_key=(node1, 'id'),
+                    end_node_key=(node2, 'id'),
+                    keys=attrs
                 )
                 data = []
 
         if len(data) != 0:
             create_relationships(
-                g.auto(), 
-                data, 
-                rel, 
-                start_node_key = (node1, 'id'),
-                end_node_key = (node2, 'id'),
-                keys = attrs
+                g.auto(),
+                data,
+                rel,
+                start_node_key=(node1, 'id'),
+                end_node_key=(node2, 'id'),
+                keys=attrs
             )
             data = []
 
 
 if __name__ == '__main__':
 
-    g = Graph('bolt://localhost:7687', auth = ('neo4j', PASSWORD))
+    g = Graph('bolt://localhost:7687', auth=('neo4j', PASSWORD))
+    g.delete_all()
+    for label in NODES.keys():
+        try:
+            g.schema.create_index(label, 'id')
+        except errors.ClientError:
+            continue
     createNodes(g, PATH_CSV_FINAL)
     createRelations(g, PATH_CSV_FINAL)
