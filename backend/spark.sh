@@ -1,7 +1,7 @@
 cd "$(dirname "$0")"
 
-mkdir -p data/artificial/post_spark
-cp data/artificial/pre_spark/* data/artificial/post_spark
+mkdir -p data/real/post_spark
+cp data/real/pre_spark/* data/real/post_spark
 
 python fill_metrics.py -o article
 python fill_metrics.py -o author
