@@ -127,14 +127,27 @@ export class QueryserviceService {
     return this.http.get(`http://127.0.0.1:8000/article/citation-graph/${id}-${d}`);
   }
 
-  public getAuthorsNewInfo(from: number, to: number, topics: Array<String>) {
+  public getCountries() : Observable<any> {
+    return this.http.get(`http://127.0.0.1:8000/countries/`);
+  }
+
+  public getAuthorsNewInfo(from: number, to: number, topics: Array<string>) {
     var data = {
       'frm': from,
       'to': to,
       'topics': topics
     };
-    const headers = new HttpHeaders();
-    headers.append('Content-Type', 'application/json');
     return this.http.post('http://127.0.0.1:8000/new-authors-info/', data);
+  }
+
+  public getInstitutesNewInfo(from: number, to: number, topics: Array<string>, 
+    countries: Array<string>) {
+    var data = {
+      'frm': from,
+      'to': to,
+      'topics': topics,
+      'countries': countries
+    };
+    return this.http.post('http://127.0.0.1:8000/new-institutes-info/', data);
   }
 }

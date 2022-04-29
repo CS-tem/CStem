@@ -39,7 +39,7 @@
     </mat-paginator>
     <div class="flex-center">
       <mat-form-field appearance="fill" class="dropdown">
-        <mat-label>Topics Considered</mat-label>
+        <mat-label>Select Topics</mat-label>
         <mat-select (selectionChange)="chooseTopics($event)" [formControl]="topicFilter" multiple>
             <mat-select-trigger>
             {{topicFilter.value ? topicFilter.value[0] : "All"}}

@@ -3,8 +3,15 @@
     width: 30%;
 }
 
+#block_container {
+    display: flex;
+    justify-content: center;
+}
+
+ngx-slider{
+    width: 30%;
+}
+
 .dropdown {
-    margin-left: auto; 
-    margin-right: 15%;
     width: 10%;
 }

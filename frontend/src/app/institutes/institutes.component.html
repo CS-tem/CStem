@@ -44,9 +44,9 @@
     </mat-paginator>
 
 
-    <div class="flex-center">
+    <div class="flex-center" id="block_container">
       <mat-form-field appearance="fill" class="dropdown">
-        <mat-label>Topics Considered</mat-label>
+        <mat-label>Select Topics</mat-label>
         <mat-select (selectionChange)="chooseTopics($event)" [formControl]="topicFilter" multiple>
             <mat-select-trigger>
             {{topicFilter.value ? topicFilter.value[0] : "All"}}
@@ -57,8 +57,26 @@
             <mat-option *ngFor="let topic of topicList" [value]="topic">{{capitalize(topic)}}</mat-option>
         </mat-select>
       </mat-form-field>
+      <mat-form-field appearance="fill" class="dropdown">
+        <mat-label>Select Countries</mat-label>
+        <mat-select (selectionChange)="chooseCountries($event)" [formControl]="countryFilter" multiple>
+            <mat-select-trigger>
+            {{countryFilter.value ? countryFilter.value[0] : "All"}}
+            <span *ngIf="countryFilter.value?.length > 1" class="example-additional-selection">
+                (+{{countryFilter.value.length - 1}} {{countryFilter.value?.length === 2 ? 'other' : 'others'}})
+            </span>
+            </mat-select-trigger>
+            <mat-option *ngFor="let country of countryList" [value]="country">{{capitalize(country)}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <ngx-slider
+        [(value)]="start_year"
+        [(highValue)]="end_year"
+        [options]="options"
+        (valueChange)="handleUserChange()"
+        (highValueChange)="handleUserChange()"
+      ></ngx-slider>
     </div>
-
 </div>
   
   
