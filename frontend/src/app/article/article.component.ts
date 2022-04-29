@@ -133,14 +133,18 @@ export class ArticleComponent implements OnInit {
               nodes_set.add(path.nodes[i].id);
               this.nodes_list.push({
                 id: path.nodes[i].id,
-                label: path.nodes[i].title
+                label: ''+path.nodes[i].id,
+                title: path.nodes[i].title,
+                color: '#C2FABC',
+                shape: 'diamond'
               });
             }
             if (!nodes_set.has(path.nodes[i+1].id)) {
               nodes_set.add(path.nodes[i+1].id);
               this.nodes_list.push({
                 id: path.nodes[i+1].id,
-                label: path.nodes[i+1].title
+                label: ''+path.nodes[i+1].id,
+                title: path.nodes[i+1].title
               });
             }
             // Use the concatenated string as the 'key' to check if already done
@@ -166,23 +170,30 @@ export class ArticleComponent implements OnInit {
         const container = this.citations;
 
         this.networkInstance = new Network(container.nativeElement, data, {
+          
+          autoResize: true,
+
           height: '100%',
-          width: '100%',
+
           nodes: {
-            shape: 'hexagon',
+            shape: 'ellipse',
             font: {
-              color: 'white',
+              color: '#000000',
+              size: 14
             },
           },
+
           edges: {
-            smooth: true,
             arrows: {
               to: {
                 enabled: true,
-                type: 'vee',
+                type: 'triangle',
               },
             },
           },
+
+          interaction: {hover:true}
+
         });
 
       })
