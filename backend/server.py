@@ -67,9 +67,11 @@ def get_institute_citations(institute_id : int):
     query = """
     CALL {{MATCH (i : Institute{{id: {}}})-[:InstituteMember]->(j : Author)-[:AuthorArticle]->(k: Article)
     OPTIONAL MATCH (k)-[:CitedBy]->(l) RETURN 
-    j,COALESCE(COUNT(DISTINCT l),0) AS citations, k.year as year ORDER BY year}}
+    j AS j1,k,COALESCE(COUNT(DISTINCT l),0) AS citations, k.year as year1 ORDER BY year1}}
+    CALL {{WITH *
+    RETURN j1 AS j2,SUM(citations) AS n_citations1, year1 AS year ORDER BY year}}
     WITH *
-    RETURN SUM(citations) AS n_citations, year;""".format(institute_id)
+    RETURN SUM(n_citations1) AS n_citations, year;""".format(institute_id)
     result = neo_db.neo4j_query(query)
     
     return result
@@ -138,7 +140,7 @@ def get_author_citations(author_id : int):
     OPTIONAL MATCH (k)-[:CitedBy]->(l) 
     RETURN k, COALESCE(COUNT(DISTINCT l),0) AS n_citation, k.year as year
     ORDER BY year}}
-    RETURN k.year, SUM(n_citation) AS n_citations;""".format(author_id)
+    RETURN year, SUM(n_citation) AS n_citations;""".format(author_id)
     result = neo_db.neo4j_query(query)
     
     return result
