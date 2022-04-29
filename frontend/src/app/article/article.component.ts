@@ -133,7 +133,7 @@ export class ArticleComponent implements OnInit {
               nodes_set.add(path.nodes[i].id);
               this.nodes_list.push({
                 id: path.nodes[i].id,
-                label: ''+path.nodes[i].id,
+                // label: ''+path.nodes[i].id,
                 title: path.nodes[i].title,
                 color: '#C2FABC',
                 shape: 'diamond'
@@ -143,7 +143,7 @@ export class ArticleComponent implements OnInit {
               nodes_set.add(path.nodes[i+1].id);
               this.nodes_list.push({
                 id: path.nodes[i+1].id,
-                label: ''+path.nodes[i+1].id,
+                // label: ''+path.nodes[i+1].id,
                 title: path.nodes[i+1].title
               });
             }
