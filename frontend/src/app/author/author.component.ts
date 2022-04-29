@@ -69,6 +69,7 @@ export class AuthorComponent implements OnInit {
   citations_y : string[]= [];
   pie_x : string[]= [];
   pie_y : string[]= [];
+  
   @ViewChild('paginator') paginator: MatPaginator | any;
   dataSource: MatTableDataSource<Article>;
 

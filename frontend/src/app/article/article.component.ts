@@ -3,8 +3,6 @@ import { QueryserviceService } from '../queryservice.service';
 import { Subscription } from 'rxjs';
 import { ActivatedRoute } from '@angular/router';
 import { ChartOptions } from '../app.component';
-import { dataTool, EChartsOption } from 'echarts';
-import * as echarts from 'echarts';
 import { Article } from '../article';
 import { DataSet } from 'vis-data';
 import { Network } from 'vis-network';
@@ -31,8 +29,6 @@ export class ArticleComponent implements OnInit {
   cited_from = [];
   cited_by = [];
   public citations_chartOptions: Partial<ChartOptions> | any;
-
-  graphOption: EChartsOption | any;
 
   // citations-related
   nodes_list: any;
