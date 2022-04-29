@@ -303,9 +303,9 @@ def get_topics(query_str : str,q: Optional[str] = None):
     depth = query[1]
     query = """MATCH (i : Article{{id:{}}})
         OPTIONAL MATCH r=(i)-[:CitedBy*..]->(j)
-        WITH j, length(r) AS depth
+        WITH r, length(r) AS depth
         WHERE depth <= {}
-        RETURN j, r;""".format(article_id, depth)
+        RETURN nodes(r) as nodes;""".format(article_id, depth)
     result = neo_db.neo4j_query(query)
     return result
 
