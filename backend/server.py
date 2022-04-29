@@ -158,15 +158,15 @@ def get_author_colabs(query_str : str):
     query = f"""
     CALL{{
         MATCH (a1 {{id: {author_id}}})-[r:Coauthor]-(a2)  
-        RETURN a2
+        RETURN a1, a2
         ORDER BY r.n_colab
         LIMIT {k}
     }}
     UNWIND a2 as ua2
-    WITH collect(DISTINCT ua2) as V
+    WITH collect(DISTINCT ua2) + a1 as V
     MATCH (v1)-[r:Coauthor]-(v2)
     WHERE v1 in V and v2 in V
-    RETURN v1, v2, r.n_colab"""
+    RETURN v1, v2, r.n_colab as n_colab"""
     result = neo_db.neo4j_query(query)
     return result
 
