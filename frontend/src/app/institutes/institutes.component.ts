@@ -28,7 +28,8 @@ export class InstitutesComponent implements OnInit {
   topics: Array<string> = [];
   countries: Array<string> = [];
   @ViewChild('paginator') paginator: MatPaginator | any;
-  dataSource: MatTableDataSource<Institute>;
+  dataSource!: MatTableDataSource<Institute>;
+  haveDS = false;
 
   start_year: number = 2005;
   end_year: number = 2023;
@@ -38,9 +39,7 @@ export class InstitutesComponent implements OnInit {
   };
 
 
-  constructor(private router: Router, private qs : QueryserviceService) { 
-    this.dataSource = new MatTableDataSource(this.institutes);
-    this.dataSource.paginator = this.paginator;
+  constructor(private router: Router, private qs : QueryserviceService) {
   }
 
   ngOnInit(): void {
@@ -63,8 +62,6 @@ export class InstitutesComponent implements OnInit {
             n_citations: row['n_citations'] 
           });
         });
-        this.dataSource.data = this.institutes;
-        this.dataSource.paginator = this.paginator;
         this.allInstitutes = this.institutes;
       })
     );
@@ -180,7 +177,12 @@ export class InstitutesComponent implements OnInit {
           if (row.n_pubs > 0 || row.n_citations > 0)
             this.institutes.push(row);
         });
-        this.dataSource.data = this.institutes;
+        if (this.haveDS)
+          this.dataSource.data = this.institutes;
+        else {
+          this.dataSource = new MatTableDataSource(this.institutes);
+          this.haveDS = true;
+        }
         this.dataSource.paginator = this.paginator;
       }
     );
