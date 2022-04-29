@@ -187,7 +187,10 @@ def get_articles(article_id : int):
     query = """
     MATCH  (i : Article{{id: {}}}), (v: Venue{{id : i.venue_id}})
     OPTIONAL MATCH (i)-[:CitedBy]->(l) 
-    RETURN i,COALESCE(COUNT(DISTINCT l),0) as citations,v.name as vname, v.acronym as vacr;""".format(article_id)
+    MATCH (i)<-[:AuthorArticle]-(a)
+    MATCH (i)<-[:ArticleTopic]-(t)
+    RETURN i,COALESCE(COUNT(DISTINCT l),0) as citations,v.name as vname, v.acronym as vacr,
+    a.name as a_name, t.name as topic;""".format(article_id)
     # query = 'MATCH (i : Article{{id : {}}}) RETURN i;'.format(article_id)
     result = neo_db.neo4j_query(query)
     return result
@@ -330,29 +333,7 @@ def get_citation_graph(query_str : str,q: Optional[str] = None):
         WHERE depth <= {}
         RETURN nodes(r) as nodes;""".format(article_id, depth)
     result = neo_db.neo4j_query(query)
-    return result
-
-    
-#author-slider-selected topics
-
-# #npubs
-# @app.get('/author/modified_n_pubs/') #author[id]-start-end-<selected topics>
-# def get_modified_npubs():
-#     start = 2016
-#     end = 2018
-#     selected_topics = ['Machine Learning']
-    
-# #n_citations
-# @app.get('/author/modified_n_citations/{query_str}') #author[id]-start-end-<selected topics>
-# def get_modified_npubs(query_str : str, q : Optional[str] = None):
-#     if q:
-#         query = q
-#     author_id = 1
-#     query = query_str.split('-')
-#     start = 2016
-#     end = 2018
-#     selected_topics = ['Machine Learning']
-    
+    return result    
 
 class NewAuthorsCondition(BaseModel):
     frm: int
@@ -428,7 +409,7 @@ def post_new_institutes_info(request: NewInstitutesCondition):
     return result
 
 
-class NewArticlesCondition(BaseModel):
+class NewVenuesCondition(BaseModel):
     frm : int
     to : int
     venues : list

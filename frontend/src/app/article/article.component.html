@@ -7,6 +7,14 @@
       <mat-list-item> Title: {{article.title}} </mat-list-item>
       <mat-divider></mat-divider>
 
+      <mat-list-item> {{authors.length == 1? "Author:" : "Authors:"}} {{
+        getCommaSeparatedString(authors, false)}} </mat-list-item>
+      <mat-divider></mat-divider>
+
+      <mat-list-item> {{topics.length == 1? "Topic:" : "Topics:"}} {{
+          getCommaSeparatedString(topics, true)}} </mat-list-item>
+      <mat-divider></mat-divider>
+
       <mat-list-item> Published at: {{article.venue_name}} ({{article.venue_acronym}}) </mat-list-item>
       <mat-divider></mat-divider>
 

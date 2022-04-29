@@ -24,6 +24,8 @@ export class ArticleComponent implements OnInit {
     venue_name: '',
     venue_acronym: ''
   };
+  authors: string[] = [];
+  topics: string[] = [];
   citations_x : string[]= [];
   citations_y : string[]= [];
   cited_from = [];
@@ -81,6 +83,18 @@ export class ArticleComponent implements OnInit {
           venue_name: res[0].vname,
           venue_acronym: res[0].vacr
         };
+        var author_set = new Set();
+        var topic_set = new Set();
+        res.forEach((row: any) => {
+          if (!author_set.has(row.a_name)) {
+            author_set.add(row.a_name);
+            this.authors.push(row.a_name);
+          }
+          if (!topic_set.has(row.topic)) {
+            topic_set.add(row.topic);
+            this.topics.push(row.topic);
+          }
+        });
       })
     );
   }
@@ -155,9 +169,6 @@ export class ArticleComponent implements OnInit {
           }
         });
 
-        // console.log(this.nodes_list);
-        // console.log(this.edges_list);
-
         var nodes = new DataSet<any>(this.nodes_list);
         var edges = new DataSet<any>(this.edges_list);
 
@@ -194,6 +205,24 @@ export class ArticleComponent implements OnInit {
 
       })
     );
+  }
+
+  capitalize(input: string) {  
+    var words = input.split(' ');  
+    var CapitalizedWords: Array<string> = [];  
+    words.forEach((element: string) => {  
+        CapitalizedWords.push(element[0].toUpperCase() + element.slice(1, element.length));  
+    });  
+    return CapitalizedWords.join(' ');  
+  }
+
+  getCommaSeparatedString(words: string[], caps: Boolean): string {
+    if (words.length == 0)
+      return "";
+    var ret = caps? this.capitalize(words[0]) : words[0];
+    for (var i = 1; i < words.length; i++) 
+      ret += caps? (", " + this.capitalize(words[i])) : (", " + words[i]);
+    return ret;
   }
 
 }
