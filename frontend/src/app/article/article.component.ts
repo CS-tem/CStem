@@ -41,6 +41,7 @@ export class ArticleComponent implements OnInit {
     this.activatedRoute.params.subscribe(params => {
       this.article_id = params['article_id'];
       this.updateArticleInfo();
+      this.updateCitationsInfo();
     });
     this.updatedCitingandCitedby();
     this.citations_chartOptions = {

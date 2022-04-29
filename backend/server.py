@@ -134,7 +134,7 @@ def get_articles(article_id : int):
 def get_article_citations(article_id : int):
     query = """
     MATCH (i : Article{{id : {}}})-[:CitedBy]->(j)
-    RETURN COUNT(j) as n_citations, j.year AS Year;""".format(article_id)
+    RETURN COUNT(j) as n_citations, j.year AS year;""".format(article_id)
     result = neo_db.neo4j_query(query)
     
     return result
