@@ -7,7 +7,9 @@ from config import NODES, RELS, PATH_CSV_FINAL
 from py2neo import Graph
 from py2neo.bulk import create_nodes, create_relationships
 
-BATCH_SIZE = 10000
+
+BATCH_SIZE = 10000 # change this accordingly
+
 
 def pyType(v):
     try:
@@ -20,23 +22,6 @@ def pyType(v):
     except Exception:
         o = str(v)
     return o
-
-
-def dir2Cypher(direction):
-    if direction == '--':
-        return '-', '->'  # Neo4j doesn't allow undirected edges while creation
-    elif direction == '->':
-        return '-', '->'
-    elif direction == '<-':
-        return '<-', '-'
-    else:
-        raise ValueError("Invalid direction")
-
-
-def propCypher(attrs, vals):
-    typed_vals = [pyType(v) for v in vals]
-    cypher = ", ".join([f"{a} : {repr(t)}" for a, t in zip(attrs, typed_vals)])
-    return cypher
 
 
 def createNodes(g, path_base):
@@ -67,8 +52,10 @@ def createNodes(g, path_base):
 
 
 
-def createRelations(f, path_base):
+def createRelations(g, path_base):
+
     for rel in sorted(RELS.keys()):
+
         between = RELS[rel]['between']
 
         node1 = between[0]
@@ -87,32 +74,49 @@ def createRelations(f, path_base):
         cols = df.columns
         n_rows = len(df)
 
+        data = []
         for idx in range(n_rows):
 
             row = df.iloc[idx]
 
             if n_attrs > 0:
                 vals = [row[a] for a in attrs]
-                props = propCypher(attrs, vals)
+                typed_vals = [pyType(v) for v in vals]
+                props = {k:v for k, v in zip(attrs, typed_vals)}
+            else:
+                props = {}
 
             node1_id = row[cols[0]]
             node2_id = row[cols[1]]
 
-            match = f'MATCH (a:{node1}), (b:{node2}) WHERE a.id = {node1_id} AND b.id = {node2_id}'
+            data.append((str(node1_id), props, str(node2_id)))
 
-            if n_attrs > 0:
-                create = f'CREATE (a){d_start}[{table}_{idx}:{rel} {{ {props} }}]{d_end}(b);\n'
-            else:
-                create = f'CREATE (a){d_start}[{table}_{idx}:{rel}]{d_end}(b);\n'
+            l_data = len(data)
+            if l_data % BATCH_SIZE == 0 and l_data != 0:
+                create_relationships(
+                    g.auto(), 
+                    data, 
+                    rel, 
+                    start_node_key = (node1, 'id'),
+                    end_node_key = (node2, 'id')
+                )
+                data = []
 
-            stmt = f'{match} {create}'
-            f.write(stmt)
-
-        f.write('\n')
+        if len(data) != 0:
+            create_relationships(
+                g.auto(), 
+                data, 
+                rel, 
+                start_node_key = (node1, 'id'),
+                end_node_key = (node2, 'id')
+            )
+            data = []
 
 
 if __name__ == '__main__':
 
     g = Graph()
+    createNodes(g, PATH_CSV_FINAL)
+    createRelations(g, PATH_CSV_FINAL)
 
     
