@@ -384,30 +384,38 @@ class NewInstitutesCondition(BaseModel):
 
 @app.post('/new-institutes-info/')
 def post_new_institutes_info(request: NewInstitutesCondition):
-    query = """
-    CALL {{
-    MATCH (c:Country)-[:InstituteCountry]->(i: Institute)-[:InstituteMember]->(j)-[:AuthorArticle]->(k)-[:CitedBy]->(l)
+    query1 = """
+    CALL {{MATCH (c:Country)-[:InstituteCountry]->(i: Institute)-[:InstituteMember]
+    ->(j)-[:AuthorArticle]->(k)<-[:ArticleTopic]-(l)
     WHERE c.name in {} AND 
-    k.year >= {} AND k.year <= {}
-    RETURN c.name as cntry, i as i0,j as j0,COALESCE(COUNT(DISTINCT k),0) AS n_pub
+    k.year >= {} AND k.year <= {} AND 
+    l.name IN {}
+    RETURN c.name as cntry, i,j, COALESCE(COUNT(DISTINCT k),0) AS n_pub
+    }}
+    RETURN cntry, i, SUM(n_pub) AS n_pubs
+    """.format(request.countries, request.frm, request.to, request.topics)
+   
+    result1 = neo_db.neo4j_query(query1)
+
+    query2 = """
+    CALL {{MATCH (c:Country)-[:InstituteCountry]->(i: Institute)-[:InstituteMember]
+    ->(j)-[:AuthorArticle]->(k)<-[:ArticleTopic]-(l)
+    MATCH (k)-[:CitedBy]->(m)
+    WHERE c.name in {} AND 
+    k.year >= {} AND k.year <= {} AND
+    l.name IN {}
+    RETURN c.name as cntry, i,j, k, COALESCE(COUNT(DISTINCT m),0) AS n_cits
     }}
     CALL {{
-        MATCH (j1)-[:AuthorArticle]->(k1)-[:CitedBy]->(l1)
-        MATCH (k1)<-[:ArticleTopic]-(q1)
-        WHERE k1.year >= {} AND k1.year <= {} AND l1.year >= {} AND l1.year <= {}
-        AND q1.name in {}
-        RETURN j1, k1, COALESCE(COUNT(DISTINCT l1),0) AS n_cits
-    }}
-    CALL{{
-        WITH *
-        RETURN cntry AS country, i0 AS i, j0 AS j, SUM(CASE WHEN j1.id = j0.id THEN n_pub ELSE 0 END) as n_pubs, SUM(CASE WHEN j1.id = j0.id THEN n_cits ELSE 0 END) AS n_citation
+        WITH cntry, i, j, k, n_cits
+        RETURN i AS i0,j AS j0, SUM(n_cits) AS n_citation
     }}
     WITH *
-    RETURN country, i, n_pubs, SUM(n_citation) AS n_citations;""".format(
-        request.countries, request.frm, request.to, request.frm, request.to, request.frm, request.to, request.topics
-    )
-    result = neo_db.neo4j_query(query)
-    return result
+    RETURN cntry, i, SUM(n_citation) AS n_citations;
+    """.format(request.countries, request.frm, request.to, request.topics)
+
+    result2 = neo_db.neo4j_query(query2)
+    return result1, result2
 
 
 class NewVenuesCondition(BaseModel):
