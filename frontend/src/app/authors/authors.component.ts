@@ -43,7 +43,6 @@ export class AuthorsComponent implements OnInit {
             n_citations: row['n_citations']
           });
         });
-        console.log(res);
         this.dataSource.data = this.authors;
         this.dataSource.paginator = this.paginator;
       })

@@ -51,7 +51,6 @@ export class ArticlesComponent implements OnInit {
             year: row['year'],
           });
         });
-        console.log(res);
         this.dataSource.data = this.articles;
         this.dataSource.paginator = this.paginator;
       })

@@ -95,7 +95,6 @@ export class InstituteComponent implements OnInit {
           n_citations: res[0]['n_citations'],
           country: res[0]['country']
         };
-        console.log(res);
       })
     );
   }

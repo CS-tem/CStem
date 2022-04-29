@@ -76,7 +76,6 @@ export class ArticleComponent implements OnInit {
           venue_name: res[0].vname,
           venue_acronym: res[0].vacr
         };
-        console.log(res);
       })
     );
   }
@@ -95,12 +94,7 @@ export class ArticleComponent implements OnInit {
           this.citations_x.push(""+ele.year);
           this.citations_y.push(""+ele.n_citations);
         }  
-        // if(this.citations_x[0] != 'null')
-        // {
-          this.citations_updateSeries(); 
-        //   console.log("H", this.citations_x);
-        // }
-          
+        this.citations_updateSeries();
       })
     );
   }
@@ -244,7 +238,6 @@ export class ArticleComponent implements OnInit {
     // }
     // gOption['data'] = data;
     // gOption['links'] = links;
-    // console.log(gOption);
     // this.graphOption = gOption;
   };
 }

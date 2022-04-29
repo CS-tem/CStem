@@ -159,7 +159,6 @@ export class AuthorComponent implements OnInit {
           n_pubs: res[0].i['n_pubs'],
           n_citations: res[0]['n_citations']
         };
-        // console.log(this.author, res);
       })
     );
   }
@@ -168,7 +167,6 @@ export class AuthorComponent implements OnInit {
     this.subscription.add(
       this.qs.getAuthorTop5Pubs(this.author_id).subscribe(res => {
         this.articles = res;
-        console.log("RES:",res);
       })
     );
   }
@@ -229,8 +227,6 @@ export class AuthorComponent implements OnInit {
           this.pie_y.push(ele.n_pubs);
         }  
         this.pie_updateSeries();
-
-        console.log(res);
       })
     );
   }
