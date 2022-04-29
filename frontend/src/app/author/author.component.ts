@@ -5,7 +5,8 @@ import { ActivatedRoute } from '@angular/router';
 import { DataSet } from 'vis-data';
 import { Network } from 'vis-network';
 import { Router } from '@angular/router';
-
+import { MatPaginator } from '@angular/material/paginator';
+import { MatTableDataSource } from '@angular/material/table';
 
 import {
   ApexAxisChartSeries,
@@ -23,6 +24,15 @@ import {
 } from "ng-apexcharts";
 import { Author } from '../author';
 import { Sort } from '@angular/material/sort';
+
+interface Article {
+  citations: number,
+  id: string,
+  n_citations: number,
+  title: string,
+  venue_id: number,
+  year: number
+}
 
 export type ChartOptions = {
   series: ApexAxisChartSeries;
@@ -52,13 +62,15 @@ export class AuthorComponent implements OnInit {
     n_pubs: 0,
     n_citations: 0
   };
-  articles = [{}];
+  articles : Array<Article> = [];
   pubs_x : string[]= [];
   pubs_y : string[]= [];
   citations_x : string[]= [];
   citations_y : string[]= [];
   pie_x : string[]= [];
   pie_y : string[]= [];
+  @ViewChild('paginator') paginator: MatPaginator | any;
+  dataSource: MatTableDataSource<Article>;
 
   displayedColumns = ["title", "year", "n_citations"];
 
@@ -138,6 +150,8 @@ export class AuthorComponent implements OnInit {
         }
       ]
     };
+    this.dataSource = new MatTableDataSource(this.articles);
+    this.dataSource.paginator = this.paginator;
   }
   
     
@@ -169,7 +183,19 @@ export class AuthorComponent implements OnInit {
   updateAuthorArticlesInfo(): void {
     this.subscription.add(
       this.qs.getAuthorTop5Pubs(this.author_id).subscribe(res => {
-        this.articles = res;
+        this.articles = [];
+        res.forEach((row: any) => {
+          this.articles.push({
+            citations: row['citations'],
+            id: row['id'],
+            n_citations: row['n_citations'],
+            title: row['title'],
+            venue_id: row['venue_id'],
+            year: row['year']
+          });
+        });
+        this.dataSource.data = this.articles;
+        this.dataSource.paginator = this.paginator;
       })
     );
   }
@@ -178,6 +204,8 @@ export class AuthorComponent implements OnInit {
     const data = this.articles.slice();
     if (!sort.active || sort.direction === '') {
       this.articles = data;
+      this.dataSource.data = this.articles;
+      this.dataSource.paginator = this.paginator;
       return;
     }
 
@@ -196,6 +224,8 @@ export class AuthorComponent implements OnInit {
           return 0;
       }
     });
+    this.dataSource.data = this.articles;
+    this.dataSource.paginator = this.paginator;
   }
 
   updatePubsInfo(): void {

@@ -6,6 +6,18 @@ import { Institute } from '../institute';
 import { Sort } from '@angular/material/sort';
 import { ChartOptions } from '../app.component';
 import { Router } from '@angular/router';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatTableDataSource } from '@angular/material/table';
+import { ViewChild } from '@angular/core';
+
+interface Member {
+  citations: number
+  h_index: number
+  id: number
+  n_citations: number
+  n_pubs: number
+  name: string
+}
 
 @Component({
   selector: 'app-institute',
@@ -23,11 +35,13 @@ export class InstituteComponent implements OnInit {
     country: 'null'
   };
   institute_id = 0;
-  members = [{}];
+  members: Array<Member> = [];
   pubs_x : string[]= [];
   pubs_y : string[]= [];
   citations_x : string[]= [];
   citations_y : string[]= [];
+  @ViewChild('paginator') paginator: MatPaginator | any;
+  dataSource: MatTableDataSource<Member>;
 
   members_displayedColumns = ["name", "h_index", "n_pubs", "n_citations"];
 
@@ -71,7 +85,9 @@ export class InstituteComponent implements OnInit {
       xaxis: {
         categories: ['2016','2017','2018','2019']
       }
-    }; 
+    };
+    this.dataSource = new MatTableDataSource(this.members);
+    this.dataSource.paginator = this.paginator; 
   }
 
   ngOnInit(): void {
@@ -102,7 +118,19 @@ export class InstituteComponent implements OnInit {
   updateMembersInfo(): void {
     this.subscription.add(
       this.qs.getInstituteMembers(this.institute_id).subscribe(res => {
-        this.members = res;
+        this.members = [];
+        res.forEach((row: any) => {
+          this.members.push({
+            citations: row['citations'],
+            h_index: row['h_index'],
+            id: row['id'],
+            n_citations: row['n_citations'],
+            n_pubs: row['n_pubs'],
+            name: row['name']
+          });
+        });
+        this.dataSource.data = this.members;
+        this.dataSource.paginator = this.paginator;
       })
     );
   }
@@ -149,6 +177,8 @@ export class InstituteComponent implements OnInit {
     const data = this.members.slice();
     if (!sort.active || sort.direction === '') {
       this.members = data;
+      this.dataSource.data = this.members;
+      this.dataSource.paginator = this.paginator;
       return;
     }
 
@@ -171,6 +201,8 @@ export class InstituteComponent implements OnInit {
           return 0;
       }
     });
+    this.dataSource.data = this.members;
+    this.dataSource.paginator = this.paginator;
   }
 
   openRow(row: any) {
