@@ -363,6 +363,24 @@ def post_new_authors_info(request: NewAuthorsCondition):
     result = neo_db.neo4j_query(query)
     return result
 
+@app.get('/countries/')
+def get_venues():
+    query = 'MATCH (i : Country) RETURN i;'
+    result = neo_db.neo4j_query(query)
+    return [entry['i'] for entry in result]
+
+class VenuesByCondition(BaseModel):
+    topics : list
+    types: list
+
+@app.post('/venues-by-condition/')
+def get_venues_by_condition(request: VenuesByCondition):
+    query = query = '''MATCH (i: Venue)<-[r: VenueTopic]-(j) WHERE 
+        i.type IN {} AND j.name in {} RETURN DISTINCT i;'''.format(
+            request.types, request.topics
+        )
+    result = neo_db.neo4j_query(query)
+    return [entry['i'] for entry in result]
 
 class NewInstitutesCondition(BaseModel):
     frm : int
@@ -372,6 +390,7 @@ class NewInstitutesCondition(BaseModel):
 
 @app.post('/new-institutes-info/')
 def post_new_institutes_info(request: NewInstitutesCondition):
+    print(request)
     query = """
     CALL {{MATCH (i : Institute)-[:InstituteMember]-(j)
     OPTIONAL MATCH (i)<-[:InstituteCountry]-(a:Country)

@@ -3,7 +3,8 @@
     <h2>Institutes</h2>
 
     <div class="flex-center">
-        <mat-form-field appearance="standard" class="filter">
+
+        <mat-form-field appearance="fill" class="filter">
             <mat-label>Search</mat-label>
             <input matInput (keyup)="applyFilter($event)" placeholder="Enter" #input>
         </mat-form-field>
@@ -20,6 +21,28 @@
             <mat-option *ngFor="let topic of topicList" [value]="topic">{{capitalize(topic)}}</mat-option>
         </mat-select>
       </mat-form-field>
+
+      <mat-form-field appearance="fill" class="dropdown">
+        <mat-label>Select Countries</mat-label>
+        <mat-select (selectionChange)="chooseCountries($event)" [formControl]="countryFilter" multiple>
+            <mat-select-trigger>
+            {{countryFilter.value ? countryFilter.value[0] : "All"}}
+            <span *ngIf="countryFilter.value?.length > 1" class="example-additional-selection">
+                (+{{countryFilter.value.length - 1}} {{countryFilter.value?.length === 2 ? 'other' : 'others'}})
+            </span>
+            </mat-select-trigger>
+            <mat-option *ngFor="let country of countryList" [value]="country">{{capitalize(country)}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <ngx-slider
+        [(value)]="start_year"
+        [(highValue)]="end_year"
+        [options]="options"
+        (valueChange)="handleUserChange()"
+        (highValueChange)="handleUserChange()"
+      ></ngx-slider>
+
     </div>
 
     <table mat-table [dataSource]="dataSource" class=""

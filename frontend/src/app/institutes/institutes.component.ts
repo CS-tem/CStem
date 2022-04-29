@@ -9,6 +9,7 @@ import { ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { Institute } from '../institute';
+import { Options } from '@angular-slider/ngx-slider';
 
 @Component({
   selector: 'app-institutes',
@@ -21,9 +22,19 @@ export class InstitutesComponent implements OnInit {
   institutes: Array<Institute> = [];
   topicFilter = new FormControl();
   topicList: string[] = ['all'];
-  chosenTopics = [];
+  countryFilter = new FormControl();
+  countryList: string[] = ['all'];
+  topics: Array<string> = [];
+  countries: Array<string> = [];
   @ViewChild('paginator') paginator: MatPaginator | any;
   dataSource: MatTableDataSource<Institute>;
+
+  start_year: number = 2005;
+  end_year: number = 2023;
+  options: Options = {
+    floor: 2005,
+    ceil: 2022
+  };
 
 
   constructor(private router: Router, private qs : QueryserviceService) { 
@@ -34,6 +45,7 @@ export class InstitutesComponent implements OnInit {
   ngOnInit(): void {
     this.updateInstitutesInfo();
     this.updateTopicsInfo();
+    this.updateCountriesInfo();
   }
 
   updateInstitutesInfo() : void {
@@ -63,6 +75,19 @@ export class InstitutesComponent implements OnInit {
         res.forEach((element: any) => {
           this.topicList.push(element.name);
         });
+        this.topics = this.topicList;
+      })
+    );
+  }
+
+  updateCountriesInfo() : void {
+    this.subscription.add(
+      this.qs.getCountries().subscribe(res => {
+        this.countryList = ['All'];
+        res.forEach((element: any) => {
+          this.countryList.push(element.name);
+        });
+        this.countries = this.countryList.slice(1);
       })
     );
   }
@@ -105,11 +130,19 @@ export class InstitutesComponent implements OnInit {
   }
 
   chooseTopics(event: MatSelectChange) {
-    var value = event.value;
-    var all = false;
-    if (value[0] == 'all') {
-      all = true;
+    this.topics = event.value;
+    if (this.topics[0] == 'All' || this.topics.length == 0) {
+      this.topics = this.topicList.slice(1);
     }
+    this.handleUserChange();
+  }
+
+  chooseCountries(event: MatSelectChange) {
+    this.countries = event.value;
+    if (this.countries[0] == 'All' || this.countries.length == 0) {
+      this.countries = this.countryList.slice(1);
+    }
+    this.handleUserChange();
   }
 
   capitalize(input: string) {  
@@ -120,6 +153,14 @@ export class InstitutesComponent implements OnInit {
     });  
     return CapitalizedWords.join(' ');  
   } 
+
+  handleUserChange() {
+    this.qs.getInstitutesNewInfo(this.start_year, this.end_year, this.topics, this.countries).subscribe(
+      (res: any) => {
+        console.log(res);
+      }
+    );
+  }
 
   openRow(row: any) {
     let route = '/institute/' + row.id;

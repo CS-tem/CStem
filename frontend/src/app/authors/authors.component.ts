@@ -70,7 +70,7 @@ export class AuthorsComponent implements OnInit {
         res.forEach((element: any) => {
           this.topicList.push(element.name);
         });
-        this.topics = this.topicList;
+        this.topics = this.topicList.slice(1);
       })
     );
   }
