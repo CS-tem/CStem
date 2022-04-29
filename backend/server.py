@@ -122,7 +122,8 @@ def get_articles():
 
 @app.get('/articles/{article_id}')
 def get_articles(article_id : int):
-    query = 'MATCH (i : Article{{id : {}}}) RETURN i;'.format(article_id)
+    query = f'MATCH (i : Article{{id : {article_id}}}), (v: Venue{{id : i.venue_id}}) RETURN i, v.name as vname, v.acronym as vacr'
+    # query = 'MATCH (i : Article{{id : {}}}) RETURN i;'.format(article_id)
     result = neo_db.neo4j_query(query)
     return result
 

@@ -7,11 +7,13 @@
       <!-- <mat-list-item> Name: {{article.title}} </mat-list-item>
       <mat-divider></mat-divider> -->
 
-      <mat-list-item> Year of Publication: {{article.year}} </mat-list-item>
+      <mat-list-item> Published at: {{article.venue_name}} ({{article.venue_acronym}}) </mat-list-item>
+      <mat-divider></mat-divider>
+
+      <mat-list-item> Year of publication: {{article.year}} </mat-list-item>
       <mat-divider></mat-divider>
 
       <mat-list-item> Total citations: {{article.n_citations}} </mat-list-item>
-      <mat-divider></mat-divider>
 
   </mat-list>
   <div class="chart">

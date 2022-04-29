@@ -21,7 +21,9 @@ export class ArticleComponent implements OnInit {
     n_citations: 0,
     title: 'null',
     venue_id: 0,
-    year: 0
+    year: 0,
+    venue_name: '',
+    venue_acronym: ''
   };
   citations_x : string[]= [];
   citations_y : string[]= [];
@@ -69,7 +71,9 @@ export class ArticleComponent implements OnInit {
           n_citations: res[0].i['n_citations'],
           title: res[0].i['title'],
           venue_id: res[0].i['venue_id'],
-          year: res[0].i['year']
+          year: res[0].i['year'],
+          venue_name: res[0].vname,
+          venue_acronym: res[0].vacr
         };
         console.log(res);
       })

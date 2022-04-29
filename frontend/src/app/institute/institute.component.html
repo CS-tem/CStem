@@ -19,7 +19,7 @@
       <mat-list-item> Total citations: {{institute.n_citations}} </mat-list-item>
       <mat-divider></mat-divider>
 
-      <mat-list-item> Average citations: {{institute.n_citations / institute.n_pubs}} </mat-list-item>
+      <mat-list-item> Average citations: {{institute.n_citations / institute.n_pubs | number : '1.2-2'}} </mat-list-item>
 
   </mat-list>
 
