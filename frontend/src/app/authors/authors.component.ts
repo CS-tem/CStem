@@ -7,6 +7,9 @@ import { Author } from '../author';
 import { ViewChild } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
+import { FormControl } from '@angular/forms';
+import { MatSelectChange } from '@angular/material/select';
+import { Options } from '@angular-slider/ngx-slider';
 
 @Component({
   selector: 'app-authors',
@@ -18,8 +21,18 @@ export class AuthorsComponent implements OnInit {
   displayedColumns = ["name", "h_index", "n_pubs", "n_citations"];
   subscription = new Subscription();
   authors: Array<Author> = [];
+  topicFilter = new FormControl();
+  topicList: string[] = ['all'];
   @ViewChild('paginator') paginator: MatPaginator | any;
   dataSource: MatTableDataSource<Author>;
+
+  start_year: number = 2005;
+  end_year: number = 2023;
+  topics: any = [];
+  options: Options = {
+    floor: 2005,
+    ceil: 2022
+  };
 
   constructor(private router: Router, private qs : QueryserviceService) { 
     this.dataSource = new MatTableDataSource(this.authors);
@@ -28,6 +41,7 @@ export class AuthorsComponent implements OnInit {
 
   ngOnInit(): void {
     this.updateAuthorsInfo();
+    this.updateTopicsInfo();
   }
 
   updateAuthorsInfo() : void {
@@ -45,6 +59,17 @@ export class AuthorsComponent implements OnInit {
         });
         this.dataSource.data = this.authors;
         this.dataSource.paginator = this.paginator;
+      })
+    );
+  }
+
+  updateTopicsInfo() : void {
+    this.subscription.add(
+      this.qs.getTopics().subscribe(res => {
+        this.topicList = ['All'];
+        res.forEach((element: any) => {
+          this.topicList.push(element.name);
+        });
       })
     );
   }
@@ -87,6 +112,27 @@ export class AuthorsComponent implements OnInit {
   openRow(row: any) {
     let route = '/author/' + row.id;
     this.router.navigate([route]);
+  }
+
+  chooseTopics(event: MatSelectChange) {
+    this.topics = event.value;
+    if (this.topics[0] == 'All' || this.topics.length == 0) {
+      this.topics = this.topicList.slice(1);
+    }
+    this.handleUserChange();
+  }
+
+  capitalize(input: string) {  
+    var words = input.split(' ');  
+    var CapitalizedWords: Array<string> = [];  
+    words.forEach((element: string) => {  
+        CapitalizedWords.push(element[0].toUpperCase() + element.slice(1, element.length));  
+    });  
+    return CapitalizedWords.join(' ');  
+  }
+
+  handleUserChange(): void {
+    this.qs.getAuthorNewInfo(this.start_year, this.end_year, this.topics);
   }
 
 }

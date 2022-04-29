@@ -125,4 +125,20 @@ export class QueryserviceService {
   public getArticleCitationGraph(id: number, d: number) : Observable<any> {
     return this.http.get(`http://127.0.0.1:8000/article/citation-graph/${id}-${d}`);
   }
+
+  public getAuthorNewInfo(from: number, to: number, topics: Array<String>) {
+    var data = {
+      from: from,
+      to: to,
+      topics: topics
+    };
+    this.http.post<any>('http://127.0.0.1:8000/new-authors-info/', data).subscribe({
+      next: data => {
+        console.log(data);
+      },
+      error: error => {
+        console.log(error);
+      }
+    });
+  }
 }

@@ -37,5 +37,26 @@
                     [pageSizeOptions]="[5, 10, 25, 100]"
                     aria-label="Select page">
     </mat-paginator>
+    <div class="flex-center">
+      <mat-form-field appearance="fill" class="dropdown">
+        <mat-label>Topics Considered</mat-label>
+        <mat-select (selectionChange)="chooseTopics($event)" [formControl]="topicFilter" multiple>
+            <mat-select-trigger>
+            {{topicFilter.value ? topicFilter.value[0] : "All"}}
+            <span *ngIf="topicFilter.value?.length > 1" class="example-additional-selection">
+                (+{{topicFilter.value.length - 1}} {{topicFilter.value?.length === 2 ? 'other' : 'others'}})
+            </span>
+            </mat-select-trigger>
+            <mat-option *ngFor="let topic of topicList" [value]="topic">{{capitalize(topic)}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <ngx-slider
+        [(value)]="start_year"
+        [(highValue)]="end_year"
+        [options]="options"
+        (valueChange)="handleUserChange()"
+        (highValueChange)="handleUserChange()"
+      ></ngx-slider>
+    </div>
 </div>
   
