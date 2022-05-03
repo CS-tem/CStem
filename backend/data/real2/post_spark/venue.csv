@@ -1,6 +1,6 @@
-id,name,acronym,type
-0,Conference on Computer Vision and Pattern Recognition,CVPR,Conference
-1,European Conference on Computer Vision,ECCV,Conference
-2,International Conference on Computer Vision,ICCV,Conference
-3,Knowledge Discovery and Data Mining,KDD,Conference
-6,Association for Computational Linguistics,ACL,Conference
+id,name,acronym,type,n_pubs,n_citations,flexibility
+0,Conference on Computer Vision and Pattern Recognition,CVPR,Conference,7,0,0.0
+1,European Conference on Computer Vision,ECCV,Conference,367,91,0.0
+2,International Conference on Computer Vision,ICCV,Conference,300,105,0.0
+3,Knowledge Discovery and Data Mining,KDD,Conference,374,31,0.0
+6,Association for Computational Linguistics,ACL,Conference,412,204,0.0

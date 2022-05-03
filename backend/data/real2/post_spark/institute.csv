@@ -1,39 +1,39 @@
-id,name
-0,Australian National University
-1,CMI
-2,Chinese Academy of Sciences
-3,Chinese University of Hong Kong
-4,DTU
-5,Durham University
-6,ETH Zurich
-7,ETS Montreal
-8,Federal University of Rio Grande
-9,Freie Universitaet Berlin
-10,Galatasaray University
-11,Goethe University Frankfurt
-12,Goldsmiths University of London
-13,Harbin Institute of Technology
-14,IISc Bangalore
-15,IIT Bombay
-16,IIT Delhi
-17,Imperial College London
-18,Korea University
-19,McGill University
-20,Monash University
-21,National Taiwan University
-22,National University of Singapore
-23,Osaka University
-24,Seoul National University
-25,TU Braunschweig
-26,The Hong Kong Polytechnic University
-27,Tokyo Institute of Technology
-28,University College London
-29,University of British Columbia
-30,University of Cambridge
-31,University of Copenhagen
-32,University of Hong Kong
-33,University of Manchester
-34,University of Melbourne
-35,University of Ottawa
-36,University of Oxford
-37,Uppsala University
+id,name,n_members,n_pubs,n_citations
+31,University of Copenhagen,64,94,33
+34,University of Melbourne,55,77,15
+28,University College London,58,96,36
+26,The Hong Kong Polytechnic University,71,108,31
+27,Tokyo Institute of Technology,60,85,28
+12,Goldsmiths University of London,62,90,23
+22,National University of Singapore,84,113,22
+1,CMI,68,107,66
+13,Harbin Institute of Technology,54,73,16
+6,ETH Zurich,55,78,26
+16,IIT Delhi,70,101,34
+3,Chinese University of Hong Kong,52,81,29
+20,Monash University,60,92,48
+5,Durham University,70,108,37
+19,McGill University,57,103,22
+15,IIT Bombay,58,69,11
+37,Uppsala University,54,80,6
+9,Freie Universitaet Berlin,76,106,23
+17,Imperial College London,48,72,29
+35,University of Ottawa,61,89,23
+4,DTU,55,85,9
+8,Federal University of Rio Grande,71,109,32
+23,Osaka University,50,64,23
+7,ETS Montreal,66,100,37
+10,Galatasaray University,66,105,38
+25,TU Braunschweig,69,101,9
+24,Seoul National University,75,105,37
+29,University of British Columbia,57,83,19
+21,National Taiwan University,69,111,54
+32,University of Hong Kong,58,94,20
+11,Goethe University Frankfurt,52,81,32
+33,University of Manchester,71,100,28
+14,IISc Bangalore,65,85,14
+2,Chinese Academy of Sciences,79,121,35
+30,University of Cambridge,67,104,13
+0,Australian National University,74,97,26
+18,Korea University,61,90,25
+36,University of Oxford,53,72,16

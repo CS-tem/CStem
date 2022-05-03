@@ -1,4 +1,4 @@
-id,name
-0,"Computer Vision"
-1,"Machine Learning & Data Mining"
-2,"Natural Language Processing"
+id,name,n_articles,n_authors,n_citations
+0,Computer Vision,674,1070,196
+1,Machine Learning & Data Mining,374,654,31
+2,Natural Language Processing,412,708,204

@@ -1,2396 +1,2396 @@
-id,name
-216,"Dragos D. Margineantu"
-677,"Nuno Vasconcelos"
-704,"César Ferri"
-1359,"Peng Shi"
-1989,"Malcolm J. A. Strens"
-2849,"C. de la Higuera"
-5965,"Joelle Pineau"
-5992,"Kari Torkkola"
-8379,"Zoran Obradovic"
-9258,"Jason S. Chang"
-10432,"Shien-Shin Tham"
-11513,"Zvika Marx"
-13297,"Adam Kowalczyk"
-14391,"Thomas Zöller"
-15055,"Allen R. Hanson"
-20454,"Yeun-Bae Kim"
-22391,"Francois Rivest"
-22727,"Anat Levin"
-24223,"Jianbo Shi"
-24505,"S. J. Russell"
-24522,"Danijel Skočaj"
-25329,"Nicholas Roy"
-25330,"Fredy Amaya"
-25531,"David L. Bean"
-26113,"Dan Roth"
-26118,"Maneesh K. Singh"
-26750,"B. Southall"
-26882,"Wei Hong"
-27705,"G. J. Streekstra"
-27717,"Miroslav Kubat"
-28849,"Matthew R. Glickman"
-31220,"Marie Rochery"
-31994,"Michel Vidal-Naquet"
-32626,"Jeffrey Ng"
-33052,"Martin Jägersand"
-33521,"Ko Nishino"
-35030,"Gerald Dalley"
-35105,"Roger Moore"
-35450,"Franck Thollard"
-36692,"Christian Wallraven"
-37042,"Geoff Hulten"
-38110,"Erwin Marsi"
-42158,"Inderjeet Mani"
-42849,"A. W. Moore"
-42945,"Vinay Bhat"
-43547,"Kiran S. Bhat"
-44109,"Kenji Furukawa"
-45052,"Alistair Willis"
-45268,"Dimitrios Katsoulas"
-46701,"Yuanzhen Li"
-48290,"Matthias Heiler"
-48596,"Roland T. Chin"
-49731,"Ian Reid"
-50062,"J. Freixenet"
-51893,"Ehud Reiter"
-51977,"C. Grover"
-52245,"J. Shotton"
-52250,"Andreas Ruf"
-52878,"George A. Miller"
-52909,"Wee Sun Lee"
-54529,"Teruo Koyanagi"
-55098,"Dong-Min Woo"
-55522,"Maria Petrou"
-56955,"Chi-Keung Tang"
-57950,"Tao Xiang"
-58670,"Choh-Man Teng"
-58704,"Timothy Baldwin"
-59117,"H Okuno"
-59136,"Xavier Llorà"
-59648,"Fabrice Heitz"
-60382,"Shuntaro Isogai"
-60470,"Manu Sridharan"
-60786,"Mike Barley"
-61452,"Satinder P. Singh"
-62099,"Aravind K. Joshi"
-62329,"Wayne Iba"
-62725,"B. Kimia"
-62752,"Greg Slabaugh"
-65537,"Yang Song"
-68413,"Tadashi Nomoto"
-68688,"David Demirdjian"
-68922,"K. Hanazawa"
-69298,"Prasad V. Tadepalli"
-69321,"J. J. Lucena-Molina"
-70079,"Josep Maria Garrell i Guiu"
-70562,"P. H. S. Torr"
-70891,"Ullrich Köthe"
-70979,"Joris Vanden Wyngaerd"
-71288,"Robin Cooper"
-71471,"Dan I Moldovan"
-72883,"Edward Schofield"
-73050,"Eric E. Bloedorn"
-73109,"Wolfgang Heidrich"
-74083,"Elli Angelopoulou"
-74460,"B. J. Tordoff"
-74560,"S. H. Muggleton"
-74620,"Richard A. Caruana"
-74695,"Michael Felsberg"
-74730,"A. M Tekalp"
-74878,"Pierre Gurdjos"
-75163,"Christophe Chefd'hotel"
-79071,"Regina Barzilay"
-79096,"M. Harville"
-79599,"Amy R. Greenwald"
-80842,"Dan Cristea"
-82624,"Charles W. Anderson"
-83043,"P. Langley"
-83044,"P. N. Belhumeur"
-83098,"Sergey V. Pakhomov"
-84610,"Sugato Basu"
-85961,"Ayman Farahat"
-86218,"Wenxin Jiang"
-86694,"Paul Aarseth"
-86912,"R. Deriche"
-87067,"Brigham S. Anderson"
-87264,"Xavier Muñoz"
-89038,"Barbara Rosario"
-89673,"Douglas A. Talbert"
-91932,"Alexander S. Yeh"
-92750,"Christian R. Shelton"
-92780,"Hai Tao"
-93228,"Xiaopeng Tao"
-93301,"Charles X. Ling"
-93633,"Nigel Tao"
-94424,"Goh Chooi Ling"
-94497,"Liang Wang"
-95118,"Manfred K Warmuth"
-95820,"Ramin Zabih"
-95878,"Jason Michael Eisner"
-95924,"Suzanne B. Sandmeyer"
-96156,"José Gomes"
-97085,"Sariel Har-Peled"
-97520,"Benny P. L. Lo"
-98783,"Chikara Matsunaga"
-99157,"Tat-Jen Cham"
-99640,"Gregory Dudek"
-100313,"Marina Meilă"
-101042,"Bill Triggs"
-101151,"Michael Bowman"
-101160,"Jesús Peral"
-101414,"Salvatore J Stolfo"
-101804,"Yasuyuki Sakai"
-103600,"Hua Wu"
-105682,"Xiaoqiang Luo"
-106304,"David Ronghwa Chiang"
-109158,"Joohui An"
-109411,"Nuria Oliver"
-109575,"Atsuyoshi Nakamura"
-109914,"James R. Slagle"
-110423,"Nanning Zheng"
-111250,"Russell Greiner"
-111637,"Arcot Sowmya"
-111860,"Joaquin Gonzalez-Rodriguez"
-112055,"Jean-Paul Armspach"
-112310,"Jessica Li Teng Koo"
-112540,"Liran Goshen"
-112705,"Philippe de Groote"
-114037,"Jussi Tohka"
-115640,"Ruzena Bajcsy"
-117201,"Étienne Mémin"
-117550,"Sadaoki Furui"
-118181,"Hang Li"
-118591,"Guillermo Sapiro"
-119404,"Chikashi Nobata"
-120050,"Dave Peterson"
-124295,"Young-Soog Chae"
-124490,"M. Tistarelli"
-125996,"Jian-Gang Wang"
-126806,"Anand Venkataraman"
-127182,"Kary Myers"
-127450,"Reinhard Rapp"
-127466,"Stefan Rapp"
-127997,"Risi Imre Kondor"
-128049,"A. D. Jepson"
-128297,"Stella X. Yu"
-128480,"R. Kimmel"
-128585,"Joseph Shamir"
-129362,"Kentaro Torisawa"
-130774,"Manik Varma"
-134224,"Jun Wang"
-136704,"Yongcheng Wang"
-139402,"M. Sznaier"
-139507,"Hisashi Kashima"
-140838,"William D. Smart"
-143038,"Jesus A. Gonzalez"
-143684,"Larry S Davis"
-144713,"Stefan Riezler"
-145217,"Gang Wang"
-145422,"Ilia Nouretdinov"
-146123,"Nicolas Meuleau"
-147013,"Yizhou Wang"
-147461,"Tepchai Supnithi"
-147983,"Roger Levy"
-148492,"Hiromi Ozaku"
-148563,"Waleed Al-Fares"
-149070,"Yang Wang"
-149215,"G. Sparr"
-149265,"Sylvain Kahane"
-149504,"C J Taylor"
-149511,"Camillo J. Taylor"
-149530,"Sham Kakade"
-150281,"W. Culbertson"
-150582,"Ronald M. Kaplan"
-151238,"Christian Matenar"
-151576,"Horst Bischof"
-151846,"Jeff G. Schneider"
-153181,"David D. Jensen"
-154919,"J. Fiérrez-Aguilar"
-158820,"A. Pentland"
-159006,"Thomas G. Dietterich"
-159168,"Hajime Kimura"
-160385,"Xiang Sean Zhou"
-160955,"Anna Korhonen"
-161015,"Yuval Krymolowski"
-161195,"Lyle Noakes"
-161248,"Deepak Ravichandran"
-161282,"Behzad Shahrary"
-161710,"Alessio Del Bue"
-162198,"Sabine Schulte im Walde"
-162506,"Meir Cohen"
-163787,"Eric Fosler-Lussier"
-164316,"René Payrissat"
-171177,"José Santos-Victor"
-173400,"Mathias Creutz"
-173570,"M. Yoshikawa"
-173903,"L. Van Gool"
-174042,"Colin Cherry"
-174717,"Y Yeshurun"
-177349,"Mazin G. Rahim"
-179063,"Bonnie L Webber"
-179257,"Francine Chen"
-179373,"Vasant G. Honavar"
-179523,"Xiangrong Chen"
-179610,"Xing Chen"
-180287,"Johannes E. Gehrke"
-180338,"L Schubert"
-186193,"Scott S. L. Piao"
-188086,"Mark S. Drew"
-189375,"Leo J. Guibas"
-190198,"P Bouthemy"
-190521,"M. Schmidt"
-191048,"Peng-Yeng Yin"
-191321,"Langzhou Chen"
-191434,"Brian Curless"
-192242,"M. J. Pazzani"
-192388,"A L Yuille"
-193424,"Shimon Ullman"
-193526,"Anand Rangarajan"
-193558,"Pradit Mittrapiyanuruk"
-193634,"Gill Bejerano"
-193881,"Ashwin Srinivasan"
-198755,"Guodong Guo"
-200013,"T. Hague"
-201114,"Duncan F. Gillies"
-201745,"Jian Su"
-203712,"Anand Panangadan"
-203813,"Alexis Nasr"
-204588,"Manfred Pinkal"
-205402,"Érick Alphonse"
-207798,"Razvan C. Bunescu"
-208590,"J. W. Bell"
-208772,"HongJiang Zhang"
-208818,"Mark Bernhardt"
-209107,"João Paulo Costeira"
-209203,"Junxian Wang"
-209645,"Stéphane Lallich"
-210216,"Robert Amar"
-210366,"Vittorio Ferrari"
-210628,"Harpreet S. Sawhney"
-210667,"Charles B. Callaway"
-215670,"M. I. A. Lourakis"
-216437,"Bernard Pfahringer"
-218608,"Patrick S. Huggins"
-218944,"Ulrich Germann"
-219113,"Rens Bod"
-220797,"Marcus Ackle Maloof"
-221379,"Lionel Clément"
-221867,"Maurice Ringer"
-223474,"J Graham"
-224633,"Robert A. Jacobs"
-226392,"Yuka Tateishi"
-228964,"Feng Huang"
-229391,"Gilles Simon"
-229470,"Danyu Liu"
-229805,"Eric Pauwels"
-230016,"Pamela W. Jordan"
-230180,"Zhengyou Zhang"
-230488,"Bla&#382/ Zupan"
-231837,"Taro Watanabe"
-231976,"Marielle Lange"
-232815,"Eiichiro Sumita"
-235117,"F. O. Kuehnel"
-235686,"Lihi Zelnik-Manor"
-236592,"Pierre Isabelle"
-236724,"Phillipe Burlina"
-239917,"Christophe Papin"
-241913,"Jan De Prins"
-242262,"Min Tang"
-242543,"Amanda Stent"
-242807,"Ying Wu"
-243350,"Kwan-Yee K. Wong"
-243485,"Cong Li"
-243754,"Lambert E. Wixson"
-244671,"Kai Ming Ting"
-246550,"Lluís Padró"
-247860,"Rong Xiao"
-250142,"Deepayan Chakrabarti"
-250660,"Seong Bae Park"
-251132,"Sebastian B. Thrun"
-251272,"V. Cornilleau-Peres"
-253049,"Gregory Aist"
-253691,"J. T. Lapresté"
-253799,"Richard Markham"
-253818,"Ian H. Jermyn"
-255733,"Beth A Hockey"
-256556,"Berthold Crysmann"
-258080,"Li Fei-Fei"
-258587,"Takaaki Hori"
-258909,"P S Yu"
-259756,"Zhi-Pei Liang"
-259834,"Shamez Alibhai"
-260599,"A. Blum"
-260859,"Hyunjung Son"
-261022,"John MacCormick"
-261571,"D S Weld"
-261682,"Nils T. Siebel"
-261748,"Michael Kohlhase"
-262035,"Cornelia Fermüller"
-263292,"R. P. N. Rao"
-263360,"Cenk Kaynak"
-263376,"Claire Gardent"
-263787,"Stephanie Sage"
-264210,"T Kanade"
-264363,"Paulo R. S. Mendonça"
-264423,"Arnulf B. A. Graf"
-265505,"Tiecheng Liu"
-268449,"Roman Goldenberg"
-271030,"Sing Bing Kang"
-272658,"J. Droulez"
-273782,"Tucker Balch"
-274716,"Alain Lecomte"
-274836,"Marie-Pierre Dubuisson-Jolly"
-274852,"Christophoros Nikou"
-275570,"Cen Rao"
-275842,"Deva Ramanan"
-276389,"M. Rao"
-276456,"D. Q. Huynh"
-282083,"Menno van Zaanen"
-284447,"Cheng-En Guo"
-284658,"Joachim Niehren"
-285351,"Akshar Bharati"
-285923,"Masao Utiyama"
-288303,"Jan Puzicha"
-288713,"Jefferson A. Coelho Jr."
-288831,"Paul M. Hubel"
-288902,"Stefan Müller"
-290258,"Margarita Osadchy"
-290611,"Abraham P. Ittycheriah"
-290916,"Nicholas J. Adams"
-293126,"Charles Rich"
-294461,"Allan Borra"
-295676,"Hiroshi Mamitsuka"
-299137,"Meng Sun"
-299976,"Qing Ma"
-300959,"Oliver Jesorsky"
-301236,"Yanlin Guo"
-301283,"David K. Wehe"
-301312,"Kazunori Komatani"
-301572,"Yiming Ma"
-301599,"Don Blaheta"
-303069,"Eugene Charniak"
-303231,"Shankar Rao"
-303450,"J. L. Crowley"
-304174,"Yue Zhou"
-304819,"Kristina Toutanova"
-305281,"Lisa N. Michaud"
-305938,"Jongsun Kim"
-306110,"Bhavani Raskutti"
-306197,"Ming-Hsuan Yang"
-306324,"Thomas Petsche"
-307088,"R. E. Schapire"
-307393,"Annabelle Chardin"
-307638,"Danny Keren"
-307786,"Richard Zens"
-307951,"Yong Wang"
-308036,"Roberto Manduchi"
-308058,"David Nister"
-308082,"Daniel Martinec"
-308619,"Robert Dale"
-309105,"Rein van den Boomgaard"
-309155,"Daisuke Kawahara"
-310501,"Huaigu Cao"
-310912,"Mihai Boicu"
-312023,"Hideki Tanaka"
-312467,"Massimo Poesio"
-312553,"Antal Van Den Bosch"
-315364,"Kyoko Kanzaki"
-316016,"Robert Fossum"
-316542,"Collin F. Baker"
-316580,"Haifeng Liu"
-316784,"Rashmi Prasad"
-317575,"Horst Hau&#223/ecker"
-318257,"Walter Daelemans"
-318275,"M. Sebban"
-318323,"Richard P. Wildes"
-318411,"Achi Brandt"
-318863,"Zhaohui Sun"
-320295,"Craig William Codrington"
-320994,"Manish Sarkar"
-321545,"Nicholas R. Howe"
-321967,"Fei-Yue Wang"
-322050,"Vlad Branzoi"
-324419,"Gerald Schaefer"
-327710,"Dani Goldberg"
-329817,"Andrew Blake"
-329846,"Marco Saerens"
-329870,"Andrew Blake"
-329899,"Daishi Harada"
-330533,"Malcolm R. K. Ryan"
-330582,"Sam Roweis"
-330696,"Sašo Džeroski"
-330840,"W. R. Edwards"
-330975,"Jing Huang"
-331989,"Katharina Morik"
-332258,"Amund Skavhaug"
-335089,"Justin A. Boyan"
-335803,"Guy Rochard"
-335900,"Yuji Matsumoto"
-337256,"Ronan Fablet"
-338274,"M. Farenzena"
-338699,"G. McGunnigle"
-339279,"Jeffrey Ho"
-339384,"Michail G. Lagoudakis"
-339621,"Salvador Ruiz-Correa"
-339762,"Moshe Ben-Ezra"
-340358,"J. Matas"
-340449,"Andrew W. Senior"
-341132,"Kurt Cornelis"
-341209,"Andrew Lippman"
-341248,"S. C. Schwartz"
-341250,"A. Criminisi"
-342203,"Alexander K. Seewald"
-342771,"B. A. A. Nazief"
-344288,"Eric McCreath"
-344307,"Huajie Zhang"
-344418,"Richard Goodrum"
-346275,"H Niemann"
-347730,"Daniel Gildea"
-347802,"Bonnie J. Dorr"
-350853,"Ping Tan"
-351918,"John Dowding"
-352417,"Tanveer Fathima Syeda-Mahmood"
-353547,"R. Stevenson"
-353560,"Francis Quek"
-354072,"Rob Fergus"
-354127,"Suzanne Ava Stevenson"
-354301,"Adam Laud"
-354406,"Kar-Ann Toh"
-355132,"Gabriel Pereira Lopes"
-355204,"Francesca Odone"
-355424,"Philip L. Worthington"
-355931,"B F Buxton"
-356561,"Friedrich Neubarth"
-357899,"Roman Yangarber"
-358163,"Ramani Duraiswami"
-358570,"Vasileios Hatzivassiloglou"
-359002,"Irfan Essa"
-360875,"Gilles Aubert"
-362496,"Cecilia Mazzaro"
-362849,"Timothy Bickmore"
-362975,"Benjamin Taton"
-363034,"Xianfeng Gu"
-363754,"Andrew Gordon"
-363829,"Alexis Roche"
-363948,"Alan Fern"
-364156,"Fatiha Sadat"
-364672,"Karsten L. Worm"
-365154,"Hauke Tschach"
-365587,"Finnegan Southey"
-366014,"Terrance E. Boult"
-366724,"Mark G. Core"
-367047,"Geoffrey J. Gordon"
-367337,"Shiri Gordon"
-367618,"Virach Sornlertlamvanich"
-367820,"Feng Han"
-368018,"Jane Mulligan"
-368258,"K Ikeuchi"
-368640,"Kenji Imamura"
-371851,"Rahul Bhotika"
-372621,"Li Lian"
-373653,"Fredrik Kahl"
-374316,"Markus Weber"
-374591,"Alin Dobra"
-376217,"Yair Weiss"
-376308,"Douglas DeCarlo"
-377630,"Rolf P. Würtz"
-377785,"Helder Araújo"
-377897,"Fabio Roli"
-377961,"Hwee Tou Ng"
-378049,"David Cohn"
-379259,"Jason Rennie"
-379951,"Denver Dash"
-379980,"Richard Dearden"
-380153,"Isabelle L. Herlin"
-380572,"Rosemary Emery"
-382648,"Stefan Carlsson"
-383857,"Masaaki Nagata"
-383879,"Charless Fowlkes"
-384963,"Yorick Wilks"
-385705,"Nir Friedman"
-387060,"David C. Wilson"
-388179,"C. J. Rupp"
-388510,"Ilan Shimshoni"
-389776,"Jiaya Jia"
-390043,"Richard Howard Wicentowski"
-390345,"Dieter Fox"
-390900,"Rodger Kibble"
-391837,"Bart Selman"
-392189,"Anitha Kannan"
-392741,"Hitoshi Isahara"
-393041,"Satoshi Sekine"
-393929,"Marcel van Lohuizen"
-394378,"Machiel Westerdijk"
-394952,"Thomas Vetter"
-395804,"Manuela M. Veloso"
-397997,"Johnny T. Chang"
-398273,"Peter Sand"
-398573,"Christoph Strecha"
-398990,"Anurag Gupta"
-401334,"LoongFah Cheong"
-402782,"Christian Jacquemin"
-403672,"Ljupěco Todorovski"
-404205,"Michael Jones"
-404573,"Lynne J. Cahill"
-405178,"Philip David"
-405387,"J. Isidoro"
-405756,"Philipp Koehn"
-406502,"Stanley E. Scharoff"
-407780,"Kiyoshi Yamabana"
-408661,"Peter Meer"
-408917,"Andrei Mikheev"
-409211,"Claire Cardie"
-409469,"Michael R. Brent"
-409742,"Salvador Botello"
-409977,"Gann Bierner"
-410260,"Adrian Corduneanu"
-410498,"Svetlana Lazebnik"
-410585,"Marc Pollefeys"
-410719,"Ye Zhang"
-411044,"S. Buchholz"
-411462,"Justus Piater"
-411831,"Amy S. Weinberg"
-412281,"J. Scott McCarley"
-413196,"L. H. Ungar"
-413922,"Hwee Tou Ng"
-413983,"T. Hassner"
-414173,"Todd Ward"
-415393,"Kristin P. Bennett"
-415689,"L Allison"
-417108,"Calvin R. Maurer, Jr."
-417190,"Michael Kipp"
-417210,"Bogdan Matei"
-417270,"Ricardo Vilalta"
-417771,"Takao Watanabe"
-418304,"Hannes Pirker"
-418600,"Gregory Z. Grudic"
-418828,"Steve Whittaker"
-419605,"Octavia I. Camps"
-420206,"Paul Morǎrescu"
-420268,"Nigel Duffy"
-420589,"Ulrich Hillenbrand"
-420676,"Pierre-Louis Bazin"
-420947,"Colin K. M. Ho"
-421775,"E. Grosso"
-422403,"Elisabeth Rouy"
-425736,"H. D. Tagare"
-426046,"Yasuhiro Taniguchi"
-426383,"Francis Bond"
-427607,"James R. Curran"
-428319,"Charles D. Yang"
-429030,"Robert Sim"
-429134,"Giuseppe Carenini"
-429456,"Emmanuel Prados"
-429751,"Laurent Romary"
-430117,"Jacques Ales Bianchetti"
-430119,"Wei Yun Yau"
-431283,"K. Oflazer"
-431572,"Kathleen R. McKeown"
-436018,"Diane J. Cook"
-439977,"Mike Rogers"
-440634,"B. Bhanu"
-440717,"David Gondek"
-441250,"Eric Villemonte de la Clergerie"
-441955,"Max Welling"
-442034,"Sandeep Seri"
-442114,"Yossi Rubner"
-442502,"Thomas Bonfort"
-443308,"JungHyun Han"
-443795,"Jette Randløv"
-443924,"Andrea Torsello"
-444515,"Slobodan Vucetic"
-444524,"Andrew Davison"
-444945,"Paul R. Cohen"
-445010,"H. Hassan"
-445148,"Simon Henderson Corston-Oliver"
-445154,"Martin Zinkevich"
-445293,"C. Schmid"
-445544,"Keith Hanna"
-446365,"Jürgen Forster"
-446367,"Jeremy Glasner"
-447560,"Frederic Richard"
-447758,"J. M. Gawron"
-448280,"F. Vichot"
-448775,"Michael Goebel"
-450172,"Barbara Caputo"
-450625,"Eiko Yamamoto"
-450666,"S. Gong"
-451678,"Julia Vogel"
-452087,"Yoram Baram"
-452599,"Brigitte Krenn"
-454658,"Olcay Taner Yildiz"
-456299,"Lisa Pearl"
-459319,"Hai Jin"
-459610,"Raffaele Cappelli"
-460609,"John D. Lafferty"
-461109,"Nancy Ide"
-462301,"Stefan Evert"
-462752,"Masato Yamamoto"
-463450,"Manabu Sassano"
-465966,"Annalisa Barla"
-466059,"R. Cipolla"
-467341,"J. Méndez Rodríguez"
-467652,"Shing-Tung Yau"
-468873,"Josef Bigün"
-469338,"Sanmay Das"
-471430,"P. Johansen"
-471815,"Silviu Cucerzan"
-471960,"Gabe Reinstein"
-473014,"Robert Malouf"
-473858,"Fernando Pereira"
-474982,"John Burger"
-475799,"Sundar Vedula"
-475922,"Amit Dubey"
-476099,"Edward A. Geiser"
-477008,"Nir Sochen"
-477326,"James H. Elder"
-477355,"Hristo Tanev"
-477632,"Rong Jin"
-478930,"Guodong Zhou"
-479355,"Benjamin van Roy"
-479964,"E. Brill"
-480326,"Antonin Rozsypal"
-480352,"Topi Mäenpää"
-480767,"Jean-Luc Gauvain"
-481333,"Sylvia C. Pont"
-481349,"Romer Rosales"
-481525,"Attilio Giordana"
-482450,"João P. Barreto"
-482470,"Tom Malzbender"
-482828,"Wen-Chi Shei"
-484193,"A S Willsky"
-485135,"Suresh Manandhar"
-485204,"Yukinori Kakazu"
-485392,"Jean-Philippe Tarel"
-485499,"Fletcher Lu"
-485916,"Wenmiao Lu"
-485982,"Richard Crouch"
-486908,"Hugues Bersini"
-487023,"Bikramjit Banerjee"
-487132,"Arindam Banerjee"
-487192,"Brian Edward Roark"
-487373,"Baback Moghaddam"
-487432,"Michael Strube"
-487452,"Koichiro Deguchi"
-488025,"Juwei Lu"
-488988,"Y. Y. Zeevi"
-490220,"D. Snow"
-490257,"Changshui Zhang"
-491788,"Shichao Zhang"
-491796,"Eibe Frank"
-491856,"Byoung-Tak Zhang"
-492319,"Ian Frank"
-493000,"Anette Frank"
-494270,"V. Caselles"
-496963,"K Kanatani"
-497322,"Emmanuel Morin"
-497328,"Luce Morin"
-497708,"T. Daniel Midgley"
-498313,"Sherri L. Condon"
-498728,"S J Maybank"
-499435,"Sang-Zoo Lee"
-499951,"Frank Delleart"
-500942,"Robert Givan"
-500947,"Timo Kohlberger"
-501263,"B. T. Thomas"
-502170,"Gaurav Tevatia"
-502347,"Michael Werman"
-502789,"Yusuf Sinan Akgul"
-502983,"Shree K. Nayar"
-503412,"Dorian Suc"
-503560,"Scott D. Cohen"
-504174,"Guang-Zhong Yang"
-504588,"William Cohen"
-504613,"Laurent D. Cohen"
-505110,"Helmut Schmid"
-505419,"Marco Carcassoni"
-505499,"Cordelia Schmid"
-506007,"Ming Zhou"
-506190,"Gerald Tesauro"
-507307,"Daniel Francis Hardt"
-509210,"Horacio Saggion"
-510052,"Brian V. Funt"
-510157,"P. Perez"
-510843,"Hirofumi Yamamoto"
-512090,"Ulrich Schäfer"
-512124,"Lourdes Agapito"
-512349,"C. K. Williams"
-514162,"Lance Williams"
-514536,"G. Hirzinger"
-515593,"HowLung Eng"
-515638,"B. North"
-516207,"Mark-Jan Nederhof"
-516828,"Wei Chu"
-518341,"Jan-Olof Eklundh"
-518462,"A. Gammerman"
-518595,"Marcel Mitran"
-519244,"Joshua Goodman"
-519291,"Mukund Padmanabhan"
-519481,"Lucero Lopez Perez"
-519908,"Ying Zhu"
-521085,"C. Elkan"
-521201,"Remco C. Veltkamp"
-521253,"Julie E. Boland"
-521467,"Guy Lebanon"
-521535,"John R Kender"
-521844,"Daniel V. Klein"
-522004,"Eitaro Fujioka"
-522329,"Johannes Fürnkranz"
-523017,"Jing Wang"
-523032,"Hans Uszkoreit"
-523533,"Antal van den Bosch"
-523535,"Stephan Vogel"
-523691,"Oliver Williams"
-523710,"Huihsin Tseng"
-524175,"Shinichi Ueno"
-524382,"Modesto Castrillón Santana"
-524468,"Gerda Lubenova Kamberova"
-524570,"Hisami Suzuki"
-524805,"Chris Pal"
-525262,"A. V. Zalesny"
-525582,"J. S. Kandola"
-525955,"Junhwan Kim"
-526246,"Akitoshi Okumura"
-526450,"CHEUNG Chi Shun"
-526900,"B. Bascle"
-527485,"John Williams"
-528784,"William J. Fitzgerald"
-529517,"Lionel Oisel"
-530430,"Frédéric Guichard Jean-Philippe Tarel"
-530459,"Aleksandr Dubinskiy"
-531177,"G. H. Granlund"
-531299,"Stefan Thater"
-531352,"Kees van Deemter"
-531696,"M Glesner"
-532138,"Anil K. Jain"
-532167,"Song Chun Zhu"
-532397,"Dekai Wu"
-532456,"Donghui Wu"
-532470,"L Zhu"
-532494,"Akane Yakushiji"
-534055,"Wei-Jing Zhu"
-534693,"Antonio Ferrández"
-535800,"G. X. Qian"
-535870,"Xiaofeng Ren"
-535952,"Stefano Ferilli"
-536062,"J. Carroll"
-536687,"Jason Fritts"
-537488,"Diana Santos"
-537597,"J Csirik"
-537920,"Paulo Rocha"
-538145,"Kah Kay Sung"
-538319,"Tom O'Hara"
-538323,"Seiya Osada"
-538830,"Hossein Ragheb"
-539433,"Scott Mardis"
-539498,"Slav Petrov"
-539505,"Barry Schiffman"
-539545,"Theo Moons"
-539578,"Richard Power"
-539581,"Ian Marshall"
-539646,"Philip Stuart Resnik"
-539654,"Tao Zhang"
-539697,"T. Zhang"
-539853,"El-Sayed Atlam"
-541768,"Martin Cooperson, Jr."
-541992,"Amir Globerson"
-543529,"Sadao Kurohash"
-543654,"Jonas Kuhn"
-543968,"Sven J. Dickinson"
-543975,"Rémi Ronfard"
-544673,"Tom Stocky"
-546401,"Noboru Miyazaki"
-546789,"S. McCarley"
-547218,"David Milward"
-547814,"Geoffrey E. Hinton"
-547871,"Masaki Murata"
-548060,"Huan Chang"
-548104,"Thomas Morton"
-550371,"Igor V. Cadez"
-550701,"Jose M. Castano"
-551288,"D G Lowe"
-552489,"ZuWhan Kim"
-552639,"Miles E. Hansard"
-552823,"Daphna Weinshall"
-552834,"Changning Huang"
-552931,"R. Malladi"
-553877,"Valentin Jijkoun"
-554203,"Sanda M. Harabagiu"
-555078,"S. K. Shevade"
-555573,"Markus Middendorf"
-556144,"Jean-Luc Meunier"
-558445,"Toyomi Saiga"
-558911,"P. Caudal"
-559504,"W. James MacLean"
-559539,"Daniel Borrajo"
-560635,"Jake D. Brutlag"
-561042,"Geoff J. McLachlan"
-561135,"Helen Wright Hastie"
-561805,"Shunsuke Uemura"
-562162,"Michael D. Grossberg"
-562370,"Xiaodong Wang"
-562630,"Yang Wang"
-562662,"Mark Everingham"
-563954,"Relu Patrascu"
-565531,"Jan Neumann"
-565787,"Jun Goto"
-566019,"Bernd Möbius"
-566321,"David Tschumperlé"
-567345,"Robert Thomas Collins"
-567385,"Christopher D. Manning"
-567515,"Russell A. Manning"
-567715,"Bernard Chazelle"
-568091,"Dimitri Metaxas"
-568211,"Kyriakos N. Sgarbas"
-568325,"Javier Ortega-Garcia"
-568407,"Dennis DeCoste"
-568463,"Jose L. Marroquin"
-570526,"César Silva"
-570876,"Carlo Tomasi"
-570941,"Ewan Klein"
-572593,"Vadim N. Smelyansky"
-572652,"Chuan Long"
-573146,"B. Georgescu"
-573826,"Masayuki Asahara"
-574026,"Ruigang Yang"
-574064,"T. Van Allen"
-574732,"Graham Finlayson"
-575016,"Mubarak Shah"
-575474,"Xiuhong Zhang"
-575691,"Takashi Washio"
-575972,"Narendra Ahuja"
-577389,"Annie Foret"
-578881,"Abe Kazemzadeh"
-579573,"Yaoyong Li"
-580053,"Alexander Koller"
-580586,"D. Ormoneit"
-580642,"Slobodan Ilic"
-580654,"Georgios Paliouras"
-581002,"Cheng Niu"
-581590,"O. Chutatape"
-582824,"Pedrito Maynard-Reid, II"
-582997,"L. Raedt"
-583083,"H. Attias"
-583351,"Johannes Hug"
-583529,"Wee Sun Lee"
-583687,"Sabino J. Ferreira"
-584659,"Mi-Suen Lee"
-585020,"Tomáš Pajdla"
-586774,"Phan Huy Khanh"
-586938,"Angel Domingo Sappa"
-587351,"G. Lanckriet"
-587406,"Scott M. Gallager"
-587979,"Huang Changning"
-588171,"Milena Petrova"
-590042,"Efstathios Hadjidemetriou"
-590362,"C. von der Malsburg"
-591237,"Silvio Savarese"
-591284,"Daphne Koller"
-591535,"Pavel Krbec"
-592908,"J. O. Kephart"
-593098,"Daniel Nikovski"
-593624,"Kannan Achan"
-594577,"Jamie Sherrah"
-595755,"Anlei Dong"
-595767,"Nimrod Megiddo"
-596053,"Doina Precup"
-596112,"David A Harwood"
-596771,"Katrin Erk"
-596813,"Adnan Ansar"
-596823,"Mikael Rousson"
-596884,"Nebojša Jojić"
-604522,"Harris Drucker"
-604755,"Eric Yap"
-604911,"R. L. de Màntaras"
-605009,"Michael Julian Black"
-605040,"Akiko Nakashima"
-607063,"Adam Finkelstein"
-607575,"Gunaranjan Vasireddy"
-608302,"Elisabeth Crawford"
-610441,"Alexander Holt"
-611723,"Astro Teller"
-612605,"Yuh-Jyh Hu"
-614387,"John C. Waterton"
-615425,"João Maciel"
-615671,"Gerard Medioni"
-615910,"M. Lindenbaum"
-617442,"Kurt Driessens"
-617966,"Shigenobu Kobayashi"
-618645,"Andrew W. More"
-618942,"Loo-Nin Teow"
-619018,"Geert Caenen"
-620242,"J. Lasenby"
-620455,"John Laird"
-620574,"Jien Kato"
-620904,"Gareth Loy"
-621166,"Mariano Rivera"
-621252,"James R. Davis"
-621348,"James W. Davis"
-621476,"Chin-Hwee Peh"
-621973,"Daniel Saul Jurafsky"
-623822,"Rohini Srihari"
-624076,"Richard Durbin"
-624312,"Alex J. Smola"
-625054,"Alexandra Psarrou"
-626198,"Karin Müller"
-626823,"Diana Maynard"
-627098,"Bianca Zadrozny"
-629033,"Ce Liu"
-629382,"Philip M. Long"
-629895,"Karvel K. Thornber"
-630142,"Andrea Garullli"
-632770,"Jan-Mark Geusebroek"
-632849,"Endong Xun"
-632893,"Alexei A. Efros"
-633094,"Douglas A. Aberdeen"
-633113,"Eric V. Siegel"
-633127,"Jens Rittscher"
-633711,"Ronald Parr"
-634051,"Tapio Elomaa"
-634341,"Neil Lawrence"
-635469,"Michele Banko"
-635823,"Luiz M. G. Gonçalves"
-635880,"Uros Pompe"
-636102,"E. Hayman"
-636945,"Tze-Yun Leong"
-638805,"Egon C. Pasztor"
-639164,"Melanie Siegel"
-643440,"Lex Weaver"
-644014,"S.-S. Ieng"
-644962,"Fan Jiang"
-644972,"Guangshan Jiang"
-645353,"Ismael García-Varea"
-645764,"Yuankai Jiang"
-647779,"A. Thayananthan"
-648158,"Shuly Wintner"
-648605,"Dana Segal"
-649177,"David Jelinek"
-649279,"Richard Segal"
-649343,"Chris Brockett"
-649729,"Fredrick Jelinek"
-649730,"M. Trajkovic"
-650363,"Eduard H. Hovy"
-650577,"Zheng Chen"
-650898,"Claude Barras"
-651419,"L. Robert"
-651641,"Alvin H. Kam"
-653815,"Cristian Sminchisescu"
-654649,"James Coughlan"
-654910,"Bernhard Schökopf"
-656383,"Alexander Berengolts"
-656503,"Tony Jebara"
-657532,"Paul E. Utgoff"
-658297,"Oliver King"
-658843,"Zhao Jun"
-659662,"Sandip Sen"
-661634,"D. Koubaroulis"
-662407,"Hanqing Lu"
-664155,"Isaac Cohen"
-664216,"Yanghai Tsin"
-666476,"Owen Rambow"
-667119,"Matthias Seeger"
-667435,"Zhuowen Tu"
-667436,"Zhouwen Tu"
-667658,"Pedro Isasi"
-667831,"Lynette Hirschman"
-667956,"Tom Drummond"
-668010,"Chris Drummond"
-668832,"Myung-Gil Jang"
-670393,"Taku Kudo"
-670513,"Hong Qi"
-672079,"Eran Borenstein"
-672540,"F. Wu"
-673226,"Attilio Giordana"
-676333,"Detlef Prescher"
-677381,"M. Botta"
-677887,"Ashutosh Garg"
-679884,"George Tecuci"
-680277,"Masaru Miyazaki"
-681533,"Matteo Negri"
-681635,"Naoki Yoshinaga"
-682633,"Ying Nian Wu"
-682899,"M. Teicher"
-685988,"Shivakumar Vaithyanathan"
-688367,"Valentina Bayer Zubek"
-689432,"Ingrid Zukerman"
-689904,"Stefan Schrödl"
-690472,"Josef Sivic"
-690693,"David Gavaghan"
-690728,"David Stirling"
-691276,"Motilal Agrawal"
-693429,"Paul L. Rosin"
-701788,"Robert Pless"
-702397,"Yukiko I. Nakano"
-702867,"L. Gaucher"
-703713,"Hung-Ju Huang"
-704210,"Kaibo Duan"
-704287,"J. Denzler"
-704958,"Yee Whye Teh"
-705348,"Qiansheng Cheng"
-705583,"Daniel Cremers"
-708915,"S. Z. Li"
-708950,"Stan. Z. Li"
-709882,"Zhiping Zheng"
-709906,"Zijian Zheng"
-713780,"Claude-Nicolas Fiechter"
-714377,"Shie Mannor"
-715742,"K. Tieu"
-715863,"Eric J. Horvitz"
-716339,"Chanderjit Bajaj"
-716834,"Jean-Marc Vézien"
-717441,"Xindong Wu"
-717448,"Dimitrios Gunopulos"
-717757,"Liesl Osman"
-718866,"Peter Ju"
-718972,"Michael Schiehlen"
-720243,"Kwok-Wai Cheung"
-720285,"Hanno Scharr"
-721723,"Daniel Marcu"
-721725,"Dorin Marcu"
-721874,"Michal Irani"
-723112,"Hua Cheng"
-723712,"Michael Bonnell Harries"
-724453,"Eunseok Lee"
-725068,"June-Ho Yi"
-726304,"Anthony Yezzi Jr"
-727262,"John Reidar Mathiassen"
-728734,"Hajime Tsukada"
-729076,"Danny B. Yang"
-729826,"Tom M. Heskes"
-730031,"Roman Wyrzykowski"
-730458,"Kim Steenstrup Pedersen"
-730910,"Nello Cristianini"
-731615,"Sami Romdhani"
-732007,"Ying Wu"
-733461,"Christophe Jermann"
-734027,"M. Hernández-Tejera"
-734086,"Stefan Wrobel"
-735112,"Philip K. Chan"
-735293,"Yan Zhou"
-735744,"Geoffrey Zweig"
-740023,"Haym Hirsh"
-740129,"Yael Dahan Netzer"
-741194,"Davi Geiger"
-741385,"Keiichi Yoshida"
-741727,"Sarah Zelikovitz"
-745197,"William Schuler"
-745677,"Steven Minton"
-747366,"Zhenyi Wen"
-747473,"Preetam Maloor"
-749550,"Arun Krishnan"
-749629,"A. P. Shon"
-751892,"Khalil Sima'an"
-752845,"Yuri A. Ivanov"
-752889,"Carine Hue"
-752999,"N. Rubin"
-754184,"Yukihiro Itoh"
-754354,"Ralph Grishman"
-754357,"Kohji Itoh"
-754631,"J. L. Prince"
-755428,"Martin Lauer"
-756618,"Geoffrey G. Towell"
-756639,"J Kittler"
-757333,"Katja Markert"
-758263,"N. Kiryati"
-759439,"David A. Maluf"
-759683,"Shuchi Chawla"
-760402,"Jean Ponce"
-761713,"J. F. G. de Freitas"
-761883,"Stefan Kaufmann"
-765068,"David E. Johnson"
-766575,"Katharina Probst"
-767097,"Cristian Levcovici"
-767133,"E. Hajičová"
-767742,"Naftali Tishby"
-768045,"Ahmed M. Elgammal"
-768665,"Slava Andreyev"
-768843,"J. Sullivan"
-769041,"Janyce Marbury Wiebe"
-769248,"Sadao Kurohashi"
-769752,"Kevin P. Murphy"
-769963,"Erik F. Tjong Kim Sang"
-770147,"Terran Lane"
-771558,"Michael van Lent"
-771611,"Ting Liu"
-772572,"S. Roukos"
-773973,"Kalina Bontcheva"
-774961,"Petr Sgall"
-778459,"Arda Çelebi"
-779274,"M. Barlaud"
-779681,"Christopher Culy"
-781098,"B. Jähne"
-782577,"Kenji Hara"
-786128,"Alireza Osareh"
-786145,"R Sangal"
-786969,"Huiying Zhong"
-788472,"Krzysztof Krawiec"
-788516,"Vivian Tsang"
-790878,"Alexandra Kinyon"
-790935,"Supan Samarasekara"
-790972,"Kentaro Toyama"
-791013,"Blai Bonet"
-791106,"Javier Portilla"
-791110,"Craig Boutilier"
-791499,"Yuri Boykov"
-791828,"Ronda Venkateswarlu"
-791964,"Jeong-Mi Cho"
-793177,"Ph. Deschamp"
-793178,"Pablo Ariel Duboué"
-793368,"Steven D. Hordley"
-793899,"Péter Dienes"
-793909,"Mona Talat Diab"
-794476,"J. R. Bergen"
-794853,"Quentin Delamarre"
-796390,"Michel Galley"
-799656,"Tomás Werner"
-800771,"R. Prevete"
-801394,"Sang W. Lee"
-801414,"Mehryar Mohri"
-802364,"Hossein Yahia"
-802832,"Miriam Goldberg"
-802955,"Masataka Kagesawa"
-803013,"Steven Gillis"
-803370,"Radu Florian"
-803514,"Hongyan Jing"
-803617,"Michael Johnston"
-803898,"Tracy H. King"
-803905,"Ralf Klinkenberg"
-804270,"Youji Kiyota"
-804273,"Alistair Knott"
-804767,"Erhard W. Hinrichs"
-804969,"Tsutomu Hirao"
-805118,"Florin Ciucu"
-805299,"Nobuhiro Kaji"
-805339,"Mark Johnson"
-805604,"Hideki Isozaki"
-805614,"Sang W. Lee"
-805629,"Tetsuya Ishikawa"
-806376,"Mark Hoebeke"
-808663,"I. Laptev"
-809889,"Eric Sung"
-810437,"Bruce Blumberg"
-811494,"Amir Jafari"
-812683,"Marta Wilczkowiak"
-813100,"Miguel Angel García"
-814056,"Patrick Ehlen"
-814378,"Kavita Thomas"
-814919,"Nikos Canterakis"
-816350,"Shuicheng Yan"
-817988,"Rong Yan"
-821399,"Feiyu Xu"
-823351,"Peng Xu"
-823804,"T. Walsh"
-825099,"Thomas M. Breuel"
-825663,"G. Sommer"
-827003,"A. Shokoufandeh"
-827369,"S H Myaeng"
-827780,"Johanna D. Moore"
-827993,"Noam Slonim"
-829605,"Takeshi Kawabata"
-830165,"John Langford"
-830170,"Julia Hockenmaier"
-830260,"Benjamin Taskar"
-830866,"Franz Beil"
-831418,"Martin S. Chodorow"
-831462,"Dragomir R. Radev"
-831476,"A. Busti"
-831699,"Leigh J. Fitzgibbon"
-832273,"Andrew W. Fitzgibbon"
-834228,"Quang-Tuan Luong"
-834708,"François Barthélemy"
-836530,"Constantine Papageorgiou"
-836788,"S. P. Chan"
-837424,"C. W. A. M. van Overveld"
-839831,"Jimin Liu"
-839850,"Kap Luk Chan"
-840117,"Jianhua Yao"
-841159,"Yizhou Yu"
-841367,"D. J. Kriegman"
-841393,"Stefan Schaal"
-842130,"Michael Jahr"
-842141,"Hagen Spies"
-842185,"José L. Vicedo"
-844060,"Boris Xavier Vintimilla"
-847570,"L. Van Gool"
-848184,"John A. Bateman"
-848446,"Nail Gumerov"
-848486,"Marius A. Pasca"
-848748,"A. N. Rajagopalan"
-849520,"Marc Swerts"
-849560,"X. Cufí"
-849819,"Panos Giannopoulos"
-849964,"C. D. Spyropoulos"
-850154,"S. S. Keerthi"
-850386,"Xavier Pennec"
-850790,"Leonid Sigal"
-851097,"Yee Seng Chan"
-851464,"R M Bolle"
-852087,"Arrigo Benedetti"
-852652,"Makoto Sato"
-853672,"Martin Jansche"
-855700,"Huazhong Ning"
-856325,"Drew Steedly"
-860703,"C. Schnörr"
-861156,"Raul Queiroz Feitosa"
-861171,"Janusz Bobulski"
-861753,"Rayid Ghani"
-862275,"Anuj Dev"
-863228,"Makoto Itami"
-863315,"Marko Grobelnik"
-863381,"T. Lindeberg"
-864212,"Laurent El Ghaoui"
-864475,"Vincent Ng"
-864976,"Hwee Tou Ng"
-865518,"Junhwan Kim"
-867095,"Gerhard Widmer"
-867490,"Frédéric Cao"
-868272,"Yunbo Cao"
-868923,"P. Anandan"
-868927,"P. Anandan"
-868934,"P. Anandan"
-869237,"Eitan Sharon"
-869333,"Nikita S. Imennov"
-869427,"Noriyoshi Uratani"
-870345,"Tom M. Mitchell"
-872463,"Jin-Dong Kim"
-872504,"Jung-jae Kim"
-873427,"Vasanth Philomin"
-874483,"Ryszard Kozera"
-874723,"O D Faugeras"
-875089,"Andrew Y. Ng"
-875276,"Clark Francis Olson"
-875626,"Wenwei Yu"
-876949,"Zeyun Yu"
-876970,"Amnon Shashua"
-877017,"Ting Yu"
-877149,"Xiang Gao"
-877192,"Peter Tu"
-878209,"Dmitriy Genzel"
-878607,"Balázs Kis"
-878883,"Lindsay Martin"
-879061,"Jiahua Wu"
-880722,"Roxana Girju"
-880864,"Judita Preiss"
-881182,"Yonatan Wexler"
-882006,"Leonid Peshkin"
-883802,"Narendra Gupta"
-884692,"E. Shechtman"
-885011,"Hui Gao"
-885409,"Sridhar Mahadevan"
-885663,"Noam Shental"
-885802,"John M. Winn"
-886783,"Julien Sénégas"
-887836,"Hiroshi Yokoi"
-890170,"Tomás Werner"
-890288,"Xiaoou Tang"
-890730,"Shree B. Kang"
-891547,"Kristin J. Dana"
-891928,"Lei Yu"
-892292,"Joan Martì"
-897671,"Eric Chown"
-897688,"Yu-Fei Ma"
-898600,"Rachel E. O. Roxas"
-898811,"Arnoldo Mayer"
-899610,"T. D. Rikert"
-900023,"Jennifer Neville"
-900237,"Se Young Park"
-901656,"Mark Hepple"
-901706,"G. Carneiro"
-902181,"Nahum Shimkin"
-902431,"Jungyun Seo"
-902650,"Nicholas Roy"
-903057,"Tomer Hertz"
-903306,"Janet Hitzeman"
-904222,"Brendan J. Frey"
-905253,"Timor Kadir"
-905637,"Satoshi Sato"
-908144,"Eric Breck"
-908370,"Jörg Stachowiak"
-909222,"H. Delingette"
-909247,"Thomas G. Dietterich"
-909257,"Anurag Mittal"
-909281,"Atsuto Maki"
-909394,"Kohji Dohsaka"
-910458,"Vibhu O. Mittal"
-910678,"Shmuel Peleg"
-913019,"T. Ko"
-913295,"Andrea Lagorio"
-913835,"Fayin Li"
-914967,"Hendrik Blockeel"
-914970,"Jovan Popovic"
-916924,"M. J. Chantler"
-917018,"Peter Sturm"
-917221,"D. J. Fleet"
-919617,"Eleazar Eskin"
-919791,"Robin D. Morris"
-920147,"Martin Reynaert"
-920978,"Sharathchandra Pankanti"
-921010,"James L. Hieronymus"
-921137,"Fumiaki Tomita"
-921236,"Hiroaki Sato"
-921324,"Lucian Vlad Lita"
-921539,"Roger C. Tam"
-921683,"K. Mikolajczyk"
-922181,"Abdessamad Echihabi"
-922269,"N Lavrac"
-922323,"Satoshi Sato"
-922337,"Imari Sato"
-922652,"Xiaoqing Ding"
-922973,"Nick Barnes"
-923066,"Jihong Ding"
-923505,"Vittorio Murino"
-923924,"Wolfram Burgard"
-923945,"Christian Retoré"
-923974,"Jacques-Olivier Lachaud"
-924152,"Yoichi Sato"
-924437,"S. A. Clark"
-926153,"R Nevatia"
-928516,"Ross Cutler"
-929627,"Pascal Fua"
-930380,"Mohommed Waleed Kadous"
-930851,"Guy Gilboa"
-933788,"Mario Hernández"
-934710,"Artur Merke"
-939002,"Jie Yang"
-939304,"Christian Lebiere"
-941403,"Bernhard Hengst"
-941501,"Rama Chellappa"
-942704,"Enrico Blanzieri"
-942948,"Kazunori Onoguchi"
-942986,"Rakesh Kumar"
-943045,"Ezio Malis"
-943420,"Marcello Pelillo"
-944698,"Junling Hu"
-945986,"Pavel Kveton"
-946912,"Marc Moens"
-948127,"Fernando de la Torre"
-949666,"Richard S. Sutton"
-949876,"Pierre Charbonnier"
-951398,"Ravi Ramamoorthi"
-953034,"Ivan Bratko"
-954827,"Vol Van Dalsem"
-955145,"Arnaud Doucet"
-955340,"Young-Suk Lee"
-955646,"Frank Verbiest"
-956204,"A. Verri"
-956449,"M. A. O. Vasilescu"
-956571,"Hamish Cunningham"
-957063,"Björn Johansson"
-957685,"Chew L Tan"
-958701,"Elizabeth O. Bratt"
-959056,"Colin Campbell"
-959454,"Wim Wiegerinck"
-960513,"Patrice Latinne"
-961635,"Ch. Brechbühler"
-961650,"Chris Buehler"
-964474,"Hai Tao"
-966071,"Thomas R. Shultz"
-966469,"Daniel B. Russakoff"
-966517,"Akio Yokoo"
-967581,"Anne de Roeck"
-968113,"Ann B. Lee"
-968258,"Nicolae Duta"
-969211,"Ryuzo Okada"
-969432,"Kazuteru Komine"
-969840,"Gianluca Donato"
-970587,"Okan Kolak"
-973203,"Michael I. Jordan"
-975037,"Y. Hu"
-977992,"Jin-Xia Huang"
-980612,"Masaki Oono"
-981982,"Philip F. Mclauchlan"
-982477,"Tanapong Potipiti"
-982770,"L. Lee"
-982785,"Lillian Jane Lee"
-983256,"B. A. Draper"
-984882,"Gang Wang"
-987795,"E. R. Hancock"
-988528,"Steven J. Gortler"
-989083,"A Tannenbaum"
-989112,"Marsha C. Lovett"
-989221,"Enrico Di Bernardo"
-989916,"Wei Yu"
-990857,"Anthony R. Dick"
-990997,"Jaco Vermaak"
-991520,"Maxime Lhuillier"
-992328,"Dayne Freitag"
-992824,"Atsushi Fujii"
-992923,"Lothar Hermes"
-993726,"Mohammad Ghavamzadeh"
-993810,"H. Zaragoza"
-993849,"Yi-Cheng Huang"
-994049,"Henrik Malm"
-994130,"Gregory F. Welch"
-995035,"Steve Seitz"
-995470,"Jesse Hoey"
-996611,"Kristin P. Bennet"
-1001275,"Antonio Robles-Kelly"
-1001759,"Lior Wolf"
-1004977,"Greg Hamerly"
-1005461,"Glenn Carroll"
-1007795,"Dunja Mladenič"
-1007950,"Carles Sierra"
-1008173,"M. P. Wellman"
-1008226,"Ruth Rosenholz"
-1008560,"Tetiana Valchuk"
-1008637,"Michael Chisholm"
-1010315,"Guozhu Dong"
-1011761,"Ran El-Yaniv"
-1012087,"O. Déniz"
-1014074,"Kimon Roussopoulos"
-1014141,"Rik Fransen"
-1014154,"Jangmin O"
-1014895,"D. P. de Farias"
-1014923,"Sandra Kübler"
-1015994,"Atsuko Kida"
-1016010,"Bing Wang"
-1016076,"Bin Wang"
-1016526,"Peter Geibel"
-1016632,"David Cohn"
-1016692,"Thomas Corpetti"
-1016882,"Ellen Riloff"
-1018007,"Zhizhou Wang"
-1020233,"Teck Khim Ng"
-1024922,"Richard Myers"
-1026008,"Koichi Yamashita"
-1026080,"James M. Rehg"
-1026691,"Manny Rayner"
-1026969,"Anton Leuski"
-1027235,"Alan Bundy"
-1027328,"Rebecca Joyce Green"
-1027403,"Michael Elhadad"
-1027446,"German Rigau"
-1027456,"Volker Krüger"
-1027532,"Daniel R. Dooly"
-1028091,"Gábor Prószéky"
-1028155,"Aleksandra Mojsilovic"
-1031765,"Nikos Fakotakis"
-1032665,"Matthew Berland"
-1032984,"Clas Jönsson"
-1033381,"Shaohua Zhou"
-1034275,"ZhenQiu Zhang"
-1034397,"Dan Roth"
-1035104,"Ruslan Mitkov"
-1035464,"Xilin Chen"
-1035878,"Kevin C. Yeh"
-1035932,"D. Peel"
-1037346,"S. I. Yoo"
-1037563,"Umberto Castellani"
-1040082,"Matthew D. Mullin"
-1043585,"Hauke Jans"
-1043807,"Li Shen"
-1044298,"Dan Flickinger"
-1044552,"Chandra Kambhamettu"
-1045090,"J. Daudé"
-1045365,"Leen-Kiat Soh"
-1046337,"Seán Slattery"
-1046398,"Colin Davidson"
-1046568,"Maureen Clerc"
-1048365,"Daniel DeMenthon"
-1049445,"Toshio Ueshiba"
-1051366,"Marco Wiering"
-1051997,"Ralf Schoknecht"
-1052084,"Micheal Rudzsky"
-1052108,"Yaron Caspi"
-1053031,"Frank Keller"
-1053804,"Daniela Hall"
-1056385,"Sang W. Lee"
-1056428,"Seungwoo Lee"
-1059510,"Mauro Birattari"
-1060150,"Zheng Chen"
-1062154,"Jason Baldridge"
-1062485,"Patrick Pantel"
-1062506,"Eric P. Xing"
-1064221,"Y. G. Leclerc"
-1066314,"Mark Hall"
-1072094,"Bei Tang"
-1073133,"Klaus J. Kirchberg"
-1074844,"Joseph L. Mundy"
-1076805,"Zoran Duric"
-1077025,"Henk Muller"
-1077615,"Vasile Rus"
-1078041,"Th. Gevers"
-1078357,"Vangelis Karkaletsis"
-1080209,"Gerald Dejong"
-1080748,"Donna K. Byron"
-1081001,"Valentin Tablan"
-1081846,"Tim McInerney"
-1082878,"Richard Mann"
-1083073,"Kia-Fock Loe"
-1084444,"Ralf D. Brown"
-1086916,"Haifeng Chen"
-1086988,"Aaron Hertzmann"
-1087416,"Chris Bishop"
-1087787,"Pedro Domingos"
-1088222,"Robert Kaucic"
-1088832,"James J. Little"
-1088942,"Mark Schwabacher"
-1089709,"Shlomo Zilberstein"
-1090046,"Dan Oblinger"
-1090577,"P. Voles"
-1091051,"Lise Getoor"
-1091255,"Yaacov Hel-Or"
-1092421,"Maurício Marengoni"
-1093731,"Yoong Keok Lee"
-1094475,"Christophe Giraud-Carrier"
-1094934,"T. N. Tan"
-1095139,"Simon Baker"
-1095311,"Jakub Zavrel"
-1097150,"Jean-Marc Lavest"
-1097501,"Fabian Ernst"
-1097610,"Sébastien Ourselin"
-1097853,"Harry Shum"
-1098396,"B C Vemuri"
-1099074,"F. P. Ferrie"
-1099509,"Carlotta Domeniconi"
-1100701,"Geoffrey Webb"
-1101206,"A. Srivastava"
-1102397,"Francesco Ricci"
-1102663,"Kevin Knight"
-1104383,"Michael Gamon"
-1104890,"Alexei Gritai"
-1105374,"Omar Javed"
-1105598,"Tessa A. Lau"
-1105722,"Marcus Hutter"
-1105725,"Sébastien Granger"
-1105745,"Lucca Ronchetti"
-1106084,"Igor Ravve"
-1107277,"Chong Jin Ong"
-1107339,"P. Duygulu"
-1107594,"A G Barto"
-1108023,"Marc Pickett"
-1110738,"Carsten Steger"
-1111450,"M. Brown"
-1111973,"Todd E. Zickler"
-1114942,"Jitendra Malik"
-1115756,"F. Wolinski"
-1115858,"Marko Bohanec"
-1116475,"A. N. Poo"
-1117450,"Jianming Liang"
-1117469,"Adrien Bartoli"
-1118364,"Jonathan Whiteley"
-1118392,"Urszula Chajewska"
-1118397,"Jonas August"
-1118659,"David P. Dobkin"
-1119028,"Qiang Ji"
-1119049,"Jonathan Baxter"
-1119348,"John A. Marchant"
-1119781,"Patricia J. Riddle"
-1119921,"Joss Knight"
-1120029,"Peter Stone"
-1120033,"Peter Stone"
-1120219,"P. Fung"
-1120281,"Daniel D. Morris"
-1120329,"Alain Content"
-1120524,"Matthew Stone"
-1120996,"Kazuhiro Fukui"
-1121805,"Peter Nillius"
-1122308,"Aly A. Farag"
-1122459,"David Page"
-1122955,"Charles R. Rosenberg"
-1123203,"Witold Drożdżyński"
-1123210,"M. L. Gini"
-1124345,"George Kamberov"
-1124685,"Zhanyi Hu"
-1125836,"Jörg Conradt"
-1125854,"M. Pietikäinen"
-1126535,"Joviša D. Žunic"
-1127086,"H. A. Kautz"
-1128186,"Sharon A. Caraballo"
-1129742,"Laura Firoiu"
-1130157,"Jong-Hoon Oh"
-1130803,"Denis Simakov"
-1131413,"Kuang-Cheng Chang"
-1131476,"Graziano Chesi"
-1132741,"Mark Steedman"
-1132948,"Andrea Fusiello"
-1133385,"Hagit Zabrodsky Hel-Or"
-1133433,"Michael J. Witbrock"
-1133438,"Daichi Hayakawa"
-1133531,"Alex Lascarides"
-1133740,"Tobias Scheffer"
-1133910,"Georgios Petasis"
-1135378,"Christopher Leckie"
-1135730,"Simon Colton"
-1136650,"Ryosuke Isotani"
-1136814,"Juho Rousu"
-1137328,"I. Tastl"
-1137419,"João Mexia"
-1137573,"Russell H. Taylor"
-1138030,"Yuji Niwa"
-1138343,"Darya Frolova"
-1139164,"Ian H. Witten"
-1139547,"Ian H. Witten"
-1139766,"Céline Rouveirol"
-1139786,"LIU Xiaohu"
-1139935,"Thomas Deschamps"
-1140778,"Koichi Takeuchi"
-1141585,"Jonathan Ginzburg"
-1142024,"Timo Ojala"
-1142069,"Mark Dras"
-1142138,"Llew Mason"
-1143154,"Jim Gee"
-1143167,"Kenneth Nilsson"
-1143576,"Michael M. Kazhdan"
-1143962,"L. Lee"
-1146776,"M. Mirmehdi"
-1147111,"Christopher H. Bryant"
-1147918,"Jill Burstein"
-1149127,"Rebecca Hwa"
-1149509,"Hung-Tat Tsui"
-1150127,"F. Esposito"
-1151200,"Adam Kowalczyk"
-1151695,"David Vernon"
-1152330,"D W Murray"
-1152684,"Marc Dymetman"
-1153920,"Kiri Wagstaff"
-1154238,"Jose Hernandez-Orallo"
-1154258,"David L. Dowe"
-1155267,"Kishore Papineni"
-1155786,"Sreeream V. Balakrishnan"
-1155826,"Kenneth W. Church"
-1156563,"Gian Luca Marcialis"
-1157261,"Leonard McMillan"
-1157925,"Mark A. Ruzon"
-1158347,"Eisaku Maeda"
-1159200,"David M. Pennock"
-1161428,"A. L. Gorin"
-1161581,"Ronen Basri"
-1161735,"Jan Hajic"
-1161797,"Vincent Colin de Verdière"
-1162008,"Catalina Barbu"
-1162110,"Thomas A. Funkhouser"
-1163215,"Björn Bringmann"
-1163227,"Carsten Rother"
-1165140,"Chong Wah Ngo"
-1165601,"S. Busemann"
-1165902,"A Vicino"
-1166090,"Sylvain Bouix"
-1166246,"C. Zhang"
-1166313,"Gianfranco Doretto"
-1167131,"Marco Ramoni"
-1167651,"Dale Schuurmans"
-1167800,"Malte Gabsdil"
-1168354,"J. Starck"
-1168602,"Ed Kaiser"
-1168903,"Adrian Barbu"
-1169023,"René Vidal"
-1169313,"Yannick de Kercadio"
-1169909,"David Forsyth"
-1170666,"Naoki Abe"
-1175006,"Wolfgang Förstner"
-1175070,"Dan Pelleg"
-1175212,"Mark D. Pendrith"
-1175471,"Haruo Takemura"
-1175876,"Yaakov Engel"
-1176148,"Janez Dem&#353/ar"
-1176201,"P. J. Armstrong"
-1176385,"Scott Matthew Thede"
-1177265,"Ralf Engel"
-1177270,"I Kononenko"
-1177970,"L. M. Alvarez"
-1178293,"N. Reithinger"
-1178356,"Rebecca J. Passonneau"
-1178523,"Frank Stolle"
-1179028,"A. Ericsson"
-1179064,"Jana Košecká"
-1179647,"Einoshin Suzuki"
-1179823,"Jun Suzuki"
-1180305,"M Takeichi"
-1180471,"Katsuya Masuda"
-1180582,"Yakup Genc"
-1181419,"Ale&stilde/ Leonardis"
-1183229,"Ariel Tankus"
-1183850,"T. S. Chua"
-1184581,"Masato Kawamoto"
-1185514,"Long Quan"
-1185534,"Nobuhiro Yugami"
-1185975,"Seong-Bae Park"
-1186909,"Ido Dagan"
-1187958,"Rahul Sukthankar"
-1188067,"Roni Khardon"
-1188964,"David C. Gibbon"
-1189370,"Athinodoros S. Georghiades"
-1189525,"Tinne Tuytelaars"
-1189781,"A. Scott Lennox"
-1190103,"F. Dornaika"
-1191133,"Chiraz BenAbdelkader"
-1191225,"Ashish Venugopal"
-1191345,"Mary P. Harper"
-1191433,"Thorsten Joachims"
-1192242,"Stefan Veeser"
-1192607,"Hanan Samet"
-1192739,"Shyjan Mahamud"
-1192847,"P Cheeseman"
-1192850,"Sebastian Padó"
-1192871,"Sylvain Prima"
-1193697,"G. Rives"
-1193840,"Ralf Plänkers"
-1193999,"Monica Rogati"
-1194519,"Andrew Zisserman"
-1194564,"Jun'ichi Kakegawa"
-1194689,"William Gregory Sakas"
-1195760,"Joseph A. O'Sullivan"
-1195814,"Craig Saunders"
-1196248,"Giulio Sandini"
-1196440,"Sholom M. Weiss"
-1197328,"D. Feldman"
-1197658,"Dragan Gamberger"
-1197747,"A. J. Torralba Silgado"
-1198184,"Steven Abney"
-1199310,"Greg Mori"
-1200102,"Roderic A. Grupen"
-1200549,"Rhodri H. Davies"
-1201431,"Ion Muslea"
-1203762,"Athanassios Papagelis"
-1204081,"Michael Fleischman"
-1206667,"Tatsuya Kawahara"
-1206693,"K. Doya"
-1208435,"K. N. Walker"
-1210142,"Jan Struyf"
-1211129,"Matthew G. Snover"
-1212098,"M. Hansen"
-1212505,"Thomas Gärtner"
-1213127,"Antoine Monnet"
-1213631,"Mitsuhiro Kondo"
-1213921,"Alessandro Chiuso"
-1218390,"Nalini K. Ratha"
-1218486,"Hilan Bensusan"
-1219425,"N. Karmarkar"
-1220010,"Kiyoshi Sudo"
-1222902,"Marilyn A. Walker"
-1225342,"Chai Wutiwiwatchai"
-1226323,"Frederik Schaffalitzky"
-1227479,"E. Alpaydin"
-1227515,"Anders Heyden"
-1227520,"A. Heyden"
-1228117,"Dennis Tell"
-1228838,"Mario Marchand"
-1229340,"Markus Becker"
-1230702,"Melinda T. Gervasio"
-1231463,"Susan E. Brennan"
-1231897,"M. Hearst"
-1233243,"Leonid Kompanets"
-1233248,"Christos Papatheodorou"
-1233726,"Robert B. Fisher"
-1235262,"J. Antonis"
-1237504,"Franz Josef Och"
-1238089,"Laurent Younes"
-1239730,"Eugene L. Fiume"
-1240079,"S W Zucker"
-1240325,"Xiaofei He"
-1242123,"R. I. Hartley"
-1242125,"R. Hartley"
-1242334,"Moumen T. El-Melegy"
-1242943,"Tzu-Tsung Wong"
-1245926,"Christopher Geyer"
-1247790,"Yaser Al-Onaizan"
-1249192,"Naoki Abe"
-1249999,"Jose M Benedi"
-1250295,"Erin L. Allwein"
-1250952,"Kenneth R. Beesley"
-1252498,"Narjès Boufaden"
-1253443,"J. H. Wright"
-1253558,"David W. Jacobs"
-1254967,"John Zweck"
-1256168,"Wei Zhang"
-1258634,"Kobus Barnard"
-1259444,"Kilyoun Kim"
-1259503,"Dorin Comaniciu"
-1260049,"Roberto Piola"
-1260730,"Bernt Schiele"
-1260856,"Yoav Y. Schechner"
-1262431,"Stuart I. Reynolds"
-1262467,"Nozha Boujemaa"
-1262870,"Donia R. Scott"
-1263423,"Rikard Berthilsson"
-1263589,"Judy Kay"
-1265132,"Jean-Daniel Zucker"
-1265372,"Michèle Sebag"
-1265824,"T. B. Y. Lai"
-1265948,"S. I. Betelú"
-1266360,"Sam Scott"
-1266815,"Christian Müller"
-1267566,"Dit-Yan Yeung"
-1268071,"Yi Li"
-1269207,"Pierre Boullier"
-1270047,"Emiel Krahmer"
-1271404,"Ralph Debusmann"
-1271623,"Anthony Yezzi"
-1271852,"Michael T. Rosenstein"
-1272069,"Diane Judith Litman"
-1274123,"Shimei Pan"
-1274219,"Haihua Pan"
-1274322,"Irene Langkilde"
-1274443,"Yoav Freund"
-1278260,"Joel R. Tetreault"
-1280403,"Mark Reid"
-1280557,"Ashutosh Garg"
-1280656,"Wen-Cheng Lin"
-1281596,"Mitsuko Yamura-Takei"
-1282487,"Yasubumi Sakakibara"
-1283428,"Gy. Dorkó"
-1283717,"John L. Barron"
-1284700,"Marc Light"
-1284839,"J. Lorenzo Navarro"
-1286087,"G. Adda"
-1286889,"Wei Fan"
-1287428,"Roger Evans"
-1287476,"J. Dy"
-1287507,"Feng Lin"
-1289943,"Kai-Fu Lee"
-1290415,"Jinyan Li"
-1291122,"L. Torgo"
-1292542,"Bill Triggs"
-1292968,"Reuven Zaritsky"
-1299391,"Mark W. Craven"
-1300290,"Bernardo Magnini"
-1302047,"Pierre Dupont"
-1303428,"Yuji Matsumoto"
-1303570,"Matthew J. Beal"
-1304547,"Qi Zhang"
-1306211,"Amy McGovern"
-1306717,"Kumiko Tanaka-Ishii"
-1307249,"Gloria Bueno"
-1308793,"Martha Stone Palmer"
-1309657,"Lei Zhang"
-1310060,"Yutaka Sasaki"
-1310964,"Thomas Leung"
-1313689,"S. Early"
-1314805,"Elliott Drabek"
-1315198,"Stephen D. Bay"
-1315408,"David McAllester"
-1316168,"S. Matwin"
-1317207,"K. P. Sycara"
-1318406,"Dana Cobzas"
-1318540,"Andrew R. McCallum"
-1319479,"Pierrette Bouillon"
-1319859,"Sanjiv Kumar"
-1320056,"Kristina Striegnitz"
-1320684,"Claude G. &#268/ron/ech"
-1322329,"Volodimir G. Vovk"
-1322705,"Michael R. Miller"
-1323032,"T. F. Cootes"
-1323047,"Alex Waibel"
-1325148,"Yoshio Nakao"
-1325560,"S. A. Goldman"
-1325885,"Ossama Emam"
-1326300,"Huajie Zhang"
-1327115,"Paul Komarek"
-1328266,"Kiyotaka Uchimoto"
-1328687,"Guo-Wei Bian"
-1329048,"Srinivasa G. Narasimhan"
-1329922,"Jan Alexandersson"
-1330471,"Théo Papadopoulo"
-1331132,"Hitoshi Iida"
-1331134,"Yoram Singer"
-1331840,"George Foster"
-1332208,"Teruo Koyama"
-1332476,"Naoki Abe"
-1332663,"Chris Brew"
-1333179,"Shai Fine"
-1335101,"Soumya Ray"
-1335235,"Takahiro Okabe"
-1336589,"Emi Izumi"
-1336772,"Gilles Trombettoni"
-1337400,"Tom Ault"
-1337695,"Paola Giovanna Merlo"
-1337821,"Anat Levin"
-1338372,"Anat Levin"
-1338820,"Malcolm R. K. Ryan"
-1339272,"Matthias Rychetsky"
-1340682,"Kim Gerdes"
-1342063,"P. Favaro"
-1342253,"Bob Price"
-1343012,"Hisayuki Kanda"
-1343461,"Bing Liu"
-1343759,"Bo-Yeong Kang"
-1346193,"Junichi Aoe"
-1347120,"L Zhang"
-1348360,"Michael Isard"
-1348669,"Ryuichiro Higashinaka"
-1349638,"Charles J. Fillmore"
-1351785,"Jude W. Shavlik"
-1352072,"Hal Daumé, III"
-1352193,"Anish Nair"
-1352567,"Prasanth B. Nair"
-1352886,"James Reisman"
-1354118,"Torsten Rohlfing"
-1354464,"U. Grenander"
-1354465,"Rajesh Parekh"
-1354514,"Andrea Kowalski"
-1355108,"Rebecca Frances Bruce"
-1355231,"Sandip Debnath"
-1356371,"Tina Eliassi-Rad"
-1356419,"Geert-Jan M. Kruijff"
-1356729,"Denis Bechet"
-1357162,"Jiangjian Xiao"
-1357344,"James Curtis Lester"
-1357489,"Alessandro Duci"
-1357823,"David J. Stracuzzi"
-1358797,"F R Chung"
-1360349,"Güter Neumann"
-1360683,"G. Frederix"
-1360723,"Song Wang"
-1360969,"Jim Xiuquan Ji"
-1361043,"Feng Zhang"
-1361320,"Yunmei Chen"
-1361672,"Huan Liu"
-1363618,"Radim Šára"
-1364394,"Shivani Agarwal"
-1364874,"Ketil Bø"
-1366713,"Douglas Fisher"
-1367580,"John W. Fisher, III"
-1368416,"Devina Desai"
-1369484,"Lawrence B. Holder"
-1369633,"Gianluca Bontempi"
-1369867,"Julia Hirschberg"
-1370017,"Carlos E. Thomaz"
-1371077,"Demetri Terzopoulos"
-1371124,"Craig Gotsman"
-1372086,"Shiloh L. Dockstader"
-1372581,"Peter D. Turney"
-1372630,"C. Decaestecker"
-1374767,"Thorsten Brants"
-1375727,"Pat Langley"
-1379100,"Susumu Katayama"
-1379870,"P. Perona"
-1380776,"Jeremy L. Wyatt"
-1381125,"Mikio Nakano"
-1381509,"Ciril Groselj"
-1382691,"Davide Maltoni"
-1383334,"Philip N. Klein"
-1386182,"Matthew Brand"
-1394926,"Matthew Brand"
-1395887,"Thomas C. Chuang"
-1395958,"Michael F. Cohen"
-1397702,"Min Zhang"
-1398249,"Heung-Yeung Shum"
-1398481,"Huan Chang"
-1399305,"Candace L. Sidner"
-1402449,"Jun-ichi Tsujii"
-1404682,"Chung Yong Lim"
-1405542,"Mu Li"
-1405564,"Ayhan Demiriz"
-1405666,"HeuiSeok Lim"
-1405674,"Hwasup Lim"
-1405926,"Xiaoli Li"
-1407936,"Sanjay Tiwari"
-1408251,"J.-P. Pons"
-1410998,"Hae-Chang Rim"
-1412127,"Alvin H. Kam"
-1412700,"B. Stenger"
-1414921,"Daniel Freedman"
-1415728,"M. Kearns"
-1415731,"M. Kearns"
-1415869,"Weng-Keen Wong"
-1417034,"Paul Clough"
-1417840,"R. Horaud"
-1418035,"M. K. Teal"
-1418351,"Do-Gil Lee"
-1420822,"Edmond Boyer"
-1421797,"L. Torresani"
-1422580,"Seiichiro Hangai"
-1422842,"Franck Genet"
-1423633,"DeKang Lin"
-1425704,"Yong S. Choi"
-1425829,"K. Daniilidis"
-1426946,"Piotr Wilinski"
-1428133,"Stephen Lin"
-1428394,"Stephen Lin"
-1428458,"Richard M. Karp"
-1429034,"Yiming Yang"
-1430839,"Peter Rander"
-1436415,"Luis Perez-Breva"
-1436757,"Hongcheng Wang"
-1438152,"Ricardo Silva"
-1438334,"Hanzi Wang"
-1438620,"T. S. Huang"
-1439763,"W. Lam"
-1440831,"Chi Wang"
-1441259,"J. W. Lloyd"
-1441517,"Michael Bowling"
-1441522,"Chris Stauffer"
-1441887,"S. K. Mitter"
-1442475,"Neil A. Thacker"
-1444730,"Johan Montagnat"
-1446178,"Scott McDonald"
-1446477,"Z. Rasheed"
-1448955,"Guihong Cao"
-1450763,"F. Béchet"
-1451221,"Adam L. Berger"
-1452835,"Marie-Odile Berger"
-1453295,"Kathleen F. McCoy"
-1453964,"Aurélien Max"
-1454471,"Huiqi Li"
-1456214,"David Eric Yarowsky"
-1457636,"Sameh M. Yamany"
-1459525,"Josephine Sullivan"
-1460014,"Wei Zhang"
-1460351,"Keith Hall"
-1460683,"Robert N. Moll"
-1464779,"Thomas Melluish"
-1465043,"L Kaelbling"
-1466400,"Chin-Yew Lin"
-1466568,"Sepandar D. Kamvar"
-1469134,"Simon Tong"
-1469208,"Xin Tong"
-1469538,"Michel Gangnet"
-1469743,"Huma Lodhi"
-1471531,"Jorge Cabrera-Gámez"
-1471573,"Rémi Munos"
-1473870,"G. Kokkinakis"
-1474640,"Masatoshi Tsuchiya"
-1475709,"Hang Li"
-1476105,"Christopher Meek"
-1477895,"O. Drbohlav"
-1478671,"Carla E. Brodley"
-1479900,"Michael Collins"
-1480237,"Yevgeny Seldin"
-1480651,"Robert C. Moore"
-1480655,"Robert C. Moore"
-1480696,"Alain Crouzil"
-1480702,"Veronique Hoste"
-1482471,"Tal Arbel"
-1482850,"Chun-Nan Hsu"
-1482853,"Wei Li"
-1485478,"Kyung-Soon Lee"
-1486455,"Jian-Cheng Wu"
-1487792,"Naokazu Yokoya"
-1488351,"Gregory F. Cooper"
-1488848,"Andy Tsai"
-1490387,"Christine E. McLaren"
-1491735,"Lauri Karttunen"
-1492794,"Jongmoo Choi"
-1494679,"D. Raba"
-1495780,"Dean F. Hougen"
-1497894,"Christoph Bregler"
-1502047,"S Sastry"
-1502066,"Dimitrios Kalles"
-1503289,"Simon Lacroix"
-1503940,"Gerald Penn"
-1504351,"Chiori Hori"
-1504490,"Bernard Zenko"
-1506013,"Jan Wieghardt"
-1508968,"V. Cherkassky"
-1509916,"Hai Leong Chieu"
-1510099,"Denys Duchier"
-1510142,"John R. Anderson"
-1510221,"G. Semeraro"
-1510880,"Khurram Shafique"
-1511907,"Fuyuko Kido"
-1512093,"Kiyoaki Aikawa"
-1512456,"Peter Brockhausen"
-1513005,"Claude Sammut"
-1513201,"Kaleem Siddiqi"
-1513350,"Maria Lapata"
-1517708,"A. Hilton"
-1519712,"Nitin Indurkhya"
-1521603,"H. González-Banos"
-1521860,"Maja J. Mataric"
-1522439,"Partha Niyogi"
-1522928,"Charles Kervrann"
-1523312,"Weiming Hu"
-1523335,"Minglun Gong"
-1524221,"Rada Mihalcea"
-1524514,"Kiriakos N. Kutulakos"
-1524766,"Andrea Pohoreckyj Danyluk"
-1524848,"Stuart Geman"
-1524871,"H. Motoda"
-1525174,"Yee-Hong Yang"
-1525952,"Jun-ichi Hirasawa"
-1526388,"Teruhisa Misu"
-1526560,"Robert W. Frischholz"
-1526671,"Greg Schohn"
-1526884,"Luc M. J. Florack"
-1528221,"Takayuki Okatani"
-1528250,"Harry Wechsler"
-1528899,"Ping Shyr"
-1531188,"Kurt Mehlhorn"
-1532420,"Massimiliano Pavan"
-1534308,"Grégory Flandin"
-1534453,"H H Nagel"
-1534756,"T. Evgeniou"
-1535016,"Hsin-Hsi Chen"
-1535197,"Ciprian Ioan Chelba"
-1535303,"Mihai Surdeanu"
-1535308,"Arvind Sastry"
-1535749,"Antony F. Bowers"
-1536309,"Sanjoy Dasgupta"
-1536424,"Bernhard Schölkopf"
-1536460,"F. Chaumette"
-1538282,"Mark Brodie"
-1539010,"Kristian J. Concepcion"
-1539841,"Stephen Benoit"
-1540428,"Mingjing Li"
-1540887,"Martin Riedmiller"
-1542357,"Takayuki Hamamoto"
-1544057,"Massimiliano Pontil"
-1546002,"Yoshinori Sagisaka"
-1546111,"Joost van de Weijer"
-1546626,"Nanda Kambhatla"
-1548314,"Yung Taek Kim"
-1549345,"Changjiang Yang"
-1550293,"Seishi Okamoto"
-1551200,"Il-Kyun Jung"
-1551612,"John Shawe-Taylor"
-1551810,"Costas Tsatsoulis"
-1552562,"Robby T. Tan"
-1552613,"Lorenza Saitta"
-1553198,"S. Avidan"
-1553426,"Tele Tan"
-1553524,"Olivier Chomat"
-1553872,"A J van Doorn"
-1554666,"Illah Nourbakhsh"
-1554904,"Arun Ross"
-1555388,"Daniel Scharstein"
-1555395,"Hans-Ulrich Krieger"
-1555647,"Abba M Krieger"
-1556072,"Dominik Auf der Maur"
-1556428,"Daisuke Miyazaki"
-1557684,"W. Zhao"
-1558411,"Mark A. Rubin"
-1558978,"Arthur E. C. Pece"
-1559032,"Gregory C. Sharp"
-1559734,"Dominic Widdows"
-1562014,"Christopher S. G. Khoo"
-1563394,"Jianfeng Gao"
-1563703,"Dimitris Samaras"
-1565479,"Achim Hoffmann"
-1566983,"Raymond J. Mooney"
-1567735,"Cyril Allauzen"
-1570590,"M. Toews"
-1571641,"Yuanhui Zhou"
-1571972,"Xiaofeng Yang"
-1573607,"Visvanathan Ramesh"
-1574536,"Yun Niu"
-1576992,"Lars Bretzner"
-1577302,"R. S. Weiss"
-1577641,"Olga Uryupina"
-1578696,"G Biswas"
-1579065,"Hedvig Sidenbladh"
-1579136,"Nikos Paragios"
-1579818,"Paul Smith"
-1580315,"Alexandre Guimond"
-1581043,"Alberto Paccanaro"
-1581110,"Francisco Casacuberta"
-1581166,"Takashi Machida"
-1581312,"D. Grimes"
-1581401,"Yiannis Aloimonos"
-1582834,"Amit Sethi"
-1583314,"Atsushi Yamada"
-1583364,"Gianluca Allaria"
-1583540,"Kenji Yamada"
-1584077,"M. Pavel"
-1584402,"Jian Sun"
-1585297,"João Gama"
-1585312,"Matthias Zobel"
-1585454,"Hiroshi Ishikawa"
-1586020,"Gary Geunbae Lee"
-1586374,"Scott Sanner"
-1586812,"Haim Schweitzer"
-1589023,"Hanning Zhou"
-1590097,"Zaharin Yusoff"
-1590362,"Akiko N. Aizawa"
-1592100,"Daniel G. Shapiro"
-1592548,"Jérôme Martin"
-1593499,"Grace Ngai"
-1593637,"David Renaudie"
-1594505,"Allen Y. Yang"
-1596333,"J J Koenderink"
-1596728,"Serge Belongie"
-1598977,"Wei Zhou"
-1600053,"D. M. Gavrila"
-1600170,"Walter Kasper"
-1602343,"Kristen Grauman"
-1602638,"Arindam Choudhury"
-1602810,"R. Gaizauskas"
-1602931,"Jeremy Yermiyahou Kaminski"
-1602934,"Dennis Kibler"
-1603136,"A. A. W. Smith"
-1603275,"Srinivas Bangalore"
-1603434,"P. Smyth"
-1603699,"Stefano Soatto"
-1604032,"M. Adda-Decker"
-1604319,"Yongmian Zhang"
-1604579,"Volker Blanz"
-1604728,"C L Giles"
-1604769,"Lori Lamel"
-1604991,"John T. Maxwell"
-1606169,"Corinna Richter"
-1607658,"James Shaw"
-1608076,"David Pierce"
-1608333,"Michael L. Littman"
-1611711,"Yasuhiro Sasaki"
-1611855,"Linda G Shapiro"
-1612467,"Jakub Piskorski"
-1612738,"Bernd Kiefer"
-1612766,"John C. Blitzer"
-1612923,"Erin Bredensteiner"
-1612939,"G. Székely"
-1612968,"Gang Hua"
-1613348,"Marko Robnik-Šikonja"
-1614045,"Eraldo Ribeiro"
-1614047,"António Ribeiro"
-1615886,"Gregory Shakhnarovich"
-1616309,"Kun Huang"
-1616922,"Eric K. Ringger"
-1618180,"Stéphanie Jehan-Besson"
-1618546,"Richard Nock"
-1618782,"D. Paiva"
-1618960,"Vladimir Kolmogorov"
-1619170,"A. Ja. Dikovsky"
-1619288,"Sethu Vijayakumar"
-1619678,"Charles S. Wiles"
-1620049,"Hichem Sahbi"
-1620097,"Somboon Hongeng"
-1621104,"Alexander G. Hauptmann"
-1621556,"Samuel W. Hasinoff"
-1621674,"Abraham Wyner"
-1622190,"K S Choi"
-1622456,"Jun Morimoto"
-1623185,"David Choi"
-1623208,"Freddy Y. Y. Choi"
-1623743,"Cen Li"
-1624015,"Won Seug Choi"
-1625554,"Renate Henschel"
-1625774,"Dídac Busquets"
-1626237,"William T. Freeman"
-1627114,"Roma Robertson"
-1627225,"Marshall F. Tappen"
-1627376,"Michael Dyer"
-1628448,"D. P. Robertson"
-1629362,"Tomas Brodsky"
-1629533,"Joseph Bockhorst"
-1629538,"Ralf Herbrich"
-1629618,"Paul A. Viola"
-1629666,"A. Zelinsky"
-1629771,"Maziar Palhang"
-1629808,"Changsong Liu"
-1629915,"Barbara L. Gates"
-1630228,"N. Ayache"
-1630382,"Tetsuji Nakagawa"
-1630460,"Hiroshi Nakagawa"
-1631565,"Yusuke Miyao"
-1631822,"Sébastien Joga"
-1632312,"Thomas B. Sebastian"
-1632700,"F. Calderon"
-1633034,"Bryan Singer"
-1633295,"Nicola Fanizzi"
-1633944,"Mads Nielsen"
-1634433,"John Oliensis"
-1635196,"W. Eric L. Grimson"
-1636577,"Myriam Greff"
-1637129,"Mircea Nicolescu"
-1638244,"Thomas Hofmann"
-1638741,"Jae Won Lee"
-1638854,"Hsing-Kuo Pao"
-1640260,"Daisuke Iijima"
-1641126,"Junxin Zhang"
-1641184,"Charles R. Dyer"
-1644558,"Yan Liu"
-1645402,"P. J. Giblin"
-1645947,"Byron Dom"
-1646016,"Luis Talavera"
-1646166,"Klaus Mück"
-1648038,"Howard J. Schultz"
-1648464,"A. D. Worrall"
-1648995,"Renaud Keriven"
-1649356,"Yufeng Liu"
-1650432,"Gavriel Speyer"
-1650436,"Trevor Darrell"
-1650656,"Theodore J. Perkins"
-1652699,"R. Szeliski"
-1652748,"Meirav Galun"
-1653450,"Vineet Chaitanya"
-1654628,"Nicholas Everett"
-1654895,"Hayit Greenspan"
-1654970,"Peter A. Flach"
-1656689,"Aya Aner"
-1657108,"Huafeng Liu"
-1657500,"Seth Rogers"
-1657600,"Ying Yang"
-1657844,"Justine Cassell"
-1658278,"Ann Copestake"
-1660145,"Sui Zhifang"
-1660706,"Assaf Zomet"
-1661638,"Olivier Gérard"
-1662451,"Peter L. Bartlett"
-1663159,"Alexander Clark"
-1664238,"Carlos Guestrin"
-1664507,"Michael Brady"
-1665372,"Joachim Buhmann"
-1666439,"Fred J. Damerau"
-1666594,"K. Kukich"
-1666614,"Florica Mindru"
-1666773,"Eleni Miltsakaki"
-1667714,"Ricardo Aler"
-1667776,"Sergey Ioffe"
-1668125,"Javier Lorenzo"
-1668397,"Etienne G. Huot"
-1668978,"Yoram Singer"
-1669861,"Václav Hlavác"
-1670596,"Herman L. Ferrá"
-1671107,"Jacob Goldberger"
-1672919,"Rahul Swaminathan"
-1673638,"Malvina Nissim"
-1673762,"Alain Trouvé"
-1674070,"Xiuwen Liu"
-1674341,"Mats Rooth"
-1674968,"Karel Oliva"
-1674999,"A. Oliva"
-1675468,"Jing Zhong"
-1677786,"George Wilson"
-1677870,"C. A. Knoblock"
-1677978,"Cynthia A. Thompson"
-1679253,"Christoph Tillmann"
-1680915,"Stefan Kramer"
-1681405,"Byoung-Tak Zhang"
-1682645,"Alexander Berg"
-1683115,"Arjan Kuijper"
-1683279,"Andy Keane"
-1683703,"D. Suter"
-1684078,"T. Ludermir"
-1686498,"Gunes Ercal"
-1686955,"Martin Urban"
-1687541,"Paola Sebastiani"
-1688000,"Fumio Takechi"
-1688416,"Xianghua Ying"
-1690508,"Liu Wenyin"
-1690915,"Edward M. Riseman"
-1690953,"Edward M. Riseman"
-1693056,"Lance Ramshaw"
-1693155,"Tim Oates"
-1693163,"Carole J. Twining"
-1693674,"Tom Pierce"
-1693774,"William B. Dolan"
-1694068,"Alicia Abella"
-1694590,"Mary Elaine Califf"
-1695178,"N. Peterfreund"
-1695306,"G. Satta"
-1695455,"Kyo Kageura"
-1695695,"Melissa Dominguez"
-1695710,"Tomaso Poggio"
-1696004,"Ehud Rivlin"
-1697003,"Cosmin Munteanu"
-1697170,"William M. Campbell"
-1698464,"Alain Trubuil"
-1698681,"Arnold W. M. Smeulders"
-1698809,"J. Deutscher"
-1699130,"Gerardo Hermosillo"
-1699311,"Éva Sáfár"
-1700565,"Kalle Åström"
-1701367,"Robert C. Holte"
-1702811,"K Ramamohanarao"
-1704302,"D Maio"
-1705477,"Simone Teufel"
-1707517,"Jeffrey C. Reynar"
-1707622,"M Hebert"
-1708361,"H. Ney"
-1708960,"Vladimir Petkevic"
-1709306,"Joshua Gluckman"
-1709864,"Javier Sánchez"
-1709879,"J. Sánchez"
-1711030,"Manuel Bodirsky"
-1711494,"Benoit Huet"
+id,name,n_pubs,n_citations,h_index
+308619,Robert Dale,1,0,0
+417190,Michael Kipp,1,0,0
+445154,Martin Zinkevich,2,0,0
+500942,Robert Givan,1,0,0
+1161428,A. L. Gorin,1,0,0
+1175006,Wolfgang Förstner,1,0,0
+1322329,Volodimir G. Vovk,2,0,0
+1358797,F R Chung,1,0,0
+1551612,John Shawe-Taylor,8,0,0
+1570590,M. Toews,1,0,0
+35450,Franck Thollard,2,0,0
+93633,Nigel Tao,1,0,0
+274716,Alain Lecomte,1,0,0
+374316,Markus Weber,1,3,1
+568091,Dimitri Metaxas,1,1,1
+877192,Peter Tu,1,0,0
+922323,Satoshi Sato,2,0,0
+990997,Jaco Vermaak,3,1,1
+995035,Steve Seitz,2,0,0
+1077025,Henk Muller,1,1,1
+1166090,Sylvain Bouix,2,2,1
+1333179,Shai Fine,1,0,0
+1339272,Matthias Rychetsky,1,0,0
+1343461,Bing Liu,1,0,0
+1349638,Charles J. Fillmore,1,0,0
+1562014,Christopher S. G. Khoo,1,0,0
+338274,M. Farenzena,1,0,0
+362849,Timothy Bickmore,1,0,0
+387060,David C. Wilson,1,0,0
+539498,Slav Petrov,1,0,0
+864976,Hwee Tou Ng,3,0,0
+964474,Hai Tao,1,0,0
+1018007,Zhizhou Wang,1,0,0
+1133910,Georgios Petasis,1,0,0
+1291122,L. Torgo,1,0,0
+1603275,Srinivas Bangalore,2,2,1
+1669861,Václav Hlavác,1,1,1
+106304,David Ronghwa Chiang,3,3,1
+362496,Cecilia Mazzaro,1,0,0
+436018,Diane J. Cook,1,0,0
+447560,Frederic Richard,1,0,0
+654910,Bernhard Schökopf,1,1,1
+849964,C. D. Spyropoulos,2,0,0
+1188067,Roni Khardon,1,0,0
+1292542,Bill Triggs,1,5,1
+1582834,Amit Sethi,1,0,0
+445010,H. Hassan,1,1,1
+771611,Ting Liu,1,0,0
+812683,Marta Wilczkowiak,2,0,0
+909394,Kohji Dohsaka,1,1,1
+1136650,Ryosuke Isotani,1,0,0
+1283717,John L. Barron,1,0,0
+1441522,Chris Stauffer,1,0,0
+1442475,Neil A. Thacker,1,0,0
+1584077,M. Pavel,1,0,0
+84610,Sugato Basu,1,0,0
+530430,Frédéric Guichard Jean-Philippe Tarel,1,2,1
+579573,Yaoyong Li,1,0,0
+690728,David Stirling,1,0,0
+803617,Michael Johnston,1,1,1
+875626,Wenwei Yu,1,0,0
+919617,Eleazar Eskin,1,0,0
+1190103,F. Dornaika,1,0,0
+1260856,Yoav Y. Schechner,3,3,1
+1292968,Reuven Zaritsky,1,0,0
+1412700,B. Stenger,1,0,0
+1502066,Dimitrios Kalles,1,0,0
+1576992,Lars Bretzner,1,0,0
+1589023,Hanning Zhou,1,0,0
+1673638,Malvina Nissim,1,0,0
+1674341,Mats Rooth,3,4,1
+86694,Paul Aarseth,1,0,0
+253799,Richard Markham,1,0,0
+290916,Nicholas J. Adams,1,0,0
+749550,Arun Krishnan,1,0,0
+767742,Naftali Tishby,3,0,0
+955646,Frank Verbiest,1,0,0
+1097853,Harry Shum,1,0,0
+1156563,Gian Luca Marcialis,1,0,0
+1191133,Chiraz BenAbdelkader,1,0,0
+1331840,George Foster,1,2,1
+1641126,Junxin Zhang,1,0,0
+9258,Jason S. Chang,1,0,0
+638805,Egon C. Pasztor,1,2,1
+836530,Constantine Papageorgiou,1,2,1
+944698,Junling Hu,1,0,0
+957063,Björn Johansson,1,0,0
+1286087,G. Adda,1,0,0
+1668125,Javier Lorenzo,1,1,1
+1686498,Gunes Ercal,1,0,0
+60382,Shuntaro Isogai,1,1,1
+144713,Stefan Riezler,4,10,3
+151238,Christian Matenar,1,0,0
+293126,Charles Rich,1,0,0
+303069,Eugene Charniak,4,7,1
+364672,Karsten L. Worm,1,3,1
+378049,David Cohn,2,0,0
+391837,Bart Selman,1,0,0
+502789,Yusuf Sinan Akgul,1,0,0
+656383,Alexander Berengolts,1,1,1
+668832,Myung-Gil Jang,1,0,0
+673226,Attilio Giordana,1,0,0
+887836,Hiroshi Yokoi,1,0,0
+996611,Kristin P. Bennet,1,0,0
+1590097,Zaharin Yusoff,1,0,0
+1658278,Ann Copestake,1,3,1
+95118,Manfred K Warmuth,1,0,0
+288902,Stefan Müller,1,1,1
+473858,Fernando Pereira,4,14,2
+878607,Balázs Kis,1,0,0
+1188964,David C. Gibbon,1,0,0
+1259444,Kilyoun Kim,1,0,0
+1492794,Jongmoo Choi,1,0,0
+62752,Greg Slabaugh,1,0,0
+96156,José Gomes,2,0,0
+415393,Kristin P. Bennett,2,0,0
+496963,K Kanatani,3,4,1
+572593,Vadim N. Smelyansky,1,0,0
+591237,Silvio Savarese,1,1,1
+1422580,Seiichiro Hangai,1,0,0
+1583314,Atsushi Yamada,1,0,0
+208818,Mark Bernhardt,1,0,0
+315364,Kyoko Kanzaki,3,0,0
+408661,Peter Meer,6,3,1
+621166,Mariano Rivera,2,1,1
+632893,Alexei A. Efros,2,3,1
+869333,Nikita S. Imennov,1,0,0
+970587,Okan Kolak,1,1,1
+1092421,Maurício Marengoni,1,0,0
+1098396,B C Vemuri,3,0,0
+1114942,Jitendra Malik,9,7,2
+1135378,Christopher Leckie,1,0,0
+1270047,Emiel Krahmer,1,0,0
+1310964,Thomas Leung,3,9,2
+1404682,Chung Yong Lim,1,0,0
+1448955,Guihong Cao,1,0,0
+1478671,Carla E. Brodley,4,0,0
+1482853,Wei Li,2,0,0
+1657844,Justine Cassell,2,0,0
+143684,Larry S Davis,6,3,1
+310501,Huaigu Cao,1,0,0
+393929,Marcel van Lohuizen,2,1,1
+664155,Isaac Cohen,1,0,0
+864475,Vincent Ng,1,2,1
+875276,Clark Francis Olson,1,0,0
+975037,Y. Hu,1,0,0
+981982,Philip F. Mclauchlan,2,7,2
+1026080,James M. Rehg,1,1,1
+1230702,Melinda T. Gervasio,1,0,0
+1510880,Khurram Shafique,2,0,0
+1555647,Abba M Krieger,1,0,0
+1681405,Byoung-Tak Zhang,1,0,0
+301572,Yiming Ma,6,1,1
+515638,B. North,1,2,1
+519291,Mukund Padmanabhan,1,0,0
+747473,Preetam Maloor,1,1,1
+922269,N Lavrac,2,0,0
+1115756,F. Wolinski,1,0,0
+1268071,Yi Li,1,0,0
+1314805,Elliott Drabek,1,0,0
+1546002,Yoshinori Sagisaka,1,1,1
+1618546,Richard Nock,2,0,0
+1627225,Marshall F. Tappen,1,0,0
+1679253,Christoph Tillmann,1,4,1
+92780,Hai Tao,1,0,0
+145422,Ilia Nouretdinov,1,0,0
+191048,Peng-Yeng Yin,1,0,0
+390345,Dieter Fox,2,0,0
+445544,Keith Hanna,1,0,0
+611723,Astro Teller,1,0,0
+633094,Douglas A. Aberdeen,1,0,0
+690472,Josef Sivic,1,0,0
+1187958,Rahul Sukthankar,1,0,0
+1265372,Michèle Sebag,2,0,0
+1343759,Bo-Yeong Kang,1,0,0
+1522928,Charles Kervrann,2,1,1
+351918,John Dowding,3,1,1
+355204,Francesca Odone,1,0,0
+358570,Vasileios Hatzivassiloglou,1,1,1
+415689,L Allison,1,0,0
+429030,Robert Sim,1,0,0
+546401,Noboru Miyazaki,1,1,1
+875089,Andrew Y. Ng,3,0,0
+1139164,Ian H. Witten,1,0,0
+1372581,Peter D. Turney,1,0,0
+1523335,Minglun Gong,1,0,0
+1553524,Olivier Chomat,2,1,1
+1555388,Daniel Scharstein,1,0,0
+1636577,Myriam Greff,1,0,0
+62099,Aravind K. Joshi,2,1,1
+446365,Jürgen Forster,1,0,0
+552931,R. Malladi,1,0,0
+667435,Zhuowen Tu,2,0,0
+716834,Jean-Marc Vézien,1,0,0
+848486,Marius A. Pasca,3,3,1
+905637,Satoshi Sato,1,0,0
+1212098,M. Hansen,1,0,0
+1320684,Claude G. &#268/ron/ech,1,1,1
+1410998,Hae-Chang Rim,4,0,0
+1583364,Gianluca Allaria,1,1,1
+1638244,Thomas Hofmann,1,0,0
+179063,Bonnie L Webber,2,1,1
+186193,Scott S. L. Piao,1,0,0
+704958,Yee Whye Teh,1,0,0
+877017,Ting Yu,1,0,0
+956571,Hamish Cunningham,1,0,0
+1513201,Kaleem Siddiqi,2,2,1
+5965,Joelle Pineau,1,0,0
+51977,C. Grover,1,2,1
+71288,Robin Cooper,1,0,0
+350853,Ping Tan,1,0,0
+445293,C. Schmid,1,0,0
+651419,L. Robert,1,0,0
+734027,M. Hernández-Tejera,1,0,0
+830165,John Langford,6,0,0
+922181,Abdessamad Echihabi,3,0,0
+992328,Dayne Freitag,1,4,1
+1094475,Christophe Giraud-Carrier,2,0,0
+1169313,Yannick de Kercadio,1,0,0
+1192242,Stefan Veeser,1,0,0
+1233243,Leonid Kompanets,2,0,0
+1272069,Diane Judith Litman,2,2,1
+1357344,James Curtis Lester,1,0,0
+288303,Jan Puzicha,1,2,1
+346275,H Niemann,1,0,0
+543654,Jonas Kuhn,4,4,1
+618645,Andrew W. More,1,0,0
+664216,Yanghai Tsin,1,0,0
+837424,C. W. A. M. van Overveld,1,0,0
+852087,Arrigo Benedetti,1,0,0
+1062154,Jason Baldridge,1,0,0
+1153920,Kiri Wagstaff,2,0,0
+1185514,Long Quan,5,0,0
+1319479,Pierrette Bouillon,1,0,0
+1476105,Christopher Meek,1,0,0
+1705477,Simone Teufel,1,0,0
+1707622,M Hebert,4,0,0
+1709306,Joshua Gluckman,1,0,0
+14391,Thomas Zöller,1,0,0
+31220,Marie Rochery,1,0,0
+50062,J. Freixenet,1,0,0
+285351,Akshar Bharati,1,0,0
+685988,Shivakumar Vaithyanathan,2,0,0
+959056,Colin Campbell,1,0,0
+1078357,Vangelis Karkaletsis,2,0,0
+1120219,P. Fung,1,0,0
+1475709,Hang Li,2,2,1
+1672919,Rahul Swaminathan,1,0,0
+304819,Kristina Toutanova,1,0,0
+306110,Bhavani Raskutti,1,0,0
+355424,Philip L. Worthington,2,2,1
+366724,Mark G. Core,1,0,0
+398273,Peter Sand,1,0,0
+855700,Huazhong Ning,1,0,0
+933788,Mario Hernández,1,1,1
+1016632,David Cohn,2,1,1
+1046337,Seán Slattery,2,0,0
+1139766,Céline Rouveirol,1,0,0
+1263423,Rikard Berthilsson,2,0,0
+1535749,Antony F. Bowers,1,0,0
+95878,Jason Michael Eisner,4,3,1
+258080,Li Fei-Fei,1,0,0
+363829,Alexis Roche,1,0,0
+365154,Hauke Tschach,1,0,0
+518341,Jan-Olof Eklundh,3,0,0
+626823,Diana Maynard,1,0,0
+867095,Gerhard Widmer,1,0,0
+885663,Noam Shental,2,0,0
+942986,Rakesh Kumar,2,0,0
+994130,Gregory F. Welch,1,0,0
+1082878,Richard Mann,1,0,0
+1110738,Carsten Steger,2,0,0
+1480651,Robert C. Moore,1,1,1
+1592548,Jérôme Martin,1,0,0
+1629771,Maziar Palhang,1,0,0
+46701,Yuanzhen Li,2,0,0
+377785,Helder Araújo,2,0,0
+409977,Gann Bierner,1,0,0
+441955,Max Welling,1,3,1
+548060,Huan Chang,1,0,0
+791110,Craig Boutilier,1,0,0
+990857,Anthony R. Dick,2,1,1
+1014154,Jangmin O,1,0,0
+1237504,Franz Josef Och,4,15,2
+1265824,T. B. Y. Lai,1,0,0
+1302047,Pierre Dupont,1,0,0
+1375727,Pat Langley,1,0,0
+1502047,S Sastry,3,1,1
+1602638,Arindam Choudhury,1,0,0
+1633034,Bryan Singer,2,0,0
+1701367,Robert C. Holte,1,0,0
+148563,Waleed Al-Fares,1,0,0
+228964,Feng Huang,1,0,0
+262035,Cornelia Fermüller,1,0,0
+300959,Oliver Jesorsky,1,0,0
+418600,Gregory Z. Grudic,1,0,0
+502347,Michael Werman,3,1,1
+528784,William J. Fitzgerald,1,0,0
+610441,Alexander Holt,1,0,0
+615910,M. Lindenbaum,1,1,1
+633113,Eric V. Siegel,1,0,0
+793177,Ph. Deschamp,1,0,0
+863315,Marko Grobelnik,1,0,0
+885802,John M. Winn,1,3,1
+1167131,Marco Ramoni,1,0,0
+1329048,Srinivasa G. Narasimhan,4,1,1
+1563703,Dimitris Samaras,2,1,1
+43547,Kiran S. Bhat,1,0,0
+192388,A L Yuille,3,2,1
+632770,Jan-Mark Geusebroek,4,0,0
+788516,Vivian Tsang,1,1,1
+825099,Thomas M. Breuel,1,0,0
+890288,Xiaoou Tang,3,0,0
+1076805,Zoran Duric,1,0,0
+1598977,Wei Zhou,1,0,0
+1690953,Edward M. Riseman,1,0,0
+1696004,Ehud Rivlin,1,0,0
+548104,Thomas Morton,1,0,0
+562630,Yang Wang,1,0,0
+567515,Russell A. Manning,1,1,1
+573146,B. Georgescu,2,0,0
+578881,Abe Kazemzadeh,1,0,0
+682899,M. Teicher,1,0,0
+693429,Paul L. Rosin,1,0,0
+805629,Tetsuya Ishikawa,2,1,1
+958701,Elizabeth O. Bratt,1,1,1
+1143962,L. Lee,1,0,0
+1176148,Janez Dem&#353/ar,1,0,0
+1199310,Greg Mori,2,1,1
+1213631,Mitsuhiro Kondo,1,0,0
+1319859,Sanjiv Kumar,1,0,0
+1356729,Denis Bechet,1,0,0
+13297,Adam Kowalczyk,1,0,0
+134224,Jun Wang,1,0,0
+151846,Jeff G. Schneider,1,0,0
+312023,Hideki Tanaka,1,1,1
+488025,Juwei Lu,1,0,0
+667831,Lynette Hirschman,1,1,1
+703713,Hung-Ju Huang,1,0,0
+1037563,Umberto Castellani,1,0,0
+1132741,Mark Steedman,3,9,2
+1469538,Michel Gangnet,2,1,1
+1604319,Yongmian Zhang,1,0,0
+1616309,Kun Huang,2,0,0
+1622190,K S Choi,4,0,0
+154919,J. Fiérrez-Aguilar,1,0,0
+377897,Fabio Roli,1,0,0
+413983,T. Hassner,1,0,0
+444945,Paul R. Cohen,1,0,0
+474982,John Burger,1,1,1
+677381,M. Botta,1,0,0
+804273,Alistair Knott,1,1,1
+1008173,M. P. Wellman,1,0,0
+1106084,Igor Ravve,1,0,0
+1131413,Kuang-Cheng Chang,1,0,0
+59117,H Okuno,2,0,0
+264423,Arnulf B. A. Graf,1,0,0
+452599,Brigitte Krenn,1,0,0
+485392,Jean-Philippe Tarel,1,0,0
+525955,Junhwan Kim,1,0,0
+582824,"Pedrito Maynard-Reid, II",1,0,0
+1090046,Dan Oblinger,1,0,0
+1280557,Ashutosh Garg,1,0,0
+1405674,Hwasup Lim,1,0,0
+1526671,Greg Schohn,1,1,1
+1604991,John T. Maxwell,1,3,1
+1695306,G. Satta,2,3,1
+109914,James R. Slagle,1,0,0
+273782,Tucker Balch,1,0,0
+382648,Stefan Carlsson,5,4,1
+411831,Amy S. Weinberg,1,1,1
+480326,Antonin Rozsypal,1,0,0
+480767,Jean-Luc Gauvain,1,0,0
+749629,A. P. Shon,1,0,0
+751892,Khalil Sima'an,1,1,1
+773973,Kalina Bontcheva,1,0,0
+1105745,Lucca Ronchetti,1,0,0
+1118392,Urszula Chajewska,1,0,0
+1225342,Chai Wutiwiwatchai,1,0,0
+1480696,Alain Crouzil,1,0,0
+147461,Tepchai Supnithi,1,0,0
+468873,Josef Bigün,2,0,0
+645353,Ismael García-Varea,1,0,0
+867490,Frédéric Cao,1,0,0
+921010,James L. Hieronymus,1,0,0
+961635,Ch. Brechbühler,1,0,0
+982770,L. Lee,1,0,0
+1169909,David Forsyth,5,1,1
+1534308,Grégory Flandin,1,0,0
+1668397,Etienne G. Huot,1,0,0
+149070,Yang Wang,1,0,0
+264210,T Kanade,2,4,1
+410719,Ye Zhang,1,0,0
+420947,Colin K. M. Ho,1,0,0
+427607,James R. Curran,1,0,0
+956449,M. A. O. Vasilescu,1,0,0
+1032984,Clas Jönsson,1,0,0
+1035104,Ruslan Mitkov,1,0,0
+1368416,Devina Desai,1,0,0
+1441887,S. K. Mitter,2,0,0
+1695695,Melissa Dominguez,1,0,0
+72883,Edward Schofield,1,0,0
+161710,Alessio Del Bue,1,0,0
+232815,Eiichiro Sumita,3,0,0
+446367,Jeremy Glasner,1,0,0
+492319,Ian Frank,1,0,0
+504588,William Cohen,1,0,0
+535952,Stefano Ferilli,1,0,0
+574732,Graham Finlayson,4,0,0
+632849,Endong Xun,2,0,0
+735112,Philip K. Chan,1,0,0
+878209,Dmitriy Genzel,1,0,0
+1175471,Haruo Takemura,1,0,0
+1526560,Robert W. Frischholz,1,0,0
+11513,Zvika Marx,2,0,0
+288831,Paul M. Hubel,1,0,0
+330533,Malcolm R. K. Ryan,1,0,0
+419605,Octavia I. Camps,1,0,0
+531352,Kees van Deemter,1,0,0
+596112,David A Harwood,1,3,1
+849560,X. Cufí,1,0,0
+1037346,S. I. Yoo,1,0,0
+1043585,Hauke Jans,1,0,0
+1289943,Kai-Fu Lee,2,1,1
+1441517,Michael Bowling,2,0,0
+1524221,Rada Mihalcea,3,4,1
+1618180,Stéphanie Jehan-Besson,2,0,0
+223474,J Graham,1,0,0
+276456,D. Q. Huynh,1,0,0
+487452,Koichiro Deguchi,1,0,0
+497322,Emmanuel Morin,1,0,0
+786128,Alireza Osareh,1,0,0
+801394,Sang W. Lee,2,2,1
+945986,Pavel Kveton,1,0,0
+1328687,Guo-Wei Bian,1,0,0
+1482850,Chun-Nan Hsu,1,0,0
+1638854,Hsing-Kuo Pao,1,0,0
+1711030,Manuel Bodirsky,1,0,0
+149215,G. Sparr,4,0,0
+625054,Alexandra Psarrou,1,0,0
+1027446,German Rigau,1,0,0
+1080209,Gerald Dejong,3,0,0
+1259503,Dorin Comaniciu,4,3,1
+1674070,Xiuwen Liu,2,1,1
+1693056,Lance Ramshaw,1,4,1
+422403,Elisabeth Rouy,1,1,1
+450172,Barbara Caputo,1,0,0
+656503,Tony Jebara,1,0,0
+1115858,Marko Bohanec,1,0,0
+1227515,Anders Heyden,5,0,0
+1444730,Johan Montagnat,1,1,1
+1583540,Kenji Yamada,4,12,2
+1608076,David Pierce,1,0,0
+1687541,Paola Sebastiani,1,0,0
+74560,S. H. Muggleton,1,0,0
+329870,Andrew Blake,1,0,0
+398990,Anurag Gupta,1,0,0
+404573,Lynne J. Cahill,1,0,0
+635880,Uros Pompe,1,0,0
+922652,Xiaoqing Ding,1,0,0
+989916,Wei Yu,1,0,0
+1118364,Jonathan Whiteley,1,0,0
+1151200,Adam Kowalczyk,1,0,0
+1184581,Masato Kawamoto,1,0,0
+1315198,Stephen D. Bay,1,0,0
+1534756,T. Evgeniou,1,0,0
+114037,Jussi Tohka,1,0,0
+130774,Manik Varma,1,0,0
+538323,Seiya Osada,1,0,0
+556144,Jean-Luc Meunier,1,0,0
+779274,M. Barlaud,2,0,0
+810437,Bruce Blumberg,1,0,0
+877149,Xiang Gao,1,0,0
+993849,Yi-Cheng Huang,1,0,0
+1005461,Glenn Carroll,2,4,1
+1043807,Li Shen,1,0,0
+1139935,Thomas Deschamps,2,1,1
+1613348,Marko Robnik-Šikonja,2,0,0
+1654628,Nicholas Everett,1,0,0
+25531,David L. Bean,1,3,1
+335803,Guy Rochard,1,0,0
+409469,Michael R. Brent,2,1,1
+450625,Eiko Yamamoto,1,0,0
+471430,P. Johansen,4,0,0
+485204,Yukinori Kakazu,1,0,0
+515593,HowLung Eng,1,0,0
+726304,Anthony Yezzi Jr,1,1,1
+869237,Eitan Sharon,1,0,0
+1381125,Mikio Nakano,2,1,1
+1402449,Jun-ichi Tsujii,7,0,0
+1630382,Tetsuji Nakagawa,1,1,1
+704,César Ferri,1,0,0
+379259,Jason Rennie,1,0,0
+487432,Michael Strube,2,1,1
+619018,Geert Caenen,1,0,0
+827993,Noam Slonim,1,0,0
+902650,Nicholas Roy,1,0,0
+923945,Christian Retoré,1,0,0
+934710,Artur Merke,1,0,0
+1143154,Jim Gee,1,0,0
+1175876,Yaakov Engel,1,0,0
+1544057,Massimiliano Pontil,1,0,0
+139507,Hisashi Kashima,1,1,1
+218608,Patrick S. Huggins,1,0,0
+239917,Christophe Papin,1,0,0
+301236,Yanlin Guo,1,0,0
+510052,Brian V. Funt,1,0,0
+898600,Rachel E. O. Roxas,1,0,0
+993810,H. Zaragoza,1,0,0
+1118659,David P. Dobkin,1,0,0
+1152684,Marc Dymetman,1,0,0
+1175070,Dan Pelleg,2,0,0
+1197658,Dragan Gamberger,2,0,0
+1200549,Rhodri H. Davies,1,0,0
+1491735,Lauri Karttunen,1,0,0
+230488,Bla&#382/ Zupan,1,0,0
+426383,Francis Bond,1,0,0
+429134,Giuseppe Carenini,1,1,1
+717757,Liesl Osman,1,0,0
+769752,Kevin P. Murphy,1,0,0
+900237,Se Young Park,1,0,0
+1086916,Haifeng Chen,2,0,0
+1086988,Aaron Hertzmann,1,0,0
+1355231,Sandip Debnath,1,0,0
+1454471,Huiqi Li,1,0,0
+1581166,Takashi Machida,1,0,0
+1634433,John Oliensis,3,0,0
+388179,C. J. Rupp,1,3,1
+559504,W. James MacLean,1,0,0
+570876,Carlo Tomasi,4,2,1
+1524514,Kiriakos N. Kutulakos,3,2,1
+58704,Timothy Baldwin,2,0,0
+231976,Marielle Lange,1,0,0
+329899,Daishi Harada,1,0,0
+362975,Benjamin Taton,1,0,0
+475799,Sundar Vedula,1,1,1
+538145,Kah Kay Sung,1,0,0
+731615,Sami Romdhani,3,0,0
+805339,Mark Johnson,6,9,2
+839831,Jimin Liu,1,0,0
+892292,Joan Martì,1,0,0
+1128186,Sharon A. Caraballo,1,2,1
+1138030,Yuji Niwa,1,0,0
+1565479,Achim Hoffmann,1,0,0
+1586812,Haim Schweitzer,3,0,0
+1600170,Walter Kasper,1,3,1
+89673,Douglas A. Talbert,1,0,0
+417210,Bogdan Matei,1,0,0
+491796,Eibe Frank,1,0,0
+494270,V. Caselles,1,0,0
+503560,Scott D. Cohen,1,1,1
+550371,Igor V. Cadez,1,0,0
+1102663,Kevin Knight,5,13,2
+1157925,Mark A. Ruzon,1,0,0
+1290415,Jinyan Li,1,0,0
+1356419,Geert-Jan M. Kruijff,1,0,0
+1524871,H. Motoda,2,0,0
+42849,A. W. Moore,8,0,0
+208772,HongJiang Zhang,5,0,0
+538319,Tom O'Hara,1,0,0
+649279,Richard Segal,1,0,0
+740129,Yael Dahan Netzer,1,0,0
+761713,J. F. G. de Freitas,1,0,0
+770147,Terran Lane,1,0,0
+1170666,Naoki Abe,1,0,0
+1548314,Yung Taek Kim,1,0,0
+1615886,Gregory Shakhnarovich,4,0,0
+5992,Kari Torkkola,2,0,0
+119404,Chikashi Nobata,2,0,0
+221379,Lionel Clément,1,0,0
+337256,Ronan Fablet,1,0,0
+376217,Yair Weiss,3,3,1
+539578,Richard Power,1,0,0
+584659,Mi-Suen Lee,1,0,0
+868272,Yunbo Cao,1,0,0
+924437,S. A. Clark,1,5,1
+1008637,Michael Chisholm,1,0,0
+1107277,Chong Jin Ong,1,0,0
+1176201,P. J. Armstrong,1,0,0
+1242125,R. Hartley,1,0,0
+1382691,Davide Maltoni,1,0,0
+1629618,Paul A. Viola,4,2,1
+74730,A. M Tekalp,2,0,0
+161282,Behzad Shahrary,1,0,0
+191321,Langzhou Chen,1,0,0
+398573,Christoph Strecha,2,0,0
+503412,Dorian Suc,1,0,0
+519481,Lucero Lopez Perez,1,0,0
+575691,Takashi Washio,1,0,0
+582997,L. Raedt,1,0,0
+817988,Rong Yan,1,0,0
+1102397,Francesco Ricci,1,0,0
+1118397,Jonas August,2,0,0
+1178293,N. Reithinger,1,0,0
+1300290,Bernardo Magnini,1,0,0
+1535308,Arvind Sastry,1,0,0
+173903,L. Van Gool,2,0,0
+401334,LoongFah Cheong,2,0,0
+502170,Gaurav Tevatia,1,0,0
+768665,Slava Andreyev,1,0,0
+1034397,Dan Roth,4,2,1
+1053804,Daniela Hall,2,1,1
+1127086,H. A. Kautz,1,0,0
+1129742,Laura Firoiu,1,0,0
+1192871,Sylvain Prima,1,0,0
+1357823,David J. Stracuzzi,2,0,0
+1363618,Radim Šára,2,0,0
+1371077,Demetri Terzopoulos,2,0,0
+1524766,Andrea Pohoreckyj Danyluk,1,0,0
+1558411,Mark A. Rubin,1,0,0
+173570,M. Yoshikawa,1,1,1
+261748,Michael Kohlhase,1,0,0
+301312,Kazunori Komatani,2,0,0
+316016,Robert Fossum,1,0,0
+397997,Johnny T. Chang,1,0,0
+487192,Brian Edward Roark,3,0,0
+848748,A. N. Rajagopalan,1,0,0
+1167651,Dale Schuurmans,3,0,0
+1269207,Pierre Boullier,1,0,0
+1325148,Yoshio Nakao,1,1,1
+1513350,Maria Lapata,4,1,1
+1695178,N. Peterfreund,1,0,0
+395804,Manuela M. Veloso,4,0,0
+791828,Ronda Venkateswarlu,1,0,0
+908370,Jörg Stachowiak,1,0,0
+1001275,Antonio Robles-Kelly,2,0,0
+1123210,M. L. Gini,1,0,0
+1133531,Alex Lascarides,2,5,2
+1163215,Björn Bringmann,1,0,0
+1242123,R. I. Hartley,7,7,1
+1332476,Naoki Abe,1,0,0
+308082,Daniel Martinec,1,0,0
+324419,Gerald Schaefer,1,0,0
+532456,Donghui Wu,1,0,0
+721725,Dorin Marcu,1,0,0
+723712,Michael Bonnell Harries,1,0,0
+821399,Feiyu Xu,2,1,1
+832273,Andrew W. Fitzgibbon,5,7,2
+1094934,T. N. Tan,1,0,0
+1320056,Kristina Striegnitz,1,0,0
+193526,Anand Rangarajan,1,0,0
+235686,Lihi Zelnik-Manor,1,2,1
+377630,Rolf P. Würtz,1,0,0
+459610,Raffaele Cappelli,1,0,0
+521085,C. Elkan,2,0,0
+672540,F. Wu,1,0,0
+903306,Janet Hitzeman,1,1,1
+914967,Hendrik Blockeel,1,0,0
+982785,Lillian Jane Lee,2,7,2
+989083,A Tannenbaum,2,2,1
+1087416,Chris Bishop,1,3,1
+1180582,Yakup Genc,2,0,0
+1193840,Ralf Plänkers,1,0,0
+1242334,Moumen T. El-Melegy,1,0,0
+1577641,Olga Uryupina,1,0,0
+1630460,Hiroshi Nakagawa,1,0,0
+73109,Wolfgang Heidrich,1,0,0
+129362,Kentaro Torisawa,1,0,0
+409211,Claire Cardie,4,2,1
+547871,Masaki Murata,1,0,0
+624076,Richard Durbin,1,0,0
+1119921,Joss Knight,1,0,0
+1141585,Jonathan Ginzburg,1,0,0
+1383334,Philip N. Klein,1,0,0
+1528221,Takayuki Okatani,1,0,0
+1528899,Ping Shyr,1,0,0
+2849,C. de la Higuera,1,0,0
+442502,Thomas Bonfort,1,0,0
+456299,Lisa Pearl,1,0,0
+523710,Huihsin Tseng,1,0,0
+562662,Mark Everingham,1,1,1
+568463,Jose L. Marroquin,2,1,1
+796390,Michel Galley,1,0,0
+825663,G. Sommer,1,0,0
+1091255,Yaacov Hel-Or,2,0,0
+1117450,Jianming Liang,1,0,0
+1211129,Matthew G. Snover,1,1,1
+1212505,Thomas Gärtner,2,0,0
+1280403,Mark Reid,1,0,0
+1585312,Matthias Zobel,1,0,0
+109158,Joohui An,1,0,0
+574026,Ruigang Yang,2,0,0
+633127,Jens Rittscher,2,2,1
+717441,Xindong Wu,1,0,0
+1426946,Piotr Wilinski,1,0,0
+1512093,Kiyoaki Aikawa,1,0,0
+1694590,Mary Elaine Califf,1,3,1
+171177,José Santos-Victor,1,0,0
+219113,Rens Bod,2,3,1
+791013,Blai Bonet,1,0,0
+793368,Steven D. Hordley,3,0,0
+831699,Leigh J. Fitzgibbon,1,0,0
+1361672,Huan Liu,1,0,0
+1438152,Ricardo Silva,1,0,0
+22391,Francois Rivest,1,0,0
+62329,Wayne Iba,1,0,0
+913019,T. Ko,1,0,0
+926153,R Nevatia,2,0,0
+1181419,Ale&stilde/ Leonardis,2,0,0
+1235262,J. Antonis,1,0,0
+1247790,Yaser Al-Onaizan,1,1,1
+1315408,David McAllester,2,1,1
+1337400,Tom Ault,1,0,0
+1480702,Veronique Hoste,2,0,0
+1510099,Denys Duchier,1,3,1
+260859,Hyunjung Son,1,0,0
+445148,Simon Henderson Corston-Oliver,3,0,0
+563954,Relu Patrascu,2,0,0
+745677,Steven Minton,2,0,0
+823351,Peng Xu,1,0,0
+856325,Drew Steedly,1,0,0
+884692,E. Shechtman,1,0,0
+1012087,O. Déniz,1,1,1
+1198184,Steven Abney,2,2,1
+1335101,Soumya Ray,1,0,0
+1652699,R. Szeliski,6,6,2
+161248,Deepak Ravichandran,1,1,1
+179373,Vasant G. Honavar,1,0,0
+243754,Lambert E. Wixson,1,0,0
+295676,Hiroshi Mamitsuka,1,0,0
+330975,Jing Huang,1,0,0
+344418,Richard Goodrum,1,3,1
+431283,K. Oflazer,1,0,0
+475922,Amit Dubey,2,0,0
+506007,Ming Zhou,4,0,0
+618942,Loo-Nin Teow,2,0,0
+648158,Shuly Wintner,1,0,0
+730910,Nello Cristianini,5,0,0
+768045,Ahmed M. Elgammal,1,3,1
+909281,Atsuto Maki,2,2,1
+921236,Hiroaki Sato,1,0,0
+967581,Anne de Roeck,1,0,0
+982477,Tanapong Potipiti,1,0,0
+1064221,Y. G. Leclerc,3,0,0
+1558978,Arthur E. C. Pece,1,0,0
+1666439,Fred J. Damerau,1,2,1
+55522,Maria Petrou,1,0,0
+112310,Jessica Li Teng Koo,1,0,0
+373653,Fredrik Kahl,2,0,0
+614387,John C. Waterton,1,0,0
+1028155,Aleksandra Mojsilovic,1,0,0
+1274219,Haihua Pan,1,0,0
+1309657,Lei Zhang,1,0,0
+1666594,K. Kukich,1,0,0
+26750,B. Southall,1,0,0
+243485,Cong Li,1,2,1
+477008,Nir Sochen,3,0,0
+689432,Ingrid Zukerman,1,0,0
+704287,J. Denzler,1,0,0
+754631,J. L. Prince,1,0,0
+769963,Erik F. Tjong Kim Sang,1,0,0
+1033381,Shaohua Zhou,2,0,0
+1108023,Marc Pickett,1,0,0
+1146776,M. Mirmehdi,1,0,0
+1157261,Leonard McMillan,1,0,0
+1203762,Athanassios Papagelis,1,0,0
+1440831,Chi Wang,1,0,0
+1456214,David Eric Yarowsky,4,6,2
+1487792,Naokazu Yokoya,1,0,0
+1590362,Akiko N. Aizawa,1,0,0
+1592100,Daniel G. Shapiro,1,0,0
+1631565,Yusuke Miyao,2,0,0
+1695710,Tomaso Poggio,2,2,1
+117201,Étienne Mémin,3,0,0
+128585,Joseph Shamir,1,1,1
+429751,Laurent Romary,1,0,0
+658843,Zhao Jun,1,0,0
+901706,G. Carneiro,2,0,0
+1192739,Shyjan Mahamud,3,0,0
+1249999,Jose M Benedi,1,0,0
+1574536,Yun Niu,1,0,0
+242262,Min Tang,1,0,0
+318257,Walter Daelemans,3,2,1
+421775,E. Grosso,2,0,0
+444515,Slobodan Vucetic,1,0,0
+539505,Barry Schiffman,1,0,0
+544673,Tom Stocky,1,0,0
+634051,Tapio Elomaa,1,0,0
+882006,Leonid Peshkin,2,0,0
+988528,Steven J. Gortler,1,0,0
+1107339,P. Duygulu,1,0,0
+1457636,Sameh M. Yamany,1,1,1
+1532420,Massimiliano Pavan,1,0,0
+1619678,Charles S. Wiles,1,2,1
+1708960,Vladimir Petkevic,1,0,0
+201114,Duncan F. Gillies,1,0,0
+241913,Jan De Prins,1,0,0
+801414,Mehryar Mohri,1,0,0
+1206693,K. Doya,1,0,0
+1512456,Peter Brockhausen,1,0,0
+1699130,Gerardo Hermosillo,2,0,0
+70079,Josep Maria Garrell i Guiu,1,0,0
+93228,Xiaopeng Tao,1,0,0
+173400,Mathias Creutz,1,0,0
+224633,Robert A. Jacobs,1,0,0
+258909,P S Yu,1,0,0
+518462,A. Gammerman,1,0,0
+1099074,F. P. Ferrie,2,0,0
+1262870,Donia R. Scott,1,0,0
+1331134,Yoram Singer,1,1,1
+1480655,Robert C. Moore,3,2,1
+1579136,Nikos Paragios,5,8,2
+1596333,J J Koenderink,2,0,0
+146123,Nicolas Meuleau,1,0,0
+383879,Charless Fowlkes,1,0,0
+405756,Philipp Koehn,1,0,0
+552489,ZuWhan Kim,2,0,0
+583351,Johannes Hug,1,0,0
+852652,Makoto Sato,1,0,0
+878883,Lindsay Martin,1,0,0
+941501,Rama Chellappa,3,0,0
+1342063,P. Favaro,6,4,1
+1398249,Heung-Yeung Shum,5,0,0
+1469743,Huma Lodhi,1,0,0
+1666614,Florica Mindru,1,0,0
+394952,Thomas Vetter,2,0,0
+705348,Qiansheng Cheng,1,0,0
+793899,Péter Dienes,1,0,0
+1078041,Th. Gevers,2,0,0
+1226323,Frederik Schaffalitzky,1,1,1
+1355108,Rebecca Frances Bruce,1,0,0
+1540428,Mingjing Li,1,0,0
+1581312,D. Grimes,1,0,0
+1686955,Martin Urban,1,1,1
+215670,M. I. A. Lourakis,2,0,0
+272658,J. Droulez,1,0,0
+290258,Margarita Osadchy,2,0,0
+320994,Manish Sarkar,1,0,0
+322050,Vlad Branzoi,1,0,0
+562370,Xiaodong Wang,2,0,0
+701788,Robert Pless,1,0,0
+755428,Martin Lauer,1,0,0
+839850,Kap Luk Chan,1,0,0
+874723,O D Faugeras,8,4,1
+880864,Judita Preiss,1,0,0
+1087787,Pedro Domingos,4,0,0
+1133433,Michael J. Witbrock,1,1,1
+1183229,Ariel Tankus,1,0,0
+1194689,William Gregory Sakas,1,0,0
+1307249,Gloria Bueno,1,0,0
+1364874,Ketil Bø,1,0,0
+1614045,Eraldo Ribeiro,1,0,0
+1693163,Carole J. Twining,1,0,0
+276389,M. Rao,2,0,0
+354127,Suzanne Ava Stevenson,1,1,1
+366014,Terrance E. Boult,1,0,0
+367820,Feng Han,1,0,0
+497328,Luce Morin,1,0,0
+581590,O. Chutatape,1,0,0
+605040,Akiko Nakashima,1,0,0
+761883,Stefan Kaufmann,1,0,0
+803898,Tracy H. King,1,3,1
+85961,Ayman Farahat,1,0,0
+721723,Daniel Marcu,7,2,1
+928516,Ross Cutler,1,0,0
+1081846,Tim McInerney,1,0,0
+1185534,Nobuhiro Yugami,1,0,0
+1227520,A. Heyden,1,0,0
+1250295,Erin L. Allwein,1,1,1
+1652748,Meirav Galun,1,0,0
+33052,Martin Jägersand,1,0,0
+359002,Irfan Essa,1,0,0
+448775,Michael Goebel,1,0,0
+485135,Suresh Manandhar,1,2,1
+516828,Wei Chu,1,0,0
+621973,Daniel Saul Jurafsky,1,1,1
+848184,John A. Bateman,1,0,0
+899610,T. D. Rikert,1,2,1
+943420,Marcello Pelillo,1,0,0
+1091051,Lise Getoor,1,0,0
+1120029,Peter Stone,2,0,0
+1161581,Ronen Basri,3,0,0
+1284839,J. Lorenzo Navarro,1,0,0
+1369867,Julia Hirschberg,2,1,1
+1430839,Peter Rander,1,1,1
+1471573,Rémi Munos,1,0,0
+1494679,D. Raba,1,0,0
+86912,R. Deriche,6,6,2
+188086,Mark S. Drew,1,0,0
+190198,P Bouthemy,1,0,0
+220797,Marcus Ackle Maloof,1,0,0
+471815,Silviu Cucerzan,1,1,1
+704210,Kaibo Duan,1,0,0
+920147,Martin Reynaert,1,0,0
+1016526,Peter Geibel,1,0,0
+1369484,Lawrence B. Holder,1,0,0
+1372086,Shiloh L. Dockstader,1,0,0
+1584402,Jian Sun,1,0,0
+1603136,A. A. W. Smith,1,0,0
+1667714,Ricardo Aler,1,0,0
+1674968,Karel Oliva,1,0,0
+93301,Charles X. Ling,2,0,0
+109411,Nuria Oliver,1,0,0
+271030,Sing Bing Kang,2,0,0
+440634,B. Bhanu,2,0,0
+523691,Oliver Williams,1,0,0
+535870,Xiaofeng Ren,2,0,0
+536687,Jason Fritts,1,0,0
+644014,S.-S. Ieng,1,0,0
+681533,Matteo Negri,1,0,0
+910458,Vibhu O. Mittal,2,2,1
+969432,Kazuteru Komine,1,0,0
+1201431,Ion Muslea,2,0,0
+1549345,Changjiang Yang,1,0,0
+1649356,Yufeng Liu,1,0,0
+1683279,Andy Keane,1,0,0
+52245,J. Shotton,1,0,0
+149511,Camillo J. Taylor,2,0,0
+150582,Ronald M. Kaplan,1,3,1
+308058,David Nister,2,1,1
+332258,Amund Skavhaug,1,0,0
+376308,Douglas DeCarlo,1,0,0
+384963,Yorick Wilks,1,0,0
+467652,Shing-Tung Yau,1,0,0
+501263,B. T. Thomas,2,1,1
+537597,J Csirik,1,0,0
+567385,Christopher D. Manning,6,1,1
+629382,Philip M. Long,1,0,0
+830170,Julia Hockenmaier,3,9,2
+921539,Roger C. Tam,1,0,0
+1281596,Mitsuko Yamura-Takei,1,0,0
+1329922,Jan Alexandersson,1,0,0
+1412127,Alvin H. Kam,2,0,0
+1602343,Kristen Grauman,1,0,0
+1604728,C L Giles,1,0,0
+79599,Amy R. Greenwald,1,0,0
+210366,Vittorio Ferrari,1,0,0
+282083,Menno van Zaanen,1,0,0
+514536,G. Hirzinger,1,0,0
+575474,Xiuhong Zhang,1,0,0
+876970,Amnon Shashua,8,6,2
+1016882,Ellen Riloff,1,3,1
+1105722,Marcus Hutter,1,0,0
+1380776,Jeremy L. Wyatt,1,0,0
+1474640,Masatoshi Tsuchiya,1,0,0
+307638,Danny Keren,2,0,0
+368018,Jane Mulligan,1,0,0
+368640,Kenji Imamura,1,0,0
+408917,Andrei Mikheev,1,1,1
+512349,C. K. Williams,2,0,0
+644972,Guangshan Jiang,2,0,0
+650363,Eduard H. Hovy,4,2,1
+680277,Masaru Miyazaki,1,0,0
+902431,Jungyun Seo,1,0,0
+1104383,Michael Gamon,2,0,0
+1323047,Alex Waibel,2,0,0
+1342253,Bob Price,1,0,0
+1546626,Nanda Kambhatla,1,0,0
+26882,Wei Hong,1,0,0
+216437,Bernard Pfahringer,1,0,0
+307786,Richard Zens,1,0,0
+364156,Fatiha Sadat,1,1,1
+482828,Wen-Chi Shei,1,0,0
+524805,Chris Pal,1,0,0
+526900,B. Bascle,1,2,1
+532397,Dekai Wu,1,0,0
+539581,Ian Marshall,1,0,0
+1167800,Malte Gabsdil,1,0,0
+1336772,Gilles Trombettoni,1,0,0
+1381509,Ciril Groselj,1,0,0
+1511907,Fuyuko Kido,1,0,0
+1581043,Alberto Paccanaro,1,0,0
+258587,Takaaki Hori,1,0,0
+299976,Qing Ma,1,0,0
+331989,Katharina Morik,1,0,0
+590042,Efstathios Hadjidemetriou,1,0,0
+715742,K. Tieu,1,0,0
+842185,José L. Vicedo,1,0,0
+868923,P. Anandan,1,0,0
+966469,Daniel B. Russakoff,1,0,0
+1007950,Carles Sierra,1,0,0
+1180471,Katsuya Masuda,1,0,0
+1191345,Mary P. Harper,1,1,1
+1521603,H. González-Banos,1,0,0
+1536309,Sanjoy Dasgupta,1,0,0
+1621104,Alexander G. Hauptmann,2,0,0
+1656689,Aya Aner,1,0,0
+413196,L. H. Ungar,1,0,0
+450666,S. Gong,4,0,0
+498728,S J Maybank,1,0,0
+541768,"Martin Cooperson, Jr.",1,0,0
+667658,Pedro Isasi,1,0,0
+806376,Mark Hoebeke,2,1,1
+983256,B. A. Draper,1,0,0
+1077615,Vasile Rus,3,3,1
+1265132,Jean-Daniel Zucker,1,0,0
+1407936,Sanjay Tiwari,1,0,0
+59136,Xavier Llorà,1,0,0
+127450,Reinhard Rapp,1,1,1
+367618,Virach Sornlertlamvanich,1,0,0
+682633,Ying Nian Wu,4,1,1
+768843,J. Sullivan,2,6,1
+1097610,Sébastien Ourselin,1,0,0
+1185975,Seong-Bae Park,1,0,0
+1191225,Ashish Venugopal,1,0,0
+1668978,Yoram Singer,1,0,0
+158820,A. Pentland,1,0,0
+417771,Takao Watanabe,1,0,0
+769041,Janyce Marbury Wiebe,1,0,0
+923924,Wolfram Burgard,2,0,0
+1027235,Alan Bundy,1,0,0
+1504351,Chiori Hori,1,0,0
+1535303,Mihai Surdeanu,3,0,0
+1553426,Tele Tan,1,0,0
+1623185,David Choi,1,0,0
+1684078,T. Ludermir,1,0,0
+490220,D. Snow,1,0,0
+543529,Sadao Kurohash,1,0,0
+551288,D G Lowe,2,2,1
+565787,Jun Goto,1,0,0
+721874,Michal Irani,6,9,2
+868927,P. Anandan,6,9,2
+897671,Eric Chown,1,0,0
+921683,K. Mikolajczyk,1,0,0
+954827,Vol Van Dalsem,1,0,0
+1524848,Stuart Geman,1,0,0
+1536460,F. Chaumette,1,0,0
+1664238,Carlos Guestrin,2,0,0
+97520,Benny P. L. Lo,1,0,0
+218944,Ulrich Germann,1,2,1
+260599,A. Blum,2,0,0
+367337,Shiri Gordon,2,0,0
+708915,S. Z. Li,2,0,0
+779681,Christopher Culy,1,0,0
+908144,Eric Breck,1,1,1
+1027328,Rebecca Joyce Green,1,0,0
+1062506,Eric P. Xing,1,0,0
+1119348,John A. Marchant,1,0,0
+1154238,Jose Hernandez-Orallo,1,0,0
+1330471,Théo Papadopoulo,2,0,0
+1466568,Sepandar D. Kamvar,2,0,0
+1488351,Gregory F. Cooper,1,0,0
+236724,Phillipe Burlina,1,0,0
+320295,Craig William Codrington,1,0,0
+794853,Quentin Delamarre,1,3,1
+849520,Marc Swerts,2,0,0
+901656,Mark Hepple,2,0,0
+1253558,David W. Jacobs,2,0,0
+1308793,Martha Stone Palmer,1,2,1
+1554666,Illah Nourbakhsh,1,0,0
+1682645,Alexander Berg,1,0,0
+1683115,Arjan Kuijper,2,0,0
+1698809,J. Deutscher,2,2,1
+58670,Choh-Man Teng,1,0,0
+236592,Pierre Isabelle,1,0,0
+539654,Tao Zhang,1,0,0
+644962,Fan Jiang,1,0,0
+647779,A. Thayananthan,1,0,0
+688367,Valentina Bayer Zubek,1,0,0
+803013,Steven Gillis,1,0,0
+863228,Makoto Itami,1,0,0
+980612,Masaki Oono,1,0,0
+1186909,Ido Dagan,2,0,0
+1612939,G. Székely,1,0,0
+1629666,A. Zelinsky,1,0,0
+210216,Robert Amar,1,0,0
+506190,Gerald Tesauro,2,0,0
+620242,J. Lasenby,1,0,0
+745197,William Schuler,4,0,0
+814056,Patrick Ehlen,1,1,1
+969840,Gianluca Donato,1,0,0
+1111450,M. Brown,1,0,0
+1120281,Daniel D. Morris,1,3,1
+1347120,L Zhang,1,0,0
+1405666,HeuiSeok Lim,1,0,0
+62725,B. Kimia,2,0,0
+69298,Prasad V. Tadepalli,2,0,0
+111250,Russell Greiner,1,0,0
+534055,Wei-Jing Zhu,1,5,1
+553877,Valentin Jijkoun,1,0,0
+592908,J. O. Kephart,2,0,0
+608302,Elisabeth Crawford,1,0,0
+654649,James Coughlan,3,2,1
+1142024,Timo Ojala,1,0,0
+1531188,Kurt Mehlhorn,1,0,0
+24522,Danijel Skočaj,2,0,0
+68922,K. Hanazawa,1,0,0
+209645,Stéphane Lallich,1,0,0
+253049,Gregory Aist,1,0,0
+307393,Annabelle Chardin,1,0,0
+410260,Adrian Corduneanu,1,0,0
+521844,Daniel V. Klein,5,1,1
+586774,Phan Huy Khanh,1,0,0
+724453,Eunseok Lee,1,0,0
+909247,Thomas G. Dietterich,3,0,0
+959454,Wim Wiegerinck,1,0,0
+1142069,Mark Dras,2,2,1
+1165140,Chong Wah Ngo,1,0,0
+1179823,Jun Suzuki,1,0,0
+1249192,Naoki Abe,1,0,0
+1348669,Ryuichiro Higashinaka,1,0,0
+1525952,Jun-ichi Hirasawa,1,1,1
+1631822,Sébastien Joga,1,1,1
+1693155,Tim Oates,1,0,0
+285923,Masao Utiyama,2,1,1
+521535,John R Kender,2,0,0
+522329,Johannes Fürnkranz,1,0,0
+993726,Mohammad Ghavamzadeh,2,0,0
+1274443,Yoav Freund,2,1,1
+1370017,Carlos E. Thomaz,1,0,0
+1603699,Stefano Soatto,11,3,1
+95820,Ramin Zabih,6,3,1
+95924,Suzanne B. Sandmeyer,1,0,0
+149504,C J Taylor,4,0,0
+193424,Shimon Ullman,2,0,0
+430117,Jacques Ales Bianchetti,1,0,0
+709906,Zijian Zheng,1,0,0
+890730,Shree B. Kang,1,0,0
+930380,Mohommed Waleed Kadous,1,0,0
+973203,Michael I. Jordan,3,0,0
+1072094,Bei Tang,1,0,0
+1090577,P. Voles,1,0,0
+1332663,Chris Brew,1,1,1
+1677786,George Wilson,1,0,0
+45268,Dimitrios Katsoulas,1,0,0
+89038,Barbara Rosario,1,0,0
+159168,Hajime Kimura,2,0,0
+532138,Anil K. Jain,3,0,0
+676333,Detlef Prescher,4,7,2
+705583,Daniel Cremers,3,0,0
+1239730,Eugene L. Fiume,1,0,0
+1361043,Feng Zhang,1,0,0
+1397702,Min Zhang,1,0,0
+1420822,Edmond Boyer,2,0,0
+1438334,Hanzi Wang,1,0,0
+1539010,Kristian J. Concepcion,1,0,0
+1660145,Sui Zhifang,1,0,0
+74460,B. J. Tordoff,1,0,0
+312467,Massimo Poesio,1,1,1
+485499,Fletcher Lu,1,0,0
+485982,Richard Crouch,1,3,1
+500947,Timo Kohlberger,1,0,0
+547814,Geoffrey E. Hinton,1,0,0
+1265948,S. I. Betelú,1,0,0
+1550293,Seishi Okamoto,1,0,0
+1604579,Volker Blanz,1,0,0
+1629808,Changsong Liu,1,0,0
+1690508,Liu Wenyin,1,0,0
+162198,Sabine Schulte im Walde,1,1,1
+339279,Jeffrey Ho,1,0,0
+623822,Rohini Srihari,2,0,0
+636945,Tze-Yun Leong,1,0,0
+870345,Tom M. Mitchell,1,0,0
+969211,Ryuzo Okada,1,0,0
+1093731,Yoong Keok Lee,1,0,0
+1125836,Jörg Conradt,1,0,0
+1168354,J. Starck,1,0,0
+1287476,J. Dy,1,0,0
+1628448,D. P. Robertson,1,0,0
+677,Nuno Vasconcelos,2,0,0
+98783,Chikara Matsunaga,1,1,1
+124295,Young-Soog Chae,1,0,0
+259834,Shamez Alibhai,1,0,0
+670393,Taku Kudo,2,1,1
+733461,Christophe Jermann,1,0,0
+872463,Jin-Dong Kim,1,0,0
+1143576,Michael M. Kazhdan,1,0,0
+1260049,Roberto Piola,1,0,0
+1352567,Prasanth B. Nair,1,0,0
+1394926,Matthew Brand,2,4,1
+1486455,Jian-Cheng Wu,1,0,0
+1504490,Bernard Zenko,1,0,0
+1612738,Bernd Kiefer,4,4,1
+54529,Teruo Koyanagi,1,1,1
+82624,Charles W. Anderson,1,0,0
+261682,Nils T. Siebel,1,0,0
+460609,John D. Lafferty,4,8,1
+479355,Benjamin van Roy,2,0,0
+485916,Wenmiao Lu,1,0,0
+532167,Song Chun Zhu,11,1,1
+541992,Amir Globerson,1,0,0
+581002,Cheng Niu,2,0,0
+709882,Zhiping Zheng,1,0,0
+809889,Eric Sung,1,0,0
+905253,Timor Kadir,1,0,0
+1119049,Jonathan Baxter,3,0,0
+1267566,Dit-Yan Yeung,1,0,0
+97085,Sariel Har-Peled,1,0,0
+198755,Guodong Guo,1,0,0
+392189,Anitha Kannan,1,0,0
+403672,Ljupěco Todorovski,2,0,0
+491788,Shichao Zhang,1,0,0
+519908,Ying Zhu,1,0,0
+523017,Jing Wang,1,0,0
+587351,G. Lanckriet,1,0,0
+805118,Florin Ciucu,1,0,0
+805614,Sang W. Lee,1,0,0
+1016076,Bin Wang,1,0,0
+1152330,D W Murray,2,0,0
+1266815,Christian Müller,2,1,1
+1477895,O. Drbohlav,1,0,0
+1517708,A. Hilton,1,0,0
+1622456,Jun Morimoto,1,0,0
+1627114,Roma Robertson,1,0,0
+1699311,Éva Sáfár,1,0,0
+344307,Huajie Zhang,1,0,0
+420268,Nigel Duffy,1,1,1
+442114,Yossi Rubner,2,2,1
+477326,James H. Elder,1,0,0
+543968,Sven J. Dickinson,1,0,0
+849819,Panos Giannopoulos,1,0,0
+1263589,Judy Kay,1,0,0
+1459525,Josephine Sullivan,1,0,0
+1648464,A. D. Worrall,1,0,0
+1688000,Fumio Takechi,1,0,0
+32626,Jeffrey Ng,1,0,0
+179523,Xiangrong Chen,1,0,0
+274852,Christophoros Nikou,1,0,0
+374591,Alin Dobra,1,0,0
+702397,Yukiko I. Nakano,2,0,0
+977992,Jin-Xia Huang,1,0,0
+1004977,Greg Hamerly,1,0,0
+1130157,Jong-Hoon Oh,1,0,0
+1149509,Hung-Tat Tsui,2,0,0
+1557684,W. Zhao,1,0,0
+1579065,Hedvig Sidenbladh,2,7,1
+1654895,Hayit Greenspan,3,0,0
+417108,"Calvin R. Maurer, Jr.",1,0,0
+891928,Lei Yu,1,0,0
+1046568,Maureen Clerc,1,0,0
+1155267,Kishore Papineni,2,6,1
+1245926,Christopher Geyer,3,1,1
+1540887,Martin Riedmiller,2,0,0
+209107,João Paulo Costeira,1,0,0
+265505,Tiecheng Liu,1,0,0
+729826,Tom M. Heskes,1,0,0
+1176385,Scott Matthew Thede,1,1,1
+126806,Anand Venkataraman,1,0,0
+139402,M. Sznaier,1,0,0
+290611,Abraham P. Ittycheriah,1,0,0
+539646,Philip Stuart Resnik,4,7,2
+813100,Miguel Angel García,1,0,0
+863381,T. Lindeberg,3,0,0
+868934,P. Anandan,1,0,0
+924152,Yoichi Sato,1,0,0
+1056428,Seungwoo Lee,1,0,0
+1256168,Wei Zhang,1,0,0
+1306717,Kumiko Tanaka-Ishii,3,0,0
+1417840,R. Horaud,3,1,1
+1559734,Dominic Widdows,1,0,0
+1989,Malcolm J. A. Strens,3,0,0
+74878,Pierre Gurdjos,1,0,0
+210667,Charles B. Callaway,2,0,0
+380572,Rosemary Emery,1,0,0
+595755,Anlei Dong,2,0,0
+662407,Hanqing Lu,1,0,0
+747366,Zhenyi Wen,1,0,0
+987795,E. R. Hancock,10,2,1
+1126535,Joviša D. Žunic,1,0,0
+1192847,P Cheeseman,1,0,0
+1271404,Ralph Debusmann,1,3,1
+1508968,V. Cherkassky,1,0,0
+68688,David Demirdjian,2,0,0
+74083,Elli Angelopoulou,2,0,0
+148492,Hiromi Ozaku,1,0,0
+477632,Rong Jin,1,0,0
+524175,Shinichi Ueno,1,0,0
+650577,Zheng Chen,1,0,0
+667436,Zhouwen Tu,1,0,0
+841367,D. J. Kriegman,4,1,1
+872504,Jung-jae Kim,1,0,0
+946912,Marc Moens,1,0,0
+968113,Ann B. Lee,1,0,0
+1120329,Alain Content,1,0,0
+1132948,Andrea Fusiello,2,0,0
+1346193,Junichi Aoe,1,0,0
+1415728,M. Kearns,1,0,0
+1528250,Harry Wechsler,1,0,0
+1632700,F. Calderon,1,0,0
+24505,S. J. Russell,2,0,0
+52878,George A. Miller,1,0,0
+145217,Gang Wang,1,0,0
+342771,B. A. A. Nazief,1,0,0
+504174,Guang-Zhong Yang,1,0,0
+661634,D. Koubaroulis,1,1,1
+715863,Eric J. Horvitz,2,0,0
+862275,Anuj Dev,1,0,0
+949876,Pierre Charbonnier,1,0,0
+1051997,Ralf Schoknecht,1,0,0
+1162110,Thomas A. Funkhouser,1,0,0
+1180305,M Takeichi,1,0,0
+1208435,K. N. Walker,1,0,0
+1254967,John Zweck,1,0,0
+1287507,Feng Lin,1,0,0
+1585454,Hiroshi Ishikawa,1,1,1
+1666773,Eleni Miltsakaki,1,0,0
+1667776,Sergey Ioffe,1,0,0
+1675468,Jing Zhong,1,0,0
+100313,Marina Meilă,2,0,0
+101804,Yasuyuki Sakai,1,1,1
+118591,Guillermo Sapiro,2,0,0
+410585,Marc Pollefeys,3,0,0
+430119,Wei Yun Yau,2,0,0
+463450,Manabu Sassano,1,0,0
+509210,Horacio Saggion,2,0,0
+596771,Katrin Erk,2,0,0
+596884,Nebojša Jojić,4,5,1
+643440,Lex Weaver,1,0,0
+713780,Claude-Nicolas Fiechter,1,0,0
+836788,S. P. Chan,1,0,0
+886783,Julien Sénégas,1,0,0
+956204,A. Verri,1,0,0
+1048365,Daniel DeMenthon,1,0,0
+1105725,Sébastien Granger,1,1,1
+1133385,Hagit Zabrodsky Hel-Or,2,0,0
+1159200,David M. Pennock,1,0,0
+1313689,S. Early,1,0,0
+1405926,Xiaoli Li,1,0,0
+1453295,Kathleen F. McCoy,1,0,0
+1510221,G. Semeraro,1,0,0
+1612968,Gang Hua,1,0,0
+1657600,Ying Yang,1,0,0
+25330,Fredy Amaya,1,0,0
+303231,Shankar Rao,1,0,0
+409742,Salvador Botello,1,0,0
+725068,June-Ho Yi,1,0,0
+1222902,Marilyn A. Walker,8,5,1
+1316168,S. Matwin,2,0,0
+1379100,Susumu Katayama,1,0,0
+1593499,Grace Ngai,2,4,2
+60786,Mike Barley,1,0,0
+109575,Atsuyoshi Nakamura,1,0,0
+251272,V. Cornilleau-Peres,1,0,0
+338699,G. McGunnigle,1,0,0
+354301,Adam Laud,1,0,0
+512090,Ulrich Schäfer,3,1,1
+525582,J. S. Kandola,1,0,0
+570526,César Silva,1,0,0
+604911,R. L. de Màntaras,1,0,0
+607575,Gunaranjan Vasireddy,1,1,1
+621252,James R. Davis,1,0,0
+629033,Ce Liu,1,0,0
+803905,Ralf Klinkenberg,1,0,0
+1011761,Ran El-Yaniv,1,0,0
+1014141,Rik Fransen,1,0,0
+1105374,Omar Javed,2,0,0
+1166246,C. Zhang,1,0,0
+1204081,Michael Fleischman,1,0,0
+1526884,Luc M. J. Florack,2,0,0
+1646166,Klaus Mück,1,0,0
+27705,G. J. Streekstra,1,0,0
+153181,David D. Jensen,1,0,0
+244671,Kai Ming Ting,3,0,0
+327710,Dani Goldberg,1,0,0
+380153,Isabelle L. Herlin,1,0,0
+431572,Kathleen R. McKeown,4,3,1
+532494,Akane Yakushiji,1,0,0
+621476,Chin-Hwee Peh,1,0,0
+624312,Alex J. Smola,3,1,1
+830866,Franz Beil,2,4,1
+992824,Atsushi Fujii,2,1,1
+1049445,Toshio Ueshiba,1,0,0
+1192607,Hanan Samet,1,0,0
+1374767,Thorsten Brants,1,0,0
+151576,Horst Bischof,1,0,0
+301599,Don Blaheta,1,0,0
+451678,Julia Vogel,1,0,0
+593098,Daniel Nikovski,1,0,0
+649343,Chris Brockett,1,0,0
+758263,N. Kiryati,2,3,1
+827003,A. Shokoufandeh,1,0,0
+989221,Enrico Di Bernardo,1,2,1
+1175212,Mark D. Pendrith,1,0,0
+1213127,Antoine Monnet,1,0,0
+1399305,Candace L. Sidner,1,0,0
+1519712,Nitin Indurkhya,1,0,0
+42945,Vinay Bhat,1,0,0
+288713,Jefferson A. Coelho Jr.,1,0,0
+347730,Daniel Gildea,3,3,1
+347802,Bonnie J. Dorr,1,0,0
+596823,Mikael Rousson,2,2,1
+754357,Kohji Itoh,1,0,0
+757333,Katja Markert,1,0,0
+765068,David E. Johnson,1,2,1
+1139786,LIU Xiaohu,1,0,0
+1322705,Michael R. Miller,1,0,0
+1535016,Hsin-Hsi Chen,1,0,0
+1625774,Dídac Busquets,1,0,0
+1670596,Herman L. Ferrá,1,0,0
+1680915,Stefan Kramer,2,0,0
+411044,S. Buchholz,1,0,0
+411462,Justus Piater,1,0,0
+566019,Bernd Möbius,1,0,0
+865518,Junhwan Kim,2,0,0
+869427,Noriyoshi Uratani,1,0,0
+1192850,Sebastian Padó,2,0,0
+1336589,Emi Izumi,1,0,0
+1415869,Weng-Keen Wong,1,0,0
+1428133,Stephen Lin,2,2,1
+1693774,William B. Dolan,1,0,0
+190521,M. Schmidt,1,0,0
+306197,Ming-Hsuan Yang,2,2,1
+321545,Nicholas R. Howe,1,0,0
+902181,Nahum Shimkin,1,0,0
+939002,Jie Yang,2,0,0
+1218486,Hilan Bensusan,1,0,0
+1318540,Andrew R. McCallum,5,11,2
+1327115,Paul Komarek,1,0,0
+1536424,Bernhard Schölkopf,1,0,0
+1552562,Robby T. Tan,2,0,0
+1633944,Mads Nielsen,4,0,0
+1673762,Alain Trouvé,1,0,0
+48290,Matthias Heiler,1,0,0
+479964,E. Brill,3,9,2
+521201,Remco C. Veltkamp,1,0,0
+913835,Fayin Li,1,0,0
+922973,Nick Barnes,1,0,0
+1158347,Eisaku Maeda,2,0,0
+1179064,Jana Košecká,4,1,1
+1193697,G. Rives,1,0,0
+1229340,Markus Becker,2,1,1
+1425704,Yong S. Choi,1,0,0
+1482471,Tal Arbel,1,0,0
+1579818,Paul Smith,2,0,0
+164316,René Payrissat,1,0,0
+465966,Annalisa Barla,1,0,0
+539697,T. Zhang,3,2,1
+558911,P. Caudal,1,0,0
+568211,Kyriakos N. Sgarbas,1,0,0
+814378,Kavita Thomas,1,0,0
+1026969,Anton Leuski,1,0,0
+1189781,A. Scott Lennox,1,0,0
+1553198,S. Avidan,3,0,0
+229470,Danyu Liu,1,0,0
+522004,Eitaro Fujioka,1,0,0
+591535,Pavel Krbec,1,0,0
+930851,Guy Gilboa,1,0,0
+1053031,Frank Keller,2,0,0
+1074844,Joseph L. Mundy,1,0,0
+1083073,Kia-Fock Loe,2,0,0
+1107594,A G Barto,5,0,0
+1178523,Frank Stolle,1,0,0
+1194519,Andrew Zisserman,12,4,1
+1253443,J. H. Wright,1,1,1
+1299391,Mark W. Craven,2,0,0
+1379870,P. Perona,5,8,2
+256556,Berthold Crysmann,2,1,1
+263292,R. P. N. Rao,1,0,0
+497708,T. Daniel Midgley,1,0,0
+527485,John Williams,1,0,0
+800771,R. Prevete,1,0,0
+861753,Rayid Ghani,3,0,0
+1337695,Paola Giovanna Merlo,1,1,1
+94424,Goh Chooi Ling,1,0,0
+536062,J. Carroll,2,0,0
+651641,Alvin H. Kam,1,0,0
+781098,B. Jähne,1,0,0
+949666,Richard S. Sutton,3,0,0
+1088222,Robert Kaucic,1,0,0
+1088832,James J. Little,1,0,0
+1284700,Marc Light,1,1,1
+1414921,Daniel Freedman,1,0,0
+1453964,Aurélien Max,1,0,0
+36692,Christian Wallraven,1,0,0
+150281,W. Culbertson,1,0,0
+407780,Kiyoshi Yamabana,1,0,0
+667119,Matthias Seeger,2,0,0
+782577,Kenji Hara,2,0,0
+1027456,Volker Krüger,1,0,0
+1046398,Colin Davidson,1,1,1
+1081001,Valentin Tablan,1,0,0
+1364394,Shivani Agarwal,1,0,0
+1526388,Teruhisa Misu,1,0,0
+1556428,Daisuke Miyazaki,2,0,0
+1637129,Mircea Nicolescu,1,0,0
+1644558,Yan Liu,2,0,0
+189375,Leo J. Guibas,2,1,1
+329817,Andrew Blake,7,10,2
+354406,Kar-Ann Toh,1,0,0
+461109,Nancy Ide,2,0,0
+512124,Lourdes Agapito,1,0,0
+566321,David Tschumperlé,2,0,0
+595767,Nimrod Megiddo,1,0,0
+730458,Kim Steenstrup Pedersen,1,0,0
+735744,Geoffrey Zweig,1,0,0
+760402,Jean Ponce,6,1,1
+920978,Sharathchandra Pankanti,1,0,0
+1348360,Michael Isard,3,9,2
+1629362,Tomas Brodsky,1,0,0
+1648038,Howard J. Schultz,1,0,0
+56955,Chi-Keung Tang,1,0,0
+251132,Sebastian B. Thrun,4,0,0
+329846,Marco Saerens,1,0,0
+462752,Masato Yamamoto,1,0,0
+630142,Andrea Garullli,1,0,0
+1034275,ZhenQiu Zhang,1,0,0
+1120524,Matthew Stone,1,1,1
+1196440,Sholom M. Weiss,1,0,0
+1227479,E. Alpaydin,2,0,0
+1318406,Dana Cobzas,1,0,0
+1614047,António Ribeiro,1,0,0
+230016,Pamela W. Jordan,2,0,0
+275842,Deva Ramanan,1,0,0
+561805,Shunsuke Uemura,1,1,1
+649729,Fredrick Jelinek,1,0,0
+708950,Stan. Z. Li,1,0,0
+727262,John Reidar Mathiassen,1,0,0
+834228,Quang-Tuan Luong,3,0,0
+45052,Alistair Willis,1,2,1
+140838,William D. Smart,1,0,0
+179257,Francine Chen,1,0,0
+306324,Thomas Petsche,1,0,0
+448280,F. Vichot,1,0,0
+514162,Lance Williams,2,0,0
+525262,A. V. Zalesny,1,0,0
+567345,Robert Thomas Collins,3,1,1
+1137573,Russell H. Taylor,1,0,0
+1233726,Robert B. Fisher,1,0,0
+1262431,Stuart I. Reynolds,1,0,0
+1367580,"John W. Fisher, III",2,0,0
+8379,Zoran Obradovic,1,0,0
+365587,Finnegan Southey,1,0,0
+429456,Emmanuel Prados,1,1,1
+467341,J. Méndez Rodríguez,1,0,0
+510843,Hirofumi Yamamoto,1,1,1
+1089709,Shlomo Zilberstein,1,0,0
+1117469,Adrien Bartoli,3,0,0
+1147111,Christopher H. Bryant,1,0,0
+1228838,Mario Marchand,1,0,0
+1513005,Claude Sammut,1,0,0
+1539841,Stephen Benoit,1,0,0
+1657500,Seth Rogers,2,0,0
+1677978,Cynthia A. Thompson,1,3,1
+127182,Kary Myers,1,0,0
+230180,Zhengyou Zhang,2,0,0
+301283,David K. Wehe,1,0,0
+341250,A. Criminisi,2,0,0
+526450,CHEUNG Chi Shun,1,0,0
+659662,Sandip Sen,1,0,0
+790878,Alexandra Kinyon,3,0,0
+823804,T. Walsh,1,0,0
+830260,Benjamin Taskar,1,0,0
+850154,S. S. Keerthi,2,0,0
+904222,Brendan J. Frey,4,5,1
+921324,Lucian Vlad Lita,1,0,0
+1352886,James Reisman,1,0,0
+1566983,Raymond J. Mooney,2,3,1
+1641184,Charles R. Dyer,1,1,1
+216,Dragos D. Margineantu,1,0,0
+253691,J. T. Lapresté,1,0,0
+284447,Cheng-En Guo,3,0,0
+353560,Francis Quek,1,0,0
+505110,Helmut Schmid,1,0,0
+535800,G. X. Qian,1,0,0
+585020,Tomáš Pajdla,3,1,1
+620904,Gareth Loy,1,0,0
+897688,Yu-Fei Ma,1,0,0
+1194564,Jun'ichi Kakegawa,1,0,0
+35105,Roger Moore,1,0,0
+60470,Manu Sridharan,1,0,0
+136704,Yongcheng Wang,1,0,0
+402782,Christian Jacquemin,2,1,1
+420676,Pierre-Louis Bazin,1,0,0
+447758,J. M. Gawron,2,1,1
+471960,Gabe Reinstein,1,0,0
+587406,Scott M. Gallager,1,0,0
+604522,Harris Drucker,1,0,0
+615425,João Maciel,1,0,0
+827780,Johanna D. Moore,1,1,1
+1317207,K. P. Sycara,1,0,0
+1366713,Douglas Fisher,1,0,0
+1395887,Thomas C. Chuang,1,0,0
+1450763,F. Béchet,1,0,0
+1604769,Lori Lamel,1,0,0
+1711494,Benoit Huet,1,0,0
+83044,P. N. Belhumeur,3,0,0
+112705,Philippe de Groote,1,0,0
+161015,Yuval Krymolowski,2,0,0
+307088,R. E. Schapire,3,1,1
+335089,Justin A. Boyan,1,0,0
+510157,P. Perez,5,1,1
+583687,Sabino J. Ferreira,1,0,0
+754184,Yukihiro Itoh,1,0,0
+759439,David A. Maluf,1,0,0
+790972,Kentaro Toyama,1,1,1
+995470,Jesse Hoey,1,0,0
+1405564,Ayhan Demiriz,1,0,0
+1654970,Peter A. Flach,3,0,0
+1660706,Assaf Zomet,3,0,0
+377961,Hwee Tou Ng,1,0,0
+478930,Guodong Zhou,2,2,1
+583083,H. Attias,1,0,0
+620455,John Laird,1,0,0
+657532,Paul E. Utgoff,2,0,0
+720243,Kwok-Wai Cheung,1,0,0
+1177970,L. M. Alvarez,1,0,0
+1240079,S W Zucker,3,2,1
+1640260,Daisuke Iijima,1,0,0
+1661638,Olivier Gérard,1,0,0
+49731,Ian Reid,2,0,0
+69321,J. J. Lucena-Molina,1,0,0
+101414,Salvatore J Stolfo,1,0,0
+414173,Todd Ward,1,5,1
+518595,Marcel Mitran,1,0,0
+539545,Theo Moons,1,0,0
+590362,C. von der Malsburg,1,0,0
+860703,C. Schnörr,2,0,0
+919791,Robin D. Morris,1,0,0
+1044552,Chandra Kambhamettu,3,0,0
+1052108,Yaron Caspi,1,0,0
+1123203,Witold Drożdżyński,1,0,0
+1250952,Kenneth R. Beesley,1,0,0
+1464779,Thomas Melluish,1,0,0
+1465043,L Kaelbling,3,0,0
+1612467,Jakub Piskorski,2,1,1
+74695,Michael Felsberg,1,0,0
+79071,Regina Barzilay,2,3,1
+368258,K Ikeuchi,5,0,0
+440717,David Gondek,1,0,0
+442034,Sandeep Seri,1,0,0
+466059,R. Cipolla,12,4,1
+469338,Sanmay Das,1,0,0
+516207,Mark-Jan Nederhof,1,0,0
+532470,L Zhu,2,0,0
+649730,M. Trajkovic,1,0,0
+734086,Stefan Wrobel,1,0,0
+793178,Pablo Ariel Duboué,1,0,0
+802832,Miriam Goldberg,1,0,0
+851097,Yee Seng Chan,1,0,0
+861171,Janusz Bobulski,1,0,0
+880722,Roxana Girju,2,3,1
+1149127,Rebecca Hwa,2,2,1
+1150127,F. Esposito,1,0,0
+1602934,Dennis Kibler,1,0,0
+70562,P. H. S. Torr,8,6,1
+70891,Ullrich Köthe,1,0,0
+247860,Rong Xiao,1,0,0
+371851,Rahul Bhotika,1,0,0
+560635,Jake D. Brutlag,1,0,0
+570941,Ewan Klein,2,0,0
+717448,Dimitrios Gunopulos,1,0,0
+730031,Roman Wyrzykowski,2,0,0
+791964,Jeong-Mi Cho,1,0,0
+900023,Jennifer Neville,1,0,0
+1060150,Zheng Chen,1,0,0
+1436757,Hongcheng Wang,1,0,0
+1460014,Wei Zhang,1,0,0
+1503940,Gerald Penn,3,0,0
+1571972,Xiaofeng Yang,1,0,0
+1621674,Abraham Wyner,1,0,0
+1635196,W. Eric L. Grimson,1,0,0
+10432,Shien-Shin Tham,1,0,0
+124490,M. Tistarelli,3,0,0
+363754,Andrew Gordon,1,0,0
+580586,D. Ormoneit,1,0,0
+1323032,T. F. Cootes,4,0,0
+1351785,Jude W. Shavlik,2,0,0
+28849,Matthew R. Glickman,1,0,0
+308036,Roberto Manduchi,2,0,0
+363034,Xianfeng Gu,1,0,0
+443795,Jette Randløv,2,0,0
+580053,Alexander Koller,3,0,0
+829605,Takeshi Kawabata,1,1,1
+943045,Ezio Malis,2,0,0
+174042,Colin Cherry,1,0,0
+340449,Andrew W. Senior,1,0,0
+583529,Wee Sun Lee,1,0,0
+929627,Pascal Fua,5,0,0
+1014923,Sandra Kübler,1,0,0
+1191433,Thorsten Joachims,6,0,0
+1197747,A. J. Torralba Silgado,2,0,0
+1707517,Jeffrey C. Reynar,1,2,1
+321967,Fei-Yue Wang,1,0,0
+443308,JungHyun Han,1,0,0
+523533,Antal van den Bosch,2,0,0
+788472,Krzysztof Krawiec,1,0,0
+1028091,Gábor Prószéky,1,0,0
+1177270,I Kononenko,2,0,0
+1563394,Jianfeng Gao,6,1,1
+486908,Hugues Bersini,1,0,0
+621348,James W. Davis,1,0,0
+718866,Peter Ju,1,0,0
+732007,Ying Wu,1,1,1
+850790,Leonid Sigal,1,0,0
+890170,Tomás Werner,1,0,0
+1135730,Simon Colton,1,0,0
+1178356,Rebecca J. Passonneau,1,1,1
+1233248,Christos Papatheodorou,1,0,0
+1607658,James Shaw,1,1,1
+1616922,Eric K. Ringger,1,0,0
+1695455,Kyo Kageura,1,0,0
+70979,Joris Vanden Wyngaerd,1,0,0
+200013,T. Hague,1,0,0
+309105,Rein van den Boomgaard,2,0,0
+318275,M. Sebban,2,0,0
+561135,Helen Wright Hastie,1,0,0
+653815,Cristian Sminchisescu,2,2,1
+827369,S H Myaeng,1,0,0
+834708,François Barthélemy,1,0,0
+909257,Anurag Mittal,2,0,0
+961650,Chris Buehler,1,0,0
+1014895,D. P. de Farias,1,0,0
+1161735,Jan Hajic,2,4,1
+1169023,René Vidal,2,0,0
+1343012,Hisayuki Kanda,1,0,0
+1356371,Tina Eliassi-Rad,1,0,0
+1360683,G. Frederix,2,0,0
+1408251,J.-P. Pons,2,0,0
+1619170,A. Ja. Dikovsky,1,0,0
+1629538,Ralf Herbrich,1,0,0
+330696,Sašo Džeroski,5,0,0
+341132,Kurt Cornelis,1,0,0
+502983,Shree K. Nayar,11,3,1
+561042,Geoff J. McLachlan,2,0,0
+574064,T. Van Allen,1,0,0
+1001759,Lior Wolf,4,5,2
+1137328,I. Tastl,1,0,0
+1166313,Gianfranco Doretto,1,0,0
+1282487,Yasubumi Sakakibara,1,0,0
+1523312,Weiming Hu,1,0,0
+1603434,P. Smyth,1,0,0
+31994,Michel Vidal-Naquet,1,0,0
+87264,Xavier Muñoz,1,0,0
+242807,Ying Wu,1,0,0
+493000,Anette Frank,2,1,1
+573826,Masayuki Asahara,1,0,0
+635469,Michele Banko,2,6,1
+853672,Martin Jansche,1,0,0
+1095311,Jakub Zavrel,1,0,0
+1183850,T. S. Chua,2,0,0
+1271623,Anthony Yezzi,5,0,0
+1395958,Michael F. Cohen,1,0,0
+275570,Cen Rao,1,0,0
+355931,B F Buxton,2,0,0
+360875,Gilles Aubert,2,0,0
+418828,Steve Whittaker,1,1,1
+909222,H. Delingette,1,1,1
+941403,Bernhard Hengst,1,0,0
+1016692,Thomas Corpetti,1,0,0
+1045365,Leen-Kiat Soh,1,0,0
+1163227,Carsten Rother,1,1,1
+229805,Eric Pauwels,2,0,0
+294461,Allan Borra,1,0,0
+316580,Haifeng Liu,1,0,0
+318323,Richard P. Wildes,1,0,0
+462301,Stefan Evert,1,0,0
+568325,Javier Ortega-Garcia,1,0,0
+626198,Karin Müller,2,0,0
+1073133,Klaus J. Kirchberg,1,0,0
+1154258,David L. Dowe,1,0,0
+1340682,Kim Gerdes,1,0,0
+1429034,Yiming Yang,3,0,0
+1469208,Xin Tong,1,0,0
+1479900,Michael Collins,4,13,2
+1551200,Il-Kyun Jung,1,0,0
+1653450,Vineet Chaitanya,1,0,0
+1662451,Peter L. Bartlett,2,0,0
+74620,Richard A. Caruana,1,0,0
+605009,Michael Julian Black,6,7,1
+778459,Arda Çelebi,1,0,0
+808663,I. Laptev,1,0,0
+1335235,Takahiro Okabe,1,0,0
+1405542,Mu Li,1,0,0
+1436415,Luis Perez-Breva,1,0,0
+38110,Erwin Marsi,1,0,0
+221867,Maurice Ringer,1,0,0
+580642,Slobodan Ilic,1,0,0
+645764,Yuankai Jiang,1,0,0
+803514,Hongyan Jing,1,0,0
+1326300,Huajie Zhang,1,0,0
+22727,Anat Levin,1,0,0
+42158,Inderjeet Mani,3,1,1
+128049,A. D. Jepson,4,0,0
+147983,Roger Levy,1,0,0
+163787,Eric Fosler-Lussier,1,0,0
+316784,Rashmi Prasad,1,0,0
+355132,Gabriel Pereira Lopes,1,0,0
+531696,M Glesner,1,0,0
+811494,Amir Jafari,1,0,0
+831476,A. Busti,1,0,0
+848446,Nail Gumerov,1,0,0
+984882,Gang Wang,1,0,0
+1044298,Dan Flickinger,1,3,1
+1045090,J. Daudé,1,0,0
+1120033,Peter Stone,1,0,0
+1147918,Jill Burstein,1,0,0
+1151695,David Vernon,2,0,0
+1162008,Catalina Barbu,1,0,0
+1428458,Richard M. Karp,1,0,0
+1503289,Simon Lacroix,1,0,0
+75163,Christophe Chefd'hotel,1,0,0
+101151,Michael Bowman,1,0,0
+335900,Yuji Matsumoto,6,2,1
+341248,S. C. Schwartz,1,0,0
+389776,Jiaya Jia,1,0,0
+505499,Cordelia Schmid,4,0,0
+593624,Kannan Achan,1,0,0
+955340,Young-Suk Lee,1,1,1
+1080748,Donna K. Byron,1,1,1
+1460351,Keith Hall,1,0,0
+1509916,Hai Leong Chieu,2,0,0
+1596728,Serge Belongie,3,2,1
+1646016,Luis Talavera,2,0,0
+1693674,Tom Pierce,1,0,0
+112055,Jean-Paul Armspach,1,0,0
+159006,Thomas G. Dietterich,1,0,0
+284658,Joachim Niehren,3,0,0
+304174,Yue Zhou,1,0,0
+305938,Jongsun Kim,1,0,0
+498313,Sherri L. Condon,1,1,1
+504613,Laurent D. Cohen,3,1,1
+530459,Aleksandr Dubinskiy,1,0,0
+539853,El-Sayed Atlam,1,0,0
+604755,Eric Yap,1,0,0
+607063,Adam Finkelstein,1,0,0
+612605,Yuh-Jyh Hu,1,0,0
+615671,Gerard Medioni,2,1,1
+741385,Keiichi Yoshida,1,0,0
+1101206,A. Srivastava,1,0,0
+1104890,Alexei Gritai,1,0,0
+1220010,Kiyoshi Sudo,1,0,0
+1521860,Maja J. Mataric,1,0,0
+1629915,Barbara L. Gates,1,1,1
+1704302,D Maio,1,0,0
+87067,Brigham S. Anderson,1,0,0
+204588,Manfred Pinkal,2,0,0
+339384,Michail G. Lagoudakis,2,0,0
+420589,Ulrich Hillenbrand,1,0,0
+481333,Sylvia C. Pont,1,0,0
+555573,Markus Middendorf,1,0,0
+805299,Nobuhiro Kaji,1,0,0
+1051366,Marco Wiering,2,0,0
+1131476,Graziano Chesi,1,0,0
+1398481,Huan Chang,1,0,0
+259756,Zhi-Pei Liang,1,0,0
+312553,Antal Van Den Bosch,4,2,1
+487132,Arindam Banerjee,1,0,0
+679884,George Tecuci,1,0,0
+689904,Stefan Schrödl,1,0,0
+910678,Shmuel Peleg,2,1,1
+1035878,Kevin C. Yeh,1,0,0
+1111973,Todd E. Zickler,2,0,0
+1142138,Llew Mason,1,1,1
+1240325,Xiaofei He,1,0,0
+27717,Miroslav Kubat,2,0,0
+677887,Ashutosh Garg,1,0,0
+702867,L. Gaucher,1,1,1
+718972,Michael Schiehlen,2,0,0
+1100701,Geoffrey Webb,2,0,0
+1438620,T. S. Huang,2,0,0
+1446178,Scott McDonald,1,0,0
+1451221,Adam L. Berger,1,1,1
+57950,Tao Xiang,1,0,0
+426046,Yasuhiro Taniguchi,1,0,0
+842141,Hagen Spies,1,0,0
+1218390,Nalini K. Ratha,1,0,0
+1303570,Matthew J. Beal,1,0,0
+1604032,M. Adda-Decker,1,0,0
+52250,Andreas Ruf,2,1,1
+305281,Lisa N. Michaud,1,0,0
+342203,Alexander K. Seewald,1,0,0
+392741,Hitoshi Isahara,8,1,1
+524468,Gerda Lubenova Kamberova,1,0,0
+546789,S. McCarley,1,0,0
+577389,Annie Foret,1,0,0
+720285,Hanno Scharr,1,0,0
+769248,Sadao Kurohashi,2,1,1
+923974,Jacques-Olivier Lachaud,1,0,0
+951398,Ravi Ramamoorthi,1,0,0
+1095139,Simon Baker,1,1,1
+1138343,Darya Frolova,1,0,0
+1567735,Cyril Allauzen,1,0,0
+1665372,Joachim Buhmann,3,2,1
+117550,Sadaoki Furui,1,0,0
+317575,Horst Hau&#223/ecker,1,0,0
+344288,Eric McCreath,1,0,0
+714377,Shie Mannor,1,0,0
+876949,Zeyun Yu,1,0,0
+948127,Fernando de la Torre,1,0,0
+1195814,Craig Saunders,2,0,0
+1197328,D. Feldman,2,0,0
+1286889,Wei Fan,1,0,0
+1360349,Güter Neumann,1,1,1
+1469134,Simon Tong,1,1,1
+1621556,Samuel W. Hasinoff,1,0,0
+1638741,Jae Won Lee,1,0,0
+1683703,D. Suter,1,0,0
+52909,Wee Sun Lee,1,0,0
+61452,Satinder P. Singh,2,0,0
+92750,Christian R. Shelton,1,0,0
+120050,Dave Peterson,1,0,0
+207798,Razvan C. Bunescu,1,0,0
+263360,Cenk Kaynak,1,0,0
+487023,Bikramjit Banerjee,1,0,0
+491856,Byoung-Tak Zhang,3,0,0
+531177,G. H. Granlund,1,0,0
+635823,Luiz M. G. Gonçalves,2,4,2
+716339,Chanderjit Bajaj,1,0,0
+864212,Laurent El Ghaoui,1,0,0
+1035464,Xilin Chen,1,0,0
+1206667,Tatsuya Kawahara,2,0,0
+1231463,Susan E. Brennan,1,0,0
+1337821,Anat Levin,1,0,0
+20454,Yeun-Bae Kim,1,0,0
+44109,Kenji Furukawa,1,0,0
+191434,Brian Curless,1,0,0
+210628,Harpreet S. Sawhney,3,0,0
+481525,Attilio Giordana,1,0,0
+550701,Jose M. Castano,1,0,0
+942948,Kazunori Onoguchi,1,0,0
+1010315,Guozhu Dong,1,0,0
+1056385,Sang W. Lee,1,0,0
+1602810,R. Gaizauskas,1,0,0
+617442,Kurt Driessens,1,0,0
+740023,Haym Hirsh,1,0,0
+1179647,Einoshin Suzuki,1,0,0
+1189370,Athinodoros S. Georghiades,1,0,0
+1304547,Qi Zhang,2,0,0
+1495780,Dean F. Hougen,1,0,0
+83043,P. Langley,6,0,0
+111637,Arcot Sowmya,1,0,0
+379951,Denver Dash,1,0,0
+393041,Satoshi Sekine,3,0,0
+473014,Robert Malouf,2,0,0
+505419,Marco Carcassoni,1,0,0
+554203,Sanda M. Harabagiu,4,3,1
+667956,Tom Drummond,4,1,1
+799656,Tomás Werner,1,0,0
+1122308,Aly A. Farag,2,1,1
+1139547,Ian H. Witten,1,0,0
+1439763,W. Lam,1,0,0
+1446477,Z. Rasheed,1,0,0
+1485478,Kyung-Soon Lee,1,0,0
+1633295,Nicola Fanizzi,1,0,0
+1688416,Xianghua Ying,1,0,0
+1709879,J. Sánchez,1,0,0
+118181,Hang Li,1,0,0
+201745,Jian Su,2,2,1
+261571,D S Weld,1,0,0
+562162,Michael D. Grossberg,2,0,0
+957685,Chew L Tan,1,0,0
+1231897,M. Hearst,2,1,1
+162506,Meir Cohen,1,2,1
+268449,Roman Goldenberg,1,0,0
+330582,Sam Roweis,1,0,0
+499951,Frank Delleart,1,0,0
+648605,Dana Segal,1,1,1
+803370,Radu Florian,1,0,0
+1008560,Tetiana Valchuk,1,0,0
+1035932,D. Peel,1,0,0
+1099509,Carlotta Domeniconi,1,0,0
+1354464,U. Grenander,1,0,0
+1466400,Chin-Yew Lin,2,1,1
+1586020,Gary Geunbae Lee,1,0,0
+193558,Pradit Mittrapiyanuruk,1,0,0
+340358,J. Matas,1,1,1
+394378,Machiel Westerdijk,1,0,0
+476099,Edward A. Geiser,1,0,0
+691276,Motilal Agrawal,1,0,0
+791499,Yuri Boykov,1,0,0
+992923,Lothar Hermes,1,0,0
+1155826,Kenneth W. Church,1,0,0
+1632312,Thomas B. Sebastian,1,0,0
+205402,Érick Alphonse,1,0,0
+383857,Masaaki Nagata,2,1,1
+390900,Rodger Kibble,1,1,1
+580654,Georgios Paliouras,2,0,0
+1027532,Daniel R. Dooly,1,0,0
+1168903,Adrian Barbu,1,0,0
+1372630,C. Decaestecker,1,0,0
+1623208,Freddy Y. Y. Choi,1,0,0
+1650656,Theodore J. Perkins,3,0,0
+103600,Hua Wu,1,0,0
+160955,Anna Korhonen,2,0,0
+179610,Xing Chen,1,0,0
+413922,Hwee Tou Ng,1,0,0
+507307,Daniel Francis Hardt,1,0,0
+521253,Julie E. Boland,1,1,1
+588171,Milena Petrova,1,0,0
+670513,Hong Qi,1,0,0
+729076,Danny B. Yang,1,0,0
+752889,Carine Hue,1,0,0
+786145,R Sangal,1,0,0
+842130,Michael Jahr,1,2,1
+1580315,Alexandre Guimond,1,0,0
+303450,J. L. Crowley,3,1,1
+484193,A S Willsky,1,1,1
+735293,Yan Zhou,1,1,1
+1258634,Kobus Barnard,3,0,0
+1522439,Partha Niyogi,1,0,0
+209203,Junxian Wang,1,0,0
+226392,Yuka Tateishi,1,0,0
+250142,Deepayan Chakrabarti,1,0,0
+255733,Beth A Hockey,3,0,0
+723112,Hua Cheng,1,1,1
+790935,Supan Samarasekara,1,0,0
+1325885,Ossama Emam,1,1,1
+1422842,Franck Genet,1,0,0
+1423633,DeKang Lin,3,1,1
+1586374,Scott Sanner,1,0,0
+26113,Dan Roth,1,0,0
+192242,M. J. Pazzani,1,0,0
+231837,Taro Watanabe,1,0,0
+552823,Daphna Weinshall,3,0,0
+847570,L. Van Gool,6,0,0
+1137419,João Mexia,1,0,0
+1421797,L. Torresani,1,0,0
+1581401,Yiannis Aloimonos,1,0,0
+1650436,Trevor Darrell,5,0,0
+1677870,C. A. Knoblock,2,0,0
+68413,Tadashi Nomoto,2,1,1
+83098,Sergey V. Pakhomov,2,0,0
+177349,Mazin G. Rahim,1,0,0
+263376,Claire Gardent,3,1,1
+264363,Paulo R. S. Mendonça,2,2,1
+521467,Guy Lebanon,1,1,1
+552639,Miles E. Hansard,1,0,0
+649177,David Jelinek,1,0,0
+772572,S. Roukos,4,6,1
+804270,Youji Kiyota,1,0,0
+814919,Nikos Canterakis,1,2,1
+903057,Tomer Hertz,2,0,0
+1195760,Joseph A. O'Sullivan,1,0,0
+1510142,John R. Anderson,1,0,0
+1542357,Takayuki Hamamoto,1,0,0
+1702811,K Ramamohanarao,3,0,0
+86218,Wenxin Jiang,1,0,0
+110423,Nanning Zheng,1,0,0
+127466,Stefan Rapp,1,1,1
+330840,W. R. Edwards,1,1,1
+480352,Topi Mäenpää,1,0,0
+1032665,Matthew Berland,1,1,1
+1338372,Anat Levin,2,0,0
+1618782,D. Paiva,1,0,0
+1629533,Joseph Bockhorst,2,0,0
+1690915,Edward M. Riseman,1,0,0
+1694068,Alicia Abella,1,0,0
+127997,Risi Imre Kondor,1,0,0
+147013,Yizhou Wang,3,0,0
+410498,Svetlana Lazebnik,3,0,0
+633711,Ronald Parr,1,0,0
+786969,Huiying Zhong,1,0,0
+841393,Stefan Schaal,2,0,0
+101160,Jesús Peral,1,0,0
+174717,Y Yeshurun,1,0,0
+242543,Amanda Stent,2,2,1
+341209,Andrew Lippman,1,0,0
+354072,Rob Fergus,1,0,0
+534693,Antonio Ferrández,2,0,0
+586938,Angel Domingo Sappa,1,0,0
+639164,Melanie Siegel,1,1,1
+1124345,George Kamberov,1,0,0
+1306211,Amy McGovern,1,0,0
+1525174,Yee-Hong Yang,1,0,0
+1554904,Arun Ross,1,0,0
+1620097,Somboon Hongeng,1,0,0
+1624015,Won Seug Choi,1,0,0
+1645402,P. J. Giblin,2,0,0
+115640,Ruzena Bajcsy,1,0,0
+307951,Yong Wang,1,0,0
+339621,Salvador Ruiz-Correa,1,0,0
+339762,Moshe Ben-Ezra,3,1,1
+487373,Baback Moghaddam,1,2,1
+490257,Changshui Zhang,1,0,0
+766575,Katharina Probst,1,0,0
+831418,Martin S. Chodorow,1,0,0
+873427,Vasanth Philomin,1,0,0
+913295,Andrea Lagorio,1,0,0
+994049,Henrik Malm,1,0,0
+1026691,Manny Rayner,2,0,0
+1040082,Matthew D. Mullin,1,0,0
+1052084,Micheal Rudzsky,1,0,0
+1119781,Patricia J. Riddle,1,0,0
+1242943,Tzu-Tsung Wong,1,0,0
+1260730,Bernt Schiele,1,0,0
+1332208,Teruo Koyama,1,0,0
+1535197,Ciprian Ioan Chelba,1,0,0
+1559032,Gregory C. Sharp,1,0,0
+1611855,Linda G Shapiro,1,0,0
+1627376,Michael Dyer,1,0,0
+1663159,Alexander Clark,1,0,0
+26118,Maneesh K. Singh,1,0,0
+33521,Ko Nishino,1,0,0
+73050,Eric E. Bloedorn,1,1,1
+112540,Liran Goshen,1,0,0
+161195,Lyle Noakes,1,0,0
+253818,Ian H. Jermyn,1,1,1
+454658,Olcay Taner Yildiz,1,0,0
+481349,Romer Rosales,1,0,0
+482470,Tom Malzbender,1,0,0
+565531,Jan Neumann,1,0,0
+756639,J Kittler,1,1,1
+791106,Javier Portilla,1,0,0
+939304,Christian Lebiere,1,0,0
+1165902,A Vicino,1,0,0
+1177265,Ralf Engel,1,0,0
+1228117,Dennis Tell,2,2,1
+1303428,Yuji Matsumoto,1,0,0
+1369633,Gianluca Bontempi,1,0,0
+1417034,Paul Clough,1,0,0
+379980,Richard Dearden,1,0,0
+404205,Michael Jones,2,2,1
+767133,E. Hajičová,1,0,0
+885011,Hui Gao,1,0,0
+968258,Nicolae Duta,1,0,0
+1027403,Michael Elhadad,2,1,1
+1097150,Jean-Marc Lavest,1,0,0
+1119028,Qiang Ji,1,0,0
+1124685,Zhanyi Hu,1,0,0
+1283428,Gy. Dorkó,1,0,0
+1354465,Rajesh Parekh,1,0,0
+1671107,Jacob Goldberger,4,1,1
+482450,João P. Barreto,2,0,0
+552834,Changning Huang,4,0,0
+774961,Petr Sgall,1,0,0
+1143167,Kenneth Nilsson,1,0,0
+1310060,Yutaka Sasaki,2,0,0
+1538282,Mark Brodie,1,0,0
+1555395,Hans-Ulrich Krieger,4,4,1
+1626237,William T. Freeman,3,2,1
+125996,Jian-Gang Wang,1,0,0
+443924,Andrea Torsello,1,0,0
+547218,David Milward,1,1,1
+1497894,Christoph Bregler,1,0,0
+1608333,Michael L. Littman,4,0,0
+1650432,Gavriel Speyer,1,0,0
+15055,Allen R. Hanson,1,0,0
+149265,Sylvain Kahane,1,0,0
+316542,Collin F. Baker,1,0,0
+352417,Tanveer Fathima Syeda-Mahmood,1,0,0
+357899,Roman Yangarber,1,0,0
+477355,Hristo Tanev,1,0,0
+558445,Toyomi Saiga,1,0,0
+596813,Adnan Ansar,1,0,0
+636102,E. Hayman,3,0,0
+804969,Tsutomu Hirao,1,0,0
+1008226,Ruth Rosenholz,1,0,0
+1122459,David Page,2,0,0
+1130803,Denis Simakov,1,0,0
+1193999,Monica Rogati,2,0,0
+1612923,Erin Bredensteiner,1,0,0
+318411,Achi Brandt,1,0,0
+420206,Paul Morǎrescu,1,0,0
+488988,Y. Y. Zeevi,1,0,0
+529517,Lionel Oisel,1,0,0
+587979,Huang Changning,1,0,0
+591284,Daphne Koller,3,1,1
+650898,Claude Barras,1,0,0
+804767,Erhard W. Hinrichs,2,0,0
+922337,Imari Sato,1,0,0
+1354514,Andrea Kowalski,1,0,0
+80842,Dan Cristea,1,0,0
+208590,J. W. Bell,1,0,0
+459319,Hai Jin,3,2,1
+568407,Dennis DeCoste,1,0,0
+752999,N. Rubin,1,0,0
+966517,Akio Yokoo,1,1,1
+1116475,A. N. Poo,1,0,0
+1262467,Nozha Boujemaa,2,0,0
+1328266,Kiyotaka Uchimoto,3,0,0
+1352072,"Hal Daumé, III",1,0,0
+1471531,Jorge Cabrera-Gámez,1,0,0
+1480237,Yevgeny Seldin,1,0,0
+79096,M. Harville,1,0,0
+143038,Jesus A. Gonzalez,1,0,0
+519244,Joshua Goodman,2,0,0
+1338820,Malcolm R. K. Ryan,1,0,0
+1534453,H H Nagel,1,0,0
+439977,Mike Rogers,1,0,0
+658297,Oliver King,1,1,1
+851464,R M Bolle,1,0,0
+1016010,Bing Wang,1,0,0
+1581110,Francisco Casacuberta,1,0,0
+1697170,William M. Campbell,2,0,0
+71471,Dan I Moldovan,5,4,1
+274836,Marie-Pierre Dubuisson-Jolly,1,0,0
+299137,Meng Sun,1,0,0
+629895,Karvel K. Thornber,1,0,0
+891547,Kristin J. Dana,2,2,1
+1024922,Richard Myers,1,0,0
+1133740,Tobias Scheffer,3,0,0
+1168602,Ed Kaiser,1,0,0
+1196248,Giulio Sandini,1,0,0
+1357162,Jiangjian Xiao,1,0,0
+1428394,Stephen Lin,3,0,0
+1578696,G Biswas,1,0,0
+55098,Dong-Min Woo,1,0,0
+318863,Zhaohui Sun,1,0,0
+524570,Hisami Suzuki,1,0,0
+802364,Hossein Yahia,1,0,0
+850386,Xavier Pennec,1,1,1
+874483,Ryszard Kozera,1,0,0
+881182,Yonatan Wexler,2,0,0
+1097501,Fabian Ernst,1,0,0
+1274322,Irene Langkilde,1,1,1
+91932,Alexander S. Yeh,1,0,0
+105682,Xiaoqiang Luo,1,0,0
+128480,R. Kimmel,1,0,0
+243350,Kwan-Yee K. Wong,2,2,1
+575016,Mubarak Shah,5,0,0
+672079,Eran Borenstein,1,0,0
+898811,Arnoldo Mayer,1,0,0
+1088942,Mark Schwabacher,1,0,0
+1120996,Kazuhiro Fukui,1,0,0
+1460683,Robert N. Moll,1,0,0
+1618960,Vladimir Kolmogorov,4,1,1
+203712,Anand Panangadan,1,0,0
+418304,Hannes Pirker,1,0,0
+425736,H. D. Tagare,1,0,0
+681635,Naoki Yoshinaga,2,0,0
+883802,Narendra Gupta,1,0,0
+955145,Arnaud Doucet,2,0,0
+1125854,M. Pietikäinen,1,0,0
+1371124,Craig Gotsman,1,0,0
+1418035,M. K. Teal,1,0,0
+25329,Nicholas Roy,1,0,0
+59648,Fabrice Heitz,1,0,0
+99157,Tat-Jen Cham,1,1,1
+309155,Daisuke Kawahara,1,0,0
+367047,Geoffrey J. Gordon,1,0,0
+524382,Modesto Castrillón Santana,2,1,1
+668010,Chris Drummond,1,0,0
+741727,Sarah Zelikovitz,1,0,0
+917018,Peter Sturm,5,0,0
+1066314,Mark Hall,1,0,0
+1441259,J. W. Lloyd,1,0,0
+1606169,Corinna Richter,1,0,0
+65537,Yang Song,2,4,2
+406502,Stanley E. Scharoff,2,0,0
+794476,J. R. Bergen,1,0,0
+831462,Dragomir R. Radev,1,0,0
+879061,Jiahua Wu,1,0,0
+921137,Fumiaki Tomita,1,0,0
+1136814,Juho Rousu,1,0,0
+1266360,Sam Scott,1,0,0
+1553872,A J van Doorn,1,0,0
+1600053,D. M. Gavrila,1,2,1
+1623743,Cen Li,1,0,0
+1698464,Alain Trubuil,2,1,1
+35030,Gerald Dalley,1,0,0
+99640,Gregory Dudek,1,0,0
+263787,Stephanie Sage,1,0,0
+372621,Li Lian,1,0,0
+428319,Charles D. Yang,1,0,0
+523032,Hans Uszkoreit,2,1,1
+526246,Akitoshi Okumura,1,0,0
+617966,Shigenobu Kobayashi,3,0,0
+914970,Jovan Popovic,1,0,0
+923505,Vittorio Murino,1,0,0
+966071,Thomas R. Shultz,1,0,0
+1007795,Dunja Mladenič,2,0,0
+1585297,João Gama,2,0,0
+37042,Geoff Hulten,1,0,0
+310912,Mihai Boicu,1,0,0
+353547,R. Stevenson,1,1,1
+405387,J. Isidoro,1,0,0
+559539,Daniel Borrajo,1,0,0
+752845,Yuri A. Ivanov,1,0,0
+1026008,Koichi Yamashita,1,0,0
+1122955,Charles R. Rosenberg,1,0,0
+1573607,Visvanathan Ramesh,7,1,1
+1593637,David Renaudie,1,1,1
+1602931,Jeremy Yermiyahou Kaminski,2,0,0
+1620049,Hichem Sahbi,2,0,0
+1657108,Huafeng Liu,1,0,0
+1700565,Kalle Åström,1,0,0
+101042,Bill Triggs,5,4,1
+246550,Lluís Padró,1,0,0
+531299,Stefan Thater,2,1,1
+543975,Rémi Ronfard,1,0,0
+690693,David Gavaghan,1,0,0
+759683,Shuchi Chawla,1,0,0
+989112,Marsha C. Lovett,1,0,0
+1161797,Vincent Colin de Verdière,2,1,1
+1287428,Roger Evans,1,0,0
+1551810,Costas Tsatsoulis,1,0,0
+1556072,Dominik Auf der Maur,1,0,0
+1664507,Michael Brady,1,0,0
+51893,Ehud Reiter,1,0,0
+128297,Stella X. Yu,1,0,0
+180338,L Schubert,1,0,0
+193634,Gill Bejerano,2,0,0
+412281,J. Scott McCarley,1,0,0
+1031765,Nikos Fakotakis,1,0,0
+1133438,Daichi Hayakawa,1,0,0
+1165601,S. Busemann,1,0,0
+1189525,Tinne Tuytelaars,1,0,0
+1200102,Roderic A. Grupen,2,0,0
+1452835,Marie-Odile Berger,1,0,0
+1611711,Yasuhiro Sasaki,1,0,0
+1709864,Javier Sánchez,1,0,0
+356561,Friedrich Neubarth,1,0,0
+390043,Richard Howard Wicentowski,1,3,1
+441250,Eric Villemonte de la Clergerie,1,0,0
+537920,Paulo Rocha,1,0,0
+567715,Bernard Chazelle,1,0,0
+594577,Jamie Sherrah,1,0,0
+771558,Michael van Lent,1,0,0
+1062485,Patrick Pantel,1,0,0
+1084444,Ralf D. Brown,1,0,0
+1354118,Torsten Rohlfing,1,0,0
+1357489,Alessandro Duci,3,0,0
+1571641,Yuanhui Zhou,1,0,0
+1594505,Allen Y. Yang,1,0,0
+111860,Joaquin Gonzalez-Rodriguez,1,0,0
+203813,Alexis Nasr,1,0,0
+523535,Stephan Vogel,2,0,0
+741194,Davi Geiger,1,0,0
+756618,Geoffrey G. Towell,2,0,0
+767097,Cristian Levcovici,1,0,0
+960513,Patrice Latinne,1,0,0
+1020233,Teck Khim Ng,1,0,0
+1105598,Tessa A. Lau,1,0,0
+1213921,Alessandro Chiuso,1,1,1
+1360969,Jim Xiuquan Ji,1,0,0
+358163,Ramani Duraiswami,3,0,0
+841159,Yizhou Yu,1,0,0
+917221,D. J. Fleet,3,7,1
+991520,Maxime Lhuillier,2,0,0
+1121805,Peter Nillius,1,0,0
+1140778,Koichi Takeuchi,1,0,0
+1210142,Jan Struyf,1,0,0
+1238089,Laurent Younes,2,1,1
+1252498,Narjès Boufaden,1,0,0
+1360723,Song Wang,1,0,0
+1648995,Renaud Keriven,2,0,0
+24223,Jianbo Shi,2,2,1
+444524,Andrew Davison,1,0,0
+537488,Diana Santos,1,0,0
+572652,Chuan Long,1,0,0
+728734,Hajime Tsukada,1,0,0
+754354,Ralph Grishman,1,0,0
+953034,Ivan Bratko,3,0,0
+1179028,A. Ericsson,1,0,0
+1274123,Shimei Pan,1,1,1
+1331132,Hitoshi Iida,1,0,0
+1386182,Matthew Brand,1,0,0
+1473870,G. Kokkinakis,1,0,0
+1490387,Christine E. McLaren,1,0,0
+1546111,Joost van de Weijer,2,0,0
+48596,Roland T. Chin,1,0,0
+160385,Xiang Sean Zhou,1,0,0
+261022,John MacCormick,3,9,2
+385705,Nir Friedman,1,0,0
+499435,Sang-Zoo Lee,2,0,0
+666476,Owen Rambow,3,1,1
+805604,Hideki Isozaki,2,0,0
+942704,Enrico Blanzieri,1,0,0
+1271852,Michael T. Rosenstein,1,0,0
+1278260,Joel R. Tetreault,1,2,1
+1280656,Wen-Cheng Lin,1,0,0
+1552613,Lorenza Saitta,1,0,0
+94497,Liang Wang,1,0,0
+417270,Ricardo Vilalta,1,0,0
+452087,Yoram Baram,1,0,0
+538830,Hossein Ragheb,1,0,0
+620574,Jien Kato,1,1,1
+816350,Shuicheng Yan,2,0,0
+923066,Jihong Ding,1,0,0
+1219425,N. Karmarkar,1,0,0
+1352193,Anish Nair,1,0,0
+1361320,Yunmei Chen,3,0,0
+1619288,Sethu Vijayakumar,2,0,0
+1697003,Cosmin Munteanu,1,0,0
+149530,Sham Kakade,3,0,0
+363948,Alan Fern,1,0,0
+575972,Narendra Ahuja,4,2,1
+844060,Boris Xavier Vintimilla,1,0,0
+1014074,Kimon Roussopoulos,1,0,0
+1015994,Atsuko Kida,1,0,0
+1059510,Mauro Birattari,1,0,0
+1155786,Sreeream V. Balakrishnan,1,0,0
+1325560,S. A. Goldman,3,1,1
+1425829,K. Daniilidis,5,1,1
+1625554,Renate Henschel,1,1,1
+1630228,N. Ayache,2,0,0
+1698681,Arnold W. M. Smeulders,4,0,0
+1359,Peng Shi,1,0,0
+180287,Johannes E. Gehrke,1,0,0
+193881,Ashwin Srinivasan,2,0,0
+235117,F. O. Kuehnel,1,0,0
+250660,Seong Bae Park,2,0,0
+388510,Ilan Shimshoni,2,0,0
+539433,Scott Mardis,1,0,0
+596053,Doina Precup,2,0,0
+627098,Bianca Zadrozny,1,0,0
+634341,Neil Lawrence,1,0,0
+840117,Jianhua Yao,1,0,0
+916924,M. J. Chantler,2,0,0
+1415731,M. Kearns,1,2,1
+1418351,Do-Gil Lee,1,0,0
+1488848,Andy Tsai,1,1,1
+1577302,R. S. Weiss,1,0,0
+1612766,John C. Blitzer,1,0,0
+1645947,Byron Dom,2,0,0
+229391,Gilles Simon,1,0,0
+405178,Philip David,1,0,0
+555078,S. K. Shevade,1,0,0
+793909,Mona Talat Diab,1,2,1
+802955,Masataka Kagesawa,1,0,0
+861156,Raul Queiroz Feitosa,1,0,0
+885409,Sridhar Mahadevan,3,0,0
+1506013,Jan Wieghardt,1,0,0
+1674999,A. Oliva,1,0,0
+1708361,H. Ney,5,15,2
